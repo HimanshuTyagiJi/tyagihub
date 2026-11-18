@@ -1,0 +1,167 @@
+[
+  {
+    "title": "Cloudflare Turnstile: How to Replace Annoying Google reCAPTCHA on Any Website for Free (2026 Guide)",
+    "permalink": "/digital-tools/cloudflare-turnstile-free-recaptcha-alternative-guide/",
+    "description": "Stop frustrating visitors with distorted crosswalks and traffic lights. Step-by-step guide to installing free, privacy-first Cloudflare Turnstile on HTML forms, WordPress, or custom backends with zero puzzle captchas.",
+    "categories": "Digital Tools",
+    "tags": []
+  },
+  {
+    "title": "Cloudflare WARP (1.1.1.1): How to Encrypt Public Wi-Fi & Speed Up Mobile Browsing for Free (2026 Guide)",
+    "permalink": "/digital-tools/cloudflare-warp-free-vpn-mobile-speed-guide/",
+    "description": "Stop paying for bloated, battery-draining VPN subscriptions. Step-by-step verified guide to using Cloudflare 1.1.1.1 with WARP on Android, iOS, and PC to encrypt public Wi-Fi and bypass ISP throttling.",
+    "categories": "Digital Tools",
+    "tags": []
+  },
+  {
+    "title": "How to Host a Website on GitHub Pages with Custom Domain & Free SSL (Zero Server Costs 2026 Guide)",
+    "permalink": "/digital-tools/github-pages-custom-domain-free-hosting-guide/",
+    "description": "A complete, step-by-step tutorial on hosting static websites for free on GitHub Pages using your own custom domain, including exact GoDaddy/Namecheap DNS records and automatic SSL setup.",
+    "categories": "Digital Tools",
+    "tags": [
+      "github pages",
+      "custom domain",
+      "free web hosting",
+      "digital tools",
+      "dns records",
+      "ssl certificate"
+    ]
+  },
+  {
+    "title": "Telegram Bot Automation: How I Built a Free Personal Cloud & File Assistant with Python (2026 Guide)",
+    "permalink": "/digital-tools/telegram-bot-personal-cloud-automation-guide/",
+    "description": "Turn Telegram into a private, unlimited 2GB cloud assistant and automated reminder bot. Step-by-step verified tutorial using BotFather, Python, and zero server maintenance costs.",
+    "categories": "Digital Tools",
+    "tags": []
+  },
+  {
+    "title": "WhatsApp Business Automation: How to Set Up Free Quick Replies, Chat Labels & Catalogs for Client Work (2026 Guide)",
+    "permalink": "/digital-tools/whatsapp-business-automation-client-guide/",
+    "description": "A practical, step-by-step walkthrough showing how I turned the free WhatsApp Business app into an automated client communication hub with quick reply shortcuts, chat labels, and digital catalogs.",
+    "categories": "Digital Tools",
+    "tags": [
+      "whatsapp business",
+      "digital tools",
+      "client communication",
+      "quick replies",
+      "chat labels",
+      "solopreneur tools"
+    ]
+  },
+  {
+    "title": "How to Build & Embed Custom Forms on Any Website for Free Using Zoho Forms (No-Code 2026 Guide)",
+    "permalink": "/digital-tools/zoho-forms-free-custom-website-embed-guide/",
+    "description": "A complete, step-by-step tutorial on building professional contact, lead generation, and feedback forms for free using Zoho Forms, and embedding them on any website without writing backend code.",
+    "categories": "Digital Tools",
+    "tags": [
+      "zoho forms",
+      "digital tools",
+      "no code",
+      "website forms",
+      "lead generation",
+      "contact form embed"
+    ]
+  },
+  {
+    "title": "How to Create 100% Free Professional GST Invoices with Zoho Invoice (Small Business Guide 2026)",
+    "permalink": "/digital-tools/zoho-invoice-free-gst-billing-guide/",
+    "description": "Comprehensive step-by-step tutorial to create, customize, and send GST-compliant invoices for free using Zoho Invoice, including tax auto-calculation and UPI payment links.",
+    "categories": "Digital Tools",
+    "tags": [
+      "zoho invoice",
+      "free gst billing",
+      "invoicing software",
+      "digital tools",
+      "freelance billing"
+    ]
+  },
+  {
+    "title": "How to Set Up Free Business Email with Custom Domain on Zoho Mail (Complete 2026 Guide)",
+    "permalink": "/digital-tools/zoho-mail-free-custom-domain-setup/",
+    "description": "Step-by-step tutorial to create a 100% free professional business email using your custom domain on Zoho Mail, including exact TXT, MX, SPF, and DKIM DNS records.",
+    "categories": "Digital Tools",
+    "tags": [
+      "zoho mail",
+      "custom domain email",
+      "business email",
+      "digital tools",
+      "dns setup"
+    ]
+  },
+  {
+    "title": "Airtable for Beginners: How I Replaced Messy Spreadsheets with a Free Client Tracker (2026 Guide)",
+    "permalink": "/productivity/airtable-beginner-client-tracker-guide/",
+    "description": "A practical, no-code guide to building your first custom client and project tracker in Airtable from scratch in 12 minutes, using 100% free relational tables.",
+    "categories": "Productivity",
+    "tags": [
+      "airtable",
+      "productivity",
+      "client tracker",
+      "no code tools",
+      "project management"
+    ]
+  },
+  {
+    "title": "The Analog Daily Focus System: Why I Switched to a Pocket Notebook & Index Card to Cure Screen Burnout (2026 Guide)",
+    "permalink": "/productivity/analog-productivity-pocket-notebook-focus-guide/",
+    "description": "Why switching from 10 digital productivity apps to a physical 3x5 index card and pocket notebook eliminated mental fatigue, ended tab overload, and doubled deep work output for a solo developer.",
+    "categories": "Productivity",
+    "tags": []
+  },
+  {
+    "title": "Clockify for Freelancers: How to Track Billable Hours & Generate Client Timesheet Audits for Free (2026 Guide)",
+    "permalink": "/productivity/clockify-freelancer-billable-hours-tracking-guide/",
+    "description": "Stop losing unbilled hours and ending up in client payment arguments. Exhaustive guide to setting up 100% free time tracking, billable rate cards, 15-minute rounding rules, and 1-click audit PDFs on Clockify.",
+    "categories": "Productivity",
+    "tags": []
+  },
+  {
+    "title": "Google Calendar Time Blocking: How I Built a Minimal Daily Scheduling System to Stop Wasting Hours (2026 Guide)",
+    "permalink": "/productivity/google-calendar-time-blocking-solopreneur-guide/",
+    "description": "A complete, step-by-step walkthrough showing how I use Google Calendar time blocking to eliminate decision fatigue, protect deep work hours, and run my business with zero burnout.",
+    "categories": "Productivity",
+    "tags": [
+      "google calendar",
+      "time blocking",
+      "productivity",
+      "daily scheduling",
+      "solopreneur workflows",
+      "deep work"
+    ]
+  },
+  {
+    "title": "The Monk Mode Morning Routine: How a 90-Minute Screen Fast Before 9 AM Doubled My Output (2026 Guide)",
+    "permalink": "/productivity/monk-mode-morning-routine-deep-work-guide/",
+    "description": "Why checking notifications within 10 minutes of waking up ruins your daily cognitive capacity. Step-by-step verified guide to building a disciplined morning monk mode routine for solo creators and developers.",
+    "categories": "Productivity",
+    "tags": []
+  },
+  {
+    "title": "Notion for Solopreneurs: How I Built a Complete Daily Dashboard & Client Task Hub from Scratch (2026 Walkthrough)",
+    "permalink": "/productivity/notion-solopreneur-dashboard-client-hub-guide/",
+    "description": "An exhaustive, step-by-step walkthrough showing how I built a minimalist, zero-clutter Notion workspace for managing clients, deliverables, and daily tasks using 100% free relational databases.",
+    "categories": "Productivity",
+    "tags": [
+      "notion",
+      "productivity",
+      "solopreneur",
+      "workspace setup",
+      "task management",
+      "client hub"
+    ]
+  },
+  {
+    "title": "Obsidian for Beginners: How I Built a Free Offline Second Brain with Markdown Notes (2026 Setup)",
+    "permalink": "/productivity/obsidian-beginner-offline-notes-guide/",
+    "description": "A complete beginner's guide to setting up Obsidian as a private, offline second brain. Learn how to connect daily notes, master bidirectional wikilinks, and organize knowledge with zero monthly fees.",
+    "categories": "Productivity",
+    "tags": [
+      "obsidian",
+      "productivity",
+      "markdown notes",
+      "second brain",
+      "note taking",
+      "knowledge management"
+    ]
+  }
+]

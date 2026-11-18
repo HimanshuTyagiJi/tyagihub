@@ -1,0 +1,115 @@
+<svg xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet" viewBox="0 0 900 480" width="900" height="480">
+  <defs>
+    <linearGradient id="monkBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e1b18"/>
+      <stop offset="50%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#0c0a09"/>
+    </linearGradient>
+    <linearGradient id="monkCard" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e293b"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+    <linearGradient id="monkFlow" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#f59e0b"/>
+      <stop offset="100%" stop-color="#10b981"/>
+    </linearGradient>
+    <filter id="monkShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="6" stdDeviation="8" flood-color="#000000" flood-opacity="0.4"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="900" height="480" rx="12" fill="url(#monkBg)" stroke="#78350f" stroke-width="1.5"/>
+
+  <!-- Title -->
+  <text x="450" y="44" text-anchor="middle" fill="#f8fafc" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="800" letter-spacing="-0.5">
+    The Monk Mode Morning Energy Architecture
+  </text>
+  <text x="450" y="70" text-anchor="middle" fill="#fde68a" font-family="system-ui, -apple-system, sans-serif" font-size="13">
+    How front-loading peak prefrontal cortex dopamine protects creative output from reactive burnout
+  </text>
+
+  <!-- Step 1: 07:00 - 08:00 AM Dopamine Fast -->
+  <g transform="translate(35, 110)" filter="url(#monkShadow)">
+    <rect width="250" height="310" rx="10" fill="url(#monkCard)" stroke="#f59e0b" stroke-width="1.5"/>
+    <rect width="250" height="40" rx="10" fill="#f59e0b" opacity="0.2"/>
+    <rect y="25" width="250" height="15" fill="#f59e0b" opacity="0.2"/>
+    <text x="18" y="26" fill="#fbbf24" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="750">🌅 1. The 60-Min Screen Fast</text>
+
+    <g transform="translate(16, 55)">
+      <text x="0" y="15" fill="#f1f5f9" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="700">07:00 AM - 08:00 AM:</text>
+
+      <rect y="25" width="218" height="60" rx="6" fill="#09090b" stroke="#334155" stroke-width="1"/>
+      <text x="10" y="44" fill="#fde68a" font-family="monospace" font-size="10" font-weight="700">Zero Phones, Zero Feeds</text>
+      <text x="10" y="60" fill="#94a3b8" font-family="system-ui, -apple-system, sans-serif" font-size="9">No WhatsApp, Twitter, or news reels</text>
+      <text x="10" y="74" fill="#94a3b8" font-family="system-ui, -apple-system, sans-serif" font-size="9">Protects basal dopamine baseline</text>
+
+      <text x="0" y="105" fill="#cbd5e1" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="600">Morning Physiology:</text>
+      <rect y="115" width="218" height="52" rx="6" fill="#09090b" stroke="#334155" stroke-width="1"/>
+      <text x="10" y="134" fill="#38bdf8" font-family="system-ui, -apple-system, sans-serif" font-size="9.5" font-weight="700">Sunlight + 500ml Water</text>
+      <text x="10" y="152" fill="#94a3b8" font-family="system-ui, -apple-system, sans-serif" font-size="9">Natural cortisol awakening response</text>
+
+      <text x="0" y="190" fill="#94a3b8" font-family="system-ui, -apple-system, sans-serif" font-size="10">Prefrontal cortex fully primed.</text>
+    </g>
+  </g>
+
+  <!-- Arrow 1 -> 2 -->
+  <g transform="translate(295, 240)">
+    <line x1="0" y1="0" x2="30" y2="0" stroke="url(#monkFlow)" stroke-width="3" stroke-linecap="round"/>
+    <polygon points="30,-5 40,0 30,5" fill="#f59e0b"/>
+  </g>
+
+  <!-- Step 2: 08:00 - 09:30 AM 90-Min Monk Sprint -->
+  <g transform="translate(335, 110)" filter="url(#monkShadow)">
+    <rect width="250" height="310" rx="10" fill="url(#monkCard)" stroke="#38bdf8" stroke-width="1.5"/>
+    <rect width="250" height="40" rx="10" fill="#0284c7" opacity="0.2"/>
+    <rect y="25" width="250" height="15" fill="#0284c7" opacity="0.2"/>
+    <text x="18" y="26" fill="#38bdf8" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="750">⚡ 2. 90-Min Monk Sprint</text>
+
+    <g transform="translate(16, 55)">
+      <text x="0" y="15" fill="#f1f5f9" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="700">08:00 AM - 09:30 AM:</text>
+
+      <rect y="25" width="218" height="60" rx="6" fill="#09090b" stroke="#334155" stroke-width="1"/>
+      <text x="10" y="44" fill="#38bdf8" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="700">Hardest Project Milestone</text>
+      <text x="10" y="60" fill="#94a3b8" font-family="system-ui, -apple-system, sans-serif" font-size="9">Writing core code, architecture, or copy</text>
+      <text x="10" y="74" fill="#94a3b8" font-family="system-ui, -apple-system, sans-serif" font-size="9">Phone stays in another room on airplane mode</text>
+
+      <text x="0" y="105" fill="#cbd5e1" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="600">Productivity Payoff:</text>
+      <rect y="115" width="218" height="52" rx="6" fill="#09090b" stroke="#334155" stroke-width="1"/>
+      <text x="10" y="134" fill="#34d399" font-family="system-ui, -apple-system, sans-serif" font-size="9.5" font-weight="700">Day Won Before 10 AM</text>
+      <text x="10" y="152" fill="#94a3b8" font-family="system-ui, -apple-system, sans-serif" font-size="9">More shipped than an entire casual day</text>
+
+      <text x="0" y="190" fill="#94a3b8" font-family="system-ui, -apple-system, sans-serif" font-size="10">Zero interruptions. Pure uninterrupted flow.</text>
+    </g>
+  </g>
+
+  <!-- Arrow 2 -> 3 -->
+  <g transform="translate(595, 240)">
+    <line x1="0" y1="0" x2="30" y2="0" stroke="url(#monkFlow)" stroke-width="3" stroke-linecap="round"/>
+    <polygon points="30,-5 40,0 30,5" fill="#10b981"/>
+  </g>
+
+  <!-- Step 3: 10:00 AM Onwards Reactive Batching -->
+  <g transform="translate(635, 110)" filter="url(#monkShadow)">
+    <rect width="230" height="310" rx="10" fill="url(#monkCard)" stroke="#10b981" stroke-width="1.5"/>
+    <rect width="230" height="40" rx="10" fill="#059669" opacity="0.2"/>
+    <rect y="25" width="230" height="15" fill="#059669" opacity="0.2"/>
+    <text x="18" y="26" fill="#34d399" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="750">📬 3. Reactive Batching</text>
+
+    <g transform="translate(16, 55)">
+      <text x="0" y="15" fill="#f1f5f9" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="700">10:00 AM ONWARDS:</text>
+
+      <rect y="25" width="198" height="60" rx="6" fill="#09090b" stroke="#10b981" stroke-width="1"/>
+      <text x="10" y="44" fill="#34d399" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="700">Shallow Work Batching</text>
+      <text x="10" y="60" fill="#94a3b8" font-family="system-ui, -apple-system, sans-serif" font-size="9">• Client WhatsApp &amp; emails</text>
+      <text x="10" y="74" fill="#94a3b8" font-family="system-ui, -apple-system, sans-serif" font-size="9">• Invoicing, bug triage, meetings</text>
+
+      <text x="0" y="105" fill="#cbd5e1" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="600">Emotional State:</text>
+      <rect y="115" width="198" height="52" rx="6" fill="#064e3b" stroke="#10b981" stroke-width="1"/>
+      <text x="10" y="135" fill="#6ee7b7" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="700">✓ Zero Guilt or Panic</text>
+      <text x="10" y="153" fill="#a7f3d0" font-family="system-ui, -apple-system, sans-serif" font-size="9">Primary priority already delivered.</text>
+
+      <text x="0" y="190" fill="#34d399" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="600">Peaceful, sustainable, superhuman.</text>
+    </g>
+  </g>
+</svg>

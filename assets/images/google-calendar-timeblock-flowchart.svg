@@ -1,0 +1,115 @@
+<svg preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 480" width="900" height="480">
+  <defs>
+    <linearGradient id="gcBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e1b4b"/>
+      <stop offset="50%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#030712"/>
+    </linearGradient>
+    <linearGradient id="gcCard" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e293b"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+    <linearGradient id="gcFlow" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8"/>
+      <stop offset="100%" stop-color="#f59e0b"/>
+    </linearGradient>
+    <filter id="gcShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="6" stdDeviation="8" flood-color="#000000" flood-opacity="0.4"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="900" height="480" rx="12" fill="url(#gcBg)" stroke="#1e293b" stroke-width="1.5"/>
+
+  <!-- Title -->
+  <text x="450" y="44" text-anchor="middle" fill="#f8fafc" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="800" letter-spacing="-0.5">
+    The 3-Tier Google Calendar Time-Blocking Architecture
+  </text>
+  <text x="450" y="70" text-anchor="middle" fill="#94a3b8" font-family="system-ui, -apple-system, sans-serif" font-size="13">
+    How color-coded schedule blocks eliminate decision fatigue and guarantee deep work execution
+  </text>
+
+  <!-- Block 1: Deep Focus (Morning) -->
+  <g transform="translate(35, 110)" filter="url(#gcShadow)">
+    <rect width="250" height="310" rx="10" fill="url(#gcCard)" stroke="#0284c7" stroke-width="1.5"/>
+    <rect width="250" height="40" rx="10" fill="#0284c7" opacity="0.25"/>
+    <rect y="25" width="250" height="15" fill="#0284c7" opacity="0.25"/>
+    <text x="18" y="26" fill="#38bdf8" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="750">🎯 1. Deep Work Block</text>
+
+    <g transform="translate(16, 55)">
+      <text x="0" y="15" fill="#f1f5f9" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="700">09:00 AM – 12:30 PM (3.5 Hrs):</text>
+
+      <rect y="25" width="218" height="60" rx="6" fill="#0f172a" stroke="#0284c7" stroke-width="1"/>
+      <text x="10" y="44" fill="#38bdf8" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="700">High-Cognitive Output</text>
+      <text x="10" y="62" fill="#94a3b8" font-family="system-ui, -apple-system, sans-serif" font-size="9">Writing, programming, core design.</text>
+      <text x="10" y="76" fill="#64748b" font-family="system-ui, -apple-system, sans-serif" font-size="9">Phone on "Do Not Disturb" (DND).</text>
+
+      <text x="0" y="108" fill="#cbd5e1" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="600">Calendar Rule:</text>
+      <text x="0" y="126" fill="#94a3b8" font-family="system-ui, -apple-system, sans-serif" font-size="10">• Zero meetings allowed</text>
+      <text x="0" y="144" fill="#94a3b8" font-family="system-ui, -apple-system, sans-serif" font-size="10">• Color: Peacock Blue (Code #0284c7)</text>
+      <text x="0" y="162" fill="#94a3b8" font-family="system-ui, -apple-system, sans-serif" font-size="10">• Single priority goal per day</text>
+
+      <text x="0" y="196" fill="#38bdf8" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="700">Result: 80% of value generated before lunch.</text>
+    </g>
+  </g>
+
+  <!-- Arrow 1 -> 2 -->
+  <g transform="translate(295, 240)">
+    <line x1="0" y1="0" x2="30" y2="0" stroke="url(#gcFlow)" stroke-width="3" stroke-linecap="round"/>
+    <polygon points="30,-5 40,0 30,5" fill="#f59e0b"/>
+  </g>
+
+  <!-- Block 2: Communication &amp; Admin (Afternoon) -->
+  <g transform="translate(335, 110)" filter="url(#gcShadow)">
+    <rect width="250" height="310" rx="10" fill="url(#gcCard)" stroke="#f59e0b" stroke-width="1.5"/>
+    <rect width="250" height="40" rx="10" fill="#f59e0b" opacity="0.25"/>
+    <rect y="25" width="250" height="15" fill="#f59e0b" opacity="0.25"/>
+    <text x="18" y="26" fill="#f59e0b" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="750">📞 2. Comms &amp; Admin Block</text>
+
+    <g transform="translate(16, 55)">
+      <text x="0" y="15" fill="#f1f5f9" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="700">01:30 PM – 04:30 PM (3.0 Hrs):</text>
+
+      <rect y="25" width="218" height="60" rx="6" fill="#0f172a" stroke="#f59e0b" stroke-width="1"/>
+      <text x="10" y="44" fill="#fbbf24" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="700">External Interactions</text>
+      <text x="10" y="62" fill="#94a3b8" font-family="system-ui, -apple-system, sans-serif" font-size="9">Client calls, email inbox zero, GST invoicing.</text>
+      <text x="10" y="76" fill="#64748b" font-family="system-ui, -apple-system, sans-serif" font-size="9">WhatsApp Business reply batches.</text>
+
+      <text x="0" y="108" fill="#cbd5e1" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="600">Calendar Rule:</text>
+      <text x="0" y="126" fill="#94a3b8" font-family="system-ui, -apple-system, sans-serif" font-size="10">• Group calls back-to-back</text>
+      <text x="0" y="144" fill="#94a3b8" font-family="system-ui, -apple-system, sans-serif" font-size="10">• Color: Banana / Amber (Code #f59e0b)</text>
+      <text x="0" y="162" fill="#94a3b8" font-family="system-ui, -apple-system, sans-serif" font-size="10">• Max 2 client calls per afternoon</text>
+
+      <text x="0" y="196" fill="#f59e0b" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="700">Result: Zero interruptions during morning focus.</text>
+    </g>
+  </g>
+
+  <!-- Arrow 2 -> 3 -->
+  <g transform="translate(595, 240)">
+    <line x1="0" y1="0" x2="30" y2="0" stroke="url(#gcFlow)" stroke-width="3" stroke-linecap="round"/>
+    <polygon points="30,-5 40,0 30,5" fill="#10b981"/>
+  </g>
+
+  <!-- Block 3: Buffer &amp; Daily Shutdown (Evening) -->
+  <g transform="translate(635, 110)" filter="url(#gcShadow)">
+    <rect width="230" height="310" rx="10" fill="url(#gcCard)" stroke="#10b981" stroke-width="1.5"/>
+    <rect width="230" height="40" rx="10" fill="#10b981" opacity="0.25"/>
+    <rect y="25" width="230" height="15" fill="#10b981" opacity="0.25"/>
+    <text x="18" y="26" fill="#10b981" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="750">🛡️ 3. Buffer &amp; Shutdown</text>
+
+    <g transform="translate(16, 55)">
+      <text x="0" y="15" fill="#f1f5f9" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="700">04:30 PM – 06:00 PM (1.5 Hrs):</text>
+
+      <rect y="25" width="198" height="60" rx="6" fill="#0f172a" stroke="#10b981" stroke-width="1"/>
+      <text x="10" y="44" fill="#34d399" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="700">The Slack Buffer</text>
+      <text x="10" y="62" fill="#94a3b8" font-family="system-ui, -apple-system, sans-serif" font-size="9">Handles overflow, delays, or emergency bugs.</text>
+      <text x="10" y="76" fill="#64748b" font-family="system-ui, -apple-system, sans-serif" font-size="9">Plan tomorrow's calendar schedule.</text>
+
+      <text x="0" y="108" fill="#cbd5e1" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="600">Calendar Rule:</text>
+      <text x="0" y="126" fill="#94a3b8" font-family="system-ui, -apple-system, sans-serif" font-size="10">• Never book client work here</text>
+      <text x="0" y="144" fill="#94a3b8" font-family="system-ui, -apple-system, sans-serif" font-size="10">• Color: Sage Green (Code #10b981)</text>
+      <text x="0" y="162" fill="#94a3b8" font-family="system-ui, -apple-system, sans-serif" font-size="10">• Close laptop at 6:00 PM clean</text>
+
+      <text x="0" y="196" fill="#10b981" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="700">Result: Zero guilt, zero midnight work stress.</text>
+    </g>
+  </g>
+</svg>

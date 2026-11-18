@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cloudflare WARP (1.1.1.1): How to Encrypt Public Wi-Fi & Speed Up Mobile Browsing for Free (2026 Guide) | TyagiHub</title>
+  <meta name="description" content="Stop paying for bloated, battery-draining VPN subscriptions. Step-by-step verified guide to using Cloudflare 1.1.1.1 with WARP on Android, iOS, and PC to encrypt public Wi-Fi and bypass ISP throttling.">
+  <link rel="canonical" href="https://tyagihub.in/digital-tools/cloudflare-warp-free-vpn-mobile-speed-guide/">
+  <meta name="robots" content="index, follow">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Cloudflare WARP (1.1.1.1): How to Encrypt Public Wi-Fi & Speed Up Mobile Browsing for Free (2026 Guide) | TyagiHub">
+  <meta property="og:description" content="Stop paying for bloated, battery-draining VPN subscriptions. Step-by-step verified guide to using Cloudflare 1.1.1.1 with WARP on Android, iOS, and PC to encrypt public Wi-Fi and bypass ISP throttling.">
+  <meta property="og:url" content="https://tyagihub.in/digital-tools/cloudflare-warp-free-vpn-mobile-speed-guide/">
+  <meta property="og:site_name" content="TyagiHub">
+  <meta property="og:image" content="https://tyagihub.in/assets/images/logo.png">
+
+  <!-- Schema.org Article Structured Data (AdSense & Google Search E-E-A-T) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "Cloudflare WARP (1.1.1.1): How to Encrypt Public Wi-Fi & Speed Up Mobile Browsing for Free (2026 Guide)",
+    "description": "Stop paying for bloated, battery-draining VPN subscriptions. Step-by-step verified guide to using Cloudflare 1.1.1.1 with WARP on Android, iOS, and PC to encrypt public Wi-Fi and bypass ISP throttling.",
+    "url": "https://tyagihub.in/digital-tools/cloudflare-warp-free-vpn-mobile-speed-guide/",
+    "datePublished": "2026-11-07",
+    "dateModified": "2026-11-07",
+    "author": {
+      "@type": "Person",
+      "name": "Himanshu Tyagi",
+      "url": "https://tyagihub.in/about/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "TyagiHub",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://tyagihub.in/assets/images/logo.png"
+      }
+    }
+  }
+  </script>
+
+  <!-- Icons -->
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/apple-touch-icon.png">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="/assets/css/main.css">
+
+  <!-- Google AdSense -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7067722696020503" crossorigin="anonymous"></script>
+
+  <script>
+    (function() {
+      const savedTheme = localStorage.getItem('th_theme');
+      if (savedTheme) {
+        document.documentElement.setAttribute('data-theme', savedTheme);
+      } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.documentElement.setAttribute('data-theme', 'dark');
+      }
+    })();
+  </script>
+</head>
+<body>
+  <!-- Reading Progress Bar -->
+  <div class="reading-progress-bar" id="progress-bar"></div>
+
+  <!-- Header Navbar -->
+  <header class="site-header">
+    <div class="header-container">
+      <a href="/" class="brand">
+        <img src="/assets/images/logo.png" alt="TyagiHub Logo" class="brand-logo" width="36" height="36">
+        <span class="brand-text">Tyagi<span>Hub</span></span>
+      </a>
+
+      <nav class="desktop-nav" aria-label="Desktop Navigation">
+        <ul class="nav-links">
+          <li><a href="/" class="nav-link">Home</a></li>
+          <li><a href="/digital-tools/" class="nav-link">Digital Tools</a></li>
+          <li><a href="/productivity/" class="nav-link">Productivity</a></li>
+          <li><a href="/about/" class="nav-link">About</a></li>
+          <li><a href="/contact/" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <button class="search-trigger-btn" type="button" aria-label="Search Guides">
+          <span>🔍</span>
+          <span>Search guides...</span>
+          <kbd>/</kbd>
+        </button>
+
+        <button class="theme-toggle-btn" type="button" aria-label="Toggle Theme">
+          <span class="theme-icon">🌙</span>
+        </button>
+
+        <button class="hamburger-btn" id="hamburger-btn" type="button" aria-label="Toggle Mobile Menu" aria-expanded="false">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Backdrop Overlay -->
+  <div class="mobile-drawer-overlay" id="drawer-overlay" aria-hidden="true"></div>
+
+  <!-- Mobile Drawer Menu -->
+  <aside class="mobile-drawer" id="mobile-drawer" aria-label="Mobile Navigation">
+    <div class="drawer-header">
+      <div class="brand">
+        <img src="/assets/images/logo.png" alt="TyagiHub Logo" class="brand-logo" width="32" height="32">
+        <span class="brand-text">Tyagi<span>Hub</span></span>
+      </div>
+      <button class="drawer-close-btn" id="drawer-close-btn" type="button" aria-label="Close Menu">✕</button>
+    </div>
+
+    <div class="mobile-search-box">
+      <span class="mobile-search-icon">🔍</span>
+      <input type="text" class="mobile-search-input" id="mobile-search-input" placeholder="Search guides & topics...">
+    </div>
+
+    <ul class="drawer-nav-list">
+      <li class="drawer-nav-item"><a href="/">🏠 Home</a></li>
+      <li class="drawer-nav-item"><a href="/digital-tools/">🛠️ Digital Tools</a></li>
+      <li class="drawer-nav-item"><a href="/productivity/">⚡ Productivity</a></li>
+      <li class="drawer-nav-item"><a href="/about/">ℹ️ About Us</a></li>
+      <li class="drawer-nav-item"><a href="/contact/">✉️ Contact Us</a></li>
+      <li class="drawer-nav-item"><a href="/privacy-policy/">🔒 Privacy Policy</a></li>
+      <li class="drawer-nav-item"><a href="/terms/">📜 Terms of Service</a></li>
+      <li class="drawer-nav-item"><a href="/disclaimer/">⚠️ Disclaimer</a></li>
+    </ul>
+
+    <div class="drawer-footer">
+      <p>&copy; 2026 TyagiHub. All rights reserved.</p>
+    </div>
+  </aside>
+
+  <!-- Live Instant Search Modal -->
+  <div class="search-modal" id="search-modal" role="dialog" aria-modal="true" aria-label="Search Guides">
+    <div class="search-dialog">
+      <div class="search-bar-wrap">
+        <span>🔍</span>
+        <input type="search" class="search-main-input" id="search-main-input" placeholder="Search Zoho, Airtable, Invoices..." autocomplete="off">
+        <button class="search-close-btn" id="search-close-btn" type="button">ESC</button>
+      </div>
+      <ul class="search-results-list" id="search-results-list">
+        <li class="search-empty-state">Type keywords to search verified tech guides...</li>
+      </ul>
+    </div>
+  </div>
+
+  <main>
+    <article class="article-container">
+      <nav class="article-breadcrumb" aria-label="Breadcrumb">
+        <a href="/">Home</a> &rsaquo; <a href="/digital-tools/">Digital Tools</a> &rsaquo; <span>Current Guide</span>
+      </nav>
+
+      <header class="article-header">
+        <h1 class="article-title">Cloudflare WARP (1.1.1.1): How to Encrypt Public Wi-Fi & Speed Up Mobile Browsing for Free (2026 Guide)</h1>
+        <div class="article-meta-bar">
+          <div class="author-chip">
+            <img src="/assets/images/logo.png" alt="Himanshu Tyagi">
+            <span>By Himanshu Tyagi</span>
+          </div>
+          <span>&bull;</span>
+          <time datetime="2026-11-07">November 7, 2026</time>
+          <span>&bull;</span>
+          <span>Category: Digital Tools</span>
+        </div>
+      </header>
+
+      <!-- Social Share Strip -->
+      <div class="share-strip">
+        <span class="share-strip-label">Share this guide:</span>
+        <button class="share-btn" id="copy-link-btn" type="button">🔗 Copy Link</button>
+        <a class="share-btn" id="share-twitter" href="#" target="_blank" rel="noopener">🐦 X (Twitter)</a>
+        <a class="share-btn" id="share-linkedin" href="#" target="_blank" rel="noopener">💼 LinkedIn</a>
+        <a class="share-btn" id="share-whatsapp" href="#" target="_blank" rel="noopener">💬 WhatsApp</a>
+      </div>
+
+      <div class="article-content">
+        
+<p class="lead">
+  Whenever you connect your smartphone or laptop to a free public Wi-Fi network at a railway station, airport lounge, hotel lobby, or local cafe, your internet traffic is being broadcast into open air. Anyone with basic packet-sniffing software sitting on the same local subnet can inspect unencrypted DNS lookups, see every domain you visit, and potentially execute session hijacking attacks.
+</p>
+
+<p>
+  To protect themselves, millions of internet users download commercial VPN apps. But legacy commercial VPNs introduce severe drawbacks: they cost ₹800 to ₹1,200 per month, drain 20% of your smartphone battery in two hours through heavy OpenVPN overhead, route your traffic through slow congested server hubs three countries away, and trigger annoying captcha verifications on every Google search.
+</p>
+
+<p>
+  In 2026, the modern, elegant solution is <strong>Cloudflare WARP (1.1.1.1)</strong>. Built on modern WireGuard cryptographic tunneling written in Rust (the open-source <em>BoringTun</em> protocol), WARP is not a traditional anonymizing VPN. Instead, it is a privacy-first, ultra-fast connection accelerator that encrypts all outbound traffic, tunnels it directly to the nearest Cloudflare Anycast edge data center, and routes it through Cloudflare's private fiber network.
+</p>
+
+<div class="note-box" style="background: var(--bg-surface); border-left: 4px solid #f97316; padding: 1.25rem 1.5rem; margin: 2rem 0; border-radius: 0 var(--radius-md) var(--radius-md) 0; border: 1px solid var(--border); border-left-width: 4px;">
+  <strong style="color: #f97316; display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.5rem; font-size: 1.05rem;">
+    ⚡ Why WARP Speeds Up Internet Instead of Slowing It Down
+  </strong>
+  <p style="margin: 0; font-size: 0.95rem; color: var(--text-muted); line-height: 1.6;">
+    Traditional VPNs degrade download and browsing speeds by 30% to 50% because your packets must travel hundreds of miles to a centralized VPN exit server. WARP connects to Cloudflare's global edge network across 330+ cities worldwide. Because Cloudflare peers directly with Google, AWS, Microsoft, and major internet exchanges, routing through WARP actually reduces page load latency by up to 28%.
+  </p>
+</div>
+
+<hr style="border: none; border-top: 1px solid var(--border); margin: 2.5rem 0;">
+
+<h2>1. The WARP Architecture: How It Protects Your Connection</h2>
+
+<p>
+  To appreciate why WARP is superior for daily mobile browsing, let's examine the technical pipeline that secures your data:
+</p>
+
+<!-- WARP Architecture Diagram -->
+<figure style="margin: 2.5rem 0; border-radius: var(--radius-md); overflow: hidden; border: 1px solid var(--border); box-shadow: var(--shadow-sm);">
+  <img src="/assets/images/cloudflare-warp-workflow.svg" alt="Cloudflare WARP Traffic Encryption Architecture" style="width: 100%; height: auto; display: block;" width="900" height="480">
+  <figcaption style="padding: 0.6rem 1rem; font-size: 0.88rem; color: var(--text-light); text-align: center; background: var(--bg-surface); border-top: 1px solid var(--border);">Figure 1: Complete WireGuard tunnel routing flow from insecure local network to Cloudflare's global edge backbone.</figcaption>
+</figure>
+
+<p>
+  As demonstrated in Figure 1 above, your internet connection undergoes a three-step cryptographic transformation:
+</p>
+
+<ol>
+  <li><strong>Local Interception:</strong> The official 1.1.1.1 app creates a local virtual network adapter on your device. All outbound DNS requests and TCP/UDP data streams are captured before reaching your local Wi-Fi router.</li>
+  <li><strong>WireGuard Encryption (BoringTun):</strong> Traffic is encrypted using the modern <code>ChaCha20-Poly1305</code> cipher and transmitted via UDP port 2408. Unlike OpenVPN's heavy handshake, WireGuard uses state-of-the-art cryptography that resumes in 0 milliseconds when switching between Wi-Fi and 5G mobile data.</li>
+  <li><strong>Anycast Edge Routing:</strong> Your packets hit Cloudflare's nearest edge server (in India: Delhi, Mumbai, Chennai, or Kolkata). Your telecom provider (Jio, Airtel, Vi) can only see an encrypted stream of data to Cloudflare; they can no longer log the specific websites you visit, inject ISP advertising banners, or throttle your speeds based on content type.</li>
+</ol>
+
+<hr style="border: none; border-top: 1px solid var(--border); margin: 2.5rem 0;">
+
+<h2>2. Step 1: Installing &amp; Activating 1.1.1.1 with WARP</h2>
+
+<p>
+  Cloudflare provides native, 100% free applications across all major operating systems (Android, iOS, Windows, macOS, and Linux).
+</p>
+
+<div class="step-card" style="background: var(--bg-surface); padding: 1.5rem; border-radius: var(--radius-md); border: 1px solid var(--border); margin: 1.5rem 0;">
+  <div style="display: flex; gap: 1rem; align-items: flex-start;">
+    <div style="background: #f97316; color: white; width: 28px; height: 28px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; flex-shrink: 0; font-size: 0.9rem;">1</div>
+    <div>
+      <h3 style="margin: 0 0 0.5rem 0; font-size: 1.1rem; color: var(--text-main);">Download the Official Client</h3>
+      <p style="margin: 0; color: var(--text-muted); font-size: 0.95rem;">On Android or iOS, search for <code>1.1.1.1 + WARP: Safer Internet</code> by Cloudflare, Inc. on Google Play or the Apple App Store. On desktop, visit <code>1.1.1.1</code> and download the Windows or macOS installer.</p>
+    </div>
+  </div>
+</div>
+
+<div class="step-card" style="background: var(--bg-surface); padding: 1.5rem; border-radius: var(--radius-md); border: 1px solid var(--border); margin: 1.5rem 0;">
+  <div style="display: flex; gap: 1rem; align-items: flex-start;">
+    <div style="background: #f97316; color: white; width: 28px; height: 28px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; flex-shrink: 0; font-size: 0.9rem;">2</div>
+    <div>
+      <h3 style="margin: 0 0 0.5rem 0; font-size: 1.1rem; color: var(--text-main);">Choose Connection Mode: 1.1.1.1 with WARP</h3>
+      <p style="margin: 0; color: var(--text-muted); font-size: 0.95rem;">Open the app settings (tap the hamburger menu). The app provides two operational modes:</p>
+      <ul style="margin: 0.5rem 0 0 0; font-size: 0.92rem; color: var(--text-muted);">
+        <li><strong>1.1.1.1 Only:</strong> Encrypts only your DNS queries (DNS-over-HTTPS). Useful if you have a very slow connection and only want DNS security.</li>
+        <li><strong>1.1.1.1 with WARP (Recommended):</strong> Encrypts all internet traffic (DNS + all application web traffic) using WireGuard. Select this mode.</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="step-card" style="background: var(--bg-surface); padding: 1.5rem; border-radius: var(--radius-md); border: 1px solid var(--border); margin: 1.5rem 0;">
+  <div style="display: flex; gap: 1rem; align-items: flex-start;">
+    <div style="background: #f97316; color: white; width: 28px; height: 28px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; flex-shrink: 0; font-size: 0.9rem;">3</div>
+    <div>
+      <h3 style="margin: 0 0 0.5rem 0; font-size: 1.1rem; color: var(--text-main);">Toggle the Big Button to CONNECTED</h3>
+      <p style="margin: 0; color: var(--text-muted); font-size: 0.95rem;">On the home screen, tap the large central switch. Your phone will prompt you to accept a VPN connection profile. Tap <strong>OK</strong>. Within 2 seconds, the status changes to <em>"Connected. Your Internet is private."</em></p>
+    </div>
+  </div>
+</div>
+
+<hr style="border: none; border-top: 1px solid var(--border); margin: 2.5rem 0;">
+
+<h2>3. Step 2: Enabling 1.1.1.1 for Families (Free Malware &amp; Adult Content Blocking)</h2>
+
+<p>
+  Cloudflare includes a powerful, zero-cost security feature called <strong>1.1.1.1 for Families</strong>. Without installing any antivirus bloatware on your phone, you can instruct Cloudflare's recursive DNS resolvers to automatically block known phishing domains, ransomware command-and-control servers, and malicious software distributors.
+</p>
+
+<p>
+  To enable automated security filtering inside the app:
+</p>
+
+<ol>
+  <li>Tap the hamburger menu in the top right &rarr; select <strong>Advanced</strong> &rarr; tap <strong>Connection options</strong>.</li>
+  <li>Tap on <strong>DNS settings</strong> &rarr; <strong>1.1.1.1 for Families</strong>.</li>
+  <li>Select one of three protection profiles:
+    <ul>
+      <li><strong>Off:</strong> Standard unblocked DNS resolution.</li>
+      <li><strong>Block malware:</strong> Resolves DNS queries while instantly dropping connections to phishing domains and malicious websites.</li>
+      <li><strong>Block malware and adult content:</strong> Blocks phishing, malware, and explicit content networks—ideal for home tablets used by children.</li>
+    </ul>
+  </li>
+</ol>
+
+<p>
+  Because this filtering occurs at the DNS layer, malware domains fail to resolve before a single byte of malicious payload can download to your browser.
+</p>
+
+<hr style="border: none; border-top: 1px solid var(--border); margin: 2.5rem 0;">
+
+<h2>4. Step 3: Verifying Your Connection Security</h2>
+
+<p>
+  Never trust a security app blindly. You can verify that Cloudflare WARP is actively encrypting your traffic and routing through Cloudflare edge nodes by visiting Cloudflare's official connection diagnostic tool:
+</p>
+
+<p>
+  Navigate to <code>https://one.one.one.one/help/</code> in your mobile browser. The diagnostic page inspects your live IP packet and displays four critical verification checks:
+</p>
+
+<pre><code class="language-text">========================================================
+🔍 CLOUDFLARE 1.1.1.1 DIAGNOSTIC RESULTS
+========================================================
+Connected to 1.1.1.1        : YES (Using Anycast resolver)
+Using DNS over HTTPS (DoH)  : YES (Queries fully encrypted)
+Using DNS over TLS (DoT)    : YES
+Using WARP                  : YES (WireGuard tunnel active)
+AS Name                     : Cloudflare, Inc.
+Data Center                 : DEL (Indira Gandhi Airport POP)
+========================================================</code></pre>
+
+<p>
+  If all four fields display <strong>YES</strong>, your connection is fully encrypted. Even if an attacker on public Wi-Fi is capturing all network packets using Wireshark, they see only an indecipherable stream of WireGuard UDP packets destined for Cloudflare's edge IP.
+</p>
+
+<hr style="border: none; border-top: 1px solid var(--border); margin: 2.5rem 0;">
+
+<h2>4. How WARP Bypasses ISP Throttling on Git Clones &amp; Media Streams</h2>
+
+<p>
+  In many regions—including major telecom networks across India—ISPs inspect the unencrypted <strong>Server Name Indication (SNI)</strong> header of your TLS handshake. When an ISP's deep packet inspection (DPI) detects heavy video streaming or international developer repository downloads (such as cloning a 2GB PyTorch or Chromium repository from GitHub), their traffic shaping algorithms actively throttle your connection speed down to a crawl.
+</p>
+
+<p>
+  Cloudflare WARP defeats ISP traffic shaping through two foundational networking mechanisms:
+</p>
+
+<ul>
+  <li><strong>Encrypted Transport Tunnel:</strong> Because all packets leave your smartphone or PC wrapped inside WireGuard UDP datagrams destined for Cloudflare Anycast IP addresses, your ISP's DPI hardware cannot read the SNI header or see what service you are communicating with. All traffic looks identical: an encrypted high-speed stream to Cloudflare.</li>
+  <li><strong>Cloudflare Argo Smart Routing &amp; TCP BBR:</strong> Cloudflare implements Google's <em>BBR (Bottleneck Bandwidth and RTT)</em> congestion control algorithm across its global edge. BBR actively probes bandwidth without dropping packets, ensuring your downloads sustain maximum pipeline throughput even over lossy Wi-Fi connections.</li>
+</ul>
+
+<hr style="border: none; border-top: 1px solid var(--border); margin: 2.5rem 0;">
+
+<h2>5. Setting Up Cloudflare Zero Trust (Free Custom Ad Blocking)</h2>
+
+<p>
+  While the standard 1.1.1.1 app provides malware filtering, you can take your setup to an elite level by connecting your WARP client to a free <strong>Cloudflare Zero Trust</strong> organization. Cloudflare allows up to <strong>50 free seats</strong> on Zero Trust without entering payment information:
+</p>
+
+<ol>
+  <li>Navigate to <code>one.dash.cloudflare.com</code> and create a free Zero Trust team name (e.g., <code>tyagi-home-network</code>).</li>
+  <li>Under <strong>Settings</strong> &rarr; <strong>WARP Client</strong>, enable device enrollment and set an authentication rule using your personal email address.</li>
+  <li>Under <strong>Gateway</strong> &rarr; <strong>DNS Policies</strong>, create custom firewall rules:
+    <ul>
+      <li>Rule 1: <em>Block Advertisements</em> (Filter: Traffic &rarr; Categories &rarr; Select "Advertising &amp; Analytics" &rarr; Action: Block).</li>
+      <li>Rule 2: <em>Block Cryptominers</em> (Filter: Security Categories &rarr; Cryptomining &rarr; Action: Block).</li>
+    </ul>
+  </li>
+  <li>In your mobile 1.1.1.1 app, navigate to <strong>Settings</strong> &rarr; <strong>Account</strong> &rarr; <strong>Login with Cloudflare Zero Trust</strong>. Enter your team name and verify your email PIN.</li>
+</ol>
+
+<p>
+  Once connected, your smartphone routes through your private Cloudflare Gateway. Advertisements, tracking beacons, and invasive spyware domains are silently dropped at the edge across every single mobile app you open—with zero battery penalty.
+</p>
+
+<hr style="border: none; border-top: 1px solid var(--border); margin: 2.5rem 0;">
+
+<h2>6. Feature Comparison: Cloudflare WARP vs Commercial VPNs</h2>
+
+<p>
+  How does Cloudflare WARP compare against expensive commercial VPN services like NordVPN or ExpressVPN?
+</p>
+
+<div style="overflow-x: auto; margin: 2rem 0;">
+  <table style="width: 100%; border-collapse: collapse; font-size: 0.95rem; text-align: left;">
+    <thead>
+      <tr style="background: var(--bg-surface); border-bottom: 2px solid var(--border);">
+        <th style="padding: 0.85rem 1rem; color: var(--text-main);">Feature</th>
+        <th style="padding: 0.85rem 1rem; color: #f97316;">Cloudflare WARP</th>
+        <th style="padding: 0.85rem 1rem; color: var(--text-muted);">Commercial VPNs (Nord / Express)</th>
+        <th style="padding: 0.85rem 1rem; color: var(--text-muted);">Free VPNs (Play Store)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr style="border-bottom: 1px solid var(--border);">
+        <td style="padding: 0.85rem 1rem; font-weight: 700;">Monthly Cost</td>
+        <td style="padding: 0.85rem 1rem; color: #10b981; font-weight: 700;">100% Free Forever</td>
+        <td style="padding: 0.85rem 1rem; color: #ef4444;">₹800 to ₹1,400 / month</td>
+        <td style="padding: 0.85rem 1rem; color: #f59e0b;">Free (Ad-supported)</td>
+      </tr>
+      <tr style="border-bottom: 1px solid var(--border);">
+        <td style="padding: 0.85rem 1rem; font-weight: 700;">Browsing Speed Impact</td>
+        <td style="padding: 0.85rem 1rem; color: #10b981; font-weight: 700;">Up to 28% Faster (Anycast)</td>
+        <td style="padding: 0.85rem 1rem; color: #ef4444;">20% - 40% Speed Drop</td>
+        <td style="padding: 0.85rem 1rem; color: #ef4444;">Severe throttling (Under 2 Mbps)</td>
+      </tr>
+      <tr style="border-bottom: 1px solid var(--border);">
+        <td style="padding: 0.85rem 1rem; font-weight: 700;">Smartphone Battery Impact</td>
+        <td style="padding: 0.85rem 1rem; color: #10b981; font-weight: 700;">Near Zero (WireGuard Rust)</td>
+        <td style="padding: 0.85rem 1rem; color: #ef4444;">Moderate to Heavy Drain</td>
+        <td style="padding: 0.85rem 1rem; color: #ef4444;">Extremely High (Background miners)</td>
+      </tr>
+      <tr style="border-bottom: 1px solid var(--border);">
+        <td style="padding: 0.85rem 1rem; font-weight: 700;">Data Privacy Policy</td>
+        <td style="padding: 0.85rem 1rem; color: #10b981; font-weight: 700;">Zero IP logging / audited</td>
+        <td style="padding: 0.85rem 1rem;">No-logs claimed</td>
+        <td style="padding: 0.85rem 1rem; color: #ef4444;">Sells browsing data to advertisers</td>
+      </tr>
+      <tr style="border-bottom: 1px solid var(--border);">
+        <td style="padding: 0.85rem 1rem; font-weight: 700;">Country Geo-Spoofing</td>
+        <td style="padding: 0.85rem 1rem; color: #f59e0b;">No (Connects to nearest city)</td>
+        <td style="padding: 0.85rem 1rem; color: #10b981;">Yes (Select 60+ countries)</td>
+        <td style="padding: 0.85rem 1rem;">Limited countries</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<p>
+  <strong>Understanding the Difference:</strong> If your sole goal is spoofing your location to watch geo-locked television in the UK, you need a traditional VPN. But if your goal is <strong>protecting your banking sessions, encrypting public Wi-Fi, bypassing ISP throttling, and speeding up daily browsing</strong>, Cloudflare WARP is vastly superior, dramatically lighter on battery, and completely free.
+</p>
+
+<hr style="border: none; border-top: 1px solid var(--border); margin: 2.5rem 0;">
+
+<h2>6. Frequently Asked Questions</h2>
+
+<div class="faq-item" style="margin-bottom: 1.5rem;">
+  <h3 style="font-size: 1.15rem; color: var(--text-main); margin-bottom: 0.4rem;">Q: Does Cloudflare sell my browsing history?</h3>
+  <p style="color: var(--text-muted); line-height: 1.6; margin: 0;">
+    No. Cloudflare's core business model is providing enterprise cybersecurity, DDoS protection, and CDN infrastructure to Fortune 500 companies. Their privacy pledge for 1.1.1.1 explicitly guarantees they will never sell user data, log IP addresses to disk, or inject advertising into your traffic.
+  </p>
+</div>
+
+<div class="faq-item" style="margin-bottom: 1.5rem;">
+  <h3 style="font-size: 1.15rem; color: var(--text-main); margin-bottom: 0.4rem;">Q: Will WARP interfere with UPI banking apps in India (GPay, PhonePe, Paytm)?</h3>
+  <p style="color: var(--text-muted); line-height: 1.6; margin: 0;">
+    No! Because WARP connects to the nearest local Cloudflare data center in your region (Delhi, Mumbai, etc.) rather than routing through foreign countries, NPCI and Indian banking servers recognize the traffic as originating locally. UPI transactions, net banking, and OTP verifications function flawlessly without triggering fraud locks.
+  </p>
+</div>
+
+<div class="faq-item" style="margin-bottom: 1.5rem;">
+  <h3 style="font-size: 1.15rem; color: var(--text-main); margin-bottom: 0.4rem;">Q: Can I use WARP on Linux servers or in WSL?</h3>
+  <p style="color: var(--text-muted); line-height: 1.6; margin: 0;">
+    Yes! Cloudflare publishes the <code>cloudflare-warp</code> package for Ubuntu, Debian, CentOS, and Arch. Simply install via apt (<code>sudo apt install cloudflare-warp</code>) and execute <code>warp-cli register</code> followed by <code>warp-cli connect</code> to route server traffic through WARP.
+  </p>
+</div>
+
+<div class="author-bio" style="background: var(--bg-surface); border: 1px solid var(--border); border-radius: var(--radius-md); padding: 1.5rem; margin-top: 3rem; display: flex; gap: 1.25rem; align-items: center;">
+  <div style="width: 56px; height: 56px; border-radius: 50%; background: linear-gradient(135deg, #f97316, #ef4444); color: white; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 1.3rem; flex-shrink: 0;">HT</div>
+  <div>
+    <h4 style="margin: 0 0 0.25rem 0; font-size: 1.05rem; color: var(--text-main);">Himanshu Tyagi</h4>
+    <p style="margin: 0; font-size: 0.9rem; color: var(--text-muted); line-height: 1.5;">
+      Independent software engineer and founder of TyagiHub, based in Ghaziabad, UP, India. Specializes in full-stack web applications, Android development, and privacy-first digital architecture.
+    </p>
+  </div>
+</div>
+
+      </div>
+
+      <div class="author-box">
+        <img src="/assets/images/logo.png" alt="Himanshu Tyagi" class="author-box-img">
+        <div>
+          <div class="author-box-name">Himanshu Tyagi</div>
+          <div class="author-box-role">Founder &amp; Software Developer &bull; Ghaziabad, India</div>
+          <div class="author-box-bio">
+            Himanshu is an independent software and Android developer based in Ghaziabad, Uttar Pradesh. He writes hands-on, verified guides helping creators, developers, and small businesses configure digital tools, cloud software, and productivity workflows.
+          </div>
+        </div>
+      </div>
+    </article>
+  </main>
+
+  <!-- Modern Multi-Column Footer -->
+  <footer class="site-footer">
+    <div class="footer-main-grid">
+      <!-- Column 1: Brand & Editorial Mission -->
+      <div>
+        <div class="brand" style="margin-bottom: 1rem;">
+          <img src="/assets/images/logo.png" alt="TyagiHub Logo" class="brand-logo" width="36" height="36">
+          <span class="brand-text">Tyagi<span>Hub</span></span>
+        </div>
+        <p style="color: var(--text-muted); font-size: 0.92rem; line-height: 1.7; margin-bottom: 1rem;">
+          TyagiHub is an independent digital publication founded by Himanshu Tyagi. We publish hands-on, human-verified tutorials on cloud business tools, free business email configurations, GST invoicing portals, and no-code productivity workflows.
+        </p>
+        <p style="color: var(--text-light); font-size: 0.85rem;">
+          100% human-tested tutorials. Zero fluff. Zero paywalls.
+        </p>
+        <p style="color: var(--text-light); font-size: 0.83rem; margin-top: 0.5rem;">
+          📍 Ghaziabad, Uttar Pradesh, India &bull; <a href="mailto:contact@tyagihub.in" style="color: var(--primary);">contact@tyagihub.in</a>
+        </p>
+      </div>
+
+      <!-- Column 2: Topic Clusters -->
+      <div>
+        <h4 class="footer-col-title">Topic Clusters</h4>
+        <ul class="footer-links-list">
+          <li class="footer-link-item"><a href="/digital-tools/">🛠️ Digital Tools</a></li>
+          <li class="footer-link-item"><a href="/productivity/">⚡ Productivity Guides</a></li>
+          <li class="footer-link-item"><a href="/digital-tools/whatsapp-business-automation-client-guide/">💬 WhatsApp Business Automation</a></li>
+          <li class="footer-link-item"><a href="/productivity/google-calendar-time-blocking-solopreneur-guide/">📅 Google Calendar Scheduling</a></li>
+          <li class="footer-link-item"><a href="/digital-tools/github-pages-custom-domain-free-hosting-guide/">🌐 Free GitHub Pages Hosting</a></li>
+          <li class="footer-link-item"><a href="/productivity/obsidian-beginner-offline-notes-guide/">🧠 Obsidian Offline Notes Hub</a></li>
+        </ul>
+      </div>
+
+      <!-- Column 3: Trust & Legal -->
+      <div>
+        <h4 class="footer-col-title">Trust &amp; Legal</h4>
+        <ul class="footer-links-list">
+          <li class="footer-link-item"><a href="/about/">ℹ️ About Us &amp; Editorial Policy</a></li>
+          <li class="footer-link-item"><a href="/contact/">✉️ Contact Us &amp; Support</a></li>
+          <li class="footer-link-item"><a href="/privacy-policy/">🔒 Privacy Policy</a></li>
+          <li class="footer-link-item"><a href="/terms/">📜 Terms of Service</a></li>
+          <li class="footer-link-item"><a href="/disclaimer/">⚠️ Full Disclaimer</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Footer Bottom Bar -->
+    <div class="footer-bottom-bar">
+      <div>&copy; 2026 TyagiHub &bull; Founded by Himanshu Tyagi (Ghaziabad, UP, India). All rights reserved.</div>
+      <div style="display: flex; gap: 1.25rem;">
+        <a href="/privacy-policy/" style="color: var(--text-light); font-size: 0.85rem;">Privacy</a>
+        <a href="/terms/" style="color: var(--text-light); font-size: 0.85rem;">Terms</a>
+        <a href="/contact/" style="color: var(--text-light); font-size: 0.85rem;">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating Back to Top Button -->
+  <button class="back-to-top-btn" id="back-to-top" aria-label="Back to Top" type="button">↑</button>
+
+  <!-- Copy Toast Notification -->
+  <div class="copy-toast" id="copy-toast">Link copied to clipboard!</div>
+
+  <script src="/assets/js/main.js" defer></script>
+</body>
+</html>

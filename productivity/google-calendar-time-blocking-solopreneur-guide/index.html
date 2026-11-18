@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Google Calendar Time Blocking: How I Built a Minimal Daily Scheduling System to Stop Wasting Hours (2026 Guide) | TyagiHub</title>
+  <meta name="description" content="A complete, step-by-step walkthrough showing how I use Google Calendar time blocking to eliminate decision fatigue, protect deep work hours, and run my business with zero burnout.">
+  <link rel="canonical" href="https://tyagihub.in/productivity/google-calendar-time-blocking-solopreneur-guide/">
+  <meta name="robots" content="index, follow">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Google Calendar Time Blocking: How I Built a Minimal Daily Scheduling System to Stop Wasting Hours (2026 Guide) | TyagiHub">
+  <meta property="og:description" content="A complete, step-by-step walkthrough showing how I use Google Calendar time blocking to eliminate decision fatigue, protect deep work hours, and run my business with zero burnout.">
+  <meta property="og:url" content="https://tyagihub.in/productivity/google-calendar-time-blocking-solopreneur-guide/">
+  <meta property="og:site_name" content="TyagiHub">
+  <meta property="og:image" content="https://tyagihub.in/assets/images/logo.png">
+
+  <!-- Schema.org Article Structured Data (AdSense & Google Search E-E-A-T) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "Google Calendar Time Blocking: How I Built a Minimal Daily Scheduling System to Stop Wasting Hours (2026 Guide)",
+    "description": "A complete, step-by-step walkthrough showing how I use Google Calendar time blocking to eliminate decision fatigue, protect deep work hours, and run my business with zero burnout.",
+    "url": "https://tyagihub.in/productivity/google-calendar-time-blocking-solopreneur-guide/",
+    "datePublished": "2026-11-18",
+    "dateModified": "2026-11-18",
+    "author": {
+      "@type": "Person",
+      "name": "Himanshu Tyagi",
+      "url": "https://tyagihub.in/about/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "TyagiHub",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://tyagihub.in/assets/images/logo.png"
+      }
+    }
+  }
+  </script>
+
+  <!-- Icons -->
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/apple-touch-icon.png">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="/assets/css/main.css">
+
+  <!-- Google AdSense -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7067722696020503" crossorigin="anonymous"></script>
+
+  <script>
+    (function() {
+      const savedTheme = localStorage.getItem('th_theme');
+      if (savedTheme) {
+        document.documentElement.setAttribute('data-theme', savedTheme);
+      } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.documentElement.setAttribute('data-theme', 'dark');
+      }
+    })();
+  </script>
+</head>
+<body>
+  <!-- Reading Progress Bar -->
+  <div class="reading-progress-bar" id="progress-bar"></div>
+
+  <!-- Header Navbar -->
+  <header class="site-header">
+    <div class="header-container">
+      <a href="/" class="brand">
+        <img src="/assets/images/logo.png" alt="TyagiHub Logo" class="brand-logo" width="36" height="36">
+        <span class="brand-text">Tyagi<span>Hub</span></span>
+      </a>
+
+      <nav class="desktop-nav" aria-label="Desktop Navigation">
+        <ul class="nav-links">
+          <li><a href="/" class="nav-link">Home</a></li>
+          <li><a href="/digital-tools/" class="nav-link">Digital Tools</a></li>
+          <li><a href="/productivity/" class="nav-link">Productivity</a></li>
+          <li><a href="/about/" class="nav-link">About</a></li>
+          <li><a href="/contact/" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <button class="search-trigger-btn" type="button" aria-label="Search Guides">
+          <span>🔍</span>
+          <span>Search guides...</span>
+          <kbd>/</kbd>
+        </button>
+
+        <button class="theme-toggle-btn" type="button" aria-label="Toggle Theme">
+          <span class="theme-icon">🌙</span>
+        </button>
+
+        <button class="hamburger-btn" id="hamburger-btn" type="button" aria-label="Toggle Mobile Menu" aria-expanded="false">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Backdrop Overlay -->
+  <div class="mobile-drawer-overlay" id="drawer-overlay" aria-hidden="true"></div>
+
+  <!-- Mobile Drawer Menu -->
+  <aside class="mobile-drawer" id="mobile-drawer" aria-label="Mobile Navigation">
+    <div class="drawer-header">
+      <div class="brand">
+        <img src="/assets/images/logo.png" alt="TyagiHub Logo" class="brand-logo" width="32" height="32">
+        <span class="brand-text">Tyagi<span>Hub</span></span>
+      </div>
+      <button class="drawer-close-btn" id="drawer-close-btn" type="button" aria-label="Close Menu">✕</button>
+    </div>
+
+    <div class="mobile-search-box">
+      <span class="mobile-search-icon">🔍</span>
+      <input type="text" class="mobile-search-input" id="mobile-search-input" placeholder="Search guides & topics...">
+    </div>
+
+    <ul class="drawer-nav-list">
+      <li class="drawer-nav-item"><a href="/">🏠 Home</a></li>
+      <li class="drawer-nav-item"><a href="/digital-tools/">🛠️ Digital Tools</a></li>
+      <li class="drawer-nav-item"><a href="/productivity/">⚡ Productivity</a></li>
+      <li class="drawer-nav-item"><a href="/about/">ℹ️ About Us</a></li>
+      <li class="drawer-nav-item"><a href="/contact/">✉️ Contact Us</a></li>
+      <li class="drawer-nav-item"><a href="/privacy-policy/">🔒 Privacy Policy</a></li>
+      <li class="drawer-nav-item"><a href="/terms/">📜 Terms of Service</a></li>
+      <li class="drawer-nav-item"><a href="/disclaimer/">⚠️ Disclaimer</a></li>
+    </ul>
+
+    <div class="drawer-footer">
+      <p>&copy; 2026 TyagiHub. All rights reserved.</p>
+    </div>
+  </aside>
+
+  <!-- Live Instant Search Modal -->
+  <div class="search-modal" id="search-modal" role="dialog" aria-modal="true" aria-label="Search Guides">
+    <div class="search-dialog">
+      <div class="search-bar-wrap">
+        <span>🔍</span>
+        <input type="search" class="search-main-input" id="search-main-input" placeholder="Search Zoho, Airtable, Invoices..." autocomplete="off">
+        <button class="search-close-btn" id="search-close-btn" type="button">ESC</button>
+      </div>
+      <ul class="search-results-list" id="search-results-list">
+        <li class="search-empty-state">Type keywords to search verified tech guides...</li>
+      </ul>
+    </div>
+  </div>
+
+  <main>
+    <article class="article-container">
+      <nav class="article-breadcrumb" aria-label="Breadcrumb">
+        <a href="/">Home</a> &rsaquo; <a href="/productivity/">Productivity</a> &rsaquo; <span>Current Guide</span>
+      </nav>
+
+      <header class="article-header">
+        <h1 class="article-title">Google Calendar Time Blocking: How I Built a Minimal Daily Scheduling System to Stop Wasting Hours (2026 Guide)</h1>
+        <div class="article-meta-bar">
+          <div class="author-chip">
+            <img src="/assets/images/logo.png" alt="Himanshu Tyagi">
+            <span>By Himanshu Tyagi</span>
+          </div>
+          <span>&bull;</span>
+          <time datetime="2026-11-18">November 18, 2026</time>
+          <span>&bull;</span>
+          <span>Category: Productivity</span>
+        </div>
+      </header>
+
+      <!-- Social Share Strip -->
+      <div class="share-strip">
+        <span class="share-strip-label">Share this guide:</span>
+        <button class="share-btn" id="copy-link-btn" type="button">🔗 Copy Link</button>
+        <a class="share-btn" id="share-twitter" href="#" target="_blank" rel="noopener">🐦 X (Twitter)</a>
+        <a class="share-btn" id="share-linkedin" href="#" target="_blank" rel="noopener">💼 LinkedIn</a>
+        <a class="share-btn" id="share-whatsapp" href="#" target="_blank" rel="noopener">💬 WhatsApp</a>
+      </div>
+
+      <div class="article-content">
+        
+<!-- Featured Cover Banner -->
+<figure style="margin: 0 0 2rem 0; border-radius: var(--radius-md); overflow: hidden; border: 1px solid var(--border); box-shadow: var(--shadow-sm);">
+  <img src="/assets/images/google-calendar-timeblocking-banner.jpg" alt="Google Calendar Time Blocking Daily Scheduling System Banner" style="width: 100%; height: auto; display: block;" width="1200" height="630">
+</figure>
+
+<p>
+  For the first two years of working as an independent developer and digital consultant, my daily productivity routine looked like a comedy of errors. 
+</p>
+
+<p>
+  Every morning at 9:00 AM, I would sit at my desk, open a fresh note, and write down an ambitious checklist of twelve tasks: <em>Write 2,000 words for a client guide, fix three backend API bugs, reply to twenty unread emails, design four social banners, file GST tax returns, and research a new JavaScript framework.</em>
+</p>
+
+<p>
+  By 6:00 PM, I had crossed off exactly two minor items. The remaining ten tasks were staring back at me like a wall of guilt. Why? Because a standard to-do list suffers from one fatal architectural flaw: <strong>it does not account for the finite dimension of time</strong>.
+</p>
+
+<p>
+  A to-do list tells you <em>what</em> you want to do, but it completely ignores <em>when</em> you are going to do it, how long each task will actually take, and whether you physically have enough hours in the day between client calls and lunch.
+</p>
+
+<p>
+  The breakthrough came when I abandoned endless task checklists and adopted <strong>Google Calendar Time Blocking</strong>. Instead of maintaining a floating wish list, I began assigning every single hour of my working day a dedicated home directly on my visual calendar grid.
+</p>
+
+<p>
+  In this exhaustive, verified walkthrough, I will show you the exact minimalist scheduling architecture I use every day. It runs 100% on the free version of Google Calendar, requires zero paid scheduling plugins, and takes less than fifteen minutes every Sunday evening to plan a stress-free, hyper-productive week.
+</p>
+
+<div class="callout success">
+  <div class="callout-title">🧠 Parkinson's Law &amp; Calendar Psychology</div>
+  <p style="margin: 0;">
+    Parkinson's Law states that <em>"work expands to fill the time available for its completion."</em> If you give yourself all day to draft an invoice or write an article, it will take all day. But when you schedule a visual, hard block from 10:00 AM to 11:30 AM on your calendar, your brain naturally locks into focused execution to beat the clock.
+  </p>
+</div>
+
+---
+
+<h2>1. The 3-Tier Time-Blocking Architecture</h2>
+
+<p>
+  The most common reason people abandon calendar blocking within a week is that they turn their schedule into an over-packed, military prison camp. They schedule back-to-back 30-minute blocks with zero breathing room, and the moment a client call runs five minutes late, the entire day's schedule collapses like a house of cards.
+</p>
+
+<p>
+  To build a schedule that survives real-world chaos, I divide every working day into three distinct, color-coded functional tiers:
+</p>
+
+<figure style="margin: 2.5rem 0; border-radius: var(--radius-md); overflow: hidden; border: 1px solid var(--border); box-shadow: var(--shadow-sm);">
+  <img src="/assets/images/google-calendar-timeblock-flowchart.svg" alt="Google Calendar 3-Tier Time Blocking System Flowchart" style="width: 100%; height: auto; display: block;" width="900" height="480">
+  <figcaption style="padding: 0.75rem 1rem; background: var(--bg-surface); color: var(--text-muted); font-size: 0.88rem; text-align: center; border-top: 1px solid var(--border);">
+    Figure 1: The 3-Tier Time-Blocking Architecture: Deep Morning Work, Afternoon Admin/Calls, and Evening Buffer Time.
+  </figcaption>
+</figure>
+
+<p>
+  Notice the protective boundaries of this design:
+</p>
+<ol>
+  <li><strong>Tier 1 — Morning Deep Focus (9:00 AM – 12:30 PM):</strong> 3.5 uninterrupted hours reserved exclusively for your highest cognitive output (coding, writing, client deliverable creation). Zero meetings or social notifications allowed.</li>
+  <li><strong>Tier 2 — Afternoon Admin &amp; Comms (1:30 PM – 4:30 PM):</strong> Grouped client calls, email inbox zero processing, GST invoicing, and WhatsApp Business replies.</li>
+  <li><strong>Tier 3 — The Daily Buffer &amp; Shutdown (4:30 PM – 6:00 PM):</strong> A dedicated 90-minute safety cushion that absorbs unexpected delays, client emergencies, or overflow work so you always close your laptop on time.</li>
+</ol>
+
+---
+
+<h2>2. Step 1: Setting Up the 3 Dedicated Google Calendars</h2>
+
+<p>
+  Do not dump all your schedule blocks into a single default calendar. Instead, create three separate sub-calendars under your main Google account. This allows you to toggle visibility on and off, assign distinct colors, and instantly audit how you are spending your life.
+</p>
+
+<div class="step-box">
+  <div class="step-header">
+    <span class="step-num">1</span>
+    <span>Open <strong>calendar.google.com</strong> on your computer.</span>
+  </div>
+</div>
+
+<div class="step-box">
+  <div class="step-header">
+    <span class="step-num">2</span>
+    <span>In the left sidebar, scroll down to <strong>Other calendars</strong>, click the <strong>+</strong> icon, and select <strong>Create new calendar</strong>.</span>
+  </div>
+</div>
+
+<div class="step-box">
+  <div class="step-header">
+    <span class="step-num">3</span>
+    <span>Create the following three specific sub-calendars and assign their visual colors:</span>
+  </div>
+  <p style="margin: 0.5rem 0 0 2.25rem; font-size: 0.95rem; color: var(--text-muted);">
+    &bull; <strong>1. Deep Work (Peacock Blue / #0284c7):</strong> Reserved for high-value deliverables.<br>
+    &bull; <strong>2. Comms &amp; Admin (Amber / #f59e0b):</strong> Calls, emails, billing, and follow-ups.<br>
+    &bull; <strong>3. Personal &amp; Buffer (Sage Green / #10b981):</strong> Workouts, meals, buffer time, and daily shutdown.
+  </p>
+</div>
+
+---
+
+<h2>3. Step 2: Protecting Your Morning "Deep Work" Monolith</h2>
+
+<p>
+  Your willpower and cognitive energy are highest during the first three hours after waking up. If you spend those precious hours checking emails, scrolling social feeds, or answering WhatsApp inquiries, you fry your focus on trivial low-value tasks.
+</p>
+
+<p>
+  Here is the golden rule: <strong>Never open your email inbox before 12:30 PM.</strong>
+</p>
+
+<h3>How to Schedule Your Morning Monolith:</h3>
+<ol>
+  <li>On Google Calendar, click on Monday at 09:00 AM and drag down to 12:30 PM.</li>
+  <li>Title the event: <code>🎯 Deep Work: [Single Priority Task]</code>.</li>
+  <li>Under the calendar dropdown, assign it to your <strong>Deep Work (Peacock Blue)</strong> calendar.</li>
+  <li>Under repeat, choose <strong>Every weekday (Monday to Friday)</strong>.</li>
+  <li>Set notifications to: <em>None</em> (you already know what you are doing).</li>
+</ol>
+
+<div class="callout warning">
+  <div class="callout-title">⚠️ The "Single Priority" Rule</div>
+  <p style="margin: 0;">
+    Do not write <em>"Do various tasks"</em> inside your morning block. Every Sunday night, name the exact deliverable (e.g. <em>"Code User Auth Module"</em> or <em>"Draft 2,000 words for Zoho Guide"</em>). When 9:00 AM arrives, you open that exact file and begin without hesitation.
+  </p>
+</div>
+
+---
+
+<h2>4. Step 3: Batching Afternoon Calls &amp; Administrative Tasks</h2>
+
+<p>
+  Context switching is the silent assassin of productivity. A study by the University of California found that it takes an average of <strong>23 minutes and 15 seconds</strong> to regain deep focus after a single interruption.
+</p>
+
+<p>
+  If you have one client call at 10:30 AM, another at 1:00 PM, and a third at 4:15 PM, your entire working day is fragmented. You spend all day waiting for the next call rather than producing output.
+</p>
+
+<h3>The Solution: Strict Batching Windows</h3>
+<ul>
+  <li>Block out <strong>01:30 PM to 04:30 PM</strong> daily as your <strong>Comms &amp; Admin (Amber)</strong> window.</li>
+  <li>If you use a free booking tool like Calendly or Zoho Bookings, configure your availability settings so clients can <strong>only book slots between 2:00 PM and 4:30 PM</strong>.</li>
+  <li>During this window, you process emails to Inbox Zero, issue invoices on Zoho Invoice, and reply to client inquiries in WhatsApp Business.</li>
+</ul>
+
+---
+
+<h2>5. Step 4: The 90-Minute "Slack Buffer" (Why Most Schedules Fail)</h2>
+
+<p>
+  In the real world, things go wrong:
+</p>
+<ul>
+  <li>A client sends urgent revision feedback.</li>
+  <li>A critical software bug requires unexpected debugging.</li>
+  <li>Your internet connection drops for 45 minutes.</li>
+</ul>
+
+<p>
+  If your calendar is booked wall-to-wall from 9:00 AM to 6:00 PM with zero empty slots, any minor glitch forces you to work until 9:00 PM or weekend nights, breeding chronic resentment and burnout.
+</p>
+
+<p>
+  To bulletproof your week, schedule a mandatory <strong>Buffer Block from 04:30 PM to 06:00 PM every weekday</strong>:
+</p>
+
+<ol>
+  <li>Title: <code>🛡️ Flex Buffer &amp; Daily Shutdown</code>.</li>
+  <li>Color: <strong>Sage Green</strong>.</li>
+  <li>If an emergency occurred during the day, this buffer block absorbs it without touching your evening personal life.</li>
+  <li>If everything went smoothly, you use this time to review tomorrow's schedule, clear your physical desk, and shut down your computer with complete satisfaction.</li>
+</ol>
+
+---
+
+<h2>6. Step 5: Mobile Phone Synchronization &amp; Home Screen Widgets</h2>
+
+<p>
+  A calendar system is useless if you have to sit in front of a laptop just to remember your schedule. 
+</p>
+
+<div class="step-box">
+  <div class="step-header">
+    <span class="step-num">1</span>
+    <span>Install the official <strong>Google Calendar app</strong> on your Android phone or iPhone.</span>
+  </div>
+</div>
+
+<div class="step-box">
+  <div class="step-header">
+    <span class="step-num">2</span>
+    <span>Add the native <strong>Google Calendar Schedule Widget (2x3 or 4x4)</strong> directly onto your smartphone's primary home screen.</span>
+  </div>
+  <p style="margin: 0.5rem 0 0 2.25rem; font-size: 0.95rem; color: var(--text-muted);">
+    Every time you unlock your phone, you see your color-coded blocks (Peacock Blue, Amber, Sage Green) at a single glance. You never have to wonder what to focus on next.
+  </p>
+</div>
+
+---
+
+<h2>7. Real-World Troubleshooting &amp; FAQ</h2>
+
+<div class="faq-box">
+  <div class="faq-q">1. What should I do when an unexpected client crisis blows up my morning deep work block?</div>
+  <div class="faq-a">
+    Do not delete the block. Simply click and drag your deep work block down into your <strong>4:30 PM Buffer slot</strong>. Treat your calendar blocks like physical moving boxes. If something moves in, something else must move out. This keeps your daily hours strictly capped.
+  </div>
+</div>
+
+<div class="faq-box">
+  <div class="faq-q">2. Can I share specific calendar availability with clients without revealing my private tasks?</div>
+  <div class="faq-a">
+    Yes! Google Calendar now has a built-in <strong>Appointment Schedule</strong> feature on personal Google accounts. It generates a clean booking link where clients only see your available free slots (e.g. 2:00 PM – 4:30 PM) while keeping all your event titles and personal blocks completely private.
+  </div>
+</div>
+
+<div class="faq-box">
+  <div class="faq-q">3. How does this compare to to-do apps like Todoist, TickTick, or Things 3?</div>
+  <div class="faq-a">
+    To-do apps are great capture buckets, but terrible execution tools. You can still use a to-do list to store raw ideas, but before your day begins, drag the top two items from your list and give them a physical time block on Google Calendar. If it doesn't have an hour on the calendar, it will not happen.
+  </div>
+</div>
+
+---
+
+<h2>Conclusion: Own Your Hours or Someone Else Will</h2>
+
+<p>
+  If you don't deliberately decide how your calendar will be spent, other people will gladly fill it for you with unnecessary meetings, endless email pings, and reactive firefighting.
+</p>
+
+<p>
+  Time blocking is not about restricting your freedom; it is about guaranteeing that the things that truly matter — your high-leverage client projects, your business growth, and your personal evenings — are fiercely protected. Take fifteen minutes this Sunday, create your three sub-calendars, block out your morning deep work monolith, and experience the quiet confidence of a workday that truly belongs to you.
+</p>
+
+      </div>
+
+      <div class="author-box">
+        <img src="/assets/images/logo.png" alt="Himanshu Tyagi" class="author-box-img">
+        <div>
+          <div class="author-box-name">Himanshu Tyagi</div>
+          <div class="author-box-role">Founder &amp; Software Developer &bull; Ghaziabad, India</div>
+          <div class="author-box-bio">
+            Himanshu is an independent software and Android developer based in Ghaziabad, Uttar Pradesh. He writes hands-on, verified guides helping creators, developers, and small businesses configure digital tools, cloud software, and productivity workflows.
+          </div>
+        </div>
+      </div>
+    </article>
+  </main>
+
+  <!-- Modern Multi-Column Footer -->
+  <footer class="site-footer">
+    <div class="footer-main-grid">
+      <!-- Column 1: Brand & Editorial Mission -->
+      <div>
+        <div class="brand" style="margin-bottom: 1rem;">
+          <img src="/assets/images/logo.png" alt="TyagiHub Logo" class="brand-logo" width="36" height="36">
+          <span class="brand-text">Tyagi<span>Hub</span></span>
+        </div>
+        <p style="color: var(--text-muted); font-size: 0.92rem; line-height: 1.7; margin-bottom: 1rem;">
+          TyagiHub is an independent digital publication founded by Himanshu Tyagi. We publish hands-on, human-verified tutorials on cloud business tools, free business email configurations, GST invoicing portals, and no-code productivity workflows.
+        </p>
+        <p style="color: var(--text-light); font-size: 0.85rem;">
+          100% human-tested tutorials. Zero fluff. Zero paywalls.
+        </p>
+        <p style="color: var(--text-light); font-size: 0.83rem; margin-top: 0.5rem;">
+          📍 Ghaziabad, Uttar Pradesh, India &bull; <a href="mailto:contact@tyagihub.in" style="color: var(--primary);">contact@tyagihub.in</a>
+        </p>
+      </div>
+
+      <!-- Column 2: Topic Clusters -->
+      <div>
+        <h4 class="footer-col-title">Topic Clusters</h4>
+        <ul class="footer-links-list">
+          <li class="footer-link-item"><a href="/digital-tools/">🛠️ Digital Tools</a></li>
+          <li class="footer-link-item"><a href="/productivity/">⚡ Productivity Guides</a></li>
+          <li class="footer-link-item"><a href="/digital-tools/whatsapp-business-automation-client-guide/">💬 WhatsApp Business Automation</a></li>
+          <li class="footer-link-item"><a href="/productivity/google-calendar-time-blocking-solopreneur-guide/">📅 Google Calendar Scheduling</a></li>
+          <li class="footer-link-item"><a href="/digital-tools/github-pages-custom-domain-free-hosting-guide/">🌐 Free GitHub Pages Hosting</a></li>
+          <li class="footer-link-item"><a href="/productivity/obsidian-beginner-offline-notes-guide/">🧠 Obsidian Offline Notes Hub</a></li>
+        </ul>
+      </div>
+
+      <!-- Column 3: Trust & Legal -->
+      <div>
+        <h4 class="footer-col-title">Trust &amp; Legal</h4>
+        <ul class="footer-links-list">
+          <li class="footer-link-item"><a href="/about/">ℹ️ About Us &amp; Editorial Policy</a></li>
+          <li class="footer-link-item"><a href="/contact/">✉️ Contact Us &amp; Support</a></li>
+          <li class="footer-link-item"><a href="/privacy-policy/">🔒 Privacy Policy</a></li>
+          <li class="footer-link-item"><a href="/terms/">📜 Terms of Service</a></li>
+          <li class="footer-link-item"><a href="/disclaimer/">⚠️ Full Disclaimer</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Footer Bottom Bar -->
+    <div class="footer-bottom-bar">
+      <div>&copy; 2026 TyagiHub &bull; Founded by Himanshu Tyagi (Ghaziabad, UP, India). All rights reserved.</div>
+      <div style="display: flex; gap: 1.25rem;">
+        <a href="/privacy-policy/" style="color: var(--text-light); font-size: 0.85rem;">Privacy</a>
+        <a href="/terms/" style="color: var(--text-light); font-size: 0.85rem;">Terms</a>
+        <a href="/contact/" style="color: var(--text-light); font-size: 0.85rem;">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating Back to Top Button -->
+  <button class="back-to-top-btn" id="back-to-top" aria-label="Back to Top" type="button">↑</button>
+
+  <!-- Copy Toast Notification -->
+  <div class="copy-toast" id="copy-toast">Link copied to clipboard!</div>
+
+  <script src="/assets/js/main.js" defer></script>
+</body>
+</html>

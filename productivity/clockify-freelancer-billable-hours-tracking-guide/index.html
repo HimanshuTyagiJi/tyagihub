@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clockify for Freelancers: How to Track Billable Hours & Generate Client Timesheet Audits for Free (2026 Guide) | TyagiHub</title>
+  <meta name="description" content="Stop losing unbilled hours and ending up in client payment arguments. Exhaustive guide to setting up 100% free time tracking, billable rate cards, 15-minute rounding rules, and 1-click audit PDFs on Clockify.">
+  <link rel="canonical" href="https://tyagihub.in/productivity/clockify-freelancer-billable-hours-tracking-guide/">
+  <meta name="robots" content="index, follow">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Clockify for Freelancers: How to Track Billable Hours & Generate Client Timesheet Audits for Free (2026 Guide) | TyagiHub">
+  <meta property="og:description" content="Stop losing unbilled hours and ending up in client payment arguments. Exhaustive guide to setting up 100% free time tracking, billable rate cards, 15-minute rounding rules, and 1-click audit PDFs on Clockify.">
+  <meta property="og:url" content="https://tyagihub.in/productivity/clockify-freelancer-billable-hours-tracking-guide/">
+  <meta property="og:site_name" content="TyagiHub">
+  <meta property="og:image" content="https://tyagihub.in/assets/images/logo.png">
+
+  <!-- Schema.org Article Structured Data (AdSense & Google Search E-E-A-T) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "Clockify for Freelancers: How to Track Billable Hours & Generate Client Timesheet Audits for Free (2026 Guide)",
+    "description": "Stop losing unbilled hours and ending up in client payment arguments. Exhaustive guide to setting up 100% free time tracking, billable rate cards, 15-minute rounding rules, and 1-click audit PDFs on Clockify.",
+    "url": "https://tyagihub.in/productivity/clockify-freelancer-billable-hours-tracking-guide/",
+    "datePublished": "2026-11-04",
+    "dateModified": "2026-11-04",
+    "author": {
+      "@type": "Person",
+      "name": "Himanshu Tyagi",
+      "url": "https://tyagihub.in/about/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "TyagiHub",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://tyagihub.in/assets/images/logo.png"
+      }
+    }
+  }
+  </script>
+
+  <!-- Icons -->
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/apple-touch-icon.png">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="/assets/css/main.css">
+
+  <!-- Google AdSense -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7067722696020503" crossorigin="anonymous"></script>
+
+  <script>
+    (function() {
+      const savedTheme = localStorage.getItem('th_theme');
+      if (savedTheme) {
+        document.documentElement.setAttribute('data-theme', savedTheme);
+      } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.documentElement.setAttribute('data-theme', 'dark');
+      }
+    })();
+  </script>
+</head>
+<body>
+  <!-- Reading Progress Bar -->
+  <div class="reading-progress-bar" id="progress-bar"></div>
+
+  <!-- Header Navbar -->
+  <header class="site-header">
+    <div class="header-container">
+      <a href="/" class="brand">
+        <img src="/assets/images/logo.png" alt="TyagiHub Logo" class="brand-logo" width="36" height="36">
+        <span class="brand-text">Tyagi<span>Hub</span></span>
+      </a>
+
+      <nav class="desktop-nav" aria-label="Desktop Navigation">
+        <ul class="nav-links">
+          <li><a href="/" class="nav-link">Home</a></li>
+          <li><a href="/digital-tools/" class="nav-link">Digital Tools</a></li>
+          <li><a href="/productivity/" class="nav-link">Productivity</a></li>
+          <li><a href="/about/" class="nav-link">About</a></li>
+          <li><a href="/contact/" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <button class="search-trigger-btn" type="button" aria-label="Search Guides">
+          <span>🔍</span>
+          <span>Search guides...</span>
+          <kbd>/</kbd>
+        </button>
+
+        <button class="theme-toggle-btn" type="button" aria-label="Toggle Theme">
+          <span class="theme-icon">🌙</span>
+        </button>
+
+        <button class="hamburger-btn" id="hamburger-btn" type="button" aria-label="Toggle Mobile Menu" aria-expanded="false">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Backdrop Overlay -->
+  <div class="mobile-drawer-overlay" id="drawer-overlay" aria-hidden="true"></div>
+
+  <!-- Mobile Drawer Menu -->
+  <aside class="mobile-drawer" id="mobile-drawer" aria-label="Mobile Navigation">
+    <div class="drawer-header">
+      <div class="brand">
+        <img src="/assets/images/logo.png" alt="TyagiHub Logo" class="brand-logo" width="32" height="32">
+        <span class="brand-text">Tyagi<span>Hub</span></span>
+      </div>
+      <button class="drawer-close-btn" id="drawer-close-btn" type="button" aria-label="Close Menu">✕</button>
+    </div>
+
+    <div class="mobile-search-box">
+      <span class="mobile-search-icon">🔍</span>
+      <input type="text" class="mobile-search-input" id="mobile-search-input" placeholder="Search guides & topics...">
+    </div>
+
+    <ul class="drawer-nav-list">
+      <li class="drawer-nav-item"><a href="/">🏠 Home</a></li>
+      <li class="drawer-nav-item"><a href="/digital-tools/">🛠️ Digital Tools</a></li>
+      <li class="drawer-nav-item"><a href="/productivity/">⚡ Productivity</a></li>
+      <li class="drawer-nav-item"><a href="/about/">ℹ️ About Us</a></li>
+      <li class="drawer-nav-item"><a href="/contact/">✉️ Contact Us</a></li>
+      <li class="drawer-nav-item"><a href="/privacy-policy/">🔒 Privacy Policy</a></li>
+      <li class="drawer-nav-item"><a href="/terms/">📜 Terms of Service</a></li>
+      <li class="drawer-nav-item"><a href="/disclaimer/">⚠️ Disclaimer</a></li>
+    </ul>
+
+    <div class="drawer-footer">
+      <p>&copy; 2026 TyagiHub. All rights reserved.</p>
+    </div>
+  </aside>
+
+  <!-- Live Instant Search Modal -->
+  <div class="search-modal" id="search-modal" role="dialog" aria-modal="true" aria-label="Search Guides">
+    <div class="search-dialog">
+      <div class="search-bar-wrap">
+        <span>🔍</span>
+        <input type="search" class="search-main-input" id="search-main-input" placeholder="Search Zoho, Airtable, Invoices..." autocomplete="off">
+        <button class="search-close-btn" id="search-close-btn" type="button">ESC</button>
+      </div>
+      <ul class="search-results-list" id="search-results-list">
+        <li class="search-empty-state">Type keywords to search verified tech guides...</li>
+      </ul>
+    </div>
+  </div>
+
+  <main>
+    <article class="article-container">
+      <nav class="article-breadcrumb" aria-label="Breadcrumb">
+        <a href="/">Home</a> &rsaquo; <a href="/productivity/">Productivity</a> &rsaquo; <span>Current Guide</span>
+      </nav>
+
+      <header class="article-header">
+        <h1 class="article-title">Clockify for Freelancers: How to Track Billable Hours & Generate Client Timesheet Audits for Free (2026 Guide)</h1>
+        <div class="article-meta-bar">
+          <div class="author-chip">
+            <img src="/assets/images/logo.png" alt="Himanshu Tyagi">
+            <span>By Himanshu Tyagi</span>
+          </div>
+          <span>&bull;</span>
+          <time datetime="2026-11-04">November 4, 2026</time>
+          <span>&bull;</span>
+          <span>Category: Productivity</span>
+        </div>
+      </header>
+
+      <!-- Social Share Strip -->
+      <div class="share-strip">
+        <span class="share-strip-label">Share this guide:</span>
+        <button class="share-btn" id="copy-link-btn" type="button">🔗 Copy Link</button>
+        <a class="share-btn" id="share-twitter" href="#" target="_blank" rel="noopener">🐦 X (Twitter)</a>
+        <a class="share-btn" id="share-linkedin" href="#" target="_blank" rel="noopener">💼 LinkedIn</a>
+        <a class="share-btn" id="share-whatsapp" href="#" target="_blank" rel="noopener">💬 WhatsApp</a>
+      </div>
+
+      <div class="article-content">
+        
+<p class="lead">
+  If you charge clients on an hourly basis or quote milestone budgets based on estimated labor, you are almost certainly losing between 15% and 25% of your billable revenue every month. Unrecorded bug fixes, "quick five-minute" client phone calls, and chaotic context-switching quietly siphon hours away from your earnings without ever appearing on an invoice.
+</p>
+
+<p>
+  Even worse than lost revenue is the awkward end-of-month confrontation with a skeptical client: <em>"Why did the landing page redesign take 34 hours instead of 20?"</em> When you send a simple invoice with a single flat line item, clients feel anxious and question your pricing. But when that same invoice is accompanied by an itemized, timestamped, minute-by-minute audit timesheet, disputes vanish instantly.
+</p>
+
+<p>
+  While enterprise platforms like Harvest and Toggl Track charge upwards of $10 to $18 per user every month, <strong>Clockify</strong> offers an extraordinarily generous <strong>Forever Free tier</strong> with unlimited projects, unlimited clients, and full PDF reporting. In this comprehensive, verified tutorial, I will walk you through setting up a professional freelance time tracking command center that automates your billing pipeline and protects your hard-earned income.
+</p>
+
+<div class="note-box" style="background: var(--bg-surface); border-left: 4px solid #0284c7; padding: 1.25rem 1.5rem; margin: 2rem 0; border-radius: 0 var(--radius-md) var(--radius-md) 0; border: 1px solid var(--border); border-left-width: 4px;">
+  <strong style="color: #0284c7; display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.5rem; font-size: 1.05rem;">
+    💡 The Psychology of Client Time Audits
+  </strong>
+  <p style="margin: 0; font-size: 0.95rem; color: var(--text-muted); line-height: 1.6;">
+    Clients do not argue over hourly rates—they argue over opacity. When a client sees transparent logs displaying exact timestamps (e.g., <em>"Nov 3, 10:15 AM - 11:45 AM: Refactored MongoDB connection pool &amp; resolved connection leak"</em>), they immediately recognize your technical rigor and approve invoices without friction.
+  </p>
+</div>
+
+<hr style="border: none; border-top: 1px solid var(--border); margin: 2.5rem 0;">
+
+<h2>1. The Freelancer Time Tracking Pipeline</h2>
+
+<p>
+  To prevent time tracking from feeling like tedious administrative overhead, your tracking workflow must be fast, frictionless, and tightly coupled with your invoicing structure.
+</p>
+
+<!-- Clockify Architecture Diagram -->
+<figure style="margin: 2.5rem 0; border-radius: var(--radius-md); overflow: hidden; border: 1px solid var(--border); box-shadow: var(--shadow-sm);">
+  <img src="/assets/images/clockify-workflow.svg" alt="Freelancer Billable Time &amp; Audit Pipeline Architecture" style="width: 100%; height: auto; display: block;" width="900" height="480">
+  <figcaption style="padding: 0.6rem 1rem; font-size: 0.88rem; color: var(--text-light); text-align: center; background: var(--bg-surface); border-top: 1px solid var(--border);">Figure 1: End-to-end freelance time logging, automated rounding, and client audit generation pipeline.</figcaption>
+</figure>
+
+<p>
+  As visualized in Figure 1, an effective tracking system relies on three distinct stages:
+</p>
+
+<ol>
+  <li><strong>Active Logging &amp; Metadata Tagging:</strong> Rather than guessing hours at the end of the day from memory, you start a live timer when opening your editor or terminal. You assign the task to an explicit Client and Project, and toggle the <strong>Billable ($)</strong> flag.</li>
+  <li><strong>Automated Rounding Engine:</strong> In modern freelance consulting, micro-tasks (answering emergency emails, reviewing pull requests) eat up cognitive focus. By enforcing standard 15-minute rounding increments, you ensure context-switching costs are accurately reflected in billable calculations.</li>
+  <li><strong>1-Click Client Audit PDF:</strong> At the close of a billing cycle, Clockify compiles all logged entries into a branded, professional summary report that attaches cleanly to your GST invoice or international wire request.</li>
+</ol>
+
+<hr style="border: none; border-top: 1px solid var(--border); margin: 2.5rem 0;">
+
+<h2>2. Step 1: Setting Up Clients, Projects &amp; Billable Rate Cards</h2>
+
+<p>
+  The biggest mistake new Clockify users make is hitting the "Start" button before configuring their workspace taxonomy. Without structured clients and projects, your reports turn into a messy soup of unassigned hours.
+</p>
+
+<div class="step-card" style="background: var(--bg-surface); padding: 1.5rem; border-radius: var(--radius-md); border: 1px solid var(--border); margin: 1.5rem 0;">
+  <div style="display: flex; gap: 1rem; align-items: flex-start;">
+    <div style="background: #0284c7; color: white; width: 28px; height: 28px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; flex-shrink: 0; font-size: 0.9rem;">1</div>
+    <div>
+      <h3 style="margin: 0 0 0.5rem 0; font-size: 1.1rem; color: var(--text-main);">Create Client Entities</h3>
+      <p style="margin: 0; color: var(--text-muted); font-size: 0.95rem;">In the Clockify sidebar, click on <strong>Clients</strong> &rarr; <strong>Add new client</strong>. Enter the company or individual client name (e.g., <em>Apex Digital Solutions</em>, <em>Studio North</em>, or <em>Local Retail Pvt Ltd</em>). Grouping by client allows you to run multi-project cross-summaries.</p>
+    </div>
+  </div>
+</div>
+
+<div class="step-card" style="background: var(--bg-surface); padding: 1.5rem; border-radius: var(--radius-md); border: 1px solid var(--border); margin: 1.5rem 0;">
+  <div style="display: flex; gap: 1rem; align-items: flex-start;">
+    <div style="background: #0284c7; color: white; width: 28px; height: 28px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; flex-shrink: 0; font-size: 0.9rem;">2</div>
+    <div>
+      <h3 style="margin: 0 0 0.5rem 0; font-size: 1.1rem; color: var(--text-main);">Add Projects &amp; Assign Color Codes</h3>
+      <p style="margin: 0; color: var(--text-muted); font-size: 0.95rem;">Navigate to <strong>Projects</strong> &rarr; <strong>Create new project</strong>. Link the project to its corresponding client, assign a distinctive color (e.g., Blue for Frontend, Emerald for API Development, Amber for DevOps), and set privacy to Public (within your private workspace).</p>
+    </div>
+  </div>
+</div>
+
+<div class="step-card" style="background: var(--bg-surface); padding: 1.5rem; border-radius: var(--radius-md); border: 1px solid var(--border); margin: 1.5rem 0;">
+  <div style="display: flex; gap: 1rem; align-items: flex-start;">
+    <div style="background: #0284c7; color: white; width: 28px; height: 28px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; flex-shrink: 0; font-size: 0.9rem;">3</div>
+    <div>
+      <h3 style="margin: 0 0 0.5rem 0; font-size: 1.1rem; color: var(--text-main);">Configure Your Default Hourly Billable Rate</h3>
+      <p style="margin: 0; color: var(--text-muted); font-size: 0.95rem;">Go to <strong>Settings</strong> &rarr; <strong>General</strong> &rarr; <strong>Default Billable Rate</strong>. Enter your baseline rate (for example, <code>₹1,500/hr</code> or <code>$35/hr</code>). You can also override this rate on a per-project basis if high-intensity architecture consulting commands a higher rate than routine maintenance.</p>
+    </div>
+  </div>
+</div>
+
+<hr style="border: none; border-top: 1px solid var(--border); margin: 2.5rem 0;">
+
+<h2>3. Step 2: Mastering the Daily Tracking Workflow (Timer vs Manual)</h2>
+
+<p>
+  Clockify provides two primary logging methods: the <strong>Live Stopwatch Timer</strong> and the <strong>Manual Grid Timesheet</strong>. Depending on your working style, you should choose the method that causes the least cognitive friction.
+</p>
+
+<h3>Method A: The Real-Time Stopwatch (Best for Deep Focus)</h3>
+<p>
+  Keep Clockify open in a dedicated browser tab, install the lightweight desktop app (available for Windows, macOS, and Linux), or use the browser extension. When starting a coding sprint:
+</p>
+<ol>
+  <li>In the <em>"What are you working on?"</em> input field, write a descriptive sentence, not a vague single word. Write <code>Implementing Stripe Webhook Signature Verification</code> rather than just <code>Code</code>.</li>
+  <li>Click the Project selector and choose your client's project.</li>
+  <li>Ensure the blue <strong>$</strong> (billable) icon is toggled on.</li>
+  <li>Hit <strong>Enter</strong> or click <strong>Start</strong>.</li>
+</ol>
+
+<div class="tip-box" style="background: var(--bg-surface); border: 1px solid var(--border); padding: 1.25rem; border-radius: var(--radius-md); margin: 1.5rem 0;">
+  <strong style="color: #10b981;">⚡ Pro-Tip: Enable Automated Idle Detection</strong>
+  <p style="margin: 0.5rem 0 0 0; font-size: 0.92rem; color: var(--text-muted); line-height: 1.5;">
+    In Clockify Desktop Settings, enable <strong>Idle Detection</strong> (set to 10 minutes). If you step away from your desk to make coffee or receive an Amazon delivery, Clockify detects the lack of mouse/keyboard input and asks upon your return: <em>"You were away for 18 minutes. Keep the time, or discard it?"</em> This prevents accidentally billing clients for your lunch break.
+  </p>
+</div>
+
+<h3>Method B: Manual Mode (Best for Retrospective Logging)</h3>
+<p>
+  If you find starting and stopping timers stressful, switch to <strong>Manual Mode</strong> (toggle the timer icon to a list icon in the top right). At the end of your workday, review your Git commit history and calendar events, and quickly type your completed blocks:
+</p>
+<ul>
+  <li><code>09:30 AM - 11:30 AM</code> &rarr; <em>Database migration &amp; schema adjustments</em> (2.0 hrs)</li>
+  <li><code>01:00 PM - 03:15 PM</code> &rarr; <em>Frontend checkout UI responsive styling</em> (2.25 hrs)</li>
+  <li><code>04:00 PM - 04:45 PM</code> &rarr; <em>Client staging walkthrough call</em> (0.75 hrs)</li>
+</ul>
+
+<hr style="border: none; border-top: 1px solid var(--border); margin: 2.5rem 0;">
+
+<h2>4. Step 3: Implementing the 15-Minute Rounding Rule</h2>
+
+<p>
+  One of the most critical principles in sustainable freelancing is the <strong>minimum billing increment</strong>. When a client messages you on WhatsApp asking to modify a button label, and it takes you 4 minutes to change the CSS, commit, and deploy, you should never bill <code>0.06 hours</code> (₹100).
+</p>
+
+<p>
+  That 4-minute modification interrupted your deep focus, required you to pull the latest repository branch, and involved testing in staging. To account for cognitive switching overhead, professional service agreements stipulate that all time is rounded up to the nearest <strong>15-minute increment (0.25 hrs)</strong>.
+</p>
+
+<div style="overflow-x: auto; margin: 2rem 0;">
+  <table style="width: 100%; border-collapse: collapse; font-size: 0.95rem; text-align: left;">
+    <thead>
+      <tr style="background: var(--bg-surface); border-bottom: 2px solid var(--border);">
+        <th style="padding: 0.85rem 1rem; color: var(--text-main);">Actual Logged Duration</th>
+        <th style="padding: 0.85rem 1rem; color: #0284c7;">Rounded Billable Hours</th>
+        <th style="padding: 0.85rem 1rem; color: #10b981;">Financial Impact (@ ₹1,500/hr)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr style="border-bottom: 1px solid var(--border);">
+        <td style="padding: 0.85rem 1rem; font-family: monospace;">6 minutes (Urgent hotfix)</td>
+        <td style="padding: 0.85rem 1rem; font-weight: 700;">0.25 Hours (15 min)</td>
+        <td style="padding: 0.85rem 1rem; font-weight: 700; color: #10b981;">₹375 (vs unrounded ₹150)</td>
+      </tr>
+      <tr style="border-bottom: 1px solid var(--border);">
+        <td style="padding: 0.85rem 1rem; font-family: monospace;">38 minutes (Feature testing)</td>
+        <td style="padding: 0.85rem 1rem; font-weight: 700;">0.75 Hours (45 min)</td>
+        <td style="padding: 0.85rem 1rem; font-weight: 700; color: #10b981;">₹1,125 (vs unrounded ₹950)</td>
+      </tr>
+      <tr style="border-bottom: 1px solid var(--border);">
+        <td style="padding: 0.85rem 1rem; font-family: monospace;">1 hour 5 minutes</td>
+        <td style="padding: 0.85rem 1rem; font-weight: 700;">1.25 Hours (75 min)</td>
+        <td style="padding: 0.85rem 1rem; font-weight: 700; color: #10b981;">₹1,875 (vs unrounded ₹1,625)</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<p>
+  Over an average month consisting of 40 to 60 micro-tasks, enforcing standard 15-minute rounding legitimately adds between <strong>₹8,000 and ₹18,000</strong> to your bottom line—without inflating a single minute of dishonest work.
+</p>
+
+<hr style="border: none; border-top: 1px solid var(--border); margin: 2.5rem 0;">
+
+<h2>5. Step 4: Generating &amp; Exporting Client Timesheet Audits</h2>
+
+<p>
+  When invoice day arrives, navigate to <strong>Reports</strong> in your Clockify sidebar. Clockify provides three reporting views:
+</p>
+
+<ul>
+  <li><strong>Summary Report:</strong> Displays high-level project totals, billable vs non-billable distribution, and total earned revenue. Ideal for sharing with business executives or startup founders who only want the macro budget status.</li>
+  <li><strong>Detailed Report (Recommended for Invoicing):</strong> Shows every single itemized task, exact start and end timestamps, assigned tags, and individual cost calculations. This is the gold standard for attachment to your invoices.</li>
+  <li><strong>Weekly Timesheet:</strong> A grid view breaking down hours by day across Monday through Sunday.</li>
+</ul>
+
+<p>
+  To export a spotless, audit-ready PDF timesheet:
+</p>
+
+<ol>
+  <li>In the <strong>Detailed Report</strong>, set the Date Range filter to your current billing cycle (e.g., <em>"Last Month"</em> or <em>"Custom: Nov 1 - Nov 15"</em>).</li>
+  <li>Filter by the specific <strong>Client</strong> so entries from different clients never bleed into each other.</li>
+  <li>Verify that the <strong>Billable</strong> filter is checked to hide internal personal tasks.</li>
+  <li>Click the <strong>Export</strong> button in the top right and select <strong>Save as PDF</strong>.</li>
+</ol>
+
+<p>
+  Clockify generates a clean, beautifully formatted PDF featuring your business name, client name, total calculated hours, total billing sum, and complete task notes. Send this PDF directly alongside your GST invoice. When clients see this level of transparent accountability, they pay promptly and view you as an elite partner rather than a risky expense.
+</p>
+
+<hr style="border: none; border-top: 1px solid var(--border); margin: 2.5rem 0;">
+
+<h2>6. Feature Comparison: Clockify vs Toggl Track vs Harvest</h2>
+
+<p>
+  How does Clockify compare to the other major time tracking tools used by independent consultants and software developers?
+</p>
+
+<div style="overflow-x: auto; margin: 2rem 0;">
+  <table style="width: 100%; border-collapse: collapse; font-size: 0.95rem; text-align: left;">
+    <thead>
+      <tr style="background: var(--bg-surface); border-bottom: 2px solid var(--border);">
+        <th style="padding: 0.85rem 1rem; color: var(--text-main);">Platform</th>
+        <th style="padding: 0.85rem 1rem; color: #0284c7;">Free Tier Generosity</th>
+        <th style="padding: 0.85rem 1rem; color: var(--text-muted);">Client &amp; Project Limits</th>
+        <th style="padding: 0.85rem 1rem; color: var(--text-muted);">PDF Reporting</th>
+        <th style="padding: 0.85rem 1rem; color: var(--text-muted);">Paid Upgrade Cost</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr style="border-bottom: 1px solid var(--border);">
+        <td style="padding: 0.85rem 1rem; font-weight: 700; color: #0284c7;">Clockify</td>
+        <td style="padding: 0.85rem 1rem; color: #10b981; font-weight: 700;">100% Free Forever</td>
+        <td style="padding: 0.85rem 1rem; color: #10b981; font-weight: 700;">Unlimited</td>
+        <td style="padding: 0.85rem 1rem; color: #10b981; font-weight: 700;">Full (Detailed + Summary)</td>
+        <td style="padding: 0.85rem 1rem;">$3.99 / user / month</td>
+      </tr>
+      <tr style="border-bottom: 1px solid var(--border);">
+        <td style="padding: 0.85rem 1rem; font-weight: 600;">Toggl Track</td>
+        <td style="padding: 0.85rem 1rem; color: #f59e0b;">Limited (Up to 5 users)</td>
+        <td style="padding: 0.85rem 1rem;">Unlimited</td>
+        <td style="padding: 0.85rem 1rem;">Basic PDF export</td>
+        <td style="padding: 0.85rem 1rem; color: #ef4444;">$9.00 / user / month</td>
+      </tr>
+      <tr style="border-bottom: 1px solid var(--border);">
+        <td style="padding: 0.85rem 1rem; font-weight: 600;">Harvest</td>
+        <td style="padding: 0.85rem 1rem; color: #ef4444;">Extremely Restricted</td>
+        <td style="padding: 0.85rem 1rem; color: #ef4444;">Only 2 active projects!</td>
+        <td style="padding: 0.85rem 1rem;">Full PDF + Invoicing</td>
+        <td style="padding: 0.85rem 1rem; color: #ef4444;">$10.80 / user / month</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<hr style="border: none; border-top: 1px solid var(--border); margin: 2.5rem 0;">
+
+<h2>7. Frequently Asked Questions</h2>
+
+<div class="faq-item" style="margin-bottom: 1.5rem;">
+  <h3 style="font-size: 1.15rem; color: var(--text-main); margin-bottom: 0.4rem;">Q: Is Clockify really 100% free forever for solopreneurs?</h3>
+  <p style="color: var(--text-muted); line-height: 1.6; margin: 0;">
+    Yes. Clockify's business model monetizes enterprise companies needing audit logs, single sign-on (SSO), and manager approval workflows. For an independent developer, designer, or freelancer, all core features—unlimited projects, unlimited timers, and PDF exports—remain completely free with zero trial expiration.
+  </p>
+</div>
+
+<div class="faq-item" style="margin-bottom: 1.5rem;">
+  <h3 style="font-size: 1.15rem; color: var(--text-main); margin-bottom: 0.4rem;">Q: Does Clockify take random desktop screenshots of my screen?</h3>
+  <p style="color: var(--text-muted); line-height: 1.6; margin: 0;">
+    No! Clockify is a professional time tracking platform, not intrusive spy software. It does not record keystrokes, track web cam video, or take background screenshots. You retain full control over your recorded data and can edit or delete entries at any time.
+  </p>
+</div>
+
+<div class="faq-item" style="margin-bottom: 1.5rem;">
+  <h3 style="font-size: 1.15rem; color: var(--text-main); margin-bottom: 0.4rem;">Q: Can I track time offline without an active internet connection?</h3>
+  <p style="color: var(--text-muted); line-height: 1.6; margin: 0;">
+    Yes. Clockify's desktop and mobile applications support full offline tracking. If your internet connection drops while traveling or coding, the timer continues running locally. The moment your device reconnects to Wi-Fi, all logged entries sync seamlessly to your cloud dashboard.
+  </p>
+</div>
+
+<div class="author-bio" style="background: var(--bg-surface); border: 1px solid var(--border); border-radius: var(--radius-md); padding: 1.5rem; margin-top: 3rem; display: flex; gap: 1.25rem; align-items: center;">
+  <div style="width: 56px; height: 56px; border-radius: 50%; background: linear-gradient(135deg, #0284c7, #10b981); color: white; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 1.3rem; flex-shrink: 0;">HT</div>
+  <div>
+    <h4 style="margin: 0 0 0.25rem 0; font-size: 1.05rem; color: var(--text-main);">Himanshu Tyagi</h4>
+    <p style="margin: 0; font-size: 0.9rem; color: var(--text-muted); line-height: 1.5;">
+      Independent software engineer and founder of TyagiHub, based in Ghaziabad, UP, India. Specializes in full-stack web applications, Android development, and privacy-first digital architecture.
+    </p>
+  </div>
+</div>
+
+      </div>
+
+      <div class="author-box">
+        <img src="/assets/images/logo.png" alt="Himanshu Tyagi" class="author-box-img">
+        <div>
+          <div class="author-box-name">Himanshu Tyagi</div>
+          <div class="author-box-role">Founder &amp; Software Developer &bull; Ghaziabad, India</div>
+          <div class="author-box-bio">
+            Himanshu is an independent software and Android developer based in Ghaziabad, Uttar Pradesh. He writes hands-on, verified guides helping creators, developers, and small businesses configure digital tools, cloud software, and productivity workflows.
+          </div>
+        </div>
+      </div>
+    </article>
+  </main>
+
+  <!-- Modern Multi-Column Footer -->
+  <footer class="site-footer">
+    <div class="footer-main-grid">
+      <!-- Column 1: Brand & Editorial Mission -->
+      <div>
+        <div class="brand" style="margin-bottom: 1rem;">
+          <img src="/assets/images/logo.png" alt="TyagiHub Logo" class="brand-logo" width="36" height="36">
+          <span class="brand-text">Tyagi<span>Hub</span></span>
+        </div>
+        <p style="color: var(--text-muted); font-size: 0.92rem; line-height: 1.7; margin-bottom: 1rem;">
+          TyagiHub is an independent digital publication founded by Himanshu Tyagi. We publish hands-on, human-verified tutorials on cloud business tools, free business email configurations, GST invoicing portals, and no-code productivity workflows.
+        </p>
+        <p style="color: var(--text-light); font-size: 0.85rem;">
+          100% human-tested tutorials. Zero fluff. Zero paywalls.
+        </p>
+        <p style="color: var(--text-light); font-size: 0.83rem; margin-top: 0.5rem;">
+          📍 Ghaziabad, Uttar Pradesh, India &bull; <a href="mailto:contact@tyagihub.in" style="color: var(--primary);">contact@tyagihub.in</a>
+        </p>
+      </div>
+
+      <!-- Column 2: Topic Clusters -->
+      <div>
+        <h4 class="footer-col-title">Topic Clusters</h4>
+        <ul class="footer-links-list">
+          <li class="footer-link-item"><a href="/digital-tools/">🛠️ Digital Tools</a></li>
+          <li class="footer-link-item"><a href="/productivity/">⚡ Productivity Guides</a></li>
+          <li class="footer-link-item"><a href="/digital-tools/whatsapp-business-automation-client-guide/">💬 WhatsApp Business Automation</a></li>
+          <li class="footer-link-item"><a href="/productivity/google-calendar-time-blocking-solopreneur-guide/">📅 Google Calendar Scheduling</a></li>
+          <li class="footer-link-item"><a href="/digital-tools/github-pages-custom-domain-free-hosting-guide/">🌐 Free GitHub Pages Hosting</a></li>
+          <li class="footer-link-item"><a href="/productivity/obsidian-beginner-offline-notes-guide/">🧠 Obsidian Offline Notes Hub</a></li>
+        </ul>
+      </div>
+
+      <!-- Column 3: Trust & Legal -->
+      <div>
+        <h4 class="footer-col-title">Trust &amp; Legal</h4>
+        <ul class="footer-links-list">
+          <li class="footer-link-item"><a href="/about/">ℹ️ About Us &amp; Editorial Policy</a></li>
+          <li class="footer-link-item"><a href="/contact/">✉️ Contact Us &amp; Support</a></li>
+          <li class="footer-link-item"><a href="/privacy-policy/">🔒 Privacy Policy</a></li>
+          <li class="footer-link-item"><a href="/terms/">📜 Terms of Service</a></li>
+          <li class="footer-link-item"><a href="/disclaimer/">⚠️ Full Disclaimer</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Footer Bottom Bar -->
+    <div class="footer-bottom-bar">
+      <div>&copy; 2026 TyagiHub &bull; Founded by Himanshu Tyagi (Ghaziabad, UP, India). All rights reserved.</div>
+      <div style="display: flex; gap: 1.25rem;">
+        <a href="/privacy-policy/" style="color: var(--text-light); font-size: 0.85rem;">Privacy</a>
+        <a href="/terms/" style="color: var(--text-light); font-size: 0.85rem;">Terms</a>
+        <a href="/contact/" style="color: var(--text-light); font-size: 0.85rem;">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating Back to Top Button -->
+  <button class="back-to-top-btn" id="back-to-top" aria-label="Back to Top" type="button">↑</button>
+
+  <!-- Copy Toast Notification -->
+  <div class="copy-toast" id="copy-toast">Link copied to clipboard!</div>
+
+  <script src="/assets/js/main.js" defer></script>
+</body>
+</html>

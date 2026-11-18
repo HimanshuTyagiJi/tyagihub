@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Obsidian for Beginners: How I Built a Free Offline Second Brain with Markdown Notes (2026 Setup) | TyagiHub</title>
+  <meta name="description" content="A complete beginner's guide to setting up Obsidian as a private, offline second brain. Learn how to connect daily notes, master bidirectional wikilinks, and organize knowledge with zero monthly fees.">
+  <link rel="canonical" href="https://tyagihub.in/productivity/obsidian-beginner-offline-notes-guide/">
+  <meta name="robots" content="index, follow">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Obsidian for Beginners: How I Built a Free Offline Second Brain with Markdown Notes (2026 Setup) | TyagiHub">
+  <meta property="og:description" content="A complete beginner's guide to setting up Obsidian as a private, offline second brain. Learn how to connect daily notes, master bidirectional wikilinks, and organize knowledge with zero monthly fees.">
+  <meta property="og:url" content="https://tyagihub.in/productivity/obsidian-beginner-offline-notes-guide/">
+  <meta property="og:site_name" content="TyagiHub">
+  <meta property="og:image" content="https://tyagihub.in/assets/images/logo.png">
+
+  <!-- Schema.org Article Structured Data (AdSense & Google Search E-E-A-T) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "Obsidian for Beginners: How I Built a Free Offline Second Brain with Markdown Notes (2026 Setup)",
+    "description": "A complete beginner's guide to setting up Obsidian as a private, offline second brain. Learn how to connect daily notes, master bidirectional wikilinks, and organize knowledge with zero monthly fees.",
+    "url": "https://tyagihub.in/productivity/obsidian-beginner-offline-notes-guide/",
+    "datePublished": "2026-11-15",
+    "dateModified": "2026-11-17",
+    "author": {
+      "@type": "Person",
+      "name": "Himanshu Tyagi",
+      "url": "https://tyagihub.in/about/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "TyagiHub",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://tyagihub.in/assets/images/logo.png"
+      }
+    }
+  }
+  </script>
+
+  <!-- Icons -->
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/apple-touch-icon.png">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="/assets/css/main.css">
+
+  <!-- Google AdSense -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7067722696020503" crossorigin="anonymous"></script>
+
+  <script>
+    (function() {
+      const savedTheme = localStorage.getItem('th_theme');
+      if (savedTheme) {
+        document.documentElement.setAttribute('data-theme', savedTheme);
+      } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.documentElement.setAttribute('data-theme', 'dark');
+      }
+    })();
+  </script>
+</head>
+<body>
+  <!-- Reading Progress Bar -->
+  <div class="reading-progress-bar" id="progress-bar"></div>
+
+  <!-- Header Navbar -->
+  <header class="site-header">
+    <div class="header-container">
+      <a href="/" class="brand">
+        <img src="/assets/images/logo.png" alt="TyagiHub Logo" class="brand-logo" width="36" height="36">
+        <span class="brand-text">Tyagi<span>Hub</span></span>
+      </a>
+
+      <nav class="desktop-nav" aria-label="Desktop Navigation">
+        <ul class="nav-links">
+          <li><a href="/" class="nav-link">Home</a></li>
+          <li><a href="/digital-tools/" class="nav-link">Digital Tools</a></li>
+          <li><a href="/productivity/" class="nav-link">Productivity</a></li>
+          <li><a href="/about/" class="nav-link">About</a></li>
+          <li><a href="/contact/" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <button class="search-trigger-btn" type="button" aria-label="Search Guides">
+          <span>🔍</span>
+          <span>Search guides...</span>
+          <kbd>/</kbd>
+        </button>
+
+        <button class="theme-toggle-btn" type="button" aria-label="Toggle Theme">
+          <span class="theme-icon">🌙</span>
+        </button>
+
+        <button class="hamburger-btn" id="hamburger-btn" type="button" aria-label="Toggle Mobile Menu" aria-expanded="false">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Backdrop Overlay -->
+  <div class="mobile-drawer-overlay" id="drawer-overlay" aria-hidden="true"></div>
+
+  <!-- Mobile Drawer Menu -->
+  <aside class="mobile-drawer" id="mobile-drawer" aria-label="Mobile Navigation">
+    <div class="drawer-header">
+      <div class="brand">
+        <img src="/assets/images/logo.png" alt="TyagiHub Logo" class="brand-logo" width="32" height="32">
+        <span class="brand-text">Tyagi<span>Hub</span></span>
+      </div>
+      <button class="drawer-close-btn" id="drawer-close-btn" type="button" aria-label="Close Menu">✕</button>
+    </div>
+
+    <div class="mobile-search-box">
+      <span class="mobile-search-icon">🔍</span>
+      <input type="text" class="mobile-search-input" id="mobile-search-input" placeholder="Search guides & topics...">
+    </div>
+
+    <ul class="drawer-nav-list">
+      <li class="drawer-nav-item"><a href="/">🏠 Home</a></li>
+      <li class="drawer-nav-item"><a href="/digital-tools/">🛠️ Digital Tools</a></li>
+      <li class="drawer-nav-item"><a href="/productivity/">⚡ Productivity</a></li>
+      <li class="drawer-nav-item"><a href="/about/">ℹ️ About Us</a></li>
+      <li class="drawer-nav-item"><a href="/contact/">✉️ Contact Us</a></li>
+      <li class="drawer-nav-item"><a href="/privacy-policy/">🔒 Privacy Policy</a></li>
+      <li class="drawer-nav-item"><a href="/terms/">📜 Terms of Service</a></li>
+      <li class="drawer-nav-item"><a href="/disclaimer/">⚠️ Disclaimer</a></li>
+    </ul>
+
+    <div class="drawer-footer">
+      <p>&copy; 2026 TyagiHub. All rights reserved.</p>
+    </div>
+  </aside>
+
+  <!-- Live Instant Search Modal -->
+  <div class="search-modal" id="search-modal" role="dialog" aria-modal="true" aria-label="Search Guides">
+    <div class="search-dialog">
+      <div class="search-bar-wrap">
+        <span>🔍</span>
+        <input type="search" class="search-main-input" id="search-main-input" placeholder="Search Zoho, Airtable, Invoices..." autocomplete="off">
+        <button class="search-close-btn" id="search-close-btn" type="button">ESC</button>
+      </div>
+      <ul class="search-results-list" id="search-results-list">
+        <li class="search-empty-state">Type keywords to search verified tech guides...</li>
+      </ul>
+    </div>
+  </div>
+
+  <main>
+    <article class="article-container">
+      <nav class="article-breadcrumb" aria-label="Breadcrumb">
+        <a href="/">Home</a> &rsaquo; <a href="/productivity/">Productivity</a> &rsaquo; <span>Current Guide</span>
+      </nav>
+
+      <header class="article-header">
+        <h1 class="article-title">Obsidian for Beginners: How I Built a Free Offline Second Brain with Markdown Notes (2026 Setup)</h1>
+        <div class="article-meta-bar">
+          <div class="author-chip">
+            <img src="/assets/images/logo.png" alt="Himanshu Tyagi">
+            <span>By Himanshu Tyagi</span>
+          </div>
+          <span>&bull;</span>
+          <time datetime="2026-11-15">November 15, 2026</time>
+          <span>&bull;</span>
+          <span>Category: Productivity</span>
+        </div>
+      </header>
+
+      <!-- Social Share Strip -->
+      <div class="share-strip">
+        <span class="share-strip-label">Share this guide:</span>
+        <button class="share-btn" id="copy-link-btn" type="button">🔗 Copy Link</button>
+        <a class="share-btn" id="share-twitter" href="#" target="_blank" rel="noopener">🐦 X (Twitter)</a>
+        <a class="share-btn" id="share-linkedin" href="#" target="_blank" rel="noopener">💼 LinkedIn</a>
+        <a class="share-btn" id="share-whatsapp" href="#" target="_blank" rel="noopener">💬 WhatsApp</a>
+      </div>
+
+      <div class="article-content">
+        
+<!-- Featured Cover Banner -->
+<figure style="margin: 0 0 2rem 0; border-radius: var(--radius-md); overflow: hidden; border: 1px solid var(--border); box-shadow: var(--shadow-sm);">
+  <img src="/assets/images/obsidian-notes-banner.jpg" alt="Obsidian for Beginners Offline Second Brain Guide Banner" style="width: 100%; height: auto; display: block;" width="1200" height="630">
+</figure>
+
+<p>
+  Over the past five years, the note-taking software landscape has become increasingly aggressive. Tools like Notion, Evernote, Bear, and Roam Research lure you in with shiny web interfaces, only to trap your most sensitive personal reflections, technical ideas, and client documentation behind recurring monthly subscriptions or proprietary database formats.
+</p>
+
+<p>
+  If your internet goes down while you are traveling on a train, you cannot access your files. If the company changes its pricing tier, you are forced to pay or manually export thousands of broken files. And if a service shuts down, your digital life disappears with it.
+</p>
+
+<p>
+  In late 2024, I made a conscious decision to reclaim complete ownership over my digital thoughts. I migrated my entire knowledge base into <strong>Obsidian</strong> — a 100% free, offline, local-first markdown note-taking application. 
+</p>
+
+<p>
+  In this hands-on, practical walkthrough, I will show you how to build a clean, minimalist "Second Brain" from absolute scratch. You will learn how to structure your vault, connect thoughts with bidirectional <code>[[Wikilinks]]</code>, leverage the famous interactive Graph View, and synchronize your notes between your computer and Android smartphone completely free of charge.
+</p>
+
+<div class="callout success">
+  <div class="callout-title">🔒 The Fundamental Philosophy of Obsidian</div>
+  <p style="margin: 0;">
+    In Obsidian, your notes are not trapped inside a locked cloud database. <strong>They are plain <code>.md</code> (Markdown) text files stored directly in a folder on your hard drive.</strong> Even if Obsidian ceases to exist thirty years from today, your notes can still be opened and edited with any basic text editor on any computer on Earth.
+  </p>
+</div>
+
+---
+
+<h2>1. How the Offline "Second Brain" System Works</h2>
+
+<p>
+  Traditional note-taking apps force you into rigid hierarchies: <em>Folder &rarr; Subfolder &rarr; Sub-subfolder &rarr; File</em>. The problem with this folder-first approach is that human memory does not operate in rigid vertical filing cabinets. Our brains work through <strong>associative connections</strong>.
+</p>
+
+<p>
+  When you read an insightful article on client pricing, that thought connects simultaneously to <em>Freelance Billing</em>, <em>Client Negotiations</em>, and <em>Annual Revenue Goals</em>. Forcing it into one single folder breaks those contextual bridges.
+</p>
+
+<figure style="margin: 2.5rem 0; border-radius: var(--radius-md); overflow: hidden; border: 1px solid var(--border); box-shadow: var(--shadow-sm);">
+  <img src="/assets/images/obsidian-vault-workflow.svg" alt="Obsidian Offline Second Brain Architecture Diagram" style="width: 100%; height: auto; display: block;" width="900" height="480">
+  <figcaption style="padding: 0.75rem 1rem; background: var(--bg-surface); color: var(--text-muted); font-size: 0.88rem; text-align: center; border-top: 1px solid var(--border);">
+    Figure 1: How Obsidian connects raw local Markdown files through bidirectional Wikilinks and clusters them into an interactive visual graph.
+  </figcaption>
+</figure>
+
+<p>
+  As shown in the architecture above, Obsidian solves this by treating notes like a personal, offline Wikipedia. You simply write in plain text, link concepts using double square brackets, and watch an interconnected constellation of knowledge grow organically over time.
+</p>
+
+---
+
+<h2>2. Step 1: Downloading Obsidian &amp; Creating Your First Vault</h2>
+
+<p>
+  Obsidian is available for Windows, macOS, Linux, iOS, and Android. It is 100% free for personal use with zero feature restrictions.
+</p>
+
+<div class="step-box">
+  <div class="step-header">
+    <span class="step-num">1</span>
+    <span>Visit <strong>obsidian.md</strong> and download the installer for your operating system.</span>
+  </div>
+</div>
+
+<div class="step-box">
+  <div class="step-header">
+    <span class="step-num">2</span>
+    <span>Launch the app and click <strong>Create new vault</strong>.</span>
+  </div>
+  <p style="margin: 0.5rem 0 0 2.25rem; font-size: 0.95rem; color: var(--text-muted);">
+    A "Vault" is simply a regular folder on your computer where Obsidian will store your markdown notes. Name your vault <code>Second Brain</code> or <code>Notes Hub</code>, and choose a safe location on your hard drive (e.g., <code>D:\Documents\Second Brain</code>).
+  </p>
+</div>
+
+<div class="step-box">
+  <div class="step-header">
+    <span class="step-num">3</span>
+    <span>Click <strong>Create</strong>. You are immediately presented with a clean, distraction-free markdown canvas.</span>
+  </div>
+</div>
+
+---
+
+<h2>3. Step 2: The Minimal Folder Structure (The 4-Folder Rule)</h2>
+
+<p>
+  Beginners frequently ruin Obsidian by creating fifty empty folders on day one. Resist this temptation. To keep your system effortless, start with only these four foundational directories:
+</p>
+
+<div class="table-wrapper">
+  <table>
+    <thead>
+      <tr>
+        <th style="width: 25%;">Folder Name</th>
+        <th style="width: 30%;">Purpose</th>
+        <th>What Lives Here</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>01 Inbox</strong></td>
+        <td>Temporary capture buffer</td>
+        <td>Quick raw thoughts, book highlights, website links, or fleeting meeting notes before they are organized.</td>
+      </tr>
+      <tr>
+        <td><strong>02 Daily Notes</strong></td>
+        <td>Chronological logbook</td>
+        <td>Your daily work journal (one note per day) where you record daily tasks, thoughts, and reflections.</td>
+      </tr>
+      <tr>
+        <td><strong>03 Knowledge Hub</strong></td>
+        <td>Permanent evergreen notes</td>
+        <td>Synthesized reference notes on specific topics (e.g., <em>DNS Networking</em>, <em>Client Onboarding SOP</em>).</td>
+      </tr>
+      <tr>
+        <td><strong>04 Attachments</strong></td>
+        <td>Media repository</td>
+        <td>Images, screenshots, and PDFs dragged into your notes, keeping your root directory spotless.</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="callout info">
+  <div class="callout-title">⚙️ Configure Attachment Path</div>
+  <p style="margin: 0;">
+    Go to <strong>Settings &rarr; Files and links &rarr; Default location for new attachments</strong>. Change it to <em>In the folder specified below</em> and type <code>04 Attachments</code>. Now, whenever you paste an image or PDF into a note, Obsidian neatly tucks the image file into your attachments folder automatically.
+  </p>
+</div>
+
+---
+
+<h2>4. Step 3: Mastering [[Wikilinks]] &amp; Bidirectional Backlinks</h2>
+
+<p>
+  The superpower of Obsidian is the <strong>Wikilink</strong>. Whenever you are writing a note and want to reference another idea, simply type two open brackets: <code>[[</code>.
+</p>
+
+<p>
+  Obsidian immediately displays a dropdown search of all existing notes in your vault. If the note already exists, hit Enter to link to it. If the note does not exist yet, keep typing the name and hit Enter — Obsidian creates a placeholder link that you can click to generate the new note later.
+</p>
+
+<h3>Example in Action:</h3>
+<p>Imagine you are typing in your Daily Note for today:</p>
+
+<pre><code class="language-markdown">### Daily Log: 17 November 2026
+- Had a kick-off call with Rahul from [[Apex Design Studio]].
+- Discussed setting up a custom domain on [[Zoho Mail]].
+- Need to research how to enforce [[DKIM Authentication]] to prevent spam filtering.</code></pre>
+
+<p>
+  Notice what just happened:
+</p>
+<ol>
+  <li>You linked your meeting directly to the client's page: <code>[[Apex Design Studio]]</code>.</li>
+  <li>You linked the software tool: <code>[[Zoho Mail]]</code>.</li>
+  <li>You linked the technical concept: <code>[[DKIM Authentication]]</code>.</li>
+</ol>
+
+<p>
+  When you later open the note titled <strong>Apex Design Studio</strong>, look at the right sidebar under <strong>Backlinks</strong>. Obsidian automatically displays every single daily note, meeting log, or invoice draft where <em>Apex Design Studio</em> was ever mentioned — with zero manual tagging!
+</p>
+
+---
+
+<h2>5. Step 4: Setting Up the Daily Notes Workflow</h2>
+
+<p>
+  The daily note is your daily anchor. It stops you from wondering <em>"Where should I write this?"</em>. Whenever you sit at your desk in the morning, you write in today's daily note.
+</p>
+
+<div class="step-box">
+  <div class="step-header">
+    <span class="step-num">1</span>
+    <span>Click the gear icon in the bottom left to open <strong>Settings</strong>.</span>
+  </div>
+</div>
+
+<div class="step-box">
+  <div class="step-header">
+    <span class="step-num">2</span>
+    <span>Under <strong>Core plugins</strong>, ensure <strong>Daily notes</strong> is toggled ON.</span>
+  </div>
+</div>
+
+<div class="step-box">
+  <div class="step-header">
+    <span class="step-num">3</span>
+    <span>Under <strong>Options &rarr; Daily notes</strong>:</span>
+  </div>
+  <p style="margin: 0.5rem 0 0 2.25rem; font-size: 0.95rem; color: var(--text-muted);">
+    &bull; <strong>Date format:</strong> <code>YYYY-MM-DD</code> (e.g., 2026-11-17)<br>
+    &bull; <strong>New file location:</strong> <code>02 Daily Notes</code>
+  </p>
+</div>
+
+<div class="step-box">
+  <div class="step-header">
+    <span class="step-num">4</span>
+    <span>Click the calendar icon on the left ribbon.</span>
+  </div>
+  <p style="margin: 0.5rem 0 0 2.25rem; font-size: 0.95rem; color: var(--text-muted);">
+    Obsidian instantly opens today's note. You can capture to-dos, meeting insights, or code snippets with complete peace of mind.
+  </p>
+</div>
+
+---
+
+<h2>6. Step 5: Visualizing Ideas with the Interactive Graph View</h2>
+
+<p>
+  Press <code>Ctrl + G</code> (or <code>Cmd + G</code> on Mac) at any time to open the famous <strong>Graph View</strong>.
+</p>
+
+<p>
+  In the beginning, your graph will look like a few scattered white dots. But as you link clients, projects, software tools, and technical guides over several weeks, you will see organic constellations start to form:
+</p>
+
+<ul>
+  <li><strong>Hub Nodes:</strong> Notes that have many links (like <em>Zoho Mail</em> or <em>Client Deliverables</em>) grow larger, showing you your primary areas of focus.</li>
+  <li><strong>Unlinked Thoughts:</strong> Isolated dots indicate thoughts that you haven't connected to your broader knowledge system yet, nudging you to integrate them.</li>
+  <li><strong>Search &amp; Filter:</strong> You can filter the graph by tags, specific folders, or keyword clusters to isolate exact project workflows.</li>
+</ul>
+
+---
+
+<h2>7. Free Synchronization: How to Sync Notes to Your Phone for ₹0</h2>
+
+<p>
+  Obsidian offers an official paid sync service called <em>Obsidian Sync</em> ($4 to $10/month). However, because Obsidian's files are just standard folders on your hard drive, you can synchronize your notes across your laptop, desktop, and mobile phone completely free using any of these zero-cost methods:
+</p>
+
+<div class="table-wrapper">
+  <table>
+    <thead>
+      <tr>
+        <th style="width: 25%;">Sync Method</th>
+        <th style="width: 25%;">Best For</th>
+        <th>How It Works &amp; Cost</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Syncthing</strong></td>
+        <td>Windows &amp; Android</td>
+        <td><strong>100% Free &amp; Open Source.</strong> Creates an encrypted, peer-to-peer Wi-Fi bridge directly between your PC and phone. Notes sync automatically in seconds without passing through third-party cloud servers.</td>
+      </tr>
+      <tr>
+        <td><strong>Git + GitHub</strong></td>
+        <td>Developers &amp; Programmers</td>
+        <td><strong>100% Free.</strong> Using the official community plugin <em>Obsidian Git</em>, your vault automatically commits and pushes backup revisions to a private GitHub repository every hour.</td>
+      </tr>
+      <tr>
+        <td><strong>iCloud Drive</strong></td>
+        <td>Mac &amp; iPhone</td>
+        <td><strong>100% Free.</strong> Simply place your Obsidian vault inside your native iCloud Drive folder. Apple handles synchronization automatically between desktop and mobile.</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+---
+
+<h2>8. The 3 Essential Community Plugins Worth Installing</h2>
+
+<p>
+  Obsidian has a library of over 1,500 free community plugins. While you should avoid bloating your setup, these three plugins dramatically improve daily quality of life:
+</p>
+
+<ol>
+  <li><strong>Dataview:</strong> Turns your vault into a personal search engine. It lets you write small queries like <em>"List all tasks where status = In Progress"</em> and displays them as a live dynamic table.</li>
+  <li><strong>Paste URL into Selection:</strong> When you highlight a word and press <code>Ctrl + V</code>, it automatically formats the text as a clean markdown hyperlink <code>[text](url)</code> instead of overwriting the word.</li>
+  <li><strong>Editor Syntax Highlight:</strong> Enhances code blocks with vibrant, syntax-highlighted code for HTML, JavaScript, Python, and CSS snippets.</li>
+</ol>
+
+---
+
+<h2>9. Real-World Troubleshooting &amp; FAQ</h2>
+
+<div class="faq-box">
+  <div class="faq-q">1. Is my data safe if I don't use cloud storage?</div>
+  <div class="faq-a">
+    Because all notes are saved locally on your drive, you have complete privacy. However, you should maintain regular backups. Copying your vault folder to an external USB drive or syncing it to a private GitHub repository ensures you never lose data even if your computer hardware fails.
+  </div>
+</div>
+
+<div class="faq-box">
+  <div class="faq-q">2. Can I export my notes to PDF or share them with clients?</div>
+  <div class="faq-a">
+    Yes. In any note, click the three dots in the top right corner and choose <strong>Export to PDF</strong>. Obsidian compiles your markdown, headings, tables, and images into a beautifully formatted document ready for printing or emailing.
+  </div>
+</div>
+
+<div class="faq-box">
+  <div class="faq-q">3. How does Obsidian compare to Notion?</div>
+  <div class="faq-a">
+    Notion is unmatched for team relational databases, kanban project management, and sharing web dashboards. Obsidian is far superior for personal writing, deep thinking, long-term knowledge retention, and offline privacy. Many solopreneurs use Notion for active client deliverables and Obsidian as their private intellectual vault.
+  </div>
+</div>
+
+---
+
+<h2>Conclusion: Build for the Long Haul</h2>
+
+<p>
+  Software tools come and go. Startups raise venture capital, get acquired, hike subscription prices, or discontinue beloved features.
+</p>
+
+<p>
+  By investing your time into plain-text Markdown notes in Obsidian, you are building on a format that has existed for decades and will exist for decades to come. Your thoughts, your ideas, and your business intellectual property remain 100% yours. Download Obsidian today, create a simple 4-folder vault, and start linking your thoughts.
+</p>
+
+      </div>
+
+      <div class="author-box">
+        <img src="/assets/images/logo.png" alt="Himanshu Tyagi" class="author-box-img">
+        <div>
+          <div class="author-box-name">Himanshu Tyagi</div>
+          <div class="author-box-role">Founder &amp; Software Developer &bull; Ghaziabad, India</div>
+          <div class="author-box-bio">
+            Himanshu is an independent software and Android developer based in Ghaziabad, Uttar Pradesh. He writes hands-on, verified guides helping creators, developers, and small businesses configure digital tools, cloud software, and productivity workflows.
+          </div>
+        </div>
+      </div>
+    </article>
+  </main>
+
+  <!-- Modern Multi-Column Footer -->
+  <footer class="site-footer">
+    <div class="footer-main-grid">
+      <!-- Column 1: Brand & Editorial Mission -->
+      <div>
+        <div class="brand" style="margin-bottom: 1rem;">
+          <img src="/assets/images/logo.png" alt="TyagiHub Logo" class="brand-logo" width="36" height="36">
+          <span class="brand-text">Tyagi<span>Hub</span></span>
+        </div>
+        <p style="color: var(--text-muted); font-size: 0.92rem; line-height: 1.7; margin-bottom: 1rem;">
+          TyagiHub is an independent digital publication founded by Himanshu Tyagi. We publish hands-on, human-verified tutorials on cloud business tools, free business email configurations, GST invoicing portals, and no-code productivity workflows.
+        </p>
+        <p style="color: var(--text-light); font-size: 0.85rem;">
+          100% human-tested tutorials. Zero fluff. Zero paywalls.
+        </p>
+        <p style="color: var(--text-light); font-size: 0.83rem; margin-top: 0.5rem;">
+          📍 Ghaziabad, Uttar Pradesh, India &bull; <a href="mailto:contact@tyagihub.in" style="color: var(--primary);">contact@tyagihub.in</a>
+        </p>
+      </div>
+
+      <!-- Column 2: Topic Clusters -->
+      <div>
+        <h4 class="footer-col-title">Topic Clusters</h4>
+        <ul class="footer-links-list">
+          <li class="footer-link-item"><a href="/digital-tools/">🛠️ Digital Tools</a></li>
+          <li class="footer-link-item"><a href="/productivity/">⚡ Productivity Guides</a></li>
+          <li class="footer-link-item"><a href="/digital-tools/whatsapp-business-automation-client-guide/">💬 WhatsApp Business Automation</a></li>
+          <li class="footer-link-item"><a href="/productivity/google-calendar-time-blocking-solopreneur-guide/">📅 Google Calendar Scheduling</a></li>
+          <li class="footer-link-item"><a href="/digital-tools/github-pages-custom-domain-free-hosting-guide/">🌐 Free GitHub Pages Hosting</a></li>
+          <li class="footer-link-item"><a href="/productivity/obsidian-beginner-offline-notes-guide/">🧠 Obsidian Offline Notes Hub</a></li>
+        </ul>
+      </div>
+
+      <!-- Column 3: Trust & Legal -->
+      <div>
+        <h4 class="footer-col-title">Trust &amp; Legal</h4>
+        <ul class="footer-links-list">
+          <li class="footer-link-item"><a href="/about/">ℹ️ About Us &amp; Editorial Policy</a></li>
+          <li class="footer-link-item"><a href="/contact/">✉️ Contact Us &amp; Support</a></li>
+          <li class="footer-link-item"><a href="/privacy-policy/">🔒 Privacy Policy</a></li>
+          <li class="footer-link-item"><a href="/terms/">📜 Terms of Service</a></li>
+          <li class="footer-link-item"><a href="/disclaimer/">⚠️ Full Disclaimer</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Footer Bottom Bar -->
+    <div class="footer-bottom-bar">
+      <div>&copy; 2026 TyagiHub &bull; Founded by Himanshu Tyagi (Ghaziabad, UP, India). All rights reserved.</div>
+      <div style="display: flex; gap: 1.25rem;">
+        <a href="/privacy-policy/" style="color: var(--text-light); font-size: 0.85rem;">Privacy</a>
+        <a href="/terms/" style="color: var(--text-light); font-size: 0.85rem;">Terms</a>
+        <a href="/contact/" style="color: var(--text-light); font-size: 0.85rem;">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating Back to Top Button -->
+  <button class="back-to-top-btn" id="back-to-top" aria-label="Back to Top" type="button">↑</button>
+
+  <!-- Copy Toast Notification -->
+  <div class="copy-toast" id="copy-toast">Link copied to clipboard!</div>
+
+  <script src="/assets/js/main.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Productivity & Workflow Systems — TyagiHub | TyagiHub</title>
+  <meta name="description" content="Practical tutorials on Airtable databases, Notion workspaces, task automation, time-blocking, and everyday digital productivity workflows.">
+  <link rel="canonical" href="https://tyagihub.in/productivity/">
+  <meta name="robots" content="index, follow">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Productivity & Workflow Systems — TyagiHub | TyagiHub">
+  <meta property="og:description" content="Practical tutorials on Airtable databases, Notion workspaces, task automation, time-blocking, and everyday digital productivity workflows.">
+  <meta property="og:url" content="https://tyagihub.in/productivity/">
+  <meta property="og:site_name" content="TyagiHub">
+  <meta property="og:image" content="https://tyagihub.in/assets/images/logo.png">
+
+  <!-- Icons -->
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/apple-touch-icon.png">
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="/assets/css/main.css">
+
+  <!-- Google AdSense Code -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7067722696020503" crossorigin="anonymous"></script>
+
+  <!-- Theme Detection -->
+  <script>
+    (function() {
+      const savedTheme = localStorage.getItem('th_theme');
+      if (savedTheme) {
+        document.documentElement.setAttribute('data-theme', savedTheme);
+      } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.documentElement.setAttribute('data-theme', 'dark');
+      }
+    })();
+  </script>
+</head>
+<body>
+  <!-- Header Navbar -->
+  <header class="site-header">
+    <div class="header-container">
+      <!-- Brand Logo -->
+      <a href="/" class="brand">
+        <img src="/assets/images/logo.png" alt="TyagiHub Logo" class="brand-logo" width="36" height="36">
+        <span class="brand-text">Tyagi<span>Hub</span></span>
+      </a>
+
+      <!-- Desktop Navigation Links -->
+      <nav class="desktop-nav" aria-label="Desktop Navigation">
+        <ul class="nav-links">
+          <li><a href="/" class="nav-link">Home</a></li>
+          <li><a href="/digital-tools/" class="nav-link">Digital Tools</a></li>
+          <li><a href="/productivity/" class="nav-link">Productivity</a></li>
+          <li><a href="/about/" class="nav-link">About</a></li>
+          <li><a href="/contact/" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Header Actions: Search, Theme Toggle & Hamburger -->
+      <div class="header-actions">
+        <!-- Desktop Search Trigger -->
+        <button class="search-trigger-btn" type="button" aria-label="Search Guides">
+          <span>🔍</span>
+          <span>Search guides...</span>
+          <kbd>/</kbd>
+        </button>
+
+        <!-- Dark/Light Mode Switcher -->
+        <button class="theme-toggle-btn" type="button" aria-label="Toggle Theme">
+          <span class="theme-icon">🌙</span>
+        </button>
+
+        <!-- Mobile Hamburger Toggle Button -->
+        <button class="hamburger-btn" id="hamburger-btn" type="button" aria-label="Toggle Mobile Menu" aria-expanded="false">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Backdrop Overlay -->
+  <div class="mobile-drawer-overlay" id="drawer-overlay" aria-hidden="true"></div>
+
+  <!-- Mobile Drawer Menu -->
+  <aside class="mobile-drawer" id="mobile-drawer" aria-label="Mobile Navigation">
+    <div class="drawer-header">
+      <div class="brand">
+        <img src="/assets/images/logo.png" alt="TyagiHub Logo" class="brand-logo" width="32" height="32">
+        <span class="brand-text">Tyagi<span>Hub</span></span>
+      </div>
+      <button class="drawer-close-btn" id="drawer-close-btn" type="button" aria-label="Close Menu">✕</button>
+    </div>
+
+    <!-- Mobile Drawer Search Bar -->
+    <div class="mobile-search-box">
+      <span class="mobile-search-icon">🔍</span>
+      <input type="text" class="mobile-search-input" id="mobile-search-input" placeholder="Search Zoho, Airtable, Invoices...">
+    </div>
+
+    <!-- Mobile Drawer Nav Links -->
+    <ul class="drawer-nav-list">
+      <li class="drawer-nav-item"><a href="/">🏠 Home</a></li>
+      <li class="drawer-nav-item"><a href="/digital-tools/">🛠️ Digital Tools</a></li>
+      <li class="drawer-nav-item"><a href="/productivity/">⚡ Productivity</a></li>
+      <li class="drawer-nav-item"><a href="/about/">ℹ️ About Us</a></li>
+      <li class="drawer-nav-item"><a href="/contact/">✉️ Contact Us</a></li>
+      <li class="drawer-nav-item"><a href="/privacy-policy/">🔒 Privacy Policy</a></li>
+      <li class="drawer-nav-item"><a href="/terms/">📜 Terms of Service</a></li>
+      <li class="drawer-nav-item"><a href="/disclaimer/">⚠️ Disclaimer</a></li>
+    </ul>
+
+    <div class="drawer-footer">
+      <p>&copy; 2026 TyagiHub. All rights reserved.</p>
+    </div>
+  </aside>
+
+  <!-- Live Instant Search Modal -->
+  <div class="search-modal" id="search-modal" role="dialog" aria-modal="true" aria-label="Search Guides">
+    <div class="search-dialog">
+      <div class="search-bar-wrap">
+        <span>🔍</span>
+        <input type="search" class="search-main-input" id="search-main-input" placeholder="Search Zoho Mail, Zoho Invoice, Airtable, Databases..." autocomplete="off">
+        <button class="search-close-btn" id="search-close-btn" type="button">ESC</button>
+      </div>
+      <ul class="search-results-list" id="search-results-list">
+        <li class="search-empty-state">Type keywords to search verified tech guides...</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Main Content Area -->
+  <main>
+    
+<header style="margin-bottom: 2rem; text-align: center;">
+  <div class="hero-badge">⚡ Workflows &amp; Productivity</div>
+  <h1 style="font-size: 2.2rem; font-weight: 800; margin-bottom: 0.6rem; letter-spacing: -0.5px;">Productivity, Time Auditing &amp; Deep Work Guides</h1>
+  <p style="color: var(--text-muted); max-width: 680px; margin: 0 auto; font-size: 1.05rem; line-height: 1.6;">
+    Battle-tested daily systems to eliminate digital burnout, structure client databases, master calendar time-blocking, track billable hours, and protect deep creative flow.
+  </p>
+</header>
+
+<!-- The Grid of Guides (Front & Center) -->
+<section style="margin-bottom: 3.5rem;">
+  <div class="posts-grid">
+    
+    <article class="post-card" data-category="productivity">
+      
+    <div style="margin: -1.5rem -1.5rem 1rem -1.5rem; overflow: hidden; border-top-left-radius: var(--radius-md); border-top-right-radius: var(--radius-md); border-bottom: 1px solid var(--border); background: #0f172a;">
+      <a href="/productivity/google-calendar-time-blocking-solopreneur-guide/">
+        <img src="/assets/images/google-calendar-timeblocking-banner.jpg" alt="Google Calendar Time Blocking: How I Built a Minimal Daily Scheduling System to Stop Wasting Hours (2026 Guide)" style="width: 100%; height: 180px; object-fit: cover; display: block;" loading="lazy">
+      </a>
+    </div>
+  
+      <div class="card-top-row">
+        <span class="card-category">Productivity</span>
+        <span class="card-read-time">⏱️ 8 min read</span>
+      </div>
+      <h3 class="card-title">
+        <a href="/productivity/google-calendar-time-blocking-solopreneur-guide/">Google Calendar Time Blocking: How I Built a Minimal Daily Scheduling System to Stop Wasting Hours (2026 Guide)</a>
+      </h3>
+      <p class="card-excerpt">A complete, step-by-step walkthrough showing how I use Google Calendar time blocking to eliminate decision fatigue, protect deep work hours, and run my business with zero burnout.</p>
+      
+      <div style="display: flex; gap: 0.4rem; flex-wrap: wrap; margin-bottom: 0.85rem;">
+        <span style="font-size: 0.72rem; padding: 0.15rem 0.5rem; background: var(--bg-surface); border: 1px solid var(--border); border-radius: var(--radius-sm); color: var(--text-light); font-weight: 600;">#google calendar</span><span style="font-size: 0.72rem; padding: 0.15rem 0.5rem; background: var(--bg-surface); border: 1px solid var(--border); border-radius: var(--radius-sm); color: var(--text-light); font-weight: 600;">#time blocking</span><span style="font-size: 0.72rem; padding: 0.15rem 0.5rem; background: var(--bg-surface); border: 1px solid var(--border); border-radius: var(--radius-sm); color: var(--text-light); font-weight: 600;">#productivity</span>
+      </div>
+    
+      <div class="card-meta">
+        <span>By Himanshu Tyagi</span>
+        <time datetime="2026-11-18">November 18, 2026</time>
+      </div>
+    </article>
+  
+
+    <article class="post-card" data-category="productivity">
+      
+    <div style="margin: -1.5rem -1.5rem 1rem -1.5rem; overflow: hidden; border-top-left-radius: var(--radius-md); border-top-right-radius: var(--radius-md); border-bottom: 1px solid var(--border); background: #0f172a;">
+      <a href="/productivity/obsidian-beginner-offline-notes-guide/">
+        <img src="/assets/images/obsidian-notes-banner.jpg" alt="Obsidian for Beginners: How I Built a Free Offline Second Brain with Markdown Notes (2026 Setup)" style="width: 100%; height: 180px; object-fit: cover; display: block;" loading="lazy">
+      </a>
+    </div>
+  
+      <div class="card-top-row">
+        <span class="card-category">Productivity</span>
+        <span class="card-read-time">⏱️ 9 min read</span>
+      </div>
+      <h3 class="card-title">
+        <a href="/productivity/obsidian-beginner-offline-notes-guide/">Obsidian for Beginners: How I Built a Free Offline Second Brain with Markdown Notes (2026 Setup)</a>
+      </h3>
+      <p class="card-excerpt">A complete beginner's guide to setting up Obsidian as a private, offline second brain. Learn how to connect daily notes, master bidirectional wikilinks, and organize knowledge with zero monthly fees.</p>
+      
+      <div style="display: flex; gap: 0.4rem; flex-wrap: wrap; margin-bottom: 0.85rem;">
+        <span style="font-size: 0.72rem; padding: 0.15rem 0.5rem; background: var(--bg-surface); border: 1px solid var(--border); border-radius: var(--radius-sm); color: var(--text-light); font-weight: 600;">#obsidian</span><span style="font-size: 0.72rem; padding: 0.15rem 0.5rem; background: var(--bg-surface); border: 1px solid var(--border); border-radius: var(--radius-sm); color: var(--text-light); font-weight: 600;">#productivity</span><span style="font-size: 0.72rem; padding: 0.15rem 0.5rem; background: var(--bg-surface); border: 1px solid var(--border); border-radius: var(--radius-sm); color: var(--text-light); font-weight: 600;">#markdown notes</span>
+      </div>
+    
+      <div class="card-meta">
+        <span>By Himanshu Tyagi</span>
+        <time datetime="2026-11-15">November 15, 2026</time>
+      </div>
+    </article>
+  
+
+    <article class="post-card" data-category="productivity">
+      
+    <div style="margin: -1.5rem -1.5rem 1rem -1.5rem; overflow: hidden; border-top-left-radius: var(--radius-md); border-top-right-radius: var(--radius-md); border-bottom: 1px solid var(--border); background: #0f172a;">
+      <a href="/productivity/notion-solopreneur-dashboard-client-hub-guide/">
+        <img src="/assets/images/notion-dashboard-banner.jpg" alt="Notion for Solopreneurs: How I Built a Complete Daily Dashboard & Client Task Hub from Scratch (2026 Walkthrough)" style="width: 100%; height: 180px; object-fit: cover; display: block;" loading="lazy">
+      </a>
+    </div>
+  
+      <div class="card-top-row">
+        <span class="card-category">Productivity</span>
+        <span class="card-read-time">⏱️ 9 min read</span>
+      </div>
+      <h3 class="card-title">
+        <a href="/productivity/notion-solopreneur-dashboard-client-hub-guide/">Notion for Solopreneurs: How I Built a Complete Daily Dashboard & Client Task Hub from Scratch (2026 Walkthrough)</a>
+      </h3>
+      <p class="card-excerpt">An exhaustive, step-by-step walkthrough showing how I built a minimalist, zero-clutter Notion workspace for managing clients, deliverables, and daily tasks using 100% free relational databases.</p>
+      
+      <div style="display: flex; gap: 0.4rem; flex-wrap: wrap; margin-bottom: 0.85rem;">
+        <span style="font-size: 0.72rem; padding: 0.15rem 0.5rem; background: var(--bg-surface); border: 1px solid var(--border); border-radius: var(--radius-sm); color: var(--text-light); font-weight: 600;">#notion</span><span style="font-size: 0.72rem; padding: 0.15rem 0.5rem; background: var(--bg-surface); border: 1px solid var(--border); border-radius: var(--radius-sm); color: var(--text-light); font-weight: 600;">#productivity</span><span style="font-size: 0.72rem; padding: 0.15rem 0.5rem; background: var(--bg-surface); border: 1px solid var(--border); border-radius: var(--radius-sm); color: var(--text-light); font-weight: 600;">#solopreneur</span>
+      </div>
+    
+      <div class="card-meta">
+        <span>By Himanshu Tyagi</span>
+        <time datetime="2026-11-14">November 14, 2026</time>
+      </div>
+    </article>
+  
+
+    <article class="post-card" data-category="productivity">
+      
+    <div style="margin: -1.5rem -1.5rem 1rem -1.5rem; overflow: hidden; border-top-left-radius: var(--radius-md); border-top-right-radius: var(--radius-md); border-bottom: 1px solid var(--border); background: #0f172a;">
+      <a href="/productivity/airtable-beginner-client-tracker-guide/">
+        <img src="/assets/images/airtable-tracker-banner.jpg" alt="Airtable for Beginners: How I Replaced Messy Spreadsheets with a Free Client Tracker (2026 Guide)" style="width: 100%; height: 180px; object-fit: cover; display: block;" loading="lazy">
+      </a>
+    </div>
+  
+      <div class="card-top-row">
+        <span class="card-category">Productivity</span>
+        <span class="card-read-time">⏱️ 7 min read</span>
+      </div>
+      <h3 class="card-title">
+        <a href="/productivity/airtable-beginner-client-tracker-guide/">Airtable for Beginners: How I Replaced Messy Spreadsheets with a Free Client Tracker (2026 Guide)</a>
+      </h3>
+      <p class="card-excerpt">A practical, no-code guide to building your first custom client and project tracker in Airtable from scratch in 12 minutes, using 100% free relational tables.</p>
+      
+      <div style="display: flex; gap: 0.4rem; flex-wrap: wrap; margin-bottom: 0.85rem;">
+        <span style="font-size: 0.72rem; padding: 0.15rem 0.5rem; background: var(--bg-surface); border: 1px solid var(--border); border-radius: var(--radius-sm); color: var(--text-light); font-weight: 600;">#airtable</span><span style="font-size: 0.72rem; padding: 0.15rem 0.5rem; background: var(--bg-surface); border: 1px solid var(--border); border-radius: var(--radius-sm); color: var(--text-light); font-weight: 600;">#productivity</span><span style="font-size: 0.72rem; padding: 0.15rem 0.5rem; background: var(--bg-surface); border: 1px solid var(--border); border-radius: var(--radius-sm); color: var(--text-light); font-weight: 600;">#client tracker</span>
+      </div>
+    
+      <div class="card-meta">
+        <span>By Himanshu Tyagi</span>
+        <time datetime="2026-11-10">November 10, 2026</time>
+      </div>
+    </article>
+  
+
+    <article class="post-card" data-category="productivity">
+      
+    <div style="margin: -1.5rem -1.5rem 1rem -1.5rem; overflow: hidden; border-top-left-radius: var(--radius-md); border-top-right-radius: var(--radius-md); border-bottom: 1px solid var(--border); background: #0f172a;">
+      <a href="/productivity/clockify-freelancer-billable-hours-tracking-guide/">
+        <img src="/assets/images/clockify-freelancer-banner.jpg" alt="Clockify for Freelancers: How to Track Billable Hours & Generate Client Timesheet Audits for Free (2026 Guide)" style="width: 100%; height: 180px; object-fit: cover; display: block;" loading="lazy">
+      </a>
+    </div>
+  
+      <div class="card-top-row">
+        <span class="card-category">Productivity</span>
+        <span class="card-read-time">⏱️ 8 min read</span>
+      </div>
+      <h3 class="card-title">
+        <a href="/productivity/clockify-freelancer-billable-hours-tracking-guide/">Clockify for Freelancers: How to Track Billable Hours & Generate Client Timesheet Audits for Free (2026 Guide)</a>
+      </h3>
+      <p class="card-excerpt">Stop losing unbilled hours and ending up in client payment arguments. Exhaustive guide to setting up 100% free time tracking, billable rate cards, 15-minute rounding rules, and 1-click audit PDFs on Clockify.</p>
+      
+      <div class="card-meta">
+        <span>By Himanshu Tyagi</span>
+        <time datetime="2026-11-04">November 4, 2026</time>
+      </div>
+    </article>
+  
+
+    <article class="post-card" data-category="productivity">
+      
+    <div style="margin: -1.5rem -1.5rem 1rem -1.5rem; overflow: hidden; border-top-left-radius: var(--radius-md); border-top-right-radius: var(--radius-md); border-bottom: 1px solid var(--border); background: #0f172a;">
+      <a href="/productivity/monk-mode-morning-routine-deep-work-guide/">
+        <img src="/assets/images/monk-mode-morning-banner.jpg" alt="The Monk Mode Morning Routine: How a 90-Minute Screen Fast Before 9 AM Doubled My Output (2026 Guide)" style="width: 100%; height: 180px; object-fit: cover; display: block;" loading="lazy">
+      </a>
+    </div>
+  
+      <div class="card-top-row">
+        <span class="card-category">Productivity</span>
+        <span class="card-read-time">⏱️ 8 min read</span>
+      </div>
+      <h3 class="card-title">
+        <a href="/productivity/monk-mode-morning-routine-deep-work-guide/">The Monk Mode Morning Routine: How a 90-Minute Screen Fast Before 9 AM Doubled My Output (2026 Guide)</a>
+      </h3>
+      <p class="card-excerpt">Why checking notifications within 10 minutes of waking up ruins your daily cognitive capacity. Step-by-step verified guide to building a disciplined morning monk mode routine for solo creators and developers.</p>
+      
+      <div class="card-meta">
+        <span>By Himanshu Tyagi</span>
+        <time datetime="2026-11-03">November 3, 2026</time>
+      </div>
+    </article>
+  
+
+    <article class="post-card" data-category="productivity">
+      
+    <div style="margin: -1.5rem -1.5rem 1rem -1.5rem; overflow: hidden; border-top-left-radius: var(--radius-md); border-top-right-radius: var(--radius-md); border-bottom: 1px solid var(--border); background: #0f172a;">
+      <a href="/productivity/analog-productivity-pocket-notebook-focus-guide/">
+        <img src="/assets/images/analog-productivity-banner.jpg" alt="The Analog Daily Focus System: Why I Switched to a Pocket Notebook & Index Card to Cure Screen Burnout (2026 Guide)" style="width: 100%; height: 180px; object-fit: cover; display: block;" loading="lazy">
+      </a>
+    </div>
+  
+      <div class="card-top-row">
+        <span class="card-category">Productivity</span>
+        <span class="card-read-time">⏱️ 9 min read</span>
+      </div>
+      <h3 class="card-title">
+        <a href="/productivity/analog-productivity-pocket-notebook-focus-guide/">The Analog Daily Focus System: Why I Switched to a Pocket Notebook & Index Card to Cure Screen Burnout (2026 Guide)</a>
+      </h3>
+      <p class="card-excerpt">Why switching from 10 digital productivity apps to a physical 3x5 index card and pocket notebook eliminated mental fatigue, ended tab overload, and doubled deep work output for a solo developer.</p>
+      
+      <div class="card-meta">
+        <span>By Himanshu Tyagi</span>
+        <time datetime="2026-11-01">November 1, 2026</time>
+      </div>
+    </article>
+  
+  </div>
+</section>
+
+<!-- Frequently Asked Questions (At the Bottom) -->
+<section style="margin: 3.5rem 0 2.5rem;">
+  <h2 class="section-title">
+    <span>❓</span> Frequently Asked Questions on Productivity Systems
+  </h2>
+  
+  <div class="faq-box">
+    <h3 class="faq-q">How do I choose between Notion, Obsidian, and Airtable?</h3>
+    <div class="faq-a">
+      Each tool serves a distinct role in a modern productivity stack: <strong>Airtable</strong> is a structured relational database ideal for managing client deliverables and tracking invoices. <strong>Notion</strong> is best for collaborative project wikis and visual Kanban boards. <strong>Obsidian</strong> is best for private, offline, long-term personal knowledge notes and research linking with zero cloud lock-in.
+    </div>
+  </div>
+
+  <div class="faq-box">
+    <h3 class="faq-q">Why do most calendar time-blocking routines fail after a few days?</h3>
+    <div class="faq-a">
+      The number one mistake is over-scheduling without margin. Real daily life brings unexpected interruptions. To make time-blocking sustainable, never schedule back-to-back blocks without breathing room. Always schedule a 30-minute daily "Catch-Up / Overflow" block in the late afternoon.
+    </div>
+  </div>
+
+  <div class="faq-box">
+    <h3 class="faq-q">What is "Monk Mode" and how does it prevent digital burnout?</h3>
+    <div class="faq-a">
+      Monk Mode is a morning deep work protocol where you protect your brain's highest-energy dopamine window. By staying off screens for the first 60 minutes after waking and completing a 90-minute single-task focus block before opening emails or messaging apps, you accomplish your hardest daily goal before distraction can begin.
+    </div>
+  </div>
+
+  <div class="faq-box">
+    <h3 class="faq-q">Why use physical index cards or notebooks alongside digital apps?</h3>
+    <div class="faq-a">
+      Digital task apps offer infinite scroll, which leads to overwhelming 50-item backlogs. A 3x5 physical index card creates healthy spatial friction: it physically forces you to pick only 3 to 5 critical priorities for the day. Striking them through with ink provides tangible psychological closure.
+    </div>
+  </div>
+
+  <div class="faq-box">
+    <h3 class="faq-q">How does Clockify help freelance solopreneurs increase their revenue?</h3>
+    <div class="faq-a">
+      Freelancers frequently lose 15-20% of their actual billable time to unrecorded micro-tasks (quick client emails, scope changes, phone calls). Using Clockify's free timer paired with a standard 15-minute minimum increment rule ensures every minute of intellectual labor is accounted for and billed transparently.
+    </div>
+  </div>
+</section>
+
+<!-- Editorial Transparency Note -->
+<section style="background: var(--bg-surface); border: 1px solid var(--border); border-radius: var(--radius-md); padding: 1.75rem; margin-top: 2rem;">
+  <h2 style="font-size: 1.25rem; font-weight: 750; margin-bottom: 0.75rem; color: var(--text-main);">
+    About Our Productivity &amp; Workflow Systems
+  </h2>
+  <p style="color: var(--text-muted); line-height: 1.7; margin-bottom: 0.75rem; font-size: 0.95rem;">
+    At TyagiHub, we believe real productivity is about imposing healthy friction, physical boundaries, and daily prioritization rather than collecting 20 different task apps. From analog index card setups and 90-minute morning focus sprints to relational client tracking in Airtable and Notion, our guides provide practical frameworks you can implement today.
+  </p>
+  <p style="color: var(--text-light); line-height: 1.6; margin: 0; font-size: 0.9rem;">
+    Need guidance on organizing your freelance workflow? Connect with Himanshu Tyagi through our <a href="/contact/" style="color: var(--primary); font-weight: 600;">Contact Page</a> or write to <code>contact@tyagihub.in</code>.
+  </p>
+</section>
+
+  </main>
+
+  <!-- Modern Multi-Column Footer -->
+  <footer class="site-footer">
+    <div class="footer-main-grid">
+      <!-- Column 1: Brand & Editorial Mission -->
+      <div>
+        <div class="brand" style="margin-bottom: 1rem;">
+          <img src="/assets/images/logo.png" alt="TyagiHub Logo" class="brand-logo" width="36" height="36">
+          <span class="brand-text">Tyagi<span>Hub</span></span>
+        </div>
+        <p style="color: var(--text-muted); font-size: 0.92rem; line-height: 1.7; margin-bottom: 1rem;">
+          TyagiHub is an independent digital publication founded by Himanshu Tyagi. We publish hands-on, human-verified tutorials on cloud business tools, free business email configurations, GST invoicing portals, and no-code productivity workflows.
+        </p>
+        <p style="color: var(--text-light); font-size: 0.85rem;">
+          100% human-tested tutorials. Zero fluff. Zero paywalls.
+        </p>
+        <p style="color: var(--text-light); font-size: 0.83rem; margin-top: 0.5rem;">
+          📍 Ghaziabad, Uttar Pradesh, India &bull; <a href="mailto:contact@tyagihub.in" style="color: var(--primary);">contact@tyagihub.in</a>
+        </p>
+      </div>
+
+      <!-- Column 2: Topic Clusters -->
+      <div>
+        <h4 class="footer-col-title">Topic Clusters</h4>
+        <ul class="footer-links-list">
+          <li class="footer-link-item"><a href="/digital-tools/">🛠️ Digital Tools</a></li>
+          <li class="footer-link-item"><a href="/productivity/">⚡ Productivity Guides</a></li>
+          <li class="footer-link-item"><a href="/digital-tools/whatsapp-business-automation-client-guide/">💬 WhatsApp Business Automation</a></li>
+          <li class="footer-link-item"><a href="/productivity/google-calendar-time-blocking-solopreneur-guide/">📅 Google Calendar Scheduling</a></li>
+          <li class="footer-link-item"><a href="/digital-tools/github-pages-custom-domain-free-hosting-guide/">🌐 Free GitHub Pages Hosting</a></li>
+          <li class="footer-link-item"><a href="/productivity/obsidian-beginner-offline-notes-guide/">🧠 Obsidian Offline Notes Hub</a></li>
+        </ul>
+      </div>
+
+      <!-- Column 3: Trust & Legal -->
+      <div>
+        <h4 class="footer-col-title">Trust &amp; Legal</h4>
+        <ul class="footer-links-list">
+          <li class="footer-link-item"><a href="/about/">ℹ️ About Us &amp; Editorial Policy</a></li>
+          <li class="footer-link-item"><a href="/contact/">✉️ Contact Us &amp; Support</a></li>
+          <li class="footer-link-item"><a href="/privacy-policy/">🔒 Privacy Policy</a></li>
+          <li class="footer-link-item"><a href="/terms/">📜 Terms of Service</a></li>
+          <li class="footer-link-item"><a href="/disclaimer/">⚠️ Full Disclaimer</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Footer Bottom Bar -->
+    <div class="footer-bottom-bar">
+      <div>&copy; 2026 TyagiHub &bull; Founded by Himanshu Tyagi (Ghaziabad, UP, India). All rights reserved.</div>
+      <div style="display: flex; gap: 1.25rem;">
+        <a href="/privacy-policy/" style="color: var(--text-light); font-size: 0.85rem;">Privacy</a>
+        <a href="/terms/" style="color: var(--text-light); font-size: 0.85rem;">Terms</a>
+        <a href="/contact/" style="color: var(--text-light); font-size: 0.85rem;">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating Back to Top Button -->
+  <button class="back-to-top-btn" id="back-to-top" aria-label="Back to Top" type="button">↑</button>
+
+  <!-- Copy Toast Notification -->
+  <div class="copy-toast" id="copy-toast">Link copied to clipboard!</div>
+
+  <!-- Main Scripts -->
+  <script src="/assets/js/main.js" defer></script>
+</body>
+</html>

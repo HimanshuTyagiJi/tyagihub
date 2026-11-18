@@ -1,0 +1,115 @@
+<svg xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet" viewBox="0 0 900 480" width="900" height="480">
+  <defs>
+    <linearGradient id="warpBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1c1917"/>
+      <stop offset="50%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#090d16"/>
+    </linearGradient>
+    <linearGradient id="warpCard" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e293b"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+    <linearGradient id="warpFlow" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#f97316"/>
+      <stop offset="100%" stop-color="#38bdf8"/>
+    </linearGradient>
+    <filter id="warpShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="6" stdDeviation="8" flood-color="#000000" flood-opacity="0.4"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="900" height="480" rx="12" fill="url(#warpBg)" stroke="#f97316" stroke-width="1.5"/>
+
+  <!-- Title -->
+  <text x="450" y="44" text-anchor="middle" fill="#f8fafc" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="800" letter-spacing="-0.5">
+    Cloudflare WARP (1.1.1.1) Traffic Encryption Architecture
+  </text>
+  <text x="450" y="70" text-anchor="middle" fill="#fb923c" font-family="system-ui, -apple-system, sans-serif" font-size="13">
+    How WireGuard tunneling and DNS-over-HTTPS eliminate public Wi-Fi snooping and ISP throttling
+  </text>
+
+  <!-- Step 1: Insecure Client Traffic -->
+  <g transform="translate(35, 110)" filter="url(#warpShadow)">
+    <rect width="250" height="310" rx="10" fill="url(#warpCard)" stroke="#ef4444" stroke-width="1.5"/>
+    <rect width="250" height="40" rx="10" fill="#ef4444" opacity="0.2"/>
+    <rect y="25" width="250" height="15" fill="#ef4444" opacity="0.2"/>
+    <text x="18" y="26" fill="#f87171" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="750">⚠️ 1. Insecure Public / Cellular</text>
+
+    <g transform="translate(16, 55)">
+      <text x="0" y="15" fill="#f1f5f9" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="700">UNENCRYPTED CONNECTIONS:</text>
+
+      <rect y="25" width="218" height="60" rx="6" fill="#0f172a" stroke="#ef4444" stroke-width="1"/>
+      <text x="10" y="44" fill="#f87171" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="600">Airport, Hotel, or Cafe Wi-Fi</text>
+      <text x="10" y="60" fill="#94a3b8" font-family="system-ui, -apple-system, sans-serif" font-size="9">DNS queries broadcast in plain text</text>
+      <text x="10" y="74" fill="#94a3b8" font-family="system-ui, -apple-system, sans-serif" font-size="9">Vulnerable to packet sniffing &amp; MITM</text>
+
+      <text x="0" y="105" fill="#cbd5e1" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="600">ISP Telecom Throttling:</text>
+      <rect y="115" width="218" height="52" rx="6" fill="#0f172a" stroke="#334155" stroke-width="1"/>
+      <text x="10" y="134" fill="#fbbf24" font-family="monospace" font-size="9">SNI Inspection Active</text>
+      <text x="10" y="152" fill="#94a3b8" font-family="system-ui, -apple-system, sans-serif" font-size="9">ISPs log browsing history &amp; throttle</text>
+
+      <text x="0" y="190" fill="#f87171" font-family="system-ui, -apple-system, sans-serif" font-size="10">High latency, zero connection privacy.</text>
+    </g>
+  </g>
+
+  <!-- Arrow 1 -> 2 -->
+  <g transform="translate(295, 240)">
+    <line x1="0" y1="0" x2="30" y2="0" stroke="url(#warpFlow)" stroke-width="3" stroke-linecap="round"/>
+    <polygon points="30,-5 40,0 30,5" fill="#f97316"/>
+  </g>
+
+  <!-- Step 2: WARP Engine (BoringTun WireGuard) -->
+  <g transform="translate(335, 110)" filter="url(#warpShadow)">
+    <rect width="250" height="310" rx="10" fill="url(#warpCard)" stroke="#f97316" stroke-width="1.5"/>
+    <rect width="250" height="40" rx="10" fill="#f97316" opacity="0.2"/>
+    <rect y="25" width="250" height="15" fill="#f97316" opacity="0.2"/>
+    <text x="18" y="26" fill="#fb923c" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="750">⚡ 2. WARP WireGuard Tunnel</text>
+
+    <g transform="translate(16, 55)">
+      <text x="0" y="15" fill="#f1f5f9" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="700">BORINGTUN RUST ENGINE:</text>
+
+      <rect y="25" width="218" height="60" rx="6" fill="#0f172a" stroke="#334155" stroke-width="1"/>
+      <text x="10" y="44" fill="#fb923c" font-family="monospace" font-size="9.5">WireGuard UDP: 1.1.1.1:2408</text>
+      <text x="10" y="60" fill="#94a3b8" font-family="system-ui, -apple-system, sans-serif" font-size="9">ChaCha20-Poly1305 encryption</text>
+      <text x="10" y="74" fill="#94a3b8" font-family="system-ui, -apple-system, sans-serif" font-size="9">Replaces bloated, battery-draining VPNs</text>
+
+      <text x="0" y="105" fill="#cbd5e1" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="600">DNS-over-HTTPS Layer:</text>
+      <rect y="115" width="218" height="52" rx="6" fill="#0f172a" stroke="#334155" stroke-width="1"/>
+      <text x="10" y="134" fill="#38bdf8" font-family="monospace" font-size="9">DoH Encrypted Queries</text>
+      <text x="10" y="152" fill="#94a3b8" font-family="system-ui, -apple-system, sans-serif" font-size="9">Resolves domains in &lt; 14ms globally</text>
+
+      <text x="0" y="190" fill="#38bdf8" font-family="system-ui, -apple-system, sans-serif" font-size="10">Zero battery drain on Android &amp; iOS.</text>
+    </g>
+  </g>
+
+  <!-- Arrow 2 -> 3 -->
+  <g transform="translate(595, 240)">
+    <line x1="0" y1="0" x2="30" y2="0" stroke="url(#warpFlow)" stroke-width="3" stroke-linecap="round"/>
+    <polygon points="30,-5 40,0 30,5" fill="#10b981"/>
+  </g>
+
+  <!-- Step 3: Cloudflare Global Edge Backbone -->
+  <g transform="translate(635, 110)" filter="url(#warpShadow)">
+    <rect width="230" height="310" rx="10" fill="url(#warpCard)" stroke="#10b981" stroke-width="1.5"/>
+    <rect width="230" height="40" rx="10" fill="#059669" opacity="0.2"/>
+    <rect y="25" width="230" height="15" fill="#059669" opacity="0.2"/>
+    <text x="18" y="26" fill="#34d399" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="750">🛡️ 3. Global Anycast Edge</text>
+
+    <g transform="translate(16, 55)">
+      <text x="0" y="15" fill="#f1f5f9" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="700">PRIVATE FIBER ROUTING:</text>
+
+      <rect y="25" width="198" height="60" rx="6" fill="#0f172a" stroke="#10b981" stroke-width="1"/>
+      <text x="10" y="44" fill="#34d399" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="700">✓ 330+ Cities Anycast</text>
+      <text x="10" y="60" fill="#94a3b8" font-family="system-ui, -apple-system, sans-serif" font-size="9">• Bypasses congested ISP hops</text>
+      <text x="10" y="74" fill="#94a3b8" font-family="system-ui, -apple-system, sans-serif" font-size="9">• Direct peering with Google/AWS</text>
+
+      <text x="0" y="105" fill="#cbd5e1" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="600">Verified Result:</text>
+      <rect y="115" width="198" height="52" rx="6" fill="#064e3b" stroke="#10b981" stroke-width="1"/>
+      <text x="10" y="135" fill="#6ee7b7" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="700">✓ 30% Faster Page Loads</text>
+      <text x="10" y="153" fill="#a7f3d0" font-family="system-ui, -apple-system, sans-serif" font-size="9">Total encryption, zero log tracking.</text>
+
+      <text x="0" y="190" fill="#34d399" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="600">100% free, unmetered bandwidth.</text>
+    </g>
+  </g>
+</svg>

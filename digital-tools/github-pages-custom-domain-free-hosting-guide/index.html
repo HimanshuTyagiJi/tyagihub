@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>How to Host a Website on GitHub Pages with Custom Domain & Free SSL (Zero Server Costs 2026 Guide) | TyagiHub</title>
+  <meta name="description" content="A complete, step-by-step tutorial on hosting static websites for free on GitHub Pages using your own custom domain, including exact GoDaddy/Namecheap DNS records and automatic SSL setup.">
+  <link rel="canonical" href="https://tyagihub.in/digital-tools/github-pages-custom-domain-free-hosting-guide/">
+  <meta name="robots" content="index, follow">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="How to Host a Website on GitHub Pages with Custom Domain & Free SSL (Zero Server Costs 2026 Guide) | TyagiHub">
+  <meta property="og:description" content="A complete, step-by-step tutorial on hosting static websites for free on GitHub Pages using your own custom domain, including exact GoDaddy/Namecheap DNS records and automatic SSL setup.">
+  <meta property="og:url" content="https://tyagihub.in/digital-tools/github-pages-custom-domain-free-hosting-guide/">
+  <meta property="og:site_name" content="TyagiHub">
+  <meta property="og:image" content="https://tyagihub.in/assets/images/logo.png">
+
+  <!-- Schema.org Article Structured Data (AdSense & Google Search E-E-A-T) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "How to Host a Website on GitHub Pages with Custom Domain & Free SSL (Zero Server Costs 2026 Guide)",
+    "description": "A complete, step-by-step tutorial on hosting static websites for free on GitHub Pages using your own custom domain, including exact GoDaddy/Namecheap DNS records and automatic SSL setup.",
+    "url": "https://tyagihub.in/digital-tools/github-pages-custom-domain-free-hosting-guide/",
+    "datePublished": "2026-11-16",
+    "dateModified": "2026-11-18",
+    "author": {
+      "@type": "Person",
+      "name": "Himanshu Tyagi",
+      "url": "https://tyagihub.in/about/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "TyagiHub",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://tyagihub.in/assets/images/logo.png"
+      }
+    }
+  }
+  </script>
+
+  <!-- Icons -->
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/apple-touch-icon.png">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="/assets/css/main.css">
+
+  <!-- Google AdSense -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7067722696020503" crossorigin="anonymous"></script>
+
+  <script>
+    (function() {
+      const savedTheme = localStorage.getItem('th_theme');
+      if (savedTheme) {
+        document.documentElement.setAttribute('data-theme', savedTheme);
+      } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.documentElement.setAttribute('data-theme', 'dark');
+      }
+    })();
+  </script>
+</head>
+<body>
+  <!-- Reading Progress Bar -->
+  <div class="reading-progress-bar" id="progress-bar"></div>
+
+  <!-- Header Navbar -->
+  <header class="site-header">
+    <div class="header-container">
+      <a href="/" class="brand">
+        <img src="/assets/images/logo.png" alt="TyagiHub Logo" class="brand-logo" width="36" height="36">
+        <span class="brand-text">Tyagi<span>Hub</span></span>
+      </a>
+
+      <nav class="desktop-nav" aria-label="Desktop Navigation">
+        <ul class="nav-links">
+          <li><a href="/" class="nav-link">Home</a></li>
+          <li><a href="/digital-tools/" class="nav-link">Digital Tools</a></li>
+          <li><a href="/productivity/" class="nav-link">Productivity</a></li>
+          <li><a href="/about/" class="nav-link">About</a></li>
+          <li><a href="/contact/" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <button class="search-trigger-btn" type="button" aria-label="Search Guides">
+          <span>🔍</span>
+          <span>Search guides...</span>
+          <kbd>/</kbd>
+        </button>
+
+        <button class="theme-toggle-btn" type="button" aria-label="Toggle Theme">
+          <span class="theme-icon">🌙</span>
+        </button>
+
+        <button class="hamburger-btn" id="hamburger-btn" type="button" aria-label="Toggle Mobile Menu" aria-expanded="false">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Backdrop Overlay -->
+  <div class="mobile-drawer-overlay" id="drawer-overlay" aria-hidden="true"></div>
+
+  <!-- Mobile Drawer Menu -->
+  <aside class="mobile-drawer" id="mobile-drawer" aria-label="Mobile Navigation">
+    <div class="drawer-header">
+      <div class="brand">
+        <img src="/assets/images/logo.png" alt="TyagiHub Logo" class="brand-logo" width="32" height="32">
+        <span class="brand-text">Tyagi<span>Hub</span></span>
+      </div>
+      <button class="drawer-close-btn" id="drawer-close-btn" type="button" aria-label="Close Menu">✕</button>
+    </div>
+
+    <div class="mobile-search-box">
+      <span class="mobile-search-icon">🔍</span>
+      <input type="text" class="mobile-search-input" id="mobile-search-input" placeholder="Search guides & topics...">
+    </div>
+
+    <ul class="drawer-nav-list">
+      <li class="drawer-nav-item"><a href="/">🏠 Home</a></li>
+      <li class="drawer-nav-item"><a href="/digital-tools/">🛠️ Digital Tools</a></li>
+      <li class="drawer-nav-item"><a href="/productivity/">⚡ Productivity</a></li>
+      <li class="drawer-nav-item"><a href="/about/">ℹ️ About Us</a></li>
+      <li class="drawer-nav-item"><a href="/contact/">✉️ Contact Us</a></li>
+      <li class="drawer-nav-item"><a href="/privacy-policy/">🔒 Privacy Policy</a></li>
+      <li class="drawer-nav-item"><a href="/terms/">📜 Terms of Service</a></li>
+      <li class="drawer-nav-item"><a href="/disclaimer/">⚠️ Disclaimer</a></li>
+    </ul>
+
+    <div class="drawer-footer">
+      <p>&copy; 2026 TyagiHub. All rights reserved.</p>
+    </div>
+  </aside>
+
+  <!-- Live Instant Search Modal -->
+  <div class="search-modal" id="search-modal" role="dialog" aria-modal="true" aria-label="Search Guides">
+    <div class="search-dialog">
+      <div class="search-bar-wrap">
+        <span>🔍</span>
+        <input type="search" class="search-main-input" id="search-main-input" placeholder="Search Zoho, Airtable, Invoices..." autocomplete="off">
+        <button class="search-close-btn" id="search-close-btn" type="button">ESC</button>
+      </div>
+      <ul class="search-results-list" id="search-results-list">
+        <li class="search-empty-state">Type keywords to search verified tech guides...</li>
+      </ul>
+    </div>
+  </div>
+
+  <main>
+    <article class="article-container">
+      <nav class="article-breadcrumb" aria-label="Breadcrumb">
+        <a href="/">Home</a> &rsaquo; <a href="/digital-tools/">Digital Tools</a> &rsaquo; <span>Current Guide</span>
+      </nav>
+
+      <header class="article-header">
+        <h1 class="article-title">How to Host a Website on GitHub Pages with Custom Domain & Free SSL (Zero Server Costs 2026 Guide)</h1>
+        <div class="article-meta-bar">
+          <div class="author-chip">
+            <img src="/assets/images/logo.png" alt="Himanshu Tyagi">
+            <span>By Himanshu Tyagi</span>
+          </div>
+          <span>&bull;</span>
+          <time datetime="2026-11-16">November 16, 2026</time>
+          <span>&bull;</span>
+          <span>Category: Digital Tools</span>
+        </div>
+      </header>
+
+      <!-- Social Share Strip -->
+      <div class="share-strip">
+        <span class="share-strip-label">Share this guide:</span>
+        <button class="share-btn" id="copy-link-btn" type="button">🔗 Copy Link</button>
+        <a class="share-btn" id="share-twitter" href="#" target="_blank" rel="noopener">🐦 X (Twitter)</a>
+        <a class="share-btn" id="share-linkedin" href="#" target="_blank" rel="noopener">💼 LinkedIn</a>
+        <a class="share-btn" id="share-whatsapp" href="#" target="_blank" rel="noopener">💬 WhatsApp</a>
+      </div>
+
+      <div class="article-content">
+        
+<!-- Featured Cover Banner -->
+<figure style="margin: 0 0 2rem 0; border-radius: var(--radius-md); overflow: hidden; border: 1px solid var(--border); box-shadow: var(--shadow-sm);">
+  <img src="/assets/images/github-pages-hosting-banner.jpg" alt="GitHub Pages Custom Domain and Free SSL Hosting Guide Banner" style="width: 100%; height: auto; display: block;" width="1200" height="630">
+</figure>
+
+<p>
+  When building a personal portfolio, documentation site, landing page, or static blog, one of the most frustrating recurring expenses is web hosting. Traditional hosting providers like Hostinger, GoDaddy, and Bluehost entice you with introductory rates of ₹149/month, only to slap you with renewal bills of ₹4,000 to ₹7,000 annually — along with extra charges for basic SSL security certificates or domain privacy.
+</p>
+
+<p>
+  For content-driven websites built with HTML, CSS, JavaScript, or static site generators, paying for shared hosting servers running outdated Apache or cPanel stacks makes very little technical sense. Shared servers suffer from database slowdowns, unexpected downtime, and vulnerability to malware injections.
+</p>
+
+<p>
+  The most reliable, enterprise-grade alternative used by developers and tech companies worldwide is <strong>GitHub Pages</strong>. GitHub provides 100% free static web hosting directly from your Git repository, backed by Fastly's global CDN edge network, with unlimited automated Let's Encrypt SSL certificates and zero server maintenance costs.
+</p>
+
+<p>
+  In this exhaustive, verified tutorial, I will walk you through the exact process: from preparing your repository and creating the critical <code>CNAME</code> file to configuring apex A-records and CNAME entries in your GoDaddy or Namecheap DNS manager.
+</p>
+
+<div class="callout success">
+  <div class="callout-title">💰 The Financial Value of GitHub Pages Hosting</div>
+  <p style="margin: 0;">
+    By hosting your static site on GitHub Pages, your ongoing hosting cost is literally <strong>₹0 per year forever</strong>. The only fee you ever pay is your standard domain renewal (approx ₹800–₹1,000/year for a <code>.in</code> or <code>.com</code>). You save thousands of rupees every single year while gaining 99.99% uptime and bulletproof security.
+  </p>
+</div>
+
+---
+
+<h2>1. How GitHub Pages Custom Domain Routing Works</h2>
+
+<p>
+  Before changing DNS zone records, it is critical to understand the technical pipeline that connects your custom domain name to GitHub's global servers:
+</p>
+
+<figure style="margin: 2.5rem 0; border-radius: var(--radius-md); overflow: hidden; border: 1px solid var(--border); box-shadow: var(--shadow-sm);">
+  <img src="/assets/images/github-pages-dns-flowchart.svg" alt="GitHub Pages Custom Domain and Free SSL Routing Flowchart" style="width: 100%; height: auto; display: block;" width="900" height="480">
+  <figcaption style="padding: 0.75rem 1rem; background: var(--bg-surface); color: var(--text-muted); font-size: 0.88rem; text-align: center; border-top: 1px solid var(--border);">
+    Figure 1: Complete routing flow from registrar DNS zone entries to GitHub Pages repository and automated SSL certificate generation.
+  </figcaption>
+</figure>
+
+<p>
+  When a visitor types <code>yourdomain.com</code> in their browser:
+</p>
+<ol>
+  <li>The DNS resolver queries the <strong>4 GitHub A-Records</strong> to find the nearest global edge IP address.</li>
+  <li>GitHub's edge server inspects the incoming HTTP request header and matches the requested domain against the <code>CNAME</code> file stored in your repository.</li>
+  <li>GitHub automatically attaches a trusted, auto-renewing SSL certificate and serves your static files in milliseconds.</li>
+</ol>
+
+---
+
+<h2>2. Step 1: Prepare Your GitHub Repository</h2>
+
+<p>
+  To host a website on GitHub Pages, your code must reside in a public or private GitHub repository.
+</p>
+
+<div class="step-box">
+  <div class="step-header">
+    <span class="step-num">1</span>
+    <span>Log in to your account at <strong>github.com</strong> and open your website repository (or create a new one named <code>my-website</code>).</span>
+  </div>
+</div>
+
+<div class="step-box">
+  <div class="step-header">
+    <span class="step-num">2</span>
+    <span>Ensure you have an <code>index.html</code> file in the root directory (or in a <code>/docs</code> folder).</span>
+  </div>
+  <p style="margin: 0.5rem 0 0 2.25rem; font-size: 0.95rem; color: var(--text-muted);">
+    GitHub Pages looks for <code>index.html</code> as the primary entry point for any incoming web visitor.
+  </p>
+</div>
+
+<div class="step-box">
+  <div class="step-header">
+    <span class="step-num">3</span>
+    <span>Create a file named <code>CNAME</code> (capital letters, no extension like .txt) directly in the root of your repository.</span>
+  </div>
+  <p style="margin: 0.5rem 0 0 2.25rem; font-size: 0.95rem; color: var(--text-muted);">
+    Inside this file, write your exact custom domain name on a single line with no http or slashes:
+    <br>
+    <code>tyagihub.in</code>
+  </p>
+</div>
+
+---
+
+<h2>3. Step 2: Configure the 4 GitHub Apex A-Records in Your DNS Manager</h2>
+
+<p>
+  Now open a new browser tab and navigate to your domain registrar's control panel (GoDaddy, Namecheap, Hostinger, BigRock, etc.). Find the <strong>DNS Management / DNS Zone Editor</strong> for your domain.
+</p>
+
+<p>
+  To route the root apex domain (e.g., <code>tyagihub.in</code> without www) to GitHub, you must create <strong>four distinct A-Records</strong>. These point your domain to GitHub's globally distributed anycast IP addresses:
+</p>
+
+<div class="table-wrapper">
+  <table>
+    <thead>
+      <tr>
+        <th style="width: 20%;">Record Type</th>
+        <th style="width: 25%;">Host / Name</th>
+        <th style="width: 35%;">Value / Destination IP</th>
+        <th>TTL</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>A</strong></td>
+        <td><code>@</code> (or blank)</td>
+        <td><code>185.199.108.153</code></td>
+        <td>1 Hour / Automatic</td>
+      </tr>
+      <tr>
+        <td><strong>A</strong></td>
+        <td><code>@</code> (or blank)</td>
+        <td><code>185.199.109.153</code></td>
+        <td>1 Hour / Automatic</td>
+      </tr>
+      <tr>
+        <td><strong>A</strong></td>
+        <td><code>@</code> (or blank)</td>
+        <td><code>185.199.110.153</code></td>
+        <td>1 Hour / Automatic</td>
+      </tr>
+      <tr>
+        <td><strong>A</strong></td>
+        <td><code>@</code> (or blank)</td>
+        <td><code>185.199.111.153</code></td>
+        <td>1 Hour / Automatic</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="callout warning">
+  <div class="callout-title">⚠️ Delete Old Conflicting A-Records First!</div>
+  <p style="margin: 0;">
+    Before adding these four records, check your DNS zone table for any existing A-records pointing to old parking pages or previous web hosts. Having multiple conflicting A-records will cause random connection timeouts and SSL generation failures.
+  </p>
+</div>
+
+---
+
+<h2>4. Step 3: Configure the WWW CNAME Record</h2>
+
+<p>
+  To ensure visitors who type <code>www.yourdomain.com</code> reach your website without hitting an error, add a <strong>CNAME record</strong>:
+</p>
+
+<div class="table-wrapper">
+  <table>
+    <thead>
+      <tr>
+        <th style="width: 20%;">Record Type</th>
+        <th style="width: 25%;">Host / Name</th>
+        <th style="width: 35%;">Value / Target</th>
+        <th>TTL</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>CNAME</strong></td>
+        <td><code>www</code></td>
+        <td><code>yourusername.github.io</code></td>
+        <td>1 Hour / Automatic</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<p>
+  <em>Note: Replace <code>yourusername</code> with your actual GitHub account username or organization name.</em>
+</p>
+
+---
+
+<h2>5. Step 4: Activating GitHub Pages in Repository Settings</h2>
+
+<p>
+  Once your DNS records are saved in your registrar, return to your GitHub repository:
+</p>
+
+<div class="step-box">
+  <div class="step-header">
+    <span class="step-num">1</span>
+    <span>Click the <strong>Settings</strong> tab located on the top right navigation bar of your repository.</span>
+  </div>
+</div>
+
+<div class="step-box">
+  <div class="step-header">
+    <span class="step-num">2</span>
+    <span>In the left sidebar, click on <strong>Pages</strong> (under the "Code and automation" section).</span>
+  </div>
+</div>
+
+<div class="step-box">
+  <div class="step-header">
+    <span class="step-num">3</span>
+    <span>Under <strong>Build and deployment &rarr; Source</strong>, choose <em>Deploy from a branch</em>.</span>
+  </div>
+  <p style="margin: 0.5rem 0 0 2.25rem; font-size: 0.95rem; color: var(--text-muted);">
+    Select your deployment branch (e.g., <code>main</code> or <code>gh-pages</code>) and folder (usually <code>/ (root)</code>). Click <strong>Save</strong>.
+  </p>
+</div>
+
+<div class="step-box">
+  <div class="step-header">
+    <span class="step-num">4</span>
+    <span>Under <strong>Custom domain</strong>, enter your root domain: <code>tyagihub.in</code> and click <strong>Save</strong>.</span>
+  </div>
+  <p style="margin: 0.5rem 0 0 2.25rem; font-size: 0.95rem; color: var(--text-muted);">
+    GitHub will run an automated DNS check. Within a few minutes, you will see a green checkmark: <em>"DNS check successful"</em>.
+  </p>
+</div>
+
+---
+
+<h2>6. Step 5: Enabling Automated Free SSL (Enforce HTTPS)</h2>
+
+<p>
+  Security is critical for user trust, search engine ranking, and Google AdSense approval. Websites lacking an HTTPS certificate are marked as "Not Secure" by modern browsers.
+</p>
+
+<p>
+  GitHub Pages provides automated, lifetime-renewing SSL certificates via Let's Encrypt:
+</p>
+
+<ol>
+  <li>Under the Custom Domain section in GitHub Pages settings, locate the checkbox labeled <strong>Enforce HTTPS</strong>.</li>
+  <li>If the checkbox is grayed out, wait 10 to 15 minutes while GitHub issues your certificate in the background.</li>
+  <li>Once active, check <strong>Enforce HTTPS</strong>.</li>
+</ol>
+
+<p>
+  From this moment forward, any visitor who accesses your site via <code>http://</code> is instantly redirected to the secure, encrypted <code>https://</code> version with a clean browser padlock icon.
+</p>
+
+---
+
+<h2>7. GitHub Pages vs. Netlify vs. Vercel vs. Cloudflare Pages</h2>
+
+<p>
+  When evaluating zero-cost static hosting platforms, developers often compare GitHub Pages against other modern options. Here is how they stack up for independent creators and solopreneurs:
+</p>
+
+<div class="table-wrapper">
+  <table>
+    <thead>
+      <tr>
+        <th style="width: 25%;">Platform</th>
+        <th style="width: 25%;">Free Bandwidth Limit</th>
+        <th style="width: 25%;">Custom Domain SSL</th>
+        <th>Best Used For</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>GitHub Pages</strong></td>
+        <td>100 GB / month</td>
+        <td>Automatic Let's Encrypt</td>
+        <td>Standard static HTML/CSS/JS, documentation blogs, and portfolios with zero configuration.</td>
+      </tr>
+      <tr>
+        <td><strong>Cloudflare Pages</strong></td>
+        <td>Unlimited bandwidth</td>
+        <td>Automatic Cloudflare Edge SSL</td>
+        <td>High-traffic static sites, though beware of aggressive bot challenges blocking AdSense crawlers.</td>
+      </tr>
+      <tr>
+        <td><strong>Netlify</strong></td>
+        <td>100 GB / month</td>
+        <td>Automatic Let's Encrypt</td>
+        <td>Forms and serverless lambda functions, though bandwidth overages are billed sharply at $55/100GB.</td>
+      </tr>
+      <tr>
+        <td><strong>Vercel</strong></td>
+        <td>100 GB / month</td>
+        <td>Automatic Let's Encrypt</td>
+        <td>Next.js and full-stack React frameworks, strictly non-commercial on the free hobby plan.</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+---
+
+<h2>8. Automated Zero-Click Deployments with GitHub Actions</h2>
+
+<p>
+  If your website uses a static build script (like our custom Node.js generator), you don't even have to manually compile files on your local computer. You can configure a <strong>GitHub Actions Workflow</strong> to automatically build and deploy your site the instant you push changes:
+</p>
+
+<div class="step-box">
+  <div class="step-header">
+    <span class="step-num">1</span>
+    <span>In your repository, create a directory path: <code>.github/workflows/deploy.yml</code>.</span>
+  </div>
+</div>
+
+<div class="step-box">
+  <div class="step-header">
+    <span class="step-num">2</span>
+    <span>Paste the following minimal deployment recipe:</span>
+  </div>
+</div>
+
+<pre><code class="language-yaml">name: Build &amp; Deploy to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install Dependencies &amp; Build
+        run: |
+          npm install
+          node build.js
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./public
+          cname: tyagihub.in</code></pre>
+
+<p>
+  With this workflow enabled, you can write a new markdown article on your laptop, commit it with Git, and GitHub's cloud runners will execute your build script, regenerate your sitemap, and publish your new pages live within 45 seconds — without touching a single server.
+</p>
+
+---
+
+<h2>9. Verifying DNS Propagation (The Command Line Check)</h2>
+
+<p>
+  DNS updates usually take between 5 to 30 minutes, although registrars officially state up to 24 hours. You can verify that your A-records are pointing correctly using your computer's terminal:
+</p>
+
+<pre><code class="language-bash"># Test DNS A-Records via Command Prompt or PowerShell
+nslookup tyagihub.in 8.8.8.8</code></pre>
+
+<p>
+  If configured correctly, the terminal output will return GitHub's 4 IP addresses:
+</p>
+
+<pre><code class="language-text">Non-authoritative answer:
+Name:    tyagihub.in
+Addresses:  185.199.108.153
+            185.199.109.153
+            185.199.110.153
+            185.199.111.153</code></pre>
+
+---
+
+<h2>8. Common Troubleshooting &amp; FAQ</h2>
+
+<div class="faq-box">
+  <div class="faq-q">1. Does moving to GitHub Pages break my custom domain business email (like Zoho Mail)?</div>
+  <div class="faq-a">
+    <strong>No, absolutely not!</strong> Web traffic (handled by A-records and CNAME) is completely separate from email traffic (handled by MX and TXT records). As long as your MX records (e.g. <code>mx.zoho.in</code>) and SPF TXT records remain in your registrar's DNS manager, your business email will continue functioning seamlessly without a second of downtime.
+  </div>
+</div>
+
+<div class="faq-box">
+  <div class="faq-q">2. What are the bandwidth and storage limits of GitHub Pages?</div>
+  <div class="faq-a">
+    GitHub Pages provides a generous soft limit of <strong>1GB of repository storage</strong> and <strong>100GB of monthly bandwidth</strong>. For 99% of personal portfolios, blogs, and documentation websites, 100GB of monthly static bandwidth can easily handle over 200,000 to 500,000 page views per month without paying a penny.
+  </div>
+</div>
+
+<div class="faq-box">
+  <div class="faq-q">3. Can I run PHP scripts or WordPress on GitHub Pages?</div>
+  <div class="faq-a">
+    No. GitHub Pages is strictly a static file host. It does not execute dynamic server-side languages like PHP or MySQL databases. If you need dynamic features (like contact forms or payment processing), use static-friendly client-side embeds like <a href="/digital-tools/zoho-forms-free-custom-website-embed-guide/">Zoho Forms</a> or serverless API endpoints.
+  </div>
+</div>
+
+<div class="faq-box">
+  <div class="faq-q">4. Why does GitHub show "Domain's DNS record could not be retrieved"?</div>
+  <div class="faq-a">
+    This typically occurs if your nameservers were recently changed (e.g., migrating away from Cloudflare back to GoDaddy). Clear your local DNS cache by running <code>ipconfig /flushdns</code> in PowerShell and allow 15–30 minutes for registrar propagation.
+  </div>
+</div>
+
+---
+
+<h2>Conclusion: High-Speed Web Hosting with Zero Server Bills</h2>
+
+<p>
+  Hosting a professional, fast, and secure website does not require spending thousands of rupees every year on bloated shared hosting plans. 
+</p>
+
+<p>
+  By deploying your static HTML, CSS, and client-side code directly to GitHub Pages and binding your custom domain with proper DNS A-records, you unlock world-class CDN speeds, automatic SSL security, and 100% peace of mind. Combine this zero-cost hosting architecture with your custom domain business email, and you have a bulletproof digital foundation with zero ongoing server expenses.
+</p>
+
+      </div>
+
+      <div class="author-box">
+        <img src="/assets/images/logo.png" alt="Himanshu Tyagi" class="author-box-img">
+        <div>
+          <div class="author-box-name">Himanshu Tyagi</div>
+          <div class="author-box-role">Founder &amp; Software Developer &bull; Ghaziabad, India</div>
+          <div class="author-box-bio">
+            Himanshu is an independent software and Android developer based in Ghaziabad, Uttar Pradesh. He writes hands-on, verified guides helping creators, developers, and small businesses configure digital tools, cloud software, and productivity workflows.
+          </div>
+        </div>
+      </div>
+    </article>
+  </main>
+
+  <!-- Modern Multi-Column Footer -->
+  <footer class="site-footer">
+    <div class="footer-main-grid">
+      <!-- Column 1: Brand & Editorial Mission -->
+      <div>
+        <div class="brand" style="margin-bottom: 1rem;">
+          <img src="/assets/images/logo.png" alt="TyagiHub Logo" class="brand-logo" width="36" height="36">
+          <span class="brand-text">Tyagi<span>Hub</span></span>
+        </div>
+        <p style="color: var(--text-muted); font-size: 0.92rem; line-height: 1.7; margin-bottom: 1rem;">
+          TyagiHub is an independent digital publication founded by Himanshu Tyagi. We publish hands-on, human-verified tutorials on cloud business tools, free business email configurations, GST invoicing portals, and no-code productivity workflows.
+        </p>
+        <p style="color: var(--text-light); font-size: 0.85rem;">
+          100% human-tested tutorials. Zero fluff. Zero paywalls.
+        </p>
+        <p style="color: var(--text-light); font-size: 0.83rem; margin-top: 0.5rem;">
+          📍 Ghaziabad, Uttar Pradesh, India &bull; <a href="mailto:contact@tyagihub.in" style="color: var(--primary);">contact@tyagihub.in</a>
+        </p>
+      </div>
+
+      <!-- Column 2: Topic Clusters -->
+      <div>
+        <h4 class="footer-col-title">Topic Clusters</h4>
+        <ul class="footer-links-list">
+          <li class="footer-link-item"><a href="/digital-tools/">🛠️ Digital Tools</a></li>
+          <li class="footer-link-item"><a href="/productivity/">⚡ Productivity Guides</a></li>
+          <li class="footer-link-item"><a href="/digital-tools/whatsapp-business-automation-client-guide/">💬 WhatsApp Business Automation</a></li>
+          <li class="footer-link-item"><a href="/productivity/google-calendar-time-blocking-solopreneur-guide/">📅 Google Calendar Scheduling</a></li>
+          <li class="footer-link-item"><a href="/digital-tools/github-pages-custom-domain-free-hosting-guide/">🌐 Free GitHub Pages Hosting</a></li>
+          <li class="footer-link-item"><a href="/productivity/obsidian-beginner-offline-notes-guide/">🧠 Obsidian Offline Notes Hub</a></li>
+        </ul>
+      </div>
+
+      <!-- Column 3: Trust & Legal -->
+      <div>
+        <h4 class="footer-col-title">Trust &amp; Legal</h4>
+        <ul class="footer-links-list">
+          <li class="footer-link-item"><a href="/about/">ℹ️ About Us &amp; Editorial Policy</a></li>
+          <li class="footer-link-item"><a href="/contact/">✉️ Contact Us &amp; Support</a></li>
+          <li class="footer-link-item"><a href="/privacy-policy/">🔒 Privacy Policy</a></li>
+          <li class="footer-link-item"><a href="/terms/">📜 Terms of Service</a></li>
+          <li class="footer-link-item"><a href="/disclaimer/">⚠️ Full Disclaimer</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Footer Bottom Bar -->
+    <div class="footer-bottom-bar">
+      <div>&copy; 2026 TyagiHub &bull; Founded by Himanshu Tyagi (Ghaziabad, UP, India). All rights reserved.</div>
+      <div style="display: flex; gap: 1.25rem;">
+        <a href="/privacy-policy/" style="color: var(--text-light); font-size: 0.85rem;">Privacy</a>
+        <a href="/terms/" style="color: var(--text-light); font-size: 0.85rem;">Terms</a>
+        <a href="/contact/" style="color: var(--text-light); font-size: 0.85rem;">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating Back to Top Button -->
+  <button class="back-to-top-btn" id="back-to-top" aria-label="Back to Top" type="button">↑</button>
+
+  <!-- Copy Toast Notification -->
+  <div class="copy-toast" id="copy-toast">Link copied to clipboard!</div>
+
+  <script src="/assets/js/main.js" defer></script>
+</body>
+</html>

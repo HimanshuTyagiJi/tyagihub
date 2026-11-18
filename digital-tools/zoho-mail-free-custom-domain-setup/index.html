@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>How to Set Up Free Business Email with Custom Domain on Zoho Mail (Complete 2026 Guide) | TyagiHub</title>
+  <meta name="description" content="Step-by-step tutorial to create a 100% free professional business email using your custom domain on Zoho Mail, including exact TXT, MX, SPF, and DKIM DNS records.">
+  <link rel="canonical" href="https://tyagihub.in/digital-tools/zoho-mail-free-custom-domain-setup/">
+  <meta name="robots" content="index, follow">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="How to Set Up Free Business Email with Custom Domain on Zoho Mail (Complete 2026 Guide) | TyagiHub">
+  <meta property="og:description" content="Step-by-step tutorial to create a 100% free professional business email using your custom domain on Zoho Mail, including exact TXT, MX, SPF, and DKIM DNS records.">
+  <meta property="og:url" content="https://tyagihub.in/digital-tools/zoho-mail-free-custom-domain-setup/">
+  <meta property="og:site_name" content="TyagiHub">
+  <meta property="og:image" content="https://tyagihub.in/assets/images/logo.png">
+
+  <!-- Schema.org Article Structured Data (AdSense & Google Search E-E-A-T) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "How to Set Up Free Business Email with Custom Domain on Zoho Mail (Complete 2026 Guide)",
+    "description": "Step-by-step tutorial to create a 100% free professional business email using your custom domain on Zoho Mail, including exact TXT, MX, SPF, and DKIM DNS records.",
+    "url": "https://tyagihub.in/digital-tools/zoho-mail-free-custom-domain-setup/",
+    "datePublished": "2026-11-02",
+    "dateModified": "2026-11-02",
+    "author": {
+      "@type": "Person",
+      "name": "Himanshu Tyagi",
+      "url": "https://tyagihub.in/about/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "TyagiHub",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://tyagihub.in/assets/images/logo.png"
+      }
+    }
+  }
+  </script>
+
+  <!-- Icons -->
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/apple-touch-icon.png">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="/assets/css/main.css">
+
+  <!-- Google AdSense -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7067722696020503" crossorigin="anonymous"></script>
+
+  <script>
+    (function() {
+      const savedTheme = localStorage.getItem('th_theme');
+      if (savedTheme) {
+        document.documentElement.setAttribute('data-theme', savedTheme);
+      } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.documentElement.setAttribute('data-theme', 'dark');
+      }
+    })();
+  </script>
+</head>
+<body>
+  <!-- Reading Progress Bar -->
+  <div class="reading-progress-bar" id="progress-bar"></div>
+
+  <!-- Header Navbar -->
+  <header class="site-header">
+    <div class="header-container">
+      <a href="/" class="brand">
+        <img src="/assets/images/logo.png" alt="TyagiHub Logo" class="brand-logo" width="36" height="36">
+        <span class="brand-text">Tyagi<span>Hub</span></span>
+      </a>
+
+      <nav class="desktop-nav" aria-label="Desktop Navigation">
+        <ul class="nav-links">
+          <li><a href="/" class="nav-link">Home</a></li>
+          <li><a href="/digital-tools/" class="nav-link">Digital Tools</a></li>
+          <li><a href="/productivity/" class="nav-link">Productivity</a></li>
+          <li><a href="/about/" class="nav-link">About</a></li>
+          <li><a href="/contact/" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <button class="search-trigger-btn" type="button" aria-label="Search Guides">
+          <span>🔍</span>
+          <span>Search guides...</span>
+          <kbd>/</kbd>
+        </button>
+
+        <button class="theme-toggle-btn" type="button" aria-label="Toggle Theme">
+          <span class="theme-icon">🌙</span>
+        </button>
+
+        <button class="hamburger-btn" id="hamburger-btn" type="button" aria-label="Toggle Mobile Menu" aria-expanded="false">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Backdrop Overlay -->
+  <div class="mobile-drawer-overlay" id="drawer-overlay" aria-hidden="true"></div>
+
+  <!-- Mobile Drawer Menu -->
+  <aside class="mobile-drawer" id="mobile-drawer" aria-label="Mobile Navigation">
+    <div class="drawer-header">
+      <div class="brand">
+        <img src="/assets/images/logo.png" alt="TyagiHub Logo" class="brand-logo" width="32" height="32">
+        <span class="brand-text">Tyagi<span>Hub</span></span>
+      </div>
+      <button class="drawer-close-btn" id="drawer-close-btn" type="button" aria-label="Close Menu">✕</button>
+    </div>
+
+    <div class="mobile-search-box">
+      <span class="mobile-search-icon">🔍</span>
+      <input type="text" class="mobile-search-input" id="mobile-search-input" placeholder="Search guides & topics...">
+    </div>
+
+    <ul class="drawer-nav-list">
+      <li class="drawer-nav-item"><a href="/">🏠 Home</a></li>
+      <li class="drawer-nav-item"><a href="/digital-tools/">🛠️ Digital Tools</a></li>
+      <li class="drawer-nav-item"><a href="/productivity/">⚡ Productivity</a></li>
+      <li class="drawer-nav-item"><a href="/about/">ℹ️ About Us</a></li>
+      <li class="drawer-nav-item"><a href="/contact/">✉️ Contact Us</a></li>
+      <li class="drawer-nav-item"><a href="/privacy-policy/">🔒 Privacy Policy</a></li>
+      <li class="drawer-nav-item"><a href="/terms/">📜 Terms of Service</a></li>
+      <li class="drawer-nav-item"><a href="/disclaimer/">⚠️ Disclaimer</a></li>
+    </ul>
+
+    <div class="drawer-footer">
+      <p>&copy; 2026 TyagiHub. All rights reserved.</p>
+    </div>
+  </aside>
+
+  <!-- Live Instant Search Modal -->
+  <div class="search-modal" id="search-modal" role="dialog" aria-modal="true" aria-label="Search Guides">
+    <div class="search-dialog">
+      <div class="search-bar-wrap">
+        <span>🔍</span>
+        <input type="search" class="search-main-input" id="search-main-input" placeholder="Search Zoho, Airtable, Invoices..." autocomplete="off">
+        <button class="search-close-btn" id="search-close-btn" type="button">ESC</button>
+      </div>
+      <ul class="search-results-list" id="search-results-list">
+        <li class="search-empty-state">Type keywords to search verified tech guides...</li>
+      </ul>
+    </div>
+  </div>
+
+  <main>
+    <article class="article-container">
+      <nav class="article-breadcrumb" aria-label="Breadcrumb">
+        <a href="/">Home</a> &rsaquo; <a href="/digital-tools/">Digital Tools</a> &rsaquo; <span>Current Guide</span>
+      </nav>
+
+      <header class="article-header">
+        <h1 class="article-title">How to Set Up Free Business Email with Custom Domain on Zoho Mail (Complete 2026 Guide)</h1>
+        <div class="article-meta-bar">
+          <div class="author-chip">
+            <img src="/assets/images/logo.png" alt="Himanshu Tyagi">
+            <span>By Himanshu Tyagi</span>
+          </div>
+          <span>&bull;</span>
+          <time datetime="2026-11-02">November 2, 2026</time>
+          <span>&bull;</span>
+          <span>Category: Digital Tools</span>
+        </div>
+      </header>
+
+      <!-- Social Share Strip -->
+      <div class="share-strip">
+        <span class="share-strip-label">Share this guide:</span>
+        <button class="share-btn" id="copy-link-btn" type="button">🔗 Copy Link</button>
+        <a class="share-btn" id="share-twitter" href="#" target="_blank" rel="noopener">🐦 X (Twitter)</a>
+        <a class="share-btn" id="share-linkedin" href="#" target="_blank" rel="noopener">💼 LinkedIn</a>
+        <a class="share-btn" id="share-whatsapp" href="#" target="_blank" rel="noopener">💬 WhatsApp</a>
+      </div>
+
+      <div class="article-content">
+        
+<!-- Featured Cover Banner -->
+<figure style="margin: 0 0 2rem 0; border-radius: var(--radius-md); overflow: hidden; border: 1px solid var(--border); box-shadow: var(--shadow-sm);">
+  <img src="/assets/images/zoho-mail-setup-banner.jpg" alt="Zoho Mail Free Custom Domain Business Email Setup Guide Banner" style="width: 100%; height: auto; display: block;" width="1200" height="630">
+</figure>
+
+<p>
+  When communicating with clients, partners, banks, or prospective employers, sending messages from a generic address like <code>yourbusiness@gmail.com</code> looks amateurish. A branded business email such as <code>contact@yourdomain.com</code> or <code>himanshu@tyagihub.in</code> instantly establishes professional credibility, brand authority, and digital trust.
+</p>
+
+<p>
+  While industry giants like Google Workspace charge approximately ₹450 to ₹650 per user each month, and Microsoft 365 requires monthly recurring subscriptions, <strong>Zoho Mail offers a hidden "Forever Free" tier</strong>. Zoho's free plan allows up to <strong>5 team members</strong> to have dedicated custom domain inboxes with <strong>5GB of secure storage per user</strong> — completely free of cost with zero trial expiration.
+</p>
+
+<p>
+  In this exhaustive, verified tutorial, we will guide you through the entire setup process: from locating the free signup page and verifying domain ownership to configuring critical MX, SPF, and DKIM records so your emails land directly in inboxes rather than the spam folder.
+</p>
+
+<div class="callout success">
+  <div class="callout-title">💰 The Financial Value of Zoho's Free Tier</div>
+  <p style="margin: 0;">
+    For a small startup, developer, or freelancer with 3 team members, Google Workspace costs over <strong>₹18,000 to ₹24,000 annually</strong>. By configuring Zoho Mail's Forever Free Plan on your domain, you save 100% of those recurring costs while maintaining a world-class, ad-free business webmail interface.
+  </p>
+</div>
+
+---
+
+<h2>1. What You Need Before You Begin</h2>
+
+<p>Before initiating the setup, ensure you have the following prerequisites ready:</p>
+
+<ol>
+  <li><strong>A Registered Domain Name:</strong> Purchased through any registrar (e.g., GoDaddy, Namecheap, Hostinger, BigRock, or Cloudflare).</li>
+  <li><strong>Access to Your Domain's DNS Manager:</strong> You must have administrative access to edit DNS records (such as your Cloudflare dashboard, cPanel Zone Editor, or GoDaddy DNS Manager).</li>
+  <li><strong>A Personal Phone Number:</strong> Required by Zoho for initial account verification and Two-Factor Authentication (2FA).</li>
+</ol>
+
+---
+
+<h2>2. Step 1: Navigating to the Zoho Mail "Forever Free" Tier</h2>
+
+<p>
+  Zoho frequently updates its homepage to highlight paid enterprise plans. To find the genuine free plan without accidentally entering a 15-day paid trial, follow these exact steps:
+</p>
+
+<div class="step-box">
+  <div class="step-header">
+    <span class="step-num">1</span>
+    <span>Visit <strong>zoho.com/mail</strong> and navigate to the <strong>Pricing</strong> tab.</span>
+  </div>
+</div>
+
+<div class="step-box">
+  <div class="step-header">
+    <span class="step-num">2</span>
+    <span>Scroll past the "Mail Lite" and "Mail Premium" paid subscription columns.</span>
+  </div>
+</div>
+
+<div class="step-box">
+  <div class="step-header">
+    <span class="step-num">3</span>
+    <span>Look at the very bottom of the pricing table for the box titled: <strong>"Forever Free Plan"</strong>.</span>
+    <p style="margin: 0.5rem 0 0 1.75rem; color: var(--text-muted); font-size: 0.95rem;">
+      Click on <strong>Sign Up Now</strong> under the Forever Free Plan. This grants 5 users, 5GB/user, and web/mobile app access with zero credit card required.
+    </p>
+  </div>
+</div>
+
+<div class="step-box">
+  <div class="step-header">
+    <span class="step-num">4</span>
+    <span>Select <strong>"Sign up with a domain I already own"</strong>, enter your root domain (e.g., <code>tyagihub.in</code>), and provide your organization name.</span>
+  </div>
+</div>
+
+---
+
+<h2>3. Step 2: Verifying Domain Ownership via TXT Record</h2>
+
+<p>
+  Before Zoho routes any emails, you must prove that you legitimately control the domain. The fastest and most reliable method is adding a <strong>TXT verification record</strong> in your domain's DNS panel.
+</p>
+
+<ol>
+  <li>In the Zoho Setup Wizard, select <strong>TXT Method</strong> for verification.</li>
+  <li>Zoho will generate a unique verification string that looks similar to: <code>zoho-verification=zb12345678.zmverify.zoho.in</code>.</li>
+  <li>Open your DNS Manager (Cloudflare, GoDaddy, or Hostinger) in a separate browser tab.</li>
+  <li>Add a new DNS record with the following parameters:
+    <ul>
+      <li><strong>Type:</strong> <code>TXT</code></li>
+      <li><strong>Name / Host:</strong> <code>@</code> (or leave blank if your provider does not support '@')</li>
+      <li><strong>Value / Content:</strong> Paste your unique <code>zoho-verification=...</code> string.</li>
+      <li><strong>TTL:</strong> Automatic (or 300 seconds / 5 minutes).</li>
+    </ul>
+  </li>
+  <li>Return to Zoho and click <strong>Verify TXT Record</strong>. Once verified, Zoho will instantly grant ownership of the domain.</li>
+</ol>
+
+---
+
+<h2>4. Step 3: Configuring MX (Mail Exchanger) Records</h2>
+
+<!-- DNS Architecture Flowchart -->
+<figure style="margin: 2rem 0; border-radius: var(--radius-md); overflow: hidden; border: 1px solid var(--border); box-shadow: var(--shadow-sm);">
+  <img src="/assets/images/zoho-mail-dns-flowchart.svg" alt="Zoho Mail 4 Essential DNS Records Architecture" style="width: 100%; height: auto; display: block;" width="1000" height="360">
+  <figcaption style="padding: 0.6rem 1rem; font-size: 0.88rem; color: var(--text-light); text-align: center; background: var(--bg-surface); border-top: 1px solid var(--border);">Figure 1: Complete 4-step DNS record configuration required for 100% deliverability.</figcaption>
+</figure>
+
+<p>
+  <strong>MX records</strong> tell the global internet where to deliver incoming emails sent to your domain. If someone sends an email to <code>contact@yourdomain.com</code>, your DNS MX records direct that message directly into Zoho's mail servers.
+</p>
+
+<div class="callout warning">
+  <div class="callout-title">⚠️ Delete Existing MX Records First</div>
+  <p style="margin: 0;">
+    Before adding Zoho MX records, check your DNS table and <strong>delete any pre-existing default MX records</strong> (such as default cPanel, GoDaddy webmail, or hosting provider MX records). Having multiple conflicting MX destinations will cause incoming emails to bounce or fail randomly.
+  </p>
+</div>
+
+<p>Add these three standard MX records in your DNS dashboard:</p>
+
+<div class="table-wrapper">
+  <table>
+    <thead>
+      <tr>
+        <th>Record Type</th>
+        <th>Host / Name</th>
+        <th>Mail Server Destination</th>
+        <th>Priority</th>
+        <th>TTL</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><code>MX</code></td>
+        <td><code>@</code></td>
+        <td><code>mx.zoho.in</code> (or <code>mx.zoho.com</code> for US accounts)</td>
+        <td><strong>10</strong></td>
+        <td>Auto / 1 Hour</td>
+      </tr>
+      <tr>
+        <td><code>MX</code></td>
+        <td><code>@</code></td>
+        <td><code>mx2.zoho.in</code> (or <code>mx2.zoho.com</code>)</td>
+        <td><strong>20</strong></td>
+        <td>Auto / 1 Hour</td>
+      </tr>
+      <tr>
+        <td><code>MX</code></td>
+        <td><code>@</code></td>
+        <td><code>mx3.zoho.in</code> (or <code>mx3.zoho.com</code>)</td>
+        <td><strong>50</strong></td>
+        <td>Auto / 1 Hour</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<p style="font-size: 0.92rem; color: var(--text-muted);">
+  <em>Note: If you signed up via zoho.in (India Data Center), use <code>.in</code> servers. If you registered via zoho.com (US Data Center), use <code>.com</code>. Your Zoho setup screen will explicitly display which domain suffix to use.</em>
+</p>
+
+---
+
+<h2>5. Step 4: Setting Up SPF (Sender Policy Framework)</h2>
+
+<p>
+  Now that your domain can receive mail, you must ensure that emails you <strong>send out</strong> are not rejected or flagged as spam by recipients using Gmail, Outlook, or Yahoo.
+</p>
+
+<p>
+  An <strong>SPF record</strong> is a public declaration in your DNS that authorizes Zoho's IP addresses to send mail on behalf of your domain name. Without an SPF record, major email providers will assume your email is spoofed phishing and send it straight to the Spam/Junk folder.
+</p>
+
+<div class="step-box">
+  <div class="step-header">
+    <span class="step-num">SPF</span>
+    <span>Add this exact TXT Record in your DNS Manager:</span>
+  </div>
+  <ul style="margin: 0.5rem 0 0 1.75rem; font-size: 0.95rem;">
+    <li><strong>Type:</strong> <code>TXT</code></li>
+    <li><strong>Host / Name:</strong> <code>@</code></li>
+    <li><strong>Content / Value:</strong> <code>v=spf1 include:zoho.in ~all</code></li>
+    <li><strong>TTL:</strong> Automatic / 300 seconds</li>
+  </ul>
+</div>
+
+<p style="font-size: 0.92rem; color: var(--text-muted);">
+  <em>Important: You must only have <strong>one single SPF TXT record</strong> per domain. If you already have an SPF record for another transactional tool, combine them (e.g., <code>v=spf1 include:zoho.in include:sendgrid.net ~all</code>).</em>
+</p>
+
+---
+
+<h2>6. Step 5: Generating and Adding DKIM (Cryptographic Signing)</h2>
+
+<p>
+  In 2024–2026, Google and Yahoo instituted mandatory <strong>DKIM authentication</strong> for all domain senders. DKIM attaches an invisible cryptographic digital signature to every email header you send. When recipient servers receive your message, they check your public DKIM key in your DNS to verify the email was not tampered with during transit.
+</p>
+
+<ol>
+  <li>In Zoho Mail Control Panel, go to: <strong>Email Configuration &rarr; DKIM</strong>.</li>
+  <li>Click <strong>Add Selector</strong>. You can name the selector anything simple, such as <code>zmail</code>.</li>
+  <li>Zoho will generate a long public key string.</li>
+  <li>Go to your DNS Manager and add a new TXT record:
+    <ul>
+      <li><strong>Type:</strong> <code>TXT</code></li>
+      <li><strong>Host / Name:</strong> <code>zmail._domainkey</code></li>
+      <li><strong>Content / Value:</strong> Paste the entire public key string provided by Zoho (starts with <code>k=rsa; p=...</code>).</li>
+    </ul>
+  </li>
+  <li>Save the record in your DNS. Return to Zoho and toggle the selector status to <strong>Active</strong>.</li>
+</ol>
+
+---
+
+<h2>7. Step 6: Setting Up DMARC (The Anti-Spoofing Policy)</h2>
+
+<p>
+  DMARC (Domain-based Message Authentication, Reporting, and Conformance) ties SPF and DKIM together. It instructs recipient mail servers on what to do if an email claiming to be from your domain fails authentication checks:
+</p>
+
+<ul>
+  <li><strong>Type:</strong> <code>TXT</code></li>
+  <li><strong>Host / Name:</strong> <code>_dmarc</code></li>
+  <li><strong>Value:</strong> <code>v=DMARC1; p=none; rua=mailto:admin@yourdomain.com</code></li>
+</ul>
+
+<p>
+  Setting <code>p=none</code> allows you to monitor email deliverability reports without accidentally blocking genuine messages while your new domain warms up.
+</p>
+
+---
+
+<h2>8. Complete DNS Records Summary Table</h2>
+
+<p>For quick reference, here are all four essential records consolidated into one checklist:</p>
+
+<div class="table-wrapper">
+  <table>
+    <thead>
+      <tr>
+        <th>Purpose</th>
+        <th>Record Type</th>
+        <th>Host / Name</th>
+        <th>Value / Target</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Domain Ownership</strong></td>
+        <td><code>TXT</code></td>
+        <td><code>@</code></td>
+        <td><code>zoho-verification=zb...</code></td>
+      </tr>
+      <tr>
+        <td><strong>Primary MX</strong></td>
+        <td><code>MX</code> (Priority 10)</td>
+        <td><code>@</code></td>
+        <td><code>mx.zoho.in</code></td>
+      </tr>
+      <tr>
+        <td><strong>Backup MX 1</strong></td>
+        <td><code>MX</code> (Priority 20)</td>
+        <td><code>@</code></td>
+        <td><code>mx2.zoho.in</code></td>
+      </tr>
+      <tr>
+        <td><strong>Backup MX 2</strong></td>
+        <td><code>MX</code> (Priority 50)</td>
+        <td><code>@</code></td>
+        <td><code>mx3.zoho.in</code></td>
+      </tr>
+      <tr>
+        <td><strong>SPF Anti-Spam</strong></td>
+        <td><code>TXT</code></td>
+        <td><code>@</code></td>
+        <td><code>v=spf1 include:zoho.in ~all</code></td>
+      </tr>
+      <tr>
+        <td><strong>DKIM Signature</strong></td>
+        <td><code>TXT</code></td>
+        <td><code>zmail._domainkey</code></td>
+        <td><code>k=rsa; p=...</code> (from Zoho Panel)</td>
+      </tr>
+      <tr>
+        <td><strong>DMARC Alignment</strong></td>
+        <td><code>TXT</code></td>
+        <td><code>_dmarc</code></td>
+        <td><code>v=DMARC1; p=none;</code></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+---
+
+<h2>9. Step 7: Creating User Inboxes and Aliases</h2>
+
+<p>Once DNS propagation finishes (typically within 5 to 30 minutes), you can configure your team's mailboxes:</p>
+
+<ul>
+  <li><strong>Primary Inboxes:</strong> In the Zoho Mail Admin Console, go to <strong>User Management &rarr; Users</strong>. Click <strong>Add User</strong> to create inboxes like <code>himanshu@tyagihub.in</code> or <code>sales@tyagihub.in</code> (up to 5 free accounts).</li>
+  <li><strong>Email Aliases (Pro Tip):</strong> You do not need to burn a separate user account for general inquiries. In your primary user settings, navigate to <strong>Mail Accounts &rarr; Email Aliases</strong> and add aliases like <code>info@yourdomain.com</code>, <code>support@yourdomain.com</code>, or <code>contact@yourdomain.com</code>. All messages sent to these aliases will route directly into your main inbox!</li>
+</ul>
+
+---
+
+<h2>10. Accessing Your New Business Email on Mobile</h2>
+
+<p>
+  Zoho Mail's Forever Free Plan provides full access through modern mobile apps on both Android and iOS:
+</p>
+
+<ol>
+  <li>Download the official <strong>Zoho Mail</strong> application from the Google Play Store or Apple App Store.</li>
+  <li>Sign in with your newly created custom domain email address and password.</li>
+  <li>You will receive push notifications, real-time message synchronization, and access to Zoho Calendar and Contacts with an ad-free interface.</li>
+</ol>
+
+<div class="callout">
+  <div class="callout-title">ℹ️ Note on IMAP / POP3 Restrictions</div>
+  <p style="margin: 0;">
+    Zoho's Forever Free Plan includes web browser access (via <code>mail.zoho.in</code>) and the official Zoho Mail mobile applications. Third-party desktop email clients (like Microsoft Outlook desktop or Apple Mail desktop via IMAP/POP3) require a paid Mail Lite upgrade. For 95% of small business users and freelancers, the official Zoho web and mobile apps provide a far superior, cloud-synchronized experience.
+  </p>
+</div>
+
+---
+
+<h2>11. Frequently Asked Questions</h2>
+
+<div class="faq-box">
+  <div class="faq-q">Is the Zoho Mail Free Plan genuinely free forever?</div>
+  <div class="faq-a">
+    Yes. Zoho has operated its Forever Free tier for over a decade. As long as you remain within the 5-user, 5GB storage per user limit, you will never be charged or asked for credit card details.
+  </div>
+</div>
+
+<div class="faq-box">
+  <div class="faq-q">How long does DNS record propagation take?</div>
+  <div class="faq-a">
+    If your domain uses modern DNS providers like Cloudflare, DNS propagation takes under 5 minutes. On traditional registrars like GoDaddy or Namecheap, it can occasionally take between 15 minutes to 2 hours.
+  </div>
+</div>
+
+<div class="faq-box">
+  <div class="faq-q">Why are my emails still going to Gmail spam?</div>
+  <div class="faq-a">
+    If your sent messages land in spam, verify that your SPF and DKIM records are active. Use free diagnostic tools like <em>mail-tester.com</em> to check your score. A new domain also requires a 1 to 2-week natural warming period with positive engagement.
+  </div>
+</div>
+
+<div class="callout success">
+  <div class="callout-title">📋 Setup Verification Checklist</div>
+  <ul style="margin: 0.5rem 0 0 1rem;">
+    <li>Domain ownership verified via TXT string.</li>
+    <li>Pre-existing old MX records deleted; 3 Zoho MX records added.</li>
+    <li>Single SPF TXT record active on root domain.</li>
+    <li>DKIM selector <code>zmail._domainkey</code> set to Active.</li>
+    <li>DMARC policy record added.</li>
+    <li>Test email successfully sent and received.</li>
+  </ul>
+</div>
+
+      </div>
+
+      <div class="author-box">
+        <img src="/assets/images/logo.png" alt="Himanshu Tyagi" class="author-box-img">
+        <div>
+          <div class="author-box-name">Himanshu Tyagi</div>
+          <div class="author-box-role">Founder &amp; Software Developer &bull; Ghaziabad, India</div>
+          <div class="author-box-bio">
+            Himanshu is an independent software and Android developer based in Ghaziabad, Uttar Pradesh. He writes hands-on, verified guides helping creators, developers, and small businesses configure digital tools, cloud software, and productivity workflows.
+          </div>
+        </div>
+      </div>
+    </article>
+  </main>
+
+  <!-- Modern Multi-Column Footer -->
+  <footer class="site-footer">
+    <div class="footer-main-grid">
+      <!-- Column 1: Brand & Editorial Mission -->
+      <div>
+        <div class="brand" style="margin-bottom: 1rem;">
+          <img src="/assets/images/logo.png" alt="TyagiHub Logo" class="brand-logo" width="36" height="36">
+          <span class="brand-text">Tyagi<span>Hub</span></span>
+        </div>
+        <p style="color: var(--text-muted); font-size: 0.92rem; line-height: 1.7; margin-bottom: 1rem;">
+          TyagiHub is an independent digital publication founded by Himanshu Tyagi. We publish hands-on, human-verified tutorials on cloud business tools, free business email configurations, GST invoicing portals, and no-code productivity workflows.
+        </p>
+        <p style="color: var(--text-light); font-size: 0.85rem;">
+          100% human-tested tutorials. Zero fluff. Zero paywalls.
+        </p>
+        <p style="color: var(--text-light); font-size: 0.83rem; margin-top: 0.5rem;">
+          📍 Ghaziabad, Uttar Pradesh, India &bull; <a href="mailto:contact@tyagihub.in" style="color: var(--primary);">contact@tyagihub.in</a>
+        </p>
+      </div>
+
+      <!-- Column 2: Topic Clusters -->
+      <div>
+        <h4 class="footer-col-title">Topic Clusters</h4>
+        <ul class="footer-links-list">
+          <li class="footer-link-item"><a href="/digital-tools/">🛠️ Digital Tools</a></li>
+          <li class="footer-link-item"><a href="/productivity/">⚡ Productivity Guides</a></li>
+          <li class="footer-link-item"><a href="/digital-tools/whatsapp-business-automation-client-guide/">💬 WhatsApp Business Automation</a></li>
+          <li class="footer-link-item"><a href="/productivity/google-calendar-time-blocking-solopreneur-guide/">📅 Google Calendar Scheduling</a></li>
+          <li class="footer-link-item"><a href="/digital-tools/github-pages-custom-domain-free-hosting-guide/">🌐 Free GitHub Pages Hosting</a></li>
+          <li class="footer-link-item"><a href="/productivity/obsidian-beginner-offline-notes-guide/">🧠 Obsidian Offline Notes Hub</a></li>
+        </ul>
+      </div>
+
+      <!-- Column 3: Trust & Legal -->
+      <div>
+        <h4 class="footer-col-title">Trust &amp; Legal</h4>
+        <ul class="footer-links-list">
+          <li class="footer-link-item"><a href="/about/">ℹ️ About Us &amp; Editorial Policy</a></li>
+          <li class="footer-link-item"><a href="/contact/">✉️ Contact Us &amp; Support</a></li>
+          <li class="footer-link-item"><a href="/privacy-policy/">🔒 Privacy Policy</a></li>
+          <li class="footer-link-item"><a href="/terms/">📜 Terms of Service</a></li>
+          <li class="footer-link-item"><a href="/disclaimer/">⚠️ Full Disclaimer</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Footer Bottom Bar -->
+    <div class="footer-bottom-bar">
+      <div>&copy; 2026 TyagiHub &bull; Founded by Himanshu Tyagi (Ghaziabad, UP, India). All rights reserved.</div>
+      <div style="display: flex; gap: 1.25rem;">
+        <a href="/privacy-policy/" style="color: var(--text-light); font-size: 0.85rem;">Privacy</a>
+        <a href="/terms/" style="color: var(--text-light); font-size: 0.85rem;">Terms</a>
+        <a href="/contact/" style="color: var(--text-light); font-size: 0.85rem;">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating Back to Top Button -->
+  <button class="back-to-top-btn" id="back-to-top" aria-label="Back to Top" type="button">↑</button>
+
+  <!-- Copy Toast Notification -->
+  <div class="copy-toast" id="copy-toast">Link copied to clipboard!</div>
+
+  <script src="/assets/js/main.js" defer></script>
+</body>
+</html>

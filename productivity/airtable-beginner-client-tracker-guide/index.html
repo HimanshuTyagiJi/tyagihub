@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Airtable for Beginners: How I Replaced Messy Spreadsheets with a Free Client Tracker (2026 Guide) | TyagiHub</title>
+  <meta name="description" content="A practical, no-code guide to building your first custom client and project tracker in Airtable from scratch in 12 minutes, using 100% free relational tables.">
+  <link rel="canonical" href="https://tyagihub.in/productivity/airtable-beginner-client-tracker-guide/">
+  <meta name="robots" content="index, follow">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Airtable for Beginners: How I Replaced Messy Spreadsheets with a Free Client Tracker (2026 Guide) | TyagiHub">
+  <meta property="og:description" content="A practical, no-code guide to building your first custom client and project tracker in Airtable from scratch in 12 minutes, using 100% free relational tables.">
+  <meta property="og:url" content="https://tyagihub.in/productivity/airtable-beginner-client-tracker-guide/">
+  <meta property="og:site_name" content="TyagiHub">
+  <meta property="og:image" content="https://tyagihub.in/assets/images/logo.png">
+
+  <!-- Schema.org Article Structured Data (AdSense & Google Search E-E-A-T) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "Airtable for Beginners: How I Replaced Messy Spreadsheets with a Free Client Tracker (2026 Guide)",
+    "description": "A practical, no-code guide to building your first custom client and project tracker in Airtable from scratch in 12 minutes, using 100% free relational tables.",
+    "url": "https://tyagihub.in/productivity/airtable-beginner-client-tracker-guide/",
+    "datePublished": "2026-11-10",
+    "dateModified": "2026-11-10",
+    "author": {
+      "@type": "Person",
+      "name": "Himanshu Tyagi",
+      "url": "https://tyagihub.in/about/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "TyagiHub",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://tyagihub.in/assets/images/logo.png"
+      }
+    }
+  }
+  </script>
+
+  <!-- Icons -->
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/apple-touch-icon.png">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="/assets/css/main.css">
+
+  <!-- Google AdSense -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7067722696020503" crossorigin="anonymous"></script>
+
+  <script>
+    (function() {
+      const savedTheme = localStorage.getItem('th_theme');
+      if (savedTheme) {
+        document.documentElement.setAttribute('data-theme', savedTheme);
+      } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.documentElement.setAttribute('data-theme', 'dark');
+      }
+    })();
+  </script>
+</head>
+<body>
+  <!-- Reading Progress Bar -->
+  <div class="reading-progress-bar" id="progress-bar"></div>
+
+  <!-- Header Navbar -->
+  <header class="site-header">
+    <div class="header-container">
+      <a href="/" class="brand">
+        <img src="/assets/images/logo.png" alt="TyagiHub Logo" class="brand-logo" width="36" height="36">
+        <span class="brand-text">Tyagi<span>Hub</span></span>
+      </a>
+
+      <nav class="desktop-nav" aria-label="Desktop Navigation">
+        <ul class="nav-links">
+          <li><a href="/" class="nav-link">Home</a></li>
+          <li><a href="/digital-tools/" class="nav-link">Digital Tools</a></li>
+          <li><a href="/productivity/" class="nav-link">Productivity</a></li>
+          <li><a href="/about/" class="nav-link">About</a></li>
+          <li><a href="/contact/" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <button class="search-trigger-btn" type="button" aria-label="Search Guides">
+          <span>🔍</span>
+          <span>Search guides...</span>
+          <kbd>/</kbd>
+        </button>
+
+        <button class="theme-toggle-btn" type="button" aria-label="Toggle Theme">
+          <span class="theme-icon">🌙</span>
+        </button>
+
+        <button class="hamburger-btn" id="hamburger-btn" type="button" aria-label="Toggle Mobile Menu" aria-expanded="false">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Backdrop Overlay -->
+  <div class="mobile-drawer-overlay" id="drawer-overlay" aria-hidden="true"></div>
+
+  <!-- Mobile Drawer Menu -->
+  <aside class="mobile-drawer" id="mobile-drawer" aria-label="Mobile Navigation">
+    <div class="drawer-header">
+      <div class="brand">
+        <img src="/assets/images/logo.png" alt="TyagiHub Logo" class="brand-logo" width="32" height="32">
+        <span class="brand-text">Tyagi<span>Hub</span></span>
+      </div>
+      <button class="drawer-close-btn" id="drawer-close-btn" type="button" aria-label="Close Menu">✕</button>
+    </div>
+
+    <div class="mobile-search-box">
+      <span class="mobile-search-icon">🔍</span>
+      <input type="text" class="mobile-search-input" id="mobile-search-input" placeholder="Search guides & topics...">
+    </div>
+
+    <ul class="drawer-nav-list">
+      <li class="drawer-nav-item"><a href="/">🏠 Home</a></li>
+      <li class="drawer-nav-item"><a href="/digital-tools/">🛠️ Digital Tools</a></li>
+      <li class="drawer-nav-item"><a href="/productivity/">⚡ Productivity</a></li>
+      <li class="drawer-nav-item"><a href="/about/">ℹ️ About Us</a></li>
+      <li class="drawer-nav-item"><a href="/contact/">✉️ Contact Us</a></li>
+      <li class="drawer-nav-item"><a href="/privacy-policy/">🔒 Privacy Policy</a></li>
+      <li class="drawer-nav-item"><a href="/terms/">📜 Terms of Service</a></li>
+      <li class="drawer-nav-item"><a href="/disclaimer/">⚠️ Disclaimer</a></li>
+    </ul>
+
+    <div class="drawer-footer">
+      <p>&copy; 2026 TyagiHub. All rights reserved.</p>
+    </div>
+  </aside>
+
+  <!-- Live Instant Search Modal -->
+  <div class="search-modal" id="search-modal" role="dialog" aria-modal="true" aria-label="Search Guides">
+    <div class="search-dialog">
+      <div class="search-bar-wrap">
+        <span>🔍</span>
+        <input type="search" class="search-main-input" id="search-main-input" placeholder="Search Zoho, Airtable, Invoices..." autocomplete="off">
+        <button class="search-close-btn" id="search-close-btn" type="button">ESC</button>
+      </div>
+      <ul class="search-results-list" id="search-results-list">
+        <li class="search-empty-state">Type keywords to search verified tech guides...</li>
+      </ul>
+    </div>
+  </div>
+
+  <main>
+    <article class="article-container">
+      <nav class="article-breadcrumb" aria-label="Breadcrumb">
+        <a href="/">Home</a> &rsaquo; <a href="/productivity/">Productivity</a> &rsaquo; <span>Current Guide</span>
+      </nav>
+
+      <header class="article-header">
+        <h1 class="article-title">Airtable for Beginners: How I Replaced Messy Spreadsheets with a Free Client Tracker (2026 Guide)</h1>
+        <div class="article-meta-bar">
+          <div class="author-chip">
+            <img src="/assets/images/logo.png" alt="Himanshu Tyagi">
+            <span>By Himanshu Tyagi</span>
+          </div>
+          <span>&bull;</span>
+          <time datetime="2026-11-10">November 10, 2026</time>
+          <span>&bull;</span>
+          <span>Category: Productivity</span>
+        </div>
+      </header>
+
+      <!-- Social Share Strip -->
+      <div class="share-strip">
+        <span class="share-strip-label">Share this guide:</span>
+        <button class="share-btn" id="copy-link-btn" type="button">🔗 Copy Link</button>
+        <a class="share-btn" id="share-twitter" href="#" target="_blank" rel="noopener">🐦 X (Twitter)</a>
+        <a class="share-btn" id="share-linkedin" href="#" target="_blank" rel="noopener">💼 LinkedIn</a>
+        <a class="share-btn" id="share-whatsapp" href="#" target="_blank" rel="noopener">💬 WhatsApp</a>
+      </div>
+
+      <div class="article-content">
+        
+<!-- Featured Cover Banner -->
+<figure style="margin: 0 0 2rem 0; border-radius: var(--radius-md); overflow: hidden; border: 1px solid var(--border); box-shadow: var(--shadow-sm);">
+  <img src="/assets/images/airtable-tracker-banner.jpg" alt="Airtable for Beginners Client Tracker Guide Banner" style="width: 100%; height: auto; display: block;" width="1200" height="630">
+</figure>
+
+<p>
+  If you are doing freelance work, building web projects, or managing orders for a small business, I am willing to bet you started your workflow exactly where I did: <strong>a giant, colorful Google Sheet or Excel workbook</strong>.
+</p>
+
+<p>
+  For the first three or four clients, a basic spreadsheet works fine. But once you cross 15 or 20 active leads, projects, and invoices, spreadsheets start breaking down fast:
+</p>
+
+<ul>
+  <li>You type the exact same client phone number and email in twelve different rows.</li>
+  <li>Someone changes a status in column D, and your formulas throw a mysterious <code>#REF!</code> error.</li>
+  <li>You have no clean way to see which projects are currently stuck without scrolling through dozens of horizontal cells.</li>
+  <li>Attaching contract PDFs or design files turns your sheet into an unreadable mess.</li>
+</ul>
+
+<p>
+  For a long time, I resisted switching to dedicated database software because I assumed tools like Airtable were complex, expensive enterprise platforms built only for venture-backed startups. <strong>I was wrong.</strong>
+</p>
+
+<p>
+  Airtable is essentially what happens if a spreadsheet and a database had a child, and made it as easy to use as Lego blocks. In this tutorial, I will walk you through the exact <strong>3-table client tracker system</strong> I built on Airtable's 100% free plan. It took me about twelve minutes to set up from a blank base, and it has saved me dozens of hours of administrative headache.
+</p>
+
+<div class="callout success">
+  <div class="callout-title">💡 What You Get on Airtable's Free Plan</div>
+  <p style="margin: 0;">
+    Airtable's free tier includes <strong>unlimited bases (projects)</strong>, up to <strong>1,000 records per base</strong>, and 1GB of attachment storage. Unless you are managing thousands of leads per month, you will not pay a single rupee for this setup.
+  </p>
+</div>
+
+---
+
+<h2>1. The Mental Shift: Spreadsheet Cells vs. Database Records</h2>
+
+<p>
+  Before opening Airtable, you need to understand one core concept that makes spreadsheets painful for client management:
+</p>
+
+<p>
+  In Excel or Google Sheets, a cell is just an isolated box. You can type a date in one box, a paragraph in the box below it, and an image URL next to it. Spreadsheets do not understand relationships.
+</p>
+
+<p>
+  In Airtable, <strong>every row is an object (record), and every column has a strict data type</strong> (like Phone Number, Single Select, Attachment, or Linked Record). Most importantly, Airtable allows you to <strong>link tables together</strong>.
+</p>
+
+<p>
+  Instead of copying a client's company name and phone number on every single project row, you store the client's information <em>once</em> in a "Clients" table, and simply link projects to that client. If the client changes their phone number later, you update it in one place, and it automatically reflects across every project and invoice linked to them.
+</p>
+
+---
+
+<h2>2. Our 3-Table Architecture</h2>
+
+<!-- Relational Schema Diagram -->
+<figure style="margin: 2rem 0; border-radius: var(--radius-md); overflow: hidden; border: 1px solid var(--border); box-shadow: var(--shadow-sm);">
+  <img src="/assets/images/airtable-database-schema.svg" alt="Airtable Relational Database Schema Architecture" style="width: 100%; height: auto; display: block;" width="1000" height="360">
+  <figcaption style="padding: 0.6rem 1rem; font-size: 0.88rem; color: var(--text-light); text-align: center; background: var(--bg-surface); border-top: 1px solid var(--border);">Figure 1: How three relational tables connect to keep your projects and clients cleanly organized.</figcaption>
+</figure>
+
+---
+
+<h2>3. Step-by-Step Build: Setting Up the Base in 12 Minutes</h2>
+
+<p>Create a free account at <strong>airtable.com</strong>, click <strong>"Create a Base"</strong>, and choose <strong>"Start from scratch"</strong>. Name your base <em>"Client &amp; Project Tracker"</em>.</p>
+
+<h3>Step 1: Build Table 1 — "Clients"</h3>
+<p>Rename the first table tab to <strong>Clients</strong>. Configure these columns (fields):</p>
+
+<ol>
+  <li><strong>Client Name (Primary Field):</strong> Set field type to <em>Single line text</em>. This will be the main label (e.g., <em>Ramesh Sharma</em> or <em>Acme Tech</em>).</li>
+  <li><strong>Email:</strong> Click the <code>+</code> button to add a field &rarr; select <strong>Email</strong> type.</li>
+  <li><strong>Phone:</strong> Add a field &rarr; select <strong>Phone number</strong> type.</li>
+  <li><strong>Company Name:</strong> <em>Single line text</em>.</li>
+  <li><strong>Client Status:</strong> Add a field &rarr; select <strong>Single select</strong>. Add three color-coded options:
+    <ul>
+      <li>🟢 <em>Active</em></li>
+      <li>🟡 <em>Lead / Prospect</em></li>
+      <li>⚪ <em>Past Client</em></li>
+    </ul>
+  </li>
+</ol>
+
+<div class="callout">
+  <div class="callout-title">📝 Test Data Entry</div>
+  <p style="margin: 0;">
+    Add two sample clients right now so you can test linkages later. For example: Row 1: <em>"Sharmaji Bakery"</em> (Active), Row 2: <em>"Apex Logistics"</em> (Lead).
+  </p>
+</div>
+
+---
+
+<h3>Step 2: Build Table 2 — "Projects"</h3>
+<p>Click the <code>+ Add or import</code> button next to the table tabs and create a second blank table named <strong>Projects</strong>. Configure these fields:</p>
+
+<ol>
+  <li><strong>Project Name (Primary Field):</strong> <em>Single line text</em> (e.g., <em>"Website Redesign"</em>, <em>"Monthly SEO"</em>).</li>
+  <li><strong>Client (The Magic Link):</strong> Add a field &rarr; choose <strong>Link to another record</strong> &rarr; select <strong>Clients</strong>.
+    <p style="font-size: 0.92rem; color: var(--text-muted); margin-top: 0.25rem;">
+      When you click this cell, Airtable pops up a searchable list of your clients from Table 1. Click a client, and the record links instantly!
+    </p>
+  </li>
+  <li><strong>Due Date:</strong> Add a field &rarr; select <strong>Date</strong>.</li>
+  <li><strong>Status:</strong> Add a field &rarr; select <strong>Single select</strong> with four stages:
+    <ul>
+      <li>🔵 <em>Backlog / To-Do</em></li>
+      <li>🟡 <em>In Progress</em></li>
+      <li>🟠 <em>In Review / Feedback</em></li>
+      <li>🟢 <em>Completed &amp; Delivered</em></li>
+    </ul>
+  </li>
+  <li><strong>Project Fee:</strong> Add a field &rarr; select <strong>Currency</strong> (INR ₹).</li>
+  <li><strong>Attachments:</strong> Add a field &rarr; select <strong>Attachment</strong> (perfect for dropping wireframes, briefs, or contracts directly onto the record).</li>
+</ol>
+
+---
+
+<h3>Step 3: Build Table 3 — "Invoices &amp; Payments"</h3>
+<p>Create a third table named <strong>Invoices</strong> to keep track of who owes you money:</p>
+
+<ol>
+  <li><strong>Invoice Number (Primary Field):</strong> Select <strong>Autonumber</strong> or <em>Single line text</em> (e.g., <em>INV-001</em>).</li>
+  <li><strong>Linked Project:</strong> Choose <strong>Link to another record</strong> &rarr; select <strong>Projects</strong>.</li>
+  <li><strong>Amount:</strong> <em>Currency</em> (INR ₹).</li>
+  <li><strong>Payment Status:</strong> <em>Single select</em>:
+    <ul>
+      <li>🔴 <em>Unpaid / Pending</em></li>
+      <li>🟢 <em>Paid in Full</em></li>
+      <li>🟡 <em>Partially Paid</em></li>
+    </ul>
+  </li>
+  <li><strong>Due Date:</strong> <em>Date</em>.</li>
+</ol>
+
+---
+
+<h2>4. The Power Move: Switching to Kanban &amp; Calendar Views</h2>
+
+<p>
+  The biggest reason I will never go back to spreadsheets is Airtable's <strong>Views</strong>.
+</p>
+
+<p>
+  In a spreadsheet, you are stuck with a grid of rows and columns. In Airtable, the underlying data remains the same, but you can display it in completely different visual layouts with one click:
+</p>
+
+<h3>A. The Drag-and-Drop Kanban Board</h3>
+<ol>
+  <li>Go to your <strong>Projects</strong> table.</li>
+  <li>In the top-left corner, click <strong>Views</strong> &rarr; select <strong>Kanban</strong>.</li>
+  <li>When prompted for <em>"Group by"</em>, select <strong>Status</strong>.</li>
+  <li><strong>Instantly</strong>, your spreadsheet turns into a visual Trello-style board! You can see your projects grouped into columns (<em>To-Do</em>, <em>In Progress</em>, <em>In Review</em>, <em>Completed</em>). When you finish a task, just drag the card from one column to the next.</li>
+</ol>
+
+<h3>B. The Deadline Calendar View</h3>
+<p>
+  Click <strong>Views &rarr; Calendar</strong> &rarr; select the <strong>Due Date</strong> field. All your project deadlines populate onto a clean monthly calendar, giving you an immediate visual sense of upcoming deliverables.
+</p>
+
+---
+
+<h2>5. Three Mistakes I Made as an Airtable Beginner (Avoid These!)</h2>
+
+<p>When I first moved over from Excel, I made a few rookie errors that caused confusion. Here is what you should avoid:</p>
+
+<div class="step-box">
+  <div class="step-header">
+    <span class="step-num">1</span>
+    <span>Treating Airtable Cells Like Sticky Notes</span>
+  </div>
+  <p style="color: var(--text-muted); font-size: 0.95rem; margin: 0;">
+    In Excel, people often cram five different pieces of info into one cell (e.g., <em>"John Doe - 9876543210 - Paid ₹5000"</em>). In Airtable, always create dedicated fields with the right type. Having a real Phone field lets you tap to call directly from the mobile app; having a real Currency field lets you run instant mathematical sums.
+  </p>
+</div>
+
+<div class="step-box">
+  <div class="step-header">
+    <span class="step-num">2</span>
+    <span>Creating Duplicate Client Rows</span>
+  </div>
+  <p style="color: var(--text-muted); font-size: 0.95rem; margin: 0;">
+    If a client hires you for a second project six months later, do <strong>NOT</strong> create a new row in your Clients table. Just open your Projects table, create the new project, and link it to the existing client record.
+  </p>
+</div>
+
+<div class="step-box">
+  <div class="step-header">
+    <span class="step-num">3</span>
+    <span>Over-Automating on Day One</span>
+  </div>
+  <p style="color: var(--text-muted); font-size: 0.95rem; margin: 0;">
+    Airtable has powerful automation features (like sending automated emails when a status changes). Do not worry about automations when starting out. Spend your first two weeks getting comfortable updating your Kanban board manually before adding automated triggers.
+  </p>
+</div>
+
+---
+
+<h2>6. Frequently Asked Questions</h2>
+
+<div class="faq-box">
+  <div class="faq-q">Is Airtable truly free for a solo freelancer or small team?</div>
+  <div class="faq-a">
+    Yes. The free tier gives you up to 1,000 records per base. For a freelancer handling 40–50 client projects a year, a single free base can easily last you 3 to 4 years before you ever come close to the limit.
+  </div>
+</div>
+
+<div class="faq-box">
+  <div class="faq-q">Can I access my Airtable base from my smartphone?</div>
+  <div class="faq-a">
+    Yes. Airtable has official, highly polished native apps for both Android and iOS. You can add new client contacts, update project statuses, or check unpaid invoice totals right from your phone on the go.
+  </div>
+</div>
+
+<div class="faq-box">
+  <div class="faq-q">Can I export my data back to Excel if I don't like it?</div>
+  <div class="faq-a">
+    Yes. You are never locked in. In any Airtable view, click the three dots in the view bar and select <strong>Download CSV</strong>. Your data exports instantly into standard spreadsheet format.
+  </div>
+</div>
+
+<div class="callout success">
+  <div class="callout-title">📋 12-Minute Implementation Checklist</div>
+  <ul style="margin: 0.5rem 0 0 1rem;">
+    <li>Base created from scratch named "Client &amp; Project Tracker".</li>
+    <li>Table 1 (Clients) built with Email, Phone, and Status fields.</li>
+    <li>Table 2 (Projects) built with Linked Record to Clients and Date field.</li>
+    <li>Table 3 (Invoices) built with Linked Record to Projects and Currency field.</li>
+    <li>Kanban View generated on Projects table grouped by Status.</li>
+    <li>Airtable mobile app downloaded for on-the-go updates.</li>
+  </ul>
+</div>
+
+      </div>
+
+      <div class="author-box">
+        <img src="/assets/images/logo.png" alt="Himanshu Tyagi" class="author-box-img">
+        <div>
+          <div class="author-box-name">Himanshu Tyagi</div>
+          <div class="author-box-role">Founder &amp; Software Developer &bull; Ghaziabad, India</div>
+          <div class="author-box-bio">
+            Himanshu is an independent software and Android developer based in Ghaziabad, Uttar Pradesh. He writes hands-on, verified guides helping creators, developers, and small businesses configure digital tools, cloud software, and productivity workflows.
+          </div>
+        </div>
+      </div>
+    </article>
+  </main>
+
+  <!-- Modern Multi-Column Footer -->
+  <footer class="site-footer">
+    <div class="footer-main-grid">
+      <!-- Column 1: Brand & Editorial Mission -->
+      <div>
+        <div class="brand" style="margin-bottom: 1rem;">
+          <img src="/assets/images/logo.png" alt="TyagiHub Logo" class="brand-logo" width="36" height="36">
+          <span class="brand-text">Tyagi<span>Hub</span></span>
+        </div>
+        <p style="color: var(--text-muted); font-size: 0.92rem; line-height: 1.7; margin-bottom: 1rem;">
+          TyagiHub is an independent digital publication founded by Himanshu Tyagi. We publish hands-on, human-verified tutorials on cloud business tools, free business email configurations, GST invoicing portals, and no-code productivity workflows.
+        </p>
+        <p style="color: var(--text-light); font-size: 0.85rem;">
+          100% human-tested tutorials. Zero fluff. Zero paywalls.
+        </p>
+        <p style="color: var(--text-light); font-size: 0.83rem; margin-top: 0.5rem;">
+          📍 Ghaziabad, Uttar Pradesh, India &bull; <a href="mailto:contact@tyagihub.in" style="color: var(--primary);">contact@tyagihub.in</a>
+        </p>
+      </div>
+
+      <!-- Column 2: Topic Clusters -->
+      <div>
+        <h4 class="footer-col-title">Topic Clusters</h4>
+        <ul class="footer-links-list">
+          <li class="footer-link-item"><a href="/digital-tools/">🛠️ Digital Tools</a></li>
+          <li class="footer-link-item"><a href="/productivity/">⚡ Productivity Guides</a></li>
+          <li class="footer-link-item"><a href="/digital-tools/whatsapp-business-automation-client-guide/">💬 WhatsApp Business Automation</a></li>
+          <li class="footer-link-item"><a href="/productivity/google-calendar-time-blocking-solopreneur-guide/">📅 Google Calendar Scheduling</a></li>
+          <li class="footer-link-item"><a href="/digital-tools/github-pages-custom-domain-free-hosting-guide/">🌐 Free GitHub Pages Hosting</a></li>
+          <li class="footer-link-item"><a href="/productivity/obsidian-beginner-offline-notes-guide/">🧠 Obsidian Offline Notes Hub</a></li>
+        </ul>
+      </div>
+
+      <!-- Column 3: Trust & Legal -->
+      <div>
+        <h4 class="footer-col-title">Trust &amp; Legal</h4>
+        <ul class="footer-links-list">
+          <li class="footer-link-item"><a href="/about/">ℹ️ About Us &amp; Editorial Policy</a></li>
+          <li class="footer-link-item"><a href="/contact/">✉️ Contact Us &amp; Support</a></li>
+          <li class="footer-link-item"><a href="/privacy-policy/">🔒 Privacy Policy</a></li>
+          <li class="footer-link-item"><a href="/terms/">📜 Terms of Service</a></li>
+          <li class="footer-link-item"><a href="/disclaimer/">⚠️ Full Disclaimer</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Footer Bottom Bar -->
+    <div class="footer-bottom-bar">
+      <div>&copy; 2026 TyagiHub &bull; Founded by Himanshu Tyagi (Ghaziabad, UP, India). All rights reserved.</div>
+      <div style="display: flex; gap: 1.25rem;">
+        <a href="/privacy-policy/" style="color: var(--text-light); font-size: 0.85rem;">Privacy</a>
+        <a href="/terms/" style="color: var(--text-light); font-size: 0.85rem;">Terms</a>
+        <a href="/contact/" style="color: var(--text-light); font-size: 0.85rem;">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating Back to Top Button -->
+  <button class="back-to-top-btn" id="back-to-top" aria-label="Back to Top" type="button">↑</button>
+
+  <!-- Copy Toast Notification -->
+  <div class="copy-toast" id="copy-toast">Link copied to clipboard!</div>
+
+  <script src="/assets/js/main.js" defer></script>
+</body>
+</html>

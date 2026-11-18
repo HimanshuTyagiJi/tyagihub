@@ -1,0 +1,87 @@
+<svg preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 360" width="1000" height="360">
+  <defs>
+    <linearGradient id="dnsCardBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e293b"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+    <filter id="dnsShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#000" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+
+  <rect width="1000" height="360" rx="16" fill="#0b1120" stroke="#1e293b" stroke-width="2"/>
+
+  <!-- Title Bar -->
+  <text x="40" y="45" fill="#38bdf8" font-family="system-ui, sans-serif" font-size="14" font-weight="700" letter-spacing="1">DNS CONFIGURATION ARCHITECTURE</text>
+  <text x="40" y="78" fill="#f8fafc" font-family="system-ui, sans-serif" font-size="22" font-weight="800">4 Essential Records for Custom Domain Email Delivery</text>
+
+  <!-- 4 Records Flow -->
+  <g transform="translate(40, 110)">
+    
+    <!-- CARD 1: TXT Verification -->
+    <g transform="translate(0, 0)">
+      <rect width="210" height="195" rx="12" fill="url(#dnsCardBg)" stroke="#38bdf8" stroke-width="1.5" filter="url(#dnsShadow)"/>
+      <circle cx="36" cy="36" r="16" fill="#005b99"/>
+      <text x="31" y="42" fill="#fff" font-family="system-ui, sans-serif" font-size="15" font-weight="800">1</text>
+      <text x="64" y="42" fill="#f8fafc" font-family="system-ui, sans-serif" font-size="16" font-weight="750">TXT Verify</text>
+      
+      <rect x="20" y="70" width="170" height="42" rx="6" fill="#0f172a" stroke="#1e293b"/>
+      <text x="30" y="95" fill="#38bdf8" font-family="monospace" font-size="11">zoho-verification=...</text>
+
+      <text x="20" y="145" fill="#cbd5e1" font-family="system-ui, sans-serif" font-size="12">Confirms you own the</text>
+      <text x="20" y="165" fill="#38bdf8" font-family="system-ui, sans-serif" font-size="12" font-weight="700">domain to Zoho servers</text>
+    </g>
+
+    <!-- Arrow 1 -->
+    <path d="M222 98 L238 98 M230 92 L238 98 L230 104" stroke="#38bdf8" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+
+    <!-- CARD 2: MX Records -->
+    <g transform="translate(250, 0)">
+      <rect width="210" height="195" rx="12" fill="url(#dnsCardBg)" stroke="#10b981" stroke-width="1.5" filter="url(#dnsShadow)"/>
+      <circle cx="36" cy="36" r="16" fill="#059669"/>
+      <text x="31" y="42" fill="#fff" font-family="system-ui, sans-serif" font-size="15" font-weight="800">2</text>
+      <text x="64" y="42" fill="#f8fafc" font-family="system-ui, sans-serif" font-size="16" font-weight="750">MX Routing</text>
+
+      <rect x="20" y="70" width="170" height="42" rx="6" fill="#022c22" stroke="#128C7E"/>
+      <text x="30" y="95" fill="#25D366" font-family="monospace" font-size="11">mx.zoho.in (Pri: 10)</text>
+
+      <text x="20" y="145" fill="#cbd5e1" font-family="system-ui, sans-serif" font-size="12">Routes incoming mails</text>
+      <text x="20" y="165" fill="#22c55e" font-family="system-ui, sans-serif" font-size="12" font-weight="700">into your Zoho inbox</text>
+    </g>
+
+    <!-- Arrow 2 -->
+    <path d="M472 98 L488 98 M480 92 L488 98 L480 104" stroke="#38bdf8" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+
+    <!-- CARD 3: SPF Record -->
+    <g transform="translate(500, 0)">
+      <rect width="210" height="195" rx="12" fill="url(#dnsCardBg)" stroke="#f59e0b" stroke-width="1.5" filter="url(#dnsShadow)"/>
+      <circle cx="36" cy="36" r="16" fill="#d97706"/>
+      <text x="31" y="42" fill="#fff" font-family="system-ui, sans-serif" font-size="15" font-weight="800">3</text>
+      <text x="64" y="42" fill="#f8fafc" font-family="system-ui, sans-serif" font-size="16" font-weight="750">SPF Sender</text>
+
+      <rect x="20" y="70" width="170" height="42" rx="6" fill="#0f172a" stroke="#f59e0b"/>
+      <text x="30" y="95" fill="#f59e0b" font-family="monospace" font-size="11">v=spf1 include:zoho.in</text>
+
+      <text x="20" y="145" fill="#cbd5e1" font-family="system-ui, sans-serif" font-size="12">Prevents spoofing;</text>
+      <text x="20" y="165" fill="#f59e0b" font-family="system-ui, sans-serif" font-size="12" font-weight="700">guarantees Inbox delivery</text>
+    </g>
+
+    <!-- Arrow 3 -->
+    <path d="M722 98 L738 98 M730 92 L738 98 L730 104" stroke="#38bdf8" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+
+    <!-- CARD 4: DKIM Signing -->
+    <g transform="translate(750, 0)">
+      <rect width="190" height="195" rx="12" fill="url(#dnsCardBg)" stroke="#8b5cf6" stroke-width="1.5" filter="url(#dnsShadow)"/>
+      <circle cx="36" cy="36" r="16" fill="#7c3aed"/>
+      <text x="31" y="42" fill="#fff" font-family="system-ui, sans-serif" font-size="15" font-weight="800">4</text>
+      <text x="64" y="42" fill="#f8fafc" font-family="system-ui, sans-serif" font-size="16" font-weight="750">DKIM Sign</text>
+
+      <rect x="15" y="70" width="160" height="42" rx="6" fill="#1e1b4b" stroke="#8b5cf6"/>
+      <text x="25" y="95" fill="#a78bfa" font-family="monospace" font-size="11">zmail._domainkey</text>
+
+      <text x="15" y="145" fill="#cbd5e1" font-family="system-ui, sans-serif" font-size="12">Digital signature so</text>
+      <text x="15" y="165" fill="#a78bfa" font-family="system-ui, sans-serif" font-size="12" font-weight="700">Gmail trusts your mails</text>
+    </g>
+
+  </g>
+</svg>

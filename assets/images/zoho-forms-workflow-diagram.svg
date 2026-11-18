@@ -1,0 +1,142 @@
+<svg preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 480" width="900" height="480">
+  <defs>
+    <linearGradient id="zfGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e293b"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+    <linearGradient id="zfFlow" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0284c7"/>
+      <stop offset="100%" stop-color="#10b981"/>
+    </linearGradient>
+    <filter id="zfShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="6" stdDeviation="8" flood-color="#000000" flood-opacity="0.4"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="900" height="480" rx="12" fill="#0b0f19" stroke="#1e293b" stroke-width="1.5"/>
+
+  <!-- Title -->
+  <text x="450" y="44" text-anchor="middle" fill="#f8fafc" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="800" letter-spacing="-0.5">
+    Zoho Forms Automated Zero-Code Architecture
+  </text>
+  <text x="450" y="70" text-anchor="middle" fill="#94a3b8" font-family="system-ui, -apple-system, sans-serif" font-size="13">
+    How an embedded form securely routes leads, protects against spambots, and triggers instant alerts
+  </text>
+
+  <!-- Node 1: Visitor Submits Form -->
+  <g transform="translate(40, 110)" filter="url(#zfShadow)">
+    <rect width="180" height="300" rx="10" fill="url(#zfGrad1)" stroke="#38bdf8" stroke-width="1.5"/>
+    <rect width="180" height="40" rx="10" fill="#0284c7" opacity="0.25"/>
+    <rect y="25" width="180" height="15" fill="#0284c7" opacity="0.25"/>
+    <text x="16" y="26" fill="#38bdf8" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="750">🌐 1. Visitor Entry</text>
+
+    <g transform="translate(14, 55)">
+      <text x="0" y="16" fill="#f1f5f9" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="650">Website Embed</text>
+      <text x="0" y="34" fill="#94a3b8" font-family="system-ui, -apple-system, sans-serif" font-size="10">Runs via clean iframe or JS embed.</text>
+
+      <rect y="50" width="152" height="1" fill="#334155"/>
+
+      <text x="0" y="68" fill="#cbd5e1" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="600">Captured Data:</text>
+      <text x="0" y="86" fill="#94a3b8" font-family="system-ui, -apple-system, sans-serif" font-size="10">• Name &amp; Email</text>
+      <text x="0" y="104" fill="#94a3b8" font-family="system-ui, -apple-system, sans-serif" font-size="10">• Phone (Validated)</text>
+      <text x="0" y="122" fill="#94a3b8" font-family="system-ui, -apple-system, sans-serif" font-size="10">• Service Dropdown</text>
+      <text x="0" y="140" fill="#94a3b8" font-family="system-ui, -apple-system, sans-serif" font-size="10">• File Attachment</text>
+
+      <rect y="156" width="152" height="60" rx="6" fill="#0f172a" stroke="#0284c7" stroke-width="0.8"/>
+      <text x="8" y="174" fill="#38bdf8" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="700">Responsive UI:</text>
+      <text x="8" y="192" fill="#94a3b8" font-family="system-ui, -apple-system, sans-serif" font-size="9">Auto-adapts to 360px mobile screens &amp; 4K monitors.</text>
+    </g>
+  </g>
+
+  <!-- Arrow 1 -> 2 -->
+  <g transform="translate(230, 240)">
+    <line x1="0" y1="0" x2="25" y2="0" stroke="url(#zfFlow)" stroke-width="3" stroke-linecap="round"/>
+    <polygon points="25,-5 35,0 25,5" fill="#818cf8"/>
+  </g>
+
+  <!-- Node 2: Zoho Cloud Security Engine -->
+  <g transform="translate(275, 110)" filter="url(#zfShadow)">
+    <rect width="180" height="300" rx="10" fill="url(#zfGrad1)" stroke="#818cf8" stroke-width="1.5"/>
+    <rect width="180" height="40" rx="10" fill="#6366f1" opacity="0.25"/>
+    <rect y="25" width="180" height="15" fill="#6366f1" opacity="0.25"/>
+    <text x="16" y="26" fill="#818cf8" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="750">🛡️ 2. Bot Defense</text>
+
+    <g transform="translate(14, 55)">
+      <text x="0" y="16" fill="#f1f5f9" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="650">Zoho Edge Verification</text>
+
+      <rect y="35" width="152" height="1" fill="#334155"/>
+
+      <text x="0" y="55" fill="#a78bfa" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="600">✓ Honeypot Field:</text>
+      <text x="0" y="72" fill="#94a3b8" font-family="system-ui, -apple-system, sans-serif" font-size="10">Blocks scraping bots silently.</text>
+
+      <text x="0" y="100" fill="#a78bfa" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="600">✓ reCAPTCHA v2 / v3:</text>
+      <text x="0" y="117" fill="#94a3b8" font-family="system-ui, -apple-system, sans-serif" font-size="10">Zero human friction.</text>
+
+      <text x="0" y="145" fill="#a78bfa" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="600">✓ Domain Restriction:</text>
+      <text x="0" y="162" fill="#94a3b8" font-family="system-ui, -apple-system, sans-serif" font-size="10">Only accepts submissions from your allowed URLs.</text>
+    </g>
+  </g>
+
+  <!-- Arrow 2 -> Split (3A &amp; 3B) -->
+  <g transform="translate(465, 200)">
+    <line x1="0" y1="40" x2="35" y2="0" stroke="url(#zfFlow)" stroke-width="2.5" stroke-linecap="round"/>
+    <polygon points="30,-5 42,0 36,8" fill="#10b981"/>
+    
+    <line x1="0" y1="40" x2="35" y2="80" stroke="url(#zfFlow)" stroke-width="2.5" stroke-linecap="round"/>
+    <polygon points="36,72 42,80 30,85" fill="#f59e0b"/>
+  </g>
+
+  <!-- Node 3A: Instant Admin Notification -->
+  <g transform="translate(520, 110)" filter="url(#zfShadow)">
+    <rect width="165" height="140" rx="10" fill="url(#zfGrad1)" stroke="#10b981" stroke-width="1.5"/>
+    <rect width="165" height="32" rx="10" fill="#10b981" opacity="0.25"/>
+    <rect y="20" width="165" height="12" fill="#10b981" opacity="0.25"/>
+    <text x="14" y="22" fill="#10b981" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="750">✉️ 3A. Admin Alert</text>
+
+    <g transform="translate(12, 45)">
+      <text x="0" y="15" fill="#f1f5f9" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="600">Direct Email to You</text>
+      <text x="0" y="32" fill="#94a3b8" font-family="system-ui, -apple-system, sans-serif" font-size="9">Sends instant email to your custom Zoho inbox with lead details.</text>
+      <text x="0" y="65" fill="#10b981" font-family="system-ui, -apple-system, sans-serif" font-size="9" font-weight="600">⚡ Response time &lt; 5 sec</text>
+    </g>
+  </g>
+
+  <!-- Node 3B: Auto-Responder to Visitor -->
+  <g transform="translate(520, 270)" filter="url(#zfShadow)">
+    <rect width="165" height="140" rx="10" fill="url(#zfGrad1)" stroke="#f59e0b" stroke-width="1.5"/>
+    <rect width="165" height="32" rx="10" fill="#f59e0b" opacity="0.25"/>
+    <rect y="20" width="165" height="12" fill="#f59e0b" opacity="0.25"/>
+    <text x="14" y="22" fill="#f59e0b" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="750">📩 3B. Auto-Reply</text>
+
+    <g transform="translate(12, 45)">
+      <text x="0" y="15" fill="#f1f5f9" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="600">Confirmation Email</text>
+      <text x="0" y="32" fill="#94a3b8" font-family="system-ui, -apple-system, sans-serif" font-size="9">Sends professional receipt: "Thank you for reaching out, we received your message!"</text>
+    </g>
+  </g>
+
+  <!-- Arrow to Final Step 4 -->
+  <g transform="translate(695, 240)">
+    <line x1="0" y1="0" x2="20" y2="0" stroke="url(#zfFlow)" stroke-width="3" stroke-linecap="round"/>
+    <polygon points="20,-5 30,0 20,5" fill="#38bdf8"/>
+  </g>
+
+  <!-- Node 4: Cloud Storage Archive -->
+  <g transform="translate(735, 110)" filter="url(#zfShadow)">
+    <rect width="135" height="300" rx="10" fill="url(#zfGrad1)" stroke="#38bdf8" stroke-width="1.5"/>
+    <rect width="135" height="40" rx="10" fill="#0284c7" opacity="0.25"/>
+    <rect y="25" width="135" height="15" fill="#0284c7" opacity="0.25"/>
+    <text x="12" y="26" fill="#38bdf8" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="750">💾 4. Database</text>
+
+    <g transform="translate(12, 55)">
+      <text x="0" y="15" fill="#f1f5f9" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="600">Forever Log</text>
+      <text x="0" y="32" fill="#94a3b8" font-family="system-ui, -apple-system, sans-serif" font-size="9">Stored safely in Zoho Forms dashboard.</text>
+
+      <rect y="60" width="111" height="1" fill="#334155"/>
+
+      <text x="0" y="80" fill="#38bdf8" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="600">Export Anytime:</text>
+      <text x="0" y="98" fill="#94a3b8" font-family="system-ui, -apple-system, sans-serif" font-size="9">• CSV / Excel</text>
+      <text x="0" y="116" fill="#94a3b8" font-family="system-ui, -apple-system, sans-serif" font-size="9">• PDF Archive</text>
+      <text x="0" y="134" fill="#94a3b8" font-family="system-ui, -apple-system, sans-serif" font-size="9">• Google Sheets Sync</text>
+    </g>
+  </g>
+</svg>

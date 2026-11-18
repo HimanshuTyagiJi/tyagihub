@@ -1,0 +1,79 @@
+<svg preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 360" width="1000" height="360">
+  <defs>
+    <linearGradient id="schemaBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#27272a"/>
+      <stop offset="100%" stop-color="#18181b"/>
+    </linearGradient>
+    <filter id="schemaShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#000" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+
+  <rect width="1000" height="360" rx="16" fill="#09090b" stroke="#27272a" stroke-width="2"/>
+
+  <!-- Title Bar -->
+  <text x="40" y="45" fill="#f59e0b" font-family="system-ui, sans-serif" font-size="14" font-weight="700" letter-spacing="1">RELATIONAL DATABASE ARCHITECTURE</text>
+  <text x="40" y="78" fill="#f8fafc" font-family="system-ui, sans-serif" font-size="22" font-weight="800">How 3 Linked Tables Eliminate Spreadsheet Chaos</text>
+
+  <!-- 3 Tables Flow -->
+  <g transform="translate(40, 110)">
+    
+    <!-- TABLE 1: Clients -->
+    <g transform="translate(0, 0)">
+      <rect width="260" height="200" rx="12" fill="url(#schemaBg)" stroke="#3b82f6" stroke-width="2" filter="url(#schemaShadow)"/>
+      <rect x="0" y="0" width="260" height="42" rx="12" fill="#1e3a8a"/>
+      <text x="20" y="27" fill="#93c5fd" font-family="system-ui, sans-serif" font-size="14" font-weight="800">TABLE 1: CLIENTS</text>
+      
+      <g transform="translate(20, 60)" font-family="monospace" font-size="12" fill="#e2e8f0">
+        <text y="0">🔑 Client Name (Primary)</text>
+        <text y="25" fill="#94a3b8">📧 Email Address</text>
+        <text y="50" fill="#94a3b8">📱 Phone Number</text>
+        <text y="75" fill="#94a3b8">🏢 Company / Brand</text>
+        <text y="105" fill="#60a5fa" font-weight="bold">🔗 Linked to Projects</text>
+      </g>
+    </g>
+
+    <!-- Arrow 1 to 2 -->
+    <g transform="translate(270, 90)">
+      <path d="M0 0 L40 0 M32 -6 L40 0 L32 6" stroke="#f59e0b" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+      <text x="5" y="-12" fill="#f59e0b" font-family="system-ui, sans-serif" font-size="10" font-weight="700">1-TO-MANY</text>
+    </g>
+
+    <!-- TABLE 2: Projects -->
+    <g transform="translate(325, 0)">
+      <rect width="280" height="200" rx="12" fill="url(#schemaBg)" stroke="#f59e0b" stroke-width="2" filter="url(#schemaShadow)"/>
+      <rect x="0" y="0" width="280" height="42" rx="12" fill="#78350f"/>
+      <text x="20" y="27" fill="#fde68a" font-family="system-ui, sans-serif" font-size="14" font-weight="800">TABLE 2: PROJECTS</text>
+
+      <g transform="translate(20, 60)" font-family="monospace" font-size="12" fill="#e2e8f0">
+        <text y="0">📌 Project Title</text>
+        <text y="25" fill="#93c5fd">👤 Linked Client (From T1)</text>
+        <text y="50" fill="#94a3b8">📅 Deadline / Due Date</text>
+        <text y="75" fill="#34d399">⚡ Status (Kanban Single-Select)</text>
+        <text y="105" fill="#f59e0b" font-weight="bold">🔗 Linked to Invoices</text>
+      </g>
+    </g>
+
+    <!-- Arrow 2 to 3 -->
+    <g transform="translate(615, 90)">
+      <path d="M0 0 L40 0 M32 -6 L40 0 L32 6" stroke="#10b981" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+      <text x="5" y="-12" fill="#10b981" font-family="system-ui, sans-serif" font-size="10" font-weight="700">1-TO-1</text>
+    </g>
+
+    <!-- TABLE 3: Invoices -->
+    <g transform="translate(670, 0)">
+      <rect width="250" height="200" rx="12" fill="url(#schemaBg)" stroke="#10b981" stroke-width="2" filter="url(#schemaShadow)"/>
+      <rect x="0" y="0" width="250" height="42" rx="12" fill="#064e3b"/>
+      <text x="20" y="27" fill="#6ee7b7" font-family="system-ui, sans-serif" font-size="14" font-weight="800">TABLE 3: INVOICES</text>
+
+      <g transform="translate(20, 60)" font-family="monospace" font-size="12" fill="#e2e8f0">
+        <text y="0">🧾 Invoice # (Auto Number)</text>
+        <text y="25" fill="#fde68a">📁 Linked Project (From T2)</text>
+        <text y="50" fill="#34d399">💰 Amount (INR)</text>
+        <text y="75" fill="#94a3b8">📆 Payment Due Date</text>
+        <text y="105" fill="#10b981" font-weight="bold">✅ Paid / Unpaid Status</text>
+      </g>
+    </g>
+
+  </g>
+</svg>

@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TyagiHub — Digital Tools & Workflows Productivity Guides | TyagiHub</title>
+  <meta name="description" content="Tested, step-by-step guides on Zoho suite, free custom domain business email, GST invoicing, Airtable workflows, and digital productivity tools.">
+  <link rel="canonical" href="https://tyagihub.in/">
+  <meta name="robots" content="index, follow">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="TyagiHub — Digital Tools & Workflows Productivity Guides | TyagiHub">
+  <meta property="og:description" content="Tested, step-by-step guides on Zoho suite, free custom domain business email, GST invoicing, Airtable workflows, and digital productivity tools.">
+  <meta property="og:url" content="https://tyagihub.in/">
+  <meta property="og:site_name" content="TyagiHub">
+  <meta property="og:image" content="https://tyagihub.in/assets/images/logo.png">
+
+  <!-- Icons -->
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/apple-touch-icon.png">
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="/assets/css/main.css">
+
+  <!-- Google AdSense Code -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7067722696020503" crossorigin="anonymous"></script>
+
+  <!-- Theme Detection -->
+  <script>
+    (function() {
+      const savedTheme = localStorage.getItem('th_theme');
+      if (savedTheme) {
+        document.documentElement.setAttribute('data-theme', savedTheme);
+      } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.documentElement.setAttribute('data-theme', 'dark');
+      }
+    })();
+  </script>
+</head>
+<body>
+  <!-- Header Navbar -->
+  <header class="site-header">
+    <div class="header-container">
+      <!-- Brand Logo -->
+      <a href="/" class="brand">
+        <img src="/assets/images/logo.png" alt="TyagiHub Logo" class="brand-logo" width="36" height="36">
+        <span class="brand-text">Tyagi<span>Hub</span></span>
+      </a>
+
+      <!-- Desktop Navigation Links -->
+      <nav class="desktop-nav" aria-label="Desktop Navigation">
+        <ul class="nav-links">
+          <li><a href="/" class="nav-link">Home</a></li>
+          <li><a href="/digital-tools/" class="nav-link">Digital Tools</a></li>
+          <li><a href="/productivity/" class="nav-link">Productivity</a></li>
+          <li><a href="/about/" class="nav-link">About</a></li>
+          <li><a href="/contact/" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Header Actions: Search, Theme Toggle & Hamburger -->
+      <div class="header-actions">
+        <!-- Desktop Search Trigger -->
+        <button class="search-trigger-btn" type="button" aria-label="Search Guides">
+          <span>🔍</span>
+          <span>Search guides...</span>
+          <kbd>/</kbd>
+        </button>
+
+        <!-- Dark/Light Mode Switcher -->
+        <button class="theme-toggle-btn" type="button" aria-label="Toggle Theme">
+          <span class="theme-icon">🌙</span>
+        </button>
+
+        <!-- Mobile Hamburger Toggle Button -->
+        <button class="hamburger-btn" id="hamburger-btn" type="button" aria-label="Toggle Mobile Menu" aria-expanded="false">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Backdrop Overlay -->
+  <div class="mobile-drawer-overlay" id="drawer-overlay" aria-hidden="true"></div>
+
+  <!-- Mobile Drawer Menu -->
+  <aside class="mobile-drawer" id="mobile-drawer" aria-label="Mobile Navigation">
+    <div class="drawer-header">
+      <div class="brand">
+        <img src="/assets/images/logo.png" alt="TyagiHub Logo" class="brand-logo" width="32" height="32">
+        <span class="brand-text">Tyagi<span>Hub</span></span>
+      </div>
+      <button class="drawer-close-btn" id="drawer-close-btn" type="button" aria-label="Close Menu">✕</button>
+    </div>
+
+    <!-- Mobile Drawer Search Bar -->
+    <div class="mobile-search-box">
+      <span class="mobile-search-icon">🔍</span>
+      <input type="text" class="mobile-search-input" id="mobile-search-input" placeholder="Search Zoho, Airtable, Invoices...">
+    </div>
+
+    <!-- Mobile Drawer Nav Links -->
+    <ul class="drawer-nav-list">
+      <li class="drawer-nav-item"><a href="/">🏠 Home</a></li>
+      <li class="drawer-nav-item"><a href="/digital-tools/">🛠️ Digital Tools</a></li>
+      <li class="drawer-nav-item"><a href="/productivity/">⚡ Productivity</a></li>
+      <li class="drawer-nav-item"><a href="/about/">ℹ️ About Us</a></li>
+      <li class="drawer-nav-item"><a href="/contact/">✉️ Contact Us</a></li>
+      <li class="drawer-nav-item"><a href="/privacy-policy/">🔒 Privacy Policy</a></li>
+      <li class="drawer-nav-item"><a href="/terms/">📜 Terms of Service</a></li>
+      <li class="drawer-nav-item"><a href="/disclaimer/">⚠️ Disclaimer</a></li>
+    </ul>
+
+    <div class="drawer-footer">
+      <p>&copy; 2026 TyagiHub. All rights reserved.</p>
+    </div>
+  </aside>
+
+  <!-- Live Instant Search Modal -->
+  <div class="search-modal" id="search-modal" role="dialog" aria-modal="true" aria-label="Search Guides">
+    <div class="search-dialog">
+      <div class="search-bar-wrap">
+        <span>🔍</span>
+        <input type="search" class="search-main-input" id="search-main-input" placeholder="Search Zoho Mail, Zoho Invoice, Airtable, Databases..." autocomplete="off">
+        <button class="search-close-btn" id="search-close-btn" type="button">ESC</button>
+      </div>
+      <ul class="search-results-list" id="search-results-list">
+        <li class="search-empty-state">Type keywords to search verified tech guides...</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Main Content Area -->
+  <main>
+    
+<section class="hero">
+  <div class="hero-badge">
+    <span>⚙️</span> 100% Free &amp; Verified SaaS Guides
+  </div>
+  <h1 class="hero-title">Master Digital Tools &amp; Daily Productivity</h1>
+  <p class="hero-subtitle">
+    Step-by-step, actionable tutorials to set up custom domain business email, generate 100% free GST invoices, build no-code databases, and streamline client workflows with zero hassle.
+  </p>
+  <div style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; margin-top: 1.5rem;">
+    <a href="/digital-tools/" class="btn" style="background: var(--primary); color: #fff; padding: 0.65rem 1.4rem; border-radius: var(--radius-md); font-weight: 700; text-decoration: none;">Explore Digital Tools &rarr;</a>
+    <a href="/productivity/" class="btn" style="background: var(--bg-surface); color: var(--text-main); border: 1px solid var(--border); padding: 0.65rem 1.4rem; border-radius: var(--radius-md); font-weight: 700; text-decoration: none;">Productivity &rarr;</a>
+  </div>
+</section>
+
+<!-- Main Guides Section with Category Filter Tabs (Front & Center!) -->
+<section style="margin-bottom: 3.5rem;">
+  <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem; flex-wrap: wrap; gap: 1rem;">
+    <h2 class="section-title" style="margin-bottom: 0;">
+      <span>📖</span> Latest Problem-Solving Guides
+    </h2>
+    <div class="filter-tabs-bar" style="margin-bottom: 0; padding-bottom: 0; border-bottom: none;">
+      <button class="filter-tab-btn is-active" data-filter="all" type="button">All Guides (15)</button>
+      <button class="filter-tab-btn" data-filter="digital-tools" type="button">🛠️ Digital Tools</button>
+      <button class="filter-tab-btn" data-filter="productivity" type="button">⚡ Productivity</button>
+    </div>
+  </div>
+
+  <div class="posts-grid" id="posts-container">
+    
+    <article class="post-card" data-category="productivity">
+      
+    <div style="margin: -1.5rem -1.5rem 1rem -1.5rem; overflow: hidden; border-top-left-radius: var(--radius-md); border-top-right-radius: var(--radius-md); border-bottom: 1px solid var(--border); background: #0f172a;">
+      <a href="/productivity/google-calendar-time-blocking-solopreneur-guide/">
+        <img src="/assets/images/google-calendar-timeblocking-banner.jpg" alt="Google Calendar Time Blocking: How I Built a Minimal Daily Scheduling System to Stop Wasting Hours (2026 Guide)" style="width: 100%; height: 180px; object-fit: cover; display: block;" loading="lazy">
+      </a>
+    </div>
+  
+      <div class="card-top-row">
+        <span class="card-category">Productivity</span>
+        <span class="card-read-time">⏱️ 8 min read</span>
+      </div>
+      <h3 class="card-title">
+        <a href="/productivity/google-calendar-time-blocking-solopreneur-guide/">Google Calendar Time Blocking: How I Built a Minimal Daily Scheduling System to Stop Wasting Hours (2026 Guide)</a>
+      </h3>
+      <p class="card-excerpt">A complete, step-by-step walkthrough showing how I use Google Calendar time blocking to eliminate decision fatigue, protect deep work hours, and run my business with zero burnout.</p>
+      
+      <div style="display: flex; gap: 0.4rem; flex-wrap: wrap; margin-bottom: 0.85rem;">
+        <span style="font-size: 0.72rem; padding: 0.15rem 0.5rem; background: var(--bg-surface); border: 1px solid var(--border); border-radius: var(--radius-sm); color: var(--text-light); font-weight: 600;">#google calendar</span><span style="font-size: 0.72rem; padding: 0.15rem 0.5rem; background: var(--bg-surface); border: 1px solid var(--border); border-radius: var(--radius-sm); color: var(--text-light); font-weight: 600;">#time blocking</span><span style="font-size: 0.72rem; padding: 0.15rem 0.5rem; background: var(--bg-surface); border: 1px solid var(--border); border-radius: var(--radius-sm); color: var(--text-light); font-weight: 600;">#productivity</span>
+      </div>
+    
+      <div class="card-meta">
+        <span>By Himanshu Tyagi</span>
+        <time datetime="2026-11-18">November 18, 2026</time>
+      </div>
+    </article>
+  
+
+    <article class="post-card" data-category="digital-tools">
+      
+    <div style="margin: -1.5rem -1.5rem 1rem -1.5rem; overflow: hidden; border-top-left-radius: var(--radius-md); border-top-right-radius: var(--radius-md); border-bottom: 1px solid var(--border); background: #0f172a;">
+      <a href="/digital-tools/whatsapp-business-automation-client-guide/">
+        <img src="/assets/images/whatsapp-business-automation-banner.jpg" alt="WhatsApp Business Automation: How to Set Up Free Quick Replies, Chat Labels & Catalogs for Client Work (2026 Guide)" style="width: 100%; height: 180px; object-fit: cover; display: block;" loading="lazy">
+      </a>
+    </div>
+  
+      <div class="card-top-row">
+        <span class="card-category">Digital Tools</span>
+        <span class="card-read-time">⏱️ 9 min read</span>
+      </div>
+      <h3 class="card-title">
+        <a href="/digital-tools/whatsapp-business-automation-client-guide/">WhatsApp Business Automation: How to Set Up Free Quick Replies, Chat Labels & Catalogs for Client Work (2026 Guide)</a>
+      </h3>
+      <p class="card-excerpt">A practical, step-by-step walkthrough showing how I turned the free WhatsApp Business app into an automated client communication hub with quick reply shortcuts, chat labels, and digital catalogs.</p>
+      
+      <div style="display: flex; gap: 0.4rem; flex-wrap: wrap; margin-bottom: 0.85rem;">
+        <span style="font-size: 0.72rem; padding: 0.15rem 0.5rem; background: var(--bg-surface); border: 1px solid var(--border); border-radius: var(--radius-sm); color: var(--text-light); font-weight: 600;">#whatsapp business</span><span style="font-size: 0.72rem; padding: 0.15rem 0.5rem; background: var(--bg-surface); border: 1px solid var(--border); border-radius: var(--radius-sm); color: var(--text-light); font-weight: 600;">#digital tools</span><span style="font-size: 0.72rem; padding: 0.15rem 0.5rem; background: var(--bg-surface); border: 1px solid var(--border); border-radius: var(--radius-sm); color: var(--text-light); font-weight: 600;">#client communication</span>
+      </div>
+    
+      <div class="card-meta">
+        <span>By Himanshu Tyagi</span>
+        <time datetime="2026-11-17">November 17, 2026</time>
+      </div>
+    </article>
+  
+
+    <article class="post-card" data-category="digital-tools">
+      
+    <div style="margin: -1.5rem -1.5rem 1rem -1.5rem; overflow: hidden; border-top-left-radius: var(--radius-md); border-top-right-radius: var(--radius-md); border-bottom: 1px solid var(--border); background: #0f172a;">
+      <a href="/digital-tools/github-pages-custom-domain-free-hosting-guide/">
+        <img src="/assets/images/github-pages-hosting-banner.jpg" alt="How to Host a Website on GitHub Pages with Custom Domain & Free SSL (Zero Server Costs 2026 Guide)" style="width: 100%; height: 180px; object-fit: cover; display: block;" loading="lazy">
+      </a>
+    </div>
+  
+      <div class="card-top-row">
+        <span class="card-category">Digital Tools</span>
+        <span class="card-read-time">⏱️ 9 min read</span>
+      </div>
+      <h3 class="card-title">
+        <a href="/digital-tools/github-pages-custom-domain-free-hosting-guide/">How to Host a Website on GitHub Pages with Custom Domain & Free SSL (Zero Server Costs 2026 Guide)</a>
+      </h3>
+      <p class="card-excerpt">A complete, step-by-step tutorial on hosting static websites for free on GitHub Pages using your own custom domain, including exact GoDaddy/Namecheap DNS records and automatic SSL setup.</p>
+      
+      <div style="display: flex; gap: 0.4rem; flex-wrap: wrap; margin-bottom: 0.85rem;">
+        <span style="font-size: 0.72rem; padding: 0.15rem 0.5rem; background: var(--bg-surface); border: 1px solid var(--border); border-radius: var(--radius-sm); color: var(--text-light); font-weight: 600;">#github pages</span><span style="font-size: 0.72rem; padding: 0.15rem 0.5rem; background: var(--bg-surface); border: 1px solid var(--border); border-radius: var(--radius-sm); color: var(--text-light); font-weight: 600;">#custom domain</span><span style="font-size: 0.72rem; padding: 0.15rem 0.5rem; background: var(--bg-surface); border: 1px solid var(--border); border-radius: var(--radius-sm); color: var(--text-light); font-weight: 600;">#free web hosting</span>
+      </div>
+    
+      <div class="card-meta">
+        <span>By Himanshu Tyagi</span>
+        <time datetime="2026-11-16">November 16, 2026</time>
+      </div>
+    </article>
+  
+
+    <article class="post-card" data-category="productivity">
+      
+    <div style="margin: -1.5rem -1.5rem 1rem -1.5rem; overflow: hidden; border-top-left-radius: var(--radius-md); border-top-right-radius: var(--radius-md); border-bottom: 1px solid var(--border); background: #0f172a;">
+      <a href="/productivity/obsidian-beginner-offline-notes-guide/">
+        <img src="/assets/images/obsidian-notes-banner.jpg" alt="Obsidian for Beginners: How I Built a Free Offline Second Brain with Markdown Notes (2026 Setup)" style="width: 100%; height: 180px; object-fit: cover; display: block;" loading="lazy">
+      </a>
+    </div>
+  
+      <div class="card-top-row">
+        <span class="card-category">Productivity</span>
+        <span class="card-read-time">⏱️ 9 min read</span>
+      </div>
+      <h3 class="card-title">
+        <a href="/productivity/obsidian-beginner-offline-notes-guide/">Obsidian for Beginners: How I Built a Free Offline Second Brain with Markdown Notes (2026 Setup)</a>
+      </h3>
+      <p class="card-excerpt">A complete beginner's guide to setting up Obsidian as a private, offline second brain. Learn how to connect daily notes, master bidirectional wikilinks, and organize knowledge with zero monthly fees.</p>
+      
+      <div style="display: flex; gap: 0.4rem; flex-wrap: wrap; margin-bottom: 0.85rem;">
+        <span style="font-size: 0.72rem; padding: 0.15rem 0.5rem; background: var(--bg-surface); border: 1px solid var(--border); border-radius: var(--radius-sm); color: var(--text-light); font-weight: 600;">#obsidian</span><span style="font-size: 0.72rem; padding: 0.15rem 0.5rem; background: var(--bg-surface); border: 1px solid var(--border); border-radius: var(--radius-sm); color: var(--text-light); font-weight: 600;">#productivity</span><span style="font-size: 0.72rem; padding: 0.15rem 0.5rem; background: var(--bg-surface); border: 1px solid var(--border); border-radius: var(--radius-sm); color: var(--text-light); font-weight: 600;">#markdown notes</span>
+      </div>
+    
+      <div class="card-meta">
+        <span>By Himanshu Tyagi</span>
+        <time datetime="2026-11-15">November 15, 2026</time>
+      </div>
+    </article>
+  
+
+    <article class="post-card" data-category="productivity">
+      
+    <div style="margin: -1.5rem -1.5rem 1rem -1.5rem; overflow: hidden; border-top-left-radius: var(--radius-md); border-top-right-radius: var(--radius-md); border-bottom: 1px solid var(--border); background: #0f172a;">
+      <a href="/productivity/notion-solopreneur-dashboard-client-hub-guide/">
+        <img src="/assets/images/notion-dashboard-banner.jpg" alt="Notion for Solopreneurs: How I Built a Complete Daily Dashboard & Client Task Hub from Scratch (2026 Walkthrough)" style="width: 100%; height: 180px; object-fit: cover; display: block;" loading="lazy">
+      </a>
+    </div>
+  
+      <div class="card-top-row">
+        <span class="card-category">Productivity</span>
+        <span class="card-read-time">⏱️ 9 min read</span>
+      </div>
+      <h3 class="card-title">
+        <a href="/productivity/notion-solopreneur-dashboard-client-hub-guide/">Notion for Solopreneurs: How I Built a Complete Daily Dashboard & Client Task Hub from Scratch (2026 Walkthrough)</a>
+      </h3>
+      <p class="card-excerpt">An exhaustive, step-by-step walkthrough showing how I built a minimalist, zero-clutter Notion workspace for managing clients, deliverables, and daily tasks using 100% free relational databases.</p>
+      
+      <div style="display: flex; gap: 0.4rem; flex-wrap: wrap; margin-bottom: 0.85rem;">
+        <span style="font-size: 0.72rem; padding: 0.15rem 0.5rem; background: var(--bg-surface); border: 1px solid var(--border); border-radius: var(--radius-sm); color: var(--text-light); font-weight: 600;">#notion</span><span style="font-size: 0.72rem; padding: 0.15rem 0.5rem; background: var(--bg-surface); border: 1px solid var(--border); border-radius: var(--radius-sm); color: var(--text-light); font-weight: 600;">#productivity</span><span style="font-size: 0.72rem; padding: 0.15rem 0.5rem; background: var(--bg-surface); border: 1px solid var(--border); border-radius: var(--radius-sm); color: var(--text-light); font-weight: 600;">#solopreneur</span>
+      </div>
+    
+      <div class="card-meta">
+        <span>By Himanshu Tyagi</span>
+        <time datetime="2026-11-14">November 14, 2026</time>
+      </div>
+    </article>
+  
+
+    <article class="post-card" data-category="digital-tools">
+      
+    <div style="margin: -1.5rem -1.5rem 1rem -1.5rem; overflow: hidden; border-top-left-radius: var(--radius-md); border-top-right-radius: var(--radius-md); border-bottom: 1px solid var(--border); background: #0f172a;">
+      <a href="/digital-tools/zoho-forms-free-custom-website-embed-guide/">
+        <img src="/assets/images/zoho-forms-setup-banner.jpg" alt="How to Build & Embed Custom Forms on Any Website for Free Using Zoho Forms (No-Code 2026 Guide)" style="width: 100%; height: 180px; object-fit: cover; display: block;" loading="lazy">
+      </a>
+    </div>
+  
+      <div class="card-top-row">
+        <span class="card-category">Digital Tools</span>
+        <span class="card-read-time">⏱️ 10 min read</span>
+      </div>
+      <h3 class="card-title">
+        <a href="/digital-tools/zoho-forms-free-custom-website-embed-guide/">How to Build & Embed Custom Forms on Any Website for Free Using Zoho Forms (No-Code 2026 Guide)</a>
+      </h3>
+      <p class="card-excerpt">A complete, step-by-step tutorial on building professional contact, lead generation, and feedback forms for free using Zoho Forms, and embedding them on any website without writing backend code.</p>
+      
+      <div style="display: flex; gap: 0.4rem; flex-wrap: wrap; margin-bottom: 0.85rem;">
+        <span style="font-size: 0.72rem; padding: 0.15rem 0.5rem; background: var(--bg-surface); border: 1px solid var(--border); border-radius: var(--radius-sm); color: var(--text-light); font-weight: 600;">#zoho forms</span><span style="font-size: 0.72rem; padding: 0.15rem 0.5rem; background: var(--bg-surface); border: 1px solid var(--border); border-radius: var(--radius-sm); color: var(--text-light); font-weight: 600;">#digital tools</span><span style="font-size: 0.72rem; padding: 0.15rem 0.5rem; background: var(--bg-surface); border: 1px solid var(--border); border-radius: var(--radius-sm); color: var(--text-light); font-weight: 600;">#no code</span>
+      </div>
+    
+      <div class="card-meta">
+        <span>By Himanshu Tyagi</span>
+        <time datetime="2026-11-12">November 12, 2026</time>
+      </div>
+    </article>
+  
+
+    <article class="post-card" data-category="productivity">
+      
+    <div style="margin: -1.5rem -1.5rem 1rem -1.5rem; overflow: hidden; border-top-left-radius: var(--radius-md); border-top-right-radius: var(--radius-md); border-bottom: 1px solid var(--border); background: #0f172a;">
+      <a href="/productivity/airtable-beginner-client-tracker-guide/">
+        <img src="/assets/images/airtable-tracker-banner.jpg" alt="Airtable for Beginners: How I Replaced Messy Spreadsheets with a Free Client Tracker (2026 Guide)" style="width: 100%; height: 180px; object-fit: cover; display: block;" loading="lazy">
+      </a>
+    </div>
+  
+      <div class="card-top-row">
+        <span class="card-category">Productivity</span>
+        <span class="card-read-time">⏱️ 7 min read</span>
+      </div>
+      <h3 class="card-title">
+        <a href="/productivity/airtable-beginner-client-tracker-guide/">Airtable for Beginners: How I Replaced Messy Spreadsheets with a Free Client Tracker (2026 Guide)</a>
+      </h3>
+      <p class="card-excerpt">A practical, no-code guide to building your first custom client and project tracker in Airtable from scratch in 12 minutes, using 100% free relational tables.</p>
+      
+      <div style="display: flex; gap: 0.4rem; flex-wrap: wrap; margin-bottom: 0.85rem;">
+        <span style="font-size: 0.72rem; padding: 0.15rem 0.5rem; background: var(--bg-surface); border: 1px solid var(--border); border-radius: var(--radius-sm); color: var(--text-light); font-weight: 600;">#airtable</span><span style="font-size: 0.72rem; padding: 0.15rem 0.5rem; background: var(--bg-surface); border: 1px solid var(--border); border-radius: var(--radius-sm); color: var(--text-light); font-weight: 600;">#productivity</span><span style="font-size: 0.72rem; padding: 0.15rem 0.5rem; background: var(--bg-surface); border: 1px solid var(--border); border-radius: var(--radius-sm); color: var(--text-light); font-weight: 600;">#client tracker</span>
+      </div>
+    
+      <div class="card-meta">
+        <span>By Himanshu Tyagi</span>
+        <time datetime="2026-11-10">November 10, 2026</time>
+      </div>
+    </article>
+  
+
+    <article class="post-card" data-category="digital-tools">
+      
+    <div style="margin: -1.5rem -1.5rem 1rem -1.5rem; overflow: hidden; border-top-left-radius: var(--radius-md); border-top-right-radius: var(--radius-md); border-bottom: 1px solid var(--border); background: #0f172a;">
+      <a href="/digital-tools/telegram-bot-personal-cloud-automation-guide/">
+        <img src="/assets/images/telegram-bot-banner.jpg" alt="Telegram Bot Automation: How I Built a Free Personal Cloud & File Assistant with Python (2026 Guide)" style="width: 100%; height: 180px; object-fit: cover; display: block;" loading="lazy">
+      </a>
+    </div>
+  
+      <div class="card-top-row">
+        <span class="card-category">Digital Tools</span>
+        <span class="card-read-time">⏱️ 9 min read</span>
+      </div>
+      <h3 class="card-title">
+        <a href="/digital-tools/telegram-bot-personal-cloud-automation-guide/">Telegram Bot Automation: How I Built a Free Personal Cloud & File Assistant with Python (2026 Guide)</a>
+      </h3>
+      <p class="card-excerpt">Turn Telegram into a private, unlimited 2GB cloud assistant and automated reminder bot. Step-by-step verified tutorial using BotFather, Python, and zero server maintenance costs.</p>
+      
+      <div class="card-meta">
+        <span>By Himanshu Tyagi</span>
+        <time datetime="2026-11-09">November 9, 2026</time>
+      </div>
+    </article>
+  
+
+    <article class="post-card" data-category="digital-tools">
+      
+    <div style="margin: -1.5rem -1.5rem 1rem -1.5rem; overflow: hidden; border-top-left-radius: var(--radius-md); border-top-right-radius: var(--radius-md); border-bottom: 1px solid var(--border); background: #0f172a;">
+      <a href="/digital-tools/cloudflare-turnstile-free-recaptcha-alternative-guide/">
+        <img src="/assets/images/cloudflare-turnstile-banner.jpg" alt="Cloudflare Turnstile: How to Replace Annoying Google reCAPTCHA on Any Website for Free (2026 Guide)" style="width: 100%; height: 180px; object-fit: cover; display: block;" loading="lazy">
+      </a>
+    </div>
+  
+      <div class="card-top-row">
+        <span class="card-category">Digital Tools</span>
+        <span class="card-read-time">⏱️ 9 min read</span>
+      </div>
+      <h3 class="card-title">
+        <a href="/digital-tools/cloudflare-turnstile-free-recaptcha-alternative-guide/">Cloudflare Turnstile: How to Replace Annoying Google reCAPTCHA on Any Website for Free (2026 Guide)</a>
+      </h3>
+      <p class="card-excerpt">Stop frustrating visitors with distorted crosswalks and traffic lights. Step-by-step guide to installing free, privacy-first Cloudflare Turnstile on HTML forms, WordPress, or custom backends with zero puzzle captchas.</p>
+      
+      <div class="card-meta">
+        <span>By Himanshu Tyagi</span>
+        <time datetime="2026-11-08">November 8, 2026</time>
+      </div>
+    </article>
+  
+
+    <article class="post-card" data-category="digital-tools">
+      
+    <div style="margin: -1.5rem -1.5rem 1rem -1.5rem; overflow: hidden; border-top-left-radius: var(--radius-md); border-top-right-radius: var(--radius-md); border-bottom: 1px solid var(--border); background: #0f172a;">
+      <a href="/digital-tools/cloudflare-warp-free-vpn-mobile-speed-guide/">
+        <img src="/assets/images/cloudflare-warp-banner.jpg" alt="Cloudflare WARP (1.1.1.1): How to Encrypt Public Wi-Fi & Speed Up Mobile Browsing for Free (2026 Guide)" style="width: 100%; height: 180px; object-fit: cover; display: block;" loading="lazy">
+      </a>
+    </div>
+  
+      <div class="card-top-row">
+        <span class="card-category">Digital Tools</span>
+        <span class="card-read-time">⏱️ 9 min read</span>
+      </div>
+      <h3 class="card-title">
+        <a href="/digital-tools/cloudflare-warp-free-vpn-mobile-speed-guide/">Cloudflare WARP (1.1.1.1): How to Encrypt Public Wi-Fi & Speed Up Mobile Browsing for Free (2026 Guide)</a>
+      </h3>
+      <p class="card-excerpt">Stop paying for bloated, battery-draining VPN subscriptions. Step-by-step verified guide to using Cloudflare 1.1.1.1 with WARP on Android, iOS, and PC to encrypt public Wi-Fi and bypass ISP throttling.</p>
+      
+      <div class="card-meta">
+        <span>By Himanshu Tyagi</span>
+        <time datetime="2026-11-07">November 7, 2026</time>
+      </div>
+    </article>
+  
+
+    <article class="post-card" data-category="digital-tools">
+      
+    <div style="margin: -1.5rem -1.5rem 1rem -1.5rem; overflow: hidden; border-top-left-radius: var(--radius-md); border-top-right-radius: var(--radius-md); border-bottom: 1px solid var(--border); background: #0f172a;">
+      <a href="/digital-tools/zoho-invoice-free-gst-billing-guide/">
+        <img src="/assets/images/zoho-invoice-setup-banner.jpg" alt="How to Create 100% Free Professional GST Invoices with Zoho Invoice (Small Business Guide 2026)" style="width: 100%; height: 180px; object-fit: cover; display: block;" loading="lazy">
+      </a>
+    </div>
+  
+      <div class="card-top-row">
+        <span class="card-category">Digital Tools</span>
+        <span class="card-read-time">⏱️ 7 min read</span>
+      </div>
+      <h3 class="card-title">
+        <a href="/digital-tools/zoho-invoice-free-gst-billing-guide/">How to Create 100% Free Professional GST Invoices with Zoho Invoice (Small Business Guide 2026)</a>
+      </h3>
+      <p class="card-excerpt">Comprehensive step-by-step tutorial to create, customize, and send GST-compliant invoices for free using Zoho Invoice, including tax auto-calculation and UPI payment links.</p>
+      
+      <div style="display: flex; gap: 0.4rem; flex-wrap: wrap; margin-bottom: 0.85rem;">
+        <span style="font-size: 0.72rem; padding: 0.15rem 0.5rem; background: var(--bg-surface); border: 1px solid var(--border); border-radius: var(--radius-sm); color: var(--text-light); font-weight: 600;">#zoho invoice</span><span style="font-size: 0.72rem; padding: 0.15rem 0.5rem; background: var(--bg-surface); border: 1px solid var(--border); border-radius: var(--radius-sm); color: var(--text-light); font-weight: 600;">#free gst billing</span><span style="font-size: 0.72rem; padding: 0.15rem 0.5rem; background: var(--bg-surface); border: 1px solid var(--border); border-radius: var(--radius-sm); color: var(--text-light); font-weight: 600;">#invoicing software</span>
+      </div>
+    
+      <div class="card-meta">
+        <span>By Himanshu Tyagi</span>
+        <time datetime="2026-11-06">November 6, 2026</time>
+      </div>
+    </article>
+  
+
+    <article class="post-card" data-category="productivity">
+      
+    <div style="margin: -1.5rem -1.5rem 1rem -1.5rem; overflow: hidden; border-top-left-radius: var(--radius-md); border-top-right-radius: var(--radius-md); border-bottom: 1px solid var(--border); background: #0f172a;">
+      <a href="/productivity/clockify-freelancer-billable-hours-tracking-guide/">
+        <img src="/assets/images/clockify-freelancer-banner.jpg" alt="Clockify for Freelancers: How to Track Billable Hours & Generate Client Timesheet Audits for Free (2026 Guide)" style="width: 100%; height: 180px; object-fit: cover; display: block;" loading="lazy">
+      </a>
+    </div>
+  
+      <div class="card-top-row">
+        <span class="card-category">Productivity</span>
+        <span class="card-read-time">⏱️ 8 min read</span>
+      </div>
+      <h3 class="card-title">
+        <a href="/productivity/clockify-freelancer-billable-hours-tracking-guide/">Clockify for Freelancers: How to Track Billable Hours & Generate Client Timesheet Audits for Free (2026 Guide)</a>
+      </h3>
+      <p class="card-excerpt">Stop losing unbilled hours and ending up in client payment arguments. Exhaustive guide to setting up 100% free time tracking, billable rate cards, 15-minute rounding rules, and 1-click audit PDFs on Clockify.</p>
+      
+      <div class="card-meta">
+        <span>By Himanshu Tyagi</span>
+        <time datetime="2026-11-04">November 4, 2026</time>
+      </div>
+    </article>
+  
+
+    <article class="post-card" data-category="productivity">
+      
+    <div style="margin: -1.5rem -1.5rem 1rem -1.5rem; overflow: hidden; border-top-left-radius: var(--radius-md); border-top-right-radius: var(--radius-md); border-bottom: 1px solid var(--border); background: #0f172a;">
+      <a href="/productivity/monk-mode-morning-routine-deep-work-guide/">
+        <img src="/assets/images/monk-mode-morning-banner.jpg" alt="The Monk Mode Morning Routine: How a 90-Minute Screen Fast Before 9 AM Doubled My Output (2026 Guide)" style="width: 100%; height: 180px; object-fit: cover; display: block;" loading="lazy">
+      </a>
+    </div>
+  
+      <div class="card-top-row">
+        <span class="card-category">Productivity</span>
+        <span class="card-read-time">⏱️ 8 min read</span>
+      </div>
+      <h3 class="card-title">
+        <a href="/productivity/monk-mode-morning-routine-deep-work-guide/">The Monk Mode Morning Routine: How a 90-Minute Screen Fast Before 9 AM Doubled My Output (2026 Guide)</a>
+      </h3>
+      <p class="card-excerpt">Why checking notifications within 10 minutes of waking up ruins your daily cognitive capacity. Step-by-step verified guide to building a disciplined morning monk mode routine for solo creators and developers.</p>
+      
+      <div class="card-meta">
+        <span>By Himanshu Tyagi</span>
+        <time datetime="2026-11-03">November 3, 2026</time>
+      </div>
+    </article>
+  
+
+    <article class="post-card" data-category="digital-tools">
+      
+    <div style="margin: -1.5rem -1.5rem 1rem -1.5rem; overflow: hidden; border-top-left-radius: var(--radius-md); border-top-right-radius: var(--radius-md); border-bottom: 1px solid var(--border); background: #0f172a;">
+      <a href="/digital-tools/zoho-mail-free-custom-domain-setup/">
+        <img src="/assets/images/zoho-mail-setup-banner.jpg" alt="How to Set Up Free Business Email with Custom Domain on Zoho Mail (Complete 2026 Guide)" style="width: 100%; height: 180px; object-fit: cover; display: block;" loading="lazy">
+      </a>
+    </div>
+  
+      <div class="card-top-row">
+        <span class="card-category">Digital Tools</span>
+        <span class="card-read-time">⏱️ 8 min read</span>
+      </div>
+      <h3 class="card-title">
+        <a href="/digital-tools/zoho-mail-free-custom-domain-setup/">How to Set Up Free Business Email with Custom Domain on Zoho Mail (Complete 2026 Guide)</a>
+      </h3>
+      <p class="card-excerpt">Step-by-step tutorial to create a 100% free professional business email using your custom domain on Zoho Mail, including exact TXT, MX, SPF, and DKIM DNS records.</p>
+      
+      <div style="display: flex; gap: 0.4rem; flex-wrap: wrap; margin-bottom: 0.85rem;">
+        <span style="font-size: 0.72rem; padding: 0.15rem 0.5rem; background: var(--bg-surface); border: 1px solid var(--border); border-radius: var(--radius-sm); color: var(--text-light); font-weight: 600;">#zoho mail</span><span style="font-size: 0.72rem; padding: 0.15rem 0.5rem; background: var(--bg-surface); border: 1px solid var(--border); border-radius: var(--radius-sm); color: var(--text-light); font-weight: 600;">#custom domain email</span><span style="font-size: 0.72rem; padding: 0.15rem 0.5rem; background: var(--bg-surface); border: 1px solid var(--border); border-radius: var(--radius-sm); color: var(--text-light); font-weight: 600;">#business email</span>
+      </div>
+    
+      <div class="card-meta">
+        <span>By Himanshu Tyagi</span>
+        <time datetime="2026-11-02">November 2, 2026</time>
+      </div>
+    </article>
+  
+
+    <article class="post-card" data-category="productivity">
+      
+    <div style="margin: -1.5rem -1.5rem 1rem -1.5rem; overflow: hidden; border-top-left-radius: var(--radius-md); border-top-right-radius: var(--radius-md); border-bottom: 1px solid var(--border); background: #0f172a;">
+      <a href="/productivity/analog-productivity-pocket-notebook-focus-guide/">
+        <img src="/assets/images/analog-productivity-banner.jpg" alt="The Analog Daily Focus System: Why I Switched to a Pocket Notebook & Index Card to Cure Screen Burnout (2026 Guide)" style="width: 100%; height: 180px; object-fit: cover; display: block;" loading="lazy">
+      </a>
+    </div>
+  
+      <div class="card-top-row">
+        <span class="card-category">Productivity</span>
+        <span class="card-read-time">⏱️ 9 min read</span>
+      </div>
+      <h3 class="card-title">
+        <a href="/productivity/analog-productivity-pocket-notebook-focus-guide/">The Analog Daily Focus System: Why I Switched to a Pocket Notebook & Index Card to Cure Screen Burnout (2026 Guide)</a>
+      </h3>
+      <p class="card-excerpt">Why switching from 10 digital productivity apps to a physical 3x5 index card and pocket notebook eliminated mental fatigue, ended tab overload, and doubled deep work output for a solo developer.</p>
+      
+      <div class="card-meta">
+        <span>By Himanshu Tyagi</span>
+        <time datetime="2026-11-01">November 1, 2026</time>
+      </div>
+    </article>
+  
+  </div>
+</section>
+
+<!-- Frequently Asked Questions (At the Bottom) -->
+<section style="margin: 4rem 0 2.5rem;">
+  <h2 class="section-title">
+    <span>❓</span> Frequently Asked Questions About TyagiHub
+  </h2>
+  
+  <div class="faq-box">
+    <h3 class="faq-q">What is TyagiHub and what topics do you cover?</h3>
+    <div class="faq-a">
+      TyagiHub is an independent technology publication founded by Himanshu Tyagi in Ghaziabad, UP. We specialize in practical, step-by-step tutorials covering verified lifetime-free digital tools (Zoho Mail, Zoho Invoice, GitHub Pages, Cloudflare) and focused solopreneur productivity workflows (Google Calendar time-blocking, Airtable relational databases, Notion, and Obsidian).
+    </div>
+  </div>
+
+  <div class="faq-box">
+    <h3 class="faq-q">Are the SaaS free tiers mentioned in your guides genuinely free forever?</h3>
+    <div class="faq-a">
+      Yes, absolutely. We strictly filter out deceptive 14-day promotional trials and only document verified, forever-free plans. For instance, Zoho Mail's 5-user free plan, Zoho Invoice's lifetime free GST billing, and GitHub Pages static hosting have zero ongoing subscription costs.
+    </div>
+  </div>
+
+  <div class="faq-box">
+    <h3 class="faq-q">How are tutorials on TyagiHub tested and verified?</h3>
+    <div class="faq-a">
+      Every single DNS record, DKIM key, GST invoice template, and Python automation script is tested hands-on on real live domains, actual physical Android hardware, and live production environments before publishing. We never publish theoretical or unverified content.
+    </div>
+  </div>
+
+  <div class="faq-box">
+    <h3 class="faq-q">How can I suggest a tutorial topic or get help with a configuration?</h3>
+    <div class="faq-a">
+      You can reach out directly to Himanshu Tyagi through our <a href="/contact/" style="color: var(--primary); font-weight: 600;">Contact Page</a> or by emailing <code>contact@tyagihub.in</code>. We read every reader email and prioritize writing new guides based on real-world challenges sent by our community.
+    </div>
+  </div>
+</section>
+
+<!-- Founder Identity & Editorial Transparency Box -->
+<section style="margin-top: 2rem; padding: 2rem; background: var(--bg-surface); border-radius: var(--radius-md); border: 1px solid var(--border);">
+  <div style="display: flex; gap: 1.25rem; align-items: center; flex-wrap: wrap; margin-bottom: 1rem;">
+    <div style="width: 54px; height: 54px; border-radius: 50%; background: linear-gradient(135deg, var(--primary), #8b5cf6); color: white; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 1.3rem; flex-shrink: 0;">HT</div>
+    <div>
+      <h2 style="font-size: 1.35rem; font-weight: 750; margin: 0 0 0.2rem 0;">About TyagiHub &amp; Founder</h2>
+      <p style="color: var(--text-light); margin: 0; font-size: 0.9rem;">By Himanshu Tyagi &bull; Software Developer &bull; Ghaziabad, UP, India</p>
+    </div>
+  </div>
+  <p style="color: var(--text-muted); margin-bottom: 0.75rem; line-height: 1.7; font-size: 0.95rem;">
+    TyagiHub is an independent technology publication founded by <strong>Himanshu Tyagi</strong> from Ghaziabad, Uttar Pradesh. We publish thoroughly tested, hands-on tutorials on digital tools, zero-cost cloud infrastructure, and practical productivity workflows for creators, freelancers, and small businesses.
+  </p>
+  <div style="margin-top: 1rem;">
+    <a href="/about/" style="color: var(--primary); font-weight: 700; text-decoration: none; margin-right: 1.5rem; font-size: 0.92rem;">Read Full Founder Story &rarr;</a>
+    <a href="/contact/" style="color: var(--text-muted); font-weight: 600; text-decoration: none; font-size: 0.92rem;">Get in Touch / Request a Tutorial &rarr;</a>
+  </div>
+</section>
+
+  </main>
+
+  <!-- Modern Multi-Column Footer -->
+  <footer class="site-footer">
+    <div class="footer-main-grid">
+      <!-- Column 1: Brand & Editorial Mission -->
+      <div>
+        <div class="brand" style="margin-bottom: 1rem;">
+          <img src="/assets/images/logo.png" alt="TyagiHub Logo" class="brand-logo" width="36" height="36">
+          <span class="brand-text">Tyagi<span>Hub</span></span>
+        </div>
+        <p style="color: var(--text-muted); font-size: 0.92rem; line-height: 1.7; margin-bottom: 1rem;">
+          TyagiHub is an independent digital publication founded by Himanshu Tyagi. We publish hands-on, human-verified tutorials on cloud business tools, free business email configurations, GST invoicing portals, and no-code productivity workflows.
+        </p>
+        <p style="color: var(--text-light); font-size: 0.85rem;">
+          100% human-tested tutorials. Zero fluff. Zero paywalls.
+        </p>
+        <p style="color: var(--text-light); font-size: 0.83rem; margin-top: 0.5rem;">
+          📍 Ghaziabad, Uttar Pradesh, India &bull; <a href="mailto:contact@tyagihub.in" style="color: var(--primary);">contact@tyagihub.in</a>
+        </p>
+      </div>
+
+      <!-- Column 2: Topic Clusters -->
+      <div>
+        <h4 class="footer-col-title">Topic Clusters</h4>
+        <ul class="footer-links-list">
+          <li class="footer-link-item"><a href="/digital-tools/">🛠️ Digital Tools</a></li>
+          <li class="footer-link-item"><a href="/productivity/">⚡ Productivity Guides</a></li>
+          <li class="footer-link-item"><a href="/digital-tools/whatsapp-business-automation-client-guide/">💬 WhatsApp Business Automation</a></li>
+          <li class="footer-link-item"><a href="/productivity/google-calendar-time-blocking-solopreneur-guide/">📅 Google Calendar Scheduling</a></li>
+          <li class="footer-link-item"><a href="/digital-tools/github-pages-custom-domain-free-hosting-guide/">🌐 Free GitHub Pages Hosting</a></li>
+          <li class="footer-link-item"><a href="/productivity/obsidian-beginner-offline-notes-guide/">🧠 Obsidian Offline Notes Hub</a></li>
+        </ul>
+      </div>
+
+      <!-- Column 3: Trust & Legal -->
+      <div>
+        <h4 class="footer-col-title">Trust &amp; Legal</h4>
+        <ul class="footer-links-list">
+          <li class="footer-link-item"><a href="/about/">ℹ️ About Us &amp; Editorial Policy</a></li>
+          <li class="footer-link-item"><a href="/contact/">✉️ Contact Us &amp; Support</a></li>
+          <li class="footer-link-item"><a href="/privacy-policy/">🔒 Privacy Policy</a></li>
+          <li class="footer-link-item"><a href="/terms/">📜 Terms of Service</a></li>
+          <li class="footer-link-item"><a href="/disclaimer/">⚠️ Full Disclaimer</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Footer Bottom Bar -->
+    <div class="footer-bottom-bar">
+      <div>&copy; 2026 TyagiHub &bull; Founded by Himanshu Tyagi (Ghaziabad, UP, India). All rights reserved.</div>
+      <div style="display: flex; gap: 1.25rem;">
+        <a href="/privacy-policy/" style="color: var(--text-light); font-size: 0.85rem;">Privacy</a>
+        <a href="/terms/" style="color: var(--text-light); font-size: 0.85rem;">Terms</a>
+        <a href="/contact/" style="color: var(--text-light); font-size: 0.85rem;">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating Back to Top Button -->
+  <button class="back-to-top-btn" id="back-to-top" aria-label="Back to Top" type="button">↑</button>
+
+  <!-- Copy Toast Notification -->
+  <div class="copy-toast" id="copy-toast">Link copied to clipboard!</div>
+
+  <!-- Main Scripts -->
+  <script src="/assets/js/main.js" defer></script>
+</body>
+</html>

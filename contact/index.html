@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us — TyagiHub Support & Editorial Office | TyagiHub</title>
+  <meta name="description" content="Get in touch with TyagiHub and founder Himanshu Tyagi in Ghaziabad, UP. Reach our editorial desk, send tutorial inquiries, or report technical updates.">
+  <link rel="canonical" href="https://tyagihub.in/contact/">
+  <meta name="robots" content="index, follow">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Contact Us — TyagiHub Support & Editorial Office | TyagiHub">
+  <meta property="og:description" content="Get in touch with TyagiHub and founder Himanshu Tyagi in Ghaziabad, UP. Reach our editorial desk, send tutorial inquiries, or report technical updates.">
+  <meta property="og:url" content="https://tyagihub.in/contact/">
+  <meta property="og:site_name" content="TyagiHub">
+  <meta property="og:image" content="https://tyagihub.in/assets/images/logo.png">
+
+  <!-- Icons -->
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/apple-touch-icon.png">
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="/assets/css/main.css">
+
+  <!-- Google AdSense Code -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7067722696020503" crossorigin="anonymous"></script>
+
+  <!-- Theme Detection -->
+  <script>
+    (function() {
+      const savedTheme = localStorage.getItem('th_theme');
+      if (savedTheme) {
+        document.documentElement.setAttribute('data-theme', savedTheme);
+      } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.documentElement.setAttribute('data-theme', 'dark');
+      }
+    })();
+  </script>
+</head>
+<body>
+  <!-- Header Navbar -->
+  <header class="site-header">
+    <div class="header-container">
+      <!-- Brand Logo -->
+      <a href="/" class="brand">
+        <img src="/assets/images/logo.png" alt="TyagiHub Logo" class="brand-logo" width="36" height="36">
+        <span class="brand-text">Tyagi<span>Hub</span></span>
+      </a>
+
+      <!-- Desktop Navigation Links -->
+      <nav class="desktop-nav" aria-label="Desktop Navigation">
+        <ul class="nav-links">
+          <li><a href="/" class="nav-link">Home</a></li>
+          <li><a href="/digital-tools/" class="nav-link">Digital Tools</a></li>
+          <li><a href="/productivity/" class="nav-link">Productivity</a></li>
+          <li><a href="/about/" class="nav-link">About</a></li>
+          <li><a href="/contact/" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Header Actions: Search, Theme Toggle & Hamburger -->
+      <div class="header-actions">
+        <!-- Desktop Search Trigger -->
+        <button class="search-trigger-btn" type="button" aria-label="Search Guides">
+          <span>🔍</span>
+          <span>Search guides...</span>
+          <kbd>/</kbd>
+        </button>
+
+        <!-- Dark/Light Mode Switcher -->
+        <button class="theme-toggle-btn" type="button" aria-label="Toggle Theme">
+          <span class="theme-icon">🌙</span>
+        </button>
+
+        <!-- Mobile Hamburger Toggle Button -->
+        <button class="hamburger-btn" id="hamburger-btn" type="button" aria-label="Toggle Mobile Menu" aria-expanded="false">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Backdrop Overlay -->
+  <div class="mobile-drawer-overlay" id="drawer-overlay" aria-hidden="true"></div>
+
+  <!-- Mobile Drawer Menu -->
+  <aside class="mobile-drawer" id="mobile-drawer" aria-label="Mobile Navigation">
+    <div class="drawer-header">
+      <div class="brand">
+        <img src="/assets/images/logo.png" alt="TyagiHub Logo" class="brand-logo" width="32" height="32">
+        <span class="brand-text">Tyagi<span>Hub</span></span>
+      </div>
+      <button class="drawer-close-btn" id="drawer-close-btn" type="button" aria-label="Close Menu">✕</button>
+    </div>
+
+    <!-- Mobile Drawer Search Bar -->
+    <div class="mobile-search-box">
+      <span class="mobile-search-icon">🔍</span>
+      <input type="text" class="mobile-search-input" id="mobile-search-input" placeholder="Search Zoho, Airtable, Invoices...">
+    </div>
+
+    <!-- Mobile Drawer Nav Links -->
+    <ul class="drawer-nav-list">
+      <li class="drawer-nav-item"><a href="/">🏠 Home</a></li>
+      <li class="drawer-nav-item"><a href="/digital-tools/">🛠️ Digital Tools</a></li>
+      <li class="drawer-nav-item"><a href="/productivity/">⚡ Productivity</a></li>
+      <li class="drawer-nav-item"><a href="/about/">ℹ️ About Us</a></li>
+      <li class="drawer-nav-item"><a href="/contact/">✉️ Contact Us</a></li>
+      <li class="drawer-nav-item"><a href="/privacy-policy/">🔒 Privacy Policy</a></li>
+      <li class="drawer-nav-item"><a href="/terms/">📜 Terms of Service</a></li>
+      <li class="drawer-nav-item"><a href="/disclaimer/">⚠️ Disclaimer</a></li>
+    </ul>
+
+    <div class="drawer-footer">
+      <p>&copy; 2026 TyagiHub. All rights reserved.</p>
+    </div>
+  </aside>
+
+  <!-- Live Instant Search Modal -->
+  <div class="search-modal" id="search-modal" role="dialog" aria-modal="true" aria-label="Search Guides">
+    <div class="search-dialog">
+      <div class="search-bar-wrap">
+        <span>🔍</span>
+        <input type="search" class="search-main-input" id="search-main-input" placeholder="Search Zoho Mail, Zoho Invoice, Airtable, Databases..." autocomplete="off">
+        <button class="search-close-btn" id="search-close-btn" type="button">ESC</button>
+      </div>
+      <ul class="search-results-list" id="search-results-list">
+        <li class="search-empty-state">Type keywords to search verified tech guides...</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Main Content Area -->
+  <main>
+    
+<div class="article-container" style="max-width: 820px; margin: 0 auto;">
+  <header style="margin-bottom: 2rem; padding-bottom: 1rem; border-bottom: 1px solid var(--border);">
+    <h1 style="font-size: 2.2rem; font-weight: 800; margin-bottom: 0.5rem;">Contact Us</h1>
+    <p style="color: var(--text-light); font-size: 0.95rem;">Direct communication with the TyagiHub editorial desk in Ghaziabad, Uttar Pradesh.</p>
+  </header>
+
+  <div class="article-content">
+    <p>
+      At TyagiHub, we pride ourselves on maintaining 100% accurate, verified, and helpful tutorials. If you have an inquiry regarding a digital tool setup, spotted a recent menu change in Zoho, Airtable, or Notion, or simply want to collaborate, please reach out to us.
+    </p>
+
+    <!-- Contact Info Cards -->
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin: 2rem 0;">
+      <div style="background: var(--bg-surface); border: 1px solid var(--border); border-radius: var(--radius-md); padding: 1.5rem;">
+        <h2 style="font-size: 1.25rem; font-weight: 700; margin: 0 0 0.5rem; border: none; padding: 0;">✉️ Direct Editorial Email</h2>
+        <p style="font-size: 0.95rem; color: var(--text-muted); margin-bottom: 1rem;">
+          For all reader feedback, tutorial error reports, and general business correspondence.
+        </p>
+        <p style="margin: 0; font-size: 1.05rem;">
+          <strong>Email:</strong> <a href="mailto:contact@tyagihub.in">contact@tyagihub.in</a>
+        </p>
+      </div>
+
+      <div style="background: var(--bg-surface); border: 1px solid var(--border); border-radius: var(--radius-md); padding: 1.5rem;">
+        <h2 style="font-size: 1.25rem; font-weight: 700; margin: 0 0 0.5rem; border: none; padding: 0;">📍 Location &amp; Social</h2>
+        <p style="font-size: 0.95rem; color: var(--text-muted); margin-bottom: 0.75rem;">
+          <strong>Location:</strong> Ghaziabad, Uttar Pradesh 201001, India
+        </p>
+        <p style="font-size: 0.95rem; color: var(--text-muted); margin-bottom: 0;">
+          <strong>Social Channels:</strong><br>
+          &bull; YouTube: <a href="https://youtube.com/@tyagihub" target="_blank" rel="noopener">@tyagihub</a><br>
+          &bull; Instagram: <a href="https://instagram.com/tyagihub" target="_blank" rel="noopener">@tyagihub</a>
+        </p>
+      </div>
+    </div>
+
+    <!-- Live Contact Message Form -->
+    <div style="background: var(--bg-surface); border: 1px solid var(--border); border-radius: var(--radius-md); padding: 2rem; margin: 2.5rem 0;">
+      <h2 style="margin-top: 0; font-size: 1.4rem; font-weight: 750; border: none; padding: 0;">Send Us a Message</h2>
+      <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 1.5rem;">
+        Fill out the form below to get in touch with Himanshu Tyagi directly. We typically reply within 24 to 48 business hours.
+      </p>
+
+      <form id="contact-form" action="mailto:contact@tyagihub.in" method="POST" enctype="text/plain">
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1.25rem;">
+          <div>
+            <label for="contact-name" style="display: block; font-size: 0.9rem; font-weight: 650; margin-bottom: 0.4rem; color: var(--text-main);">Your Full Name *</label>
+            <input type="text" id="contact-name" name="name" required placeholder="e.g. Rahul Sharma" style="width: 100%; padding: 0.75rem; border: 1px solid var(--border); border-radius: var(--radius-sm); background: var(--bg-card); color: var(--text-main); font-size: 0.95rem;">
+          </div>
+          <div>
+            <label for="contact-email" style="display: block; font-size: 0.9rem; font-weight: 650; margin-bottom: 0.4rem; color: var(--text-main);">Your Email Address *</label>
+            <input type="email" id="contact-email" name="email" required placeholder="you@example.com" style="width: 100%; padding: 0.75rem; border: 1px solid var(--border); border-radius: var(--radius-sm); background: var(--bg-card); color: var(--text-main); font-size: 0.95rem;">
+          </div>
+        </div>
+
+        <div style="margin-bottom: 1.25rem;">
+          <label for="contact-subject" style="display: block; font-size: 0.9rem; font-weight: 650; margin-bottom: 0.4rem; color: var(--text-main);">Subject / Topic *</label>
+          <input type="text" id="contact-subject" name="subject" required placeholder="e.g. Question regarding Zoho Mail DNS setup" style="width: 100%; padding: 0.75rem; border: 1px solid var(--border); border-radius: var(--radius-sm); background: var(--bg-card); color: var(--text-main); font-size: 0.95rem;">
+        </div>
+
+        <div style="margin-bottom: 1.5rem;">
+          <label for="contact-message" style="display: block; font-size: 0.9rem; font-weight: 650; margin-bottom: 0.4rem; color: var(--text-main);">Your Message *</label>
+          <textarea id="contact-message" name="message" rows="5" required placeholder="Please provide detailed feedback, questions, or software error messages..." style="width: 100%; padding: 0.75rem; border: 1px solid var(--border); border-radius: var(--radius-sm); background: var(--bg-card); color: var(--text-main); font-size: 0.95rem; resize: vertical;"></textarea>
+        </div>
+
+        <button type="submit" style="background: var(--primary); color: #ffffff; border: none; padding: 0.85rem 1.75rem; border-radius: var(--radius-md); font-weight: 700; font-size: 1rem; cursor: pointer; transition: background 0.15s ease;">
+          Send Message &rarr;
+        </button>
+      </form>
+    </div>
+
+    <h2>Frequently Asked Questions</h2>
+    <h3>How quickly will I receive a reply?</h3>
+    <p>
+      We review incoming correspondence daily and typically reply within <strong>24 to 48 business hours</strong>. If you are reporting a configuration or DNS error, attaching relevant screenshots or specifying your domain provider helps us assist you faster.
+    </p>
+
+    <h3>Do you provide one-on-one consulting?</h3>
+    <p>
+      Our primary goal is publishing free, open-access tutorials for everyone. If you have an interesting cloud setup question or challenge that could benefit our broader community, email us at <a href="mailto:contact@tyagihub.in">contact@tyagihub.in</a> and we will work on turning it into an open step-by-step guide.
+    </p>
+
+    <h3>Do you accept sponsored reviews or guest posts?</h3>
+    <p>
+      To preserve our readers' trust and maintain strict editorial integrity, TyagiHub does not accept sponsored content, paid app promotions, or third-party guest posts selling backlinks. Every tutorial is independently tested and authored.
+    </p>
+  </div>
+</div>
+
+  </main>
+
+  <!-- Modern Multi-Column Footer -->
+  <footer class="site-footer">
+    <div class="footer-main-grid">
+      <!-- Column 1: Brand & Editorial Mission -->
+      <div>
+        <div class="brand" style="margin-bottom: 1rem;">
+          <img src="/assets/images/logo.png" alt="TyagiHub Logo" class="brand-logo" width="36" height="36">
+          <span class="brand-text">Tyagi<span>Hub</span></span>
+        </div>
+        <p style="color: var(--text-muted); font-size: 0.92rem; line-height: 1.7; margin-bottom: 1rem;">
+          TyagiHub is an independent digital publication founded by Himanshu Tyagi. We publish hands-on, human-verified tutorials on cloud business tools, free business email configurations, GST invoicing portals, and no-code productivity workflows.
+        </p>
+        <p style="color: var(--text-light); font-size: 0.85rem;">
+          100% human-tested tutorials. Zero fluff. Zero paywalls.
+        </p>
+        <p style="color: var(--text-light); font-size: 0.83rem; margin-top: 0.5rem;">
+          📍 Ghaziabad, Uttar Pradesh, India &bull; <a href="mailto:contact@tyagihub.in" style="color: var(--primary);">contact@tyagihub.in</a>
+        </p>
+      </div>
+
+      <!-- Column 2: Topic Clusters -->
+      <div>
+        <h4 class="footer-col-title">Topic Clusters</h4>
+        <ul class="footer-links-list">
+          <li class="footer-link-item"><a href="/digital-tools/">🛠️ Digital Tools</a></li>
+          <li class="footer-link-item"><a href="/productivity/">⚡ Productivity Guides</a></li>
+          <li class="footer-link-item"><a href="/digital-tools/whatsapp-business-automation-client-guide/">💬 WhatsApp Business Automation</a></li>
+          <li class="footer-link-item"><a href="/productivity/google-calendar-time-blocking-solopreneur-guide/">📅 Google Calendar Scheduling</a></li>
+          <li class="footer-link-item"><a href="/digital-tools/github-pages-custom-domain-free-hosting-guide/">🌐 Free GitHub Pages Hosting</a></li>
+          <li class="footer-link-item"><a href="/productivity/obsidian-beginner-offline-notes-guide/">🧠 Obsidian Offline Notes Hub</a></li>
+        </ul>
+      </div>
+
+      <!-- Column 3: Trust & Legal -->
+      <div>
+        <h4 class="footer-col-title">Trust &amp; Legal</h4>
+        <ul class="footer-links-list">
+          <li class="footer-link-item"><a href="/about/">ℹ️ About Us &amp; Editorial Policy</a></li>
+          <li class="footer-link-item"><a href="/contact/">✉️ Contact Us &amp; Support</a></li>
+          <li class="footer-link-item"><a href="/privacy-policy/">🔒 Privacy Policy</a></li>
+          <li class="footer-link-item"><a href="/terms/">📜 Terms of Service</a></li>
+          <li class="footer-link-item"><a href="/disclaimer/">⚠️ Full Disclaimer</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Footer Bottom Bar -->
+    <div class="footer-bottom-bar">
+      <div>&copy; 2026 TyagiHub &bull; Founded by Himanshu Tyagi (Ghaziabad, UP, India). All rights reserved.</div>
+      <div style="display: flex; gap: 1.25rem;">
+        <a href="/privacy-policy/" style="color: var(--text-light); font-size: 0.85rem;">Privacy</a>
+        <a href="/terms/" style="color: var(--text-light); font-size: 0.85rem;">Terms</a>
+        <a href="/contact/" style="color: var(--text-light); font-size: 0.85rem;">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating Back to Top Button -->
+  <button class="back-to-top-btn" id="back-to-top" aria-label="Back to Top" type="button">↑</button>
+
+  <!-- Copy Toast Notification -->
+  <div class="copy-toast" id="copy-toast">Link copied to clipboard!</div>
+
+  <!-- Main Scripts -->
+  <script src="/assets/js/main.js" defer></script>
+</body>
+</html>

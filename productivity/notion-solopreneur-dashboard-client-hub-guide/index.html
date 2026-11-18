@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Notion for Solopreneurs: How I Built a Complete Daily Dashboard & Client Task Hub from Scratch (2026 Walkthrough) | TyagiHub</title>
+  <meta name="description" content="An exhaustive, step-by-step walkthrough showing how I built a minimalist, zero-clutter Notion workspace for managing clients, deliverables, and daily tasks using 100% free relational databases.">
+  <link rel="canonical" href="https://tyagihub.in/productivity/notion-solopreneur-dashboard-client-hub-guide/">
+  <meta name="robots" content="index, follow">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Notion for Solopreneurs: How I Built a Complete Daily Dashboard & Client Task Hub from Scratch (2026 Walkthrough) | TyagiHub">
+  <meta property="og:description" content="An exhaustive, step-by-step walkthrough showing how I built a minimalist, zero-clutter Notion workspace for managing clients, deliverables, and daily tasks using 100% free relational databases.">
+  <meta property="og:url" content="https://tyagihub.in/productivity/notion-solopreneur-dashboard-client-hub-guide/">
+  <meta property="og:site_name" content="TyagiHub">
+  <meta property="og:image" content="https://tyagihub.in/assets/images/logo.png">
+
+  <!-- Schema.org Article Structured Data (AdSense & Google Search E-E-A-T) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "Notion for Solopreneurs: How I Built a Complete Daily Dashboard & Client Task Hub from Scratch (2026 Walkthrough)",
+    "description": "An exhaustive, step-by-step walkthrough showing how I built a minimalist, zero-clutter Notion workspace for managing clients, deliverables, and daily tasks using 100% free relational databases.",
+    "url": "https://tyagihub.in/productivity/notion-solopreneur-dashboard-client-hub-guide/",
+    "datePublished": "2026-11-14",
+    "dateModified": "2026-11-15",
+    "author": {
+      "@type": "Person",
+      "name": "Himanshu Tyagi",
+      "url": "https://tyagihub.in/about/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "TyagiHub",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://tyagihub.in/assets/images/logo.png"
+      }
+    }
+  }
+  </script>
+
+  <!-- Icons -->
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/apple-touch-icon.png">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="/assets/css/main.css">
+
+  <!-- Google AdSense -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7067722696020503" crossorigin="anonymous"></script>
+
+  <script>
+    (function() {
+      const savedTheme = localStorage.getItem('th_theme');
+      if (savedTheme) {
+        document.documentElement.setAttribute('data-theme', savedTheme);
+      } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.documentElement.setAttribute('data-theme', 'dark');
+      }
+    })();
+  </script>
+</head>
+<body>
+  <!-- Reading Progress Bar -->
+  <div class="reading-progress-bar" id="progress-bar"></div>
+
+  <!-- Header Navbar -->
+  <header class="site-header">
+    <div class="header-container">
+      <a href="/" class="brand">
+        <img src="/assets/images/logo.png" alt="TyagiHub Logo" class="brand-logo" width="36" height="36">
+        <span class="brand-text">Tyagi<span>Hub</span></span>
+      </a>
+
+      <nav class="desktop-nav" aria-label="Desktop Navigation">
+        <ul class="nav-links">
+          <li><a href="/" class="nav-link">Home</a></li>
+          <li><a href="/digital-tools/" class="nav-link">Digital Tools</a></li>
+          <li><a href="/productivity/" class="nav-link">Productivity</a></li>
+          <li><a href="/about/" class="nav-link">About</a></li>
+          <li><a href="/contact/" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <button class="search-trigger-btn" type="button" aria-label="Search Guides">
+          <span>🔍</span>
+          <span>Search guides...</span>
+          <kbd>/</kbd>
+        </button>
+
+        <button class="theme-toggle-btn" type="button" aria-label="Toggle Theme">
+          <span class="theme-icon">🌙</span>
+        </button>
+
+        <button class="hamburger-btn" id="hamburger-btn" type="button" aria-label="Toggle Mobile Menu" aria-expanded="false">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Backdrop Overlay -->
+  <div class="mobile-drawer-overlay" id="drawer-overlay" aria-hidden="true"></div>
+
+  <!-- Mobile Drawer Menu -->
+  <aside class="mobile-drawer" id="mobile-drawer" aria-label="Mobile Navigation">
+    <div class="drawer-header">
+      <div class="brand">
+        <img src="/assets/images/logo.png" alt="TyagiHub Logo" class="brand-logo" width="32" height="32">
+        <span class="brand-text">Tyagi<span>Hub</span></span>
+      </div>
+      <button class="drawer-close-btn" id="drawer-close-btn" type="button" aria-label="Close Menu">✕</button>
+    </div>
+
+    <div class="mobile-search-box">
+      <span class="mobile-search-icon">🔍</span>
+      <input type="text" class="mobile-search-input" id="mobile-search-input" placeholder="Search guides & topics...">
+    </div>
+
+    <ul class="drawer-nav-list">
+      <li class="drawer-nav-item"><a href="/">🏠 Home</a></li>
+      <li class="drawer-nav-item"><a href="/digital-tools/">🛠️ Digital Tools</a></li>
+      <li class="drawer-nav-item"><a href="/productivity/">⚡ Productivity</a></li>
+      <li class="drawer-nav-item"><a href="/about/">ℹ️ About Us</a></li>
+      <li class="drawer-nav-item"><a href="/contact/">✉️ Contact Us</a></li>
+      <li class="drawer-nav-item"><a href="/privacy-policy/">🔒 Privacy Policy</a></li>
+      <li class="drawer-nav-item"><a href="/terms/">📜 Terms of Service</a></li>
+      <li class="drawer-nav-item"><a href="/disclaimer/">⚠️ Disclaimer</a></li>
+    </ul>
+
+    <div class="drawer-footer">
+      <p>&copy; 2026 TyagiHub. All rights reserved.</p>
+    </div>
+  </aside>
+
+  <!-- Live Instant Search Modal -->
+  <div class="search-modal" id="search-modal" role="dialog" aria-modal="true" aria-label="Search Guides">
+    <div class="search-dialog">
+      <div class="search-bar-wrap">
+        <span>🔍</span>
+        <input type="search" class="search-main-input" id="search-main-input" placeholder="Search Zoho, Airtable, Invoices..." autocomplete="off">
+        <button class="search-close-btn" id="search-close-btn" type="button">ESC</button>
+      </div>
+      <ul class="search-results-list" id="search-results-list">
+        <li class="search-empty-state">Type keywords to search verified tech guides...</li>
+      </ul>
+    </div>
+  </div>
+
+  <main>
+    <article class="article-container">
+      <nav class="article-breadcrumb" aria-label="Breadcrumb">
+        <a href="/">Home</a> &rsaquo; <a href="/productivity/">Productivity</a> &rsaquo; <span>Current Guide</span>
+      </nav>
+
+      <header class="article-header">
+        <h1 class="article-title">Notion for Solopreneurs: How I Built a Complete Daily Dashboard & Client Task Hub from Scratch (2026 Walkthrough)</h1>
+        <div class="article-meta-bar">
+          <div class="author-chip">
+            <img src="/assets/images/logo.png" alt="Himanshu Tyagi">
+            <span>By Himanshu Tyagi</span>
+          </div>
+          <span>&bull;</span>
+          <time datetime="2026-11-14">November 14, 2026</time>
+          <span>&bull;</span>
+          <span>Category: Productivity</span>
+        </div>
+      </header>
+
+      <!-- Social Share Strip -->
+      <div class="share-strip">
+        <span class="share-strip-label">Share this guide:</span>
+        <button class="share-btn" id="copy-link-btn" type="button">🔗 Copy Link</button>
+        <a class="share-btn" id="share-twitter" href="#" target="_blank" rel="noopener">🐦 X (Twitter)</a>
+        <a class="share-btn" id="share-linkedin" href="#" target="_blank" rel="noopener">💼 LinkedIn</a>
+        <a class="share-btn" id="share-whatsapp" href="#" target="_blank" rel="noopener">💬 WhatsApp</a>
+      </div>
+
+      <div class="article-content">
+        
+<!-- Featured Cover Banner -->
+<figure style="margin: 0 0 2rem 0; border-radius: var(--radius-md); overflow: hidden; border: 1px solid var(--border); box-shadow: var(--shadow-sm);">
+  <img src="/assets/images/notion-dashboard-banner.jpg" alt="Notion Solopreneur Dashboard & Client Hub Walkthrough Banner" style="width: 100%; height: auto; display: block;" width="1200" height="630">
+</figure>
+
+<p>
+  When I first downloaded Notion a few years ago, I fell straight into the trap that ensnares nearly every new user: I spent three full days downloading aesthetic $40 templates, adding animated weather widgets, embedding Spotify playlists, and color-coding sixty different nested subpages. 
+</p>
+
+<p>
+  Within two weeks, I had completely abandoned it. Opening my dashboard felt like walking into an overdecorated digital museum rather than getting work done. I spent more time rearranging little pastel icons and tweaking database tags than actually pitching clients, writing code, or delivering projects.
+</p>
+
+<p>
+  If you are running an independent business, freelancing, or juggling client deliverables as a solo operator, you do not need an aesthetic labyrinth. <strong>You need an operating cockpit.</strong> You need a single screen where you open your laptop in the morning, immediately see what needs to be delivered today, capture raw client notes in seconds, and close your laptop without wondering if a critical deadline fell through the cracks.
+</p>
+
+<p>
+  In this hands-on, zero-fluff walkthrough, I will guide you step by step through the exact 3-database relational architecture I use every day. It runs 100% on Notion's free tier, requires zero paid plugins or templates, and takes less than thirty minutes to build from a completely blank page.
+</p>
+
+<div class="callout info">
+  <div class="callout-title">💡 The Golden Rule of Solopreneur Productivity</div>
+  <p style="margin: 0;">
+    If a workspace requires more than three clicks or five seconds to log a new task or client note, you will stop maintaining it within a month. Our system separates <strong>where data lives</strong> (background relational tables) from <strong>where you work</strong> (a single, distraction-free morning command dashboard).
+  </p>
+</div>
+
+---
+
+<h2>1. The Architecture: Why the "3-Database Core" Works</h2>
+
+<p>
+  Most broken Notion setups make the fatal mistake of dumping everything into one giant, chaotic to-do list. The moment you combine high-level client contracts with quick reminders like <em>"Send invoice to Rahul"</em> and <em>"Buy new USB-C cable"</em>, your workspace turns into cognitive noise.
+</p>
+
+<p>
+  Instead, professional workflows rely on a proven three-tier hierarchy:
+</p>
+
+<ol>
+  <li><strong>Tier 1 — Clients Database (The Master CRM):</strong> Holds high-level company names, primary contact persons, retainer values, and contracted billing terms.</li>
+  <li><strong>Tier 2 — Projects Database (The Deliverables Hub):</strong> Represents distinct milestones or deliverables (e.g., <em>"Redesign Landing Page"</em> or <em>"Q4 Financial Audit"</em>), linked directly to a client.</li>
+  <li><strong>Tier 3 — Daily Tasks Database (The Execution Engine):</strong> Individual, actionable checkboxes (e.g., <em>"Draft wireframe"</em>, <em>"Send draft PDF"</em>), linked to an overarching project.</li>
+</ol>
+
+<figure style="margin: 2.5rem 0; border-radius: var(--radius-md); overflow: hidden; border: 1px solid var(--border); box-shadow: var(--shadow-sm);">
+  <img src="/assets/images/notion-database-workflow.svg" alt="Solopreneur Notion Relational Database Workflow Flowchart" style="width: 100%; height: auto; display: block;" width="900" height="480">
+  <figcaption style="padding: 0.75rem 1rem; background: var(--bg-surface); color: var(--text-muted); font-size: 0.88rem; text-align: center; border-top: 1px solid var(--border);">
+    Figure 1: Relational architecture connecting Clients, Projects, and Daily Tasks with automated rollups.
+  </figcaption>
+</figure>
+
+<p>
+  By connecting these three tables with Notion's native <strong>Relations and Rollups</strong>, you only ever need to type a client's name once. From that moment forward, every project, invoice milestone, and daily task inherits the client's information automatically.
+</p>
+
+---
+
+<h2>2. Step 1: Create the Background Storage Page</h2>
+
+<p>
+  To keep our final dashboard clean and fast, we first build a dedicated "Backstage" page where our raw database tables will live. This ensures you never accidentally delete an entire database while editing your morning homepage.
+</p>
+
+<div class="step-box">
+  <div class="step-header">
+    <span class="step-num">1</span>
+    <span>In your Notion sidebar, click <strong>Add a page</strong> and name it <code>[System] Databases Archive</code>.</span>
+  </div>
+  <p style="margin: 0.5rem 0 0 2.25rem; font-size: 0.95rem; color: var(--text-muted);">
+    Give it a wrench or gear icon (⚙️) so you know it's a backend system folder.
+  </p>
+</div>
+
+<div class="step-box">
+  <div class="step-header">
+    <span class="step-num">2</span>
+    <span>Inside this archive page, you will create three full-page tables as described below.</span>
+  </div>
+</div>
+
+---
+
+<h2>3. Step 2: Build Database 1 — The Clients CRM</h2>
+
+<p>
+  Inside your <code>[System] Databases Archive</code> page, type <code>/table full page</code> and name the database <strong>Clients CRM</strong>.
+</p>
+
+<p>
+  Configure the table with the following essential properties (avoid adding unnecessary fields):
+</p>
+
+<div class="table-wrapper">
+  <table>
+    <thead>
+      <tr>
+        <th style="width: 25%;">Property Name</th>
+        <th style="width: 25%;">Property Type</th>
+        <th>Purpose &amp; Suggested Values</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Client Name</strong></td>
+        <td>Title (Default)</td>
+        <td>The business or individual name (e.g., <em>Acme Corp</em>, <em>Studio North</em>).</td>
+      </tr>
+      <tr>
+        <td><strong>Status</strong></td>
+        <td>Select</td>
+        <td>Options: <code>Active Retainer</code>, <code>Fixed Project</code>, <code>Lead / Pitch</code>, <code>Completed</code>.</td>
+      </tr>
+      <tr>
+        <td><strong>Monthly Value</strong></td>
+        <td>Number</td>
+        <td>Format as currency (₹ or $). Useful for calculating your total recurring revenue.</td>
+      </tr>
+      <tr>
+        <td><strong>Primary Email</strong></td>
+        <td>Email</td>
+        <td>Direct contact point for invoice submissions and deliverables.</td>
+      </tr>
+      <tr>
+        <td><strong>Billing Cycle</strong></td>
+        <td>Select</td>
+        <td>Options: <code>1st of Month</code>, <code>15th of Month</code>, <code>Net 15 Upon Delivery</code>.</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="callout success">
+  <div class="callout-title">✅ Test Entry</div>
+  <p style="margin: 0;">
+    Add two sample clients right now (e.g., <em>Apex Design Studio</em> with status <code>Active Retainer</code> and <em>Nova Labs</em> with status <code>Fixed Project</code>). Having dummy data makes configuring the next relation steps effortless.
+  </p>
+</div>
+
+---
+
+<h2>4. Step 3: Build Database 2 — Active Projects Hub</h2>
+
+<p>
+  Return to your <code>[System] Databases Archive</code> page, type <code>/table full page</code> again, and name this database <strong>Projects Hub</strong>.
+</p>
+
+<p>
+  This database tracks broad milestones that usually take between one week and three months to complete. Set up these properties:
+</p>
+
+<div class="table-wrapper">
+  <table>
+    <thead>
+      <tr>
+        <th style="width: 25%;">Property Name</th>
+        <th style="width: 25%;">Property Type</th>
+        <th>Purpose &amp; Configuration</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Project Name</strong></td>
+        <td>Title</td>
+        <td>The specific deliverable (e.g., <em>Website Rebranding</em>, <em>Q1 Tax Audit</em>).</td>
+      </tr>
+      <tr>
+        <td><strong>Client</strong></td>
+        <td><strong>Relation</strong></td>
+        <td>Link to <strong>Clients CRM</strong>. Enable <em>Show on Clients CRM</em>.</td>
+      </tr>
+      <tr>
+        <td><strong>Status</strong></td>
+        <td>Status</td>
+        <td>Groups: <code>Not Started</code>, <code>In Progress</code>, <code>Under Client Review</code>, <code>Delivered</code>.</td>
+      </tr>
+      <tr>
+        <td><strong>Target Deadline</strong></td>
+        <td>Date</td>
+        <td>The final agreed submission date.</td>
+      </tr>
+      <tr>
+        <td><strong>Priority</strong></td>
+        <td>Select</td>
+        <td>Options: <code>🔥 High</code>, <code>⚡ Normal</code>, <code>🌱 Low</code>.</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<p>
+  Notice the magic of the <strong>Relation</strong> property: when you type <em>"Website Rebranding"</em>, you simply click on the <em>Client</em> column and select <em>"Apex Design Studio"</em> from your CRM. Both databases are now permanently synchronized.
+</p>
+
+---
+
+<h2>5. Step 4: Build Database 3 — The Daily Tasks Engine</h2>
+
+<p>
+  The final database is where you will spend 90% of your daily working hours. In the archive page, create another table named <strong>Daily Tasks</strong>.
+</p>
+
+<p>
+  Configure these specific properties:
+</p>
+
+<div class="table-wrapper">
+  <table>
+    <thead>
+      <tr>
+        <th style="width: 25%;">Property Name</th>
+        <th style="width: 25%;">Property Type</th>
+        <th>Purpose &amp; Exact Setup</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Task</strong></td>
+        <td>Title</td>
+        <td>Actionable, granular verb phrase (e.g., <em>Draft 3 hero section mockups</em>).</td>
+      </tr>
+      <tr>
+        <td><strong>Due Date</strong></td>
+        <td>Date</td>
+        <td>Crucial for our automatic morning filtering. Set to today's date for tests.</td>
+      </tr>
+      <tr>
+        <td><strong>Status</strong></td>
+        <td>Status</td>
+        <td>Options: <code>To-Do</code>, <code>In Progress</code>, <code>Done</code>.</td>
+      </tr>
+      <tr>
+        <td><strong>Project</strong></td>
+        <td><strong>Relation</strong></td>
+        <td>Link to <strong>Projects Hub</strong>. Enable two-way linking.</td>
+      </tr>
+      <tr>
+        <td><strong>Client (Auto)</strong></td>
+        <td><strong>Rollup</strong></td>
+        <td>
+          Select relation <em>Project</em> &rarr; property <em>Client</em> &rarr; calculate <em>Show original</em>.
+          <strong>This automatically pulls the client name without any manual typing!</strong>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+---
+
+<h2>6. Step 5: Assemble the "Solopreneur Command Center" Dashboard</h2>
+
+<p>
+  Now comes the satisfying part: bringing everything together on a clean, beautiful morning dashboard.
+</p>
+
+<div class="step-box">
+  <div class="step-header">
+    <span class="step-num">1</span>
+    <span>Create a new top-level page in your Notion sidebar named <code>⚡ Today Hub</code> (or <code>Command Center</code>).</span>
+  </div>
+</div>
+
+<div class="step-box">
+  <div class="step-header">
+    <span class="step-num">2</span>
+    <span>Click the page settings icon (three dots in top right) and toggle on <strong>Full width</strong> and <strong>Small text</strong>. This gives your screen breathing room.</span>
+  </div>
+</div>
+
+<div class="step-box">
+  <div class="step-header">
+    <span class="step-num">3</span>
+    <span>At the top, create a 2-column layout by typing <code>/2 columns</code>.</span>
+  </div>
+  <p style="margin: 0.5rem 0 0 2.25rem; font-size: 0.95rem; color: var(--text-muted);">
+    In the left column, write a motivational headline like <em>"🎯 Focus: Deliver 3 core tasks before checking email."</em> In the right column, add a quick callout box for brain-dump scratchpad notes.
+  </p>
+</div>
+
+<div class="step-box">
+  <div class="step-header">
+    <span class="step-num">4</span>
+    <span>Below the columns, type <code>/linked view of database</code> and choose <strong>Daily Tasks</strong>.</span>
+  </div>
+</div>
+
+---
+
+<h2>7. The Secret Sauce: Configuring the "Today Only" Kanban View</h2>
+
+<p>
+  A giant task list causes paralysis. To turn our linked database into an intuitive daily Kanban board:
+</p>
+
+<ol>
+  <li>In your linked view, click the view dropdown and select <strong>Board</strong> view.</li>
+  <li>Group the board by <strong>Status</strong> (columns: <em>To-Do</em>, <em>In Progress</em>, <em>Done</em>).</li>
+  <li>
+    Click <strong>Filter</strong> &rarr; select <strong>Due Date</strong> &rarr; choose:
+    <br>
+    <code>Due Date is on or before Today</code>
+  </li>
+  <li>
+    Click <strong>Properties</strong> and make visible: <em>Project</em>, <em>Client (Auto)</em>, and <em>Due Date</em>.
+  </li>
+</ol>
+
+<div class="callout warning">
+  <div class="callout-title">⚠️ Why "On or Before Today" is Essential</div>
+  <p style="margin: 0;">
+    If you only filter for <em>"Due Date is Today"</em>, any task you failed to finish yesterday will vanish into digital limbo. By setting the filter to <strong>"On or before Today"</strong>, overdue tasks stay visible in red until you either complete them or reschedule them. Zero forgotten tasks!
+  </p>
+</div>
+
+---
+
+<h2>8. Adding the Active Projects Pipeline View</h2>
+
+<p>
+  Right below your Daily Tasks Kanban, insert a second linked database view:
+</p>
+
+<ol>
+  <li>Type <code>/linked view of database</code> &rarr; choose <strong>Projects Hub</strong>.</li>
+  <li>Select <strong>Gallery view</strong> or <strong>Table view</strong>.</li>
+  <li>
+    Add a filter: <code>Status is not Delivered</code>.
+  </li>
+  <li>
+    This gives you a clear bird's-eye view of your 3–5 active client commitments without cluttering your immediate morning task list.
+  </li>
+</ol>
+
+---
+
+<h2>9. Notion Free Tier Optimization & Performance Rules</h2>
+
+<p>
+  Many solopreneurs assume they need Notion's paid "Plus" plan ($10/month). In reality, Notion's Free Plan offers <strong>unlimited pages and blocks for solo users</strong>. You only need to follow these four optimization rules to keep it running smoothly forever:
+</p>
+
+<div class="table-wrapper">
+  <table>
+    <thead>
+      <tr>
+        <th>Rule</th>
+        <th>What to Do</th>
+        <th>Why It Matters</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>1. Avoid Heavy Video/PDF Uploads</strong></td>
+        <td>Link external assets via Google Drive or Dropbox links rather than uploading raw 100MB files directly into Notion.</td>
+        <td>Free plan has a 5MB per-file upload limit. External links keep Notion snappy and free.</td>
+      </tr>
+      <tr>
+        <td><strong>2. Archive Completed Projects</strong></td>
+        <td>Every quarter, filter projects marked <em>"Delivered"</em> and move them to an <em>"Archive 2026"</em> subpage.</td>
+        <td>Keeps database queries lightning-fast on mobile phones.</td>
+      </tr>
+      <tr>
+        <td><strong>3. Limit Third-Party Widgets</strong></td>
+        <td>Avoid slow iframe widgets (clocks, aesthetic quotes, external calendars).</td>
+        <td>Third-party widgets increase page load times by 3–4 seconds on mobile data.</td>
+      </tr>
+      <tr>
+        <td><strong>4. Use Mobile Lock</strong></td>
+        <td>In the Notion mobile app (iOS/Android), click the top right menu and select <em>Lock Database</em> on your dashboard.</td>
+        <td>Prevents accidental finger drags and property deletion when checking tasks on your phone.</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+---
+
+<h2>10. Frequently Asked Questions (FAQ)</h2>
+
+<div class="faq-box">
+  <div class="faq-q">1. What happens if I want to collaborate with a client or subcontractor?</div>
+  <div class="faq-a">
+    Notion's free tier allows you to invite up to <strong>10 Guest Users</strong> for free. You can share an individual Project page or Deliverables board directly with a client via their email without paying for an enterprise team workspace.
+  </div>
+</div>
+
+<div class="faq-box">
+  <div class="faq-q">2. Can I use this setup on my smartphone when away from my desk?</div>
+  <div class="faq-a">
+    Yes! Download the official Notion mobile app. Favorite the <code>⚡ Today Hub</code> page by clicking the star icon. On iOS or Android, you can even add a native <strong>Notion Home Screen Widget</strong> that opens directly to your Today Tasks board with a single tap.
+  </div>
+</div>
+
+<div class="faq-box">
+  <div class="faq-q">3. How does this compare to specialized tools like Trello, Asana, or ClickUp?</div>
+  <div class="faq-a">
+    Trello is great for basic boards, but lacks relational client linking. Asana and ClickUp become very expensive very quickly and feature overwhelming enterprise settings. Notion gives you a clean, unified canvas where your notes, client database, and tasks coexist in one tab.
+  </div>
+</div>
+
+<div class="faq-box">
+  <div class="faq-q">4. How do I backup my Notion workspace in case of account issues?</div>
+  <div class="faq-a">
+    Go to <strong>Settings &amp; Members &rarr; Settings &rarr; Export all workspace content</strong>. Select <em>Markdown &amp; CSV</em> format. Notion will generate a complete ZIP file containing all your databases and notes, ensuring you retain 100% offline ownership of your business data.
+  </div>
+</div>
+
+---
+
+<h2>Conclusion: Keep It Lean and Get to Work</h2>
+
+<p>
+  Productivity is not measured by the complexity of your software setup; it is measured by the quality and consistency of your output. 
+</p>
+
+<p>
+  By setting up this 3-database relational core, you gain all the power of an enterprise project management suite with zero cost, zero bloat, and zero maintenance friction. Take 25 minutes today to configure your archive, connect your relations, set your morning filter, and enjoy the peace of mind that comes with knowing exactly what to conquer tomorrow morning.
+</p>
+
+      </div>
+
+      <div class="author-box">
+        <img src="/assets/images/logo.png" alt="Himanshu Tyagi" class="author-box-img">
+        <div>
+          <div class="author-box-name">Himanshu Tyagi</div>
+          <div class="author-box-role">Founder &amp; Software Developer &bull; Ghaziabad, India</div>
+          <div class="author-box-bio">
+            Himanshu is an independent software and Android developer based in Ghaziabad, Uttar Pradesh. He writes hands-on, verified guides helping creators, developers, and small businesses configure digital tools, cloud software, and productivity workflows.
+          </div>
+        </div>
+      </div>
+    </article>
+  </main>
+
+  <!-- Modern Multi-Column Footer -->
+  <footer class="site-footer">
+    <div class="footer-main-grid">
+      <!-- Column 1: Brand & Editorial Mission -->
+      <div>
+        <div class="brand" style="margin-bottom: 1rem;">
+          <img src="/assets/images/logo.png" alt="TyagiHub Logo" class="brand-logo" width="36" height="36">
+          <span class="brand-text">Tyagi<span>Hub</span></span>
+        </div>
+        <p style="color: var(--text-muted); font-size: 0.92rem; line-height: 1.7; margin-bottom: 1rem;">
+          TyagiHub is an independent digital publication founded by Himanshu Tyagi. We publish hands-on, human-verified tutorials on cloud business tools, free business email configurations, GST invoicing portals, and no-code productivity workflows.
+        </p>
+        <p style="color: var(--text-light); font-size: 0.85rem;">
+          100% human-tested tutorials. Zero fluff. Zero paywalls.
+        </p>
+        <p style="color: var(--text-light); font-size: 0.83rem; margin-top: 0.5rem;">
+          📍 Ghaziabad, Uttar Pradesh, India &bull; <a href="mailto:contact@tyagihub.in" style="color: var(--primary);">contact@tyagihub.in</a>
+        </p>
+      </div>
+
+      <!-- Column 2: Topic Clusters -->
+      <div>
+        <h4 class="footer-col-title">Topic Clusters</h4>
+        <ul class="footer-links-list">
+          <li class="footer-link-item"><a href="/digital-tools/">🛠️ Digital Tools</a></li>
+          <li class="footer-link-item"><a href="/productivity/">⚡ Productivity Guides</a></li>
+          <li class="footer-link-item"><a href="/digital-tools/whatsapp-business-automation-client-guide/">💬 WhatsApp Business Automation</a></li>
+          <li class="footer-link-item"><a href="/productivity/google-calendar-time-blocking-solopreneur-guide/">📅 Google Calendar Scheduling</a></li>
+          <li class="footer-link-item"><a href="/digital-tools/github-pages-custom-domain-free-hosting-guide/">🌐 Free GitHub Pages Hosting</a></li>
+          <li class="footer-link-item"><a href="/productivity/obsidian-beginner-offline-notes-guide/">🧠 Obsidian Offline Notes Hub</a></li>
+        </ul>
+      </div>
+
+      <!-- Column 3: Trust & Legal -->
+      <div>
+        <h4 class="footer-col-title">Trust &amp; Legal</h4>
+        <ul class="footer-links-list">
+          <li class="footer-link-item"><a href="/about/">ℹ️ About Us &amp; Editorial Policy</a></li>
+          <li class="footer-link-item"><a href="/contact/">✉️ Contact Us &amp; Support</a></li>
+          <li class="footer-link-item"><a href="/privacy-policy/">🔒 Privacy Policy</a></li>
+          <li class="footer-link-item"><a href="/terms/">📜 Terms of Service</a></li>
+          <li class="footer-link-item"><a href="/disclaimer/">⚠️ Full Disclaimer</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Footer Bottom Bar -->
+    <div class="footer-bottom-bar">
+      <div>&copy; 2026 TyagiHub &bull; Founded by Himanshu Tyagi (Ghaziabad, UP, India). All rights reserved.</div>
+      <div style="display: flex; gap: 1.25rem;">
+        <a href="/privacy-policy/" style="color: var(--text-light); font-size: 0.85rem;">Privacy</a>
+        <a href="/terms/" style="color: var(--text-light); font-size: 0.85rem;">Terms</a>
+        <a href="/contact/" style="color: var(--text-light); font-size: 0.85rem;">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating Back to Top Button -->
+  <button class="back-to-top-btn" id="back-to-top" aria-label="Back to Top" type="button">↑</button>
+
+  <!-- Copy Toast Notification -->
+  <div class="copy-toast" id="copy-toast">Link copied to clipboard!</div>
+
+  <script src="/assets/js/main.js" defer></script>
+</body>
+</html>
