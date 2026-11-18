@@ -47,7 +47,7 @@
   <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/apple-touch-icon.png">
 
   
-  <link rel="stylesheet" href="/assets/css/main.css">
+  <link rel="stylesheet" href="/assets/css/main.css?v=20261118_v2">
 
   
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7067722696020503" crossorigin="anonymous"></script>
@@ -311,7 +311,7 @@
   Navigate to <code>https://one.one.one.one/help/</code> in your mobile browser. The diagnostic page inspects your live IP packet and displays four critical verification checks:
 </p>
 
-<pre><code class="language-text">========================================================
+<div class="code-block-wrapper"><div class="code-block-header"><span class="lang-badge">💻 <span>TEXT</span></span><button class="code-copy-btn" type="button" aria-label="Copy code"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle;"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg><span>Copy</span></button></div><pre><code class="language-text">========================================================
 🔍 CLOUDFLARE 1.1.1.1 DIAGNOSTIC RESULTS
 ========================================================
 Connected to 1.1.1.1        : YES (Using Anycast resolver)
@@ -320,7 +320,7 @@ Using DNS over TLS (DoT)    : YES
 Using WARP                  : YES (WireGuard tunnel active)
 AS Name                     : Cloudflare, Inc.
 Data Center                 : DEL (Indira Gandhi Airport POP)
-========================================================</code></pre>
+========================================================</code></pre></div>
 
 <p>
   If all four fields display <strong>YES</strong>, your connection is fully encrypted. Even if an attacker on public Wi-Fi is capturing all network packets using Wireshark, they see only an indecipherable stream of WireGuard UDP packets destined for Cloudflare's edge IP.
@@ -534,6 +534,6 @@ Data Center                 : DEL (Indira Gandhi Airport POP)
   
   <div class="copy-toast" id="copy-toast">Link copied to clipboard!</div>
 
-  <script src="/assets/js/main.js" defer></script>
+  <script src="/assets/js/main.js?v=20261118_v2" defer></script>
 </body>
 </html>

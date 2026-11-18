@@ -47,7 +47,7 @@
   <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/apple-touch-icon.png">
 
   
-  <link rel="stylesheet" href="/assets/css/main.css">
+  <link rel="stylesheet" href="/assets/css/main.css?v=20261118_v2">
 
   
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7067722696020503" crossorigin="anonymous"></script>
@@ -497,7 +497,7 @@
   </div>
 </div>
 
-<pre><code class="language-yaml">name: Build &amp; Deploy to GitHub Pages
+<div class="code-block-wrapper"><div class="code-block-header"><span class="lang-badge">💻 <span>YAML</span></span><button class="code-copy-btn" type="button" aria-label="Copy code"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle;"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg><span>Copy</span></button></div><pre><code class="language-yaml">name: Build &amp; Deploy to GitHub Pages
 
 on:
   push:
@@ -526,7 +526,7 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./public
-          cname: tyagihub.in</code></pre>
+          cname: tyagihub.in</code></pre></div>
 
 <p>
   With this workflow enabled, you can write a new markdown article on your laptop, commit it with Git, and GitHub's cloud runners will execute your build script, regenerate your sitemap, and publish your new pages live within 45 seconds — without touching a single server.
@@ -540,19 +540,19 @@ jobs:
   DNS updates usually take between 5 to 30 minutes, although registrars officially state up to 24 hours. You can verify that your A-records are pointing correctly using your computer's terminal:
 </p>
 
-<pre><code class="language-bash"># Test DNS A-Records via Command Prompt or PowerShell
-nslookup tyagihub.in 8.8.8.8</code></pre>
+<div class="code-block-wrapper"><div class="code-block-header"><span class="lang-badge">💻 <span>BASH</span></span><button class="code-copy-btn" type="button" aria-label="Copy code"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle;"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg><span>Copy</span></button></div><pre><code class="language-bash"># Test DNS A-Records via Command Prompt or PowerShell
+nslookup tyagihub.in 8.8.8.8</code></pre></div>
 
 <p>
   If configured correctly, the terminal output will return GitHub's 4 IP addresses:
 </p>
 
-<pre><code class="language-text">Non-authoritative answer:
+<div class="code-block-wrapper"><div class="code-block-header"><span class="lang-badge">💻 <span>TEXT</span></span><button class="code-copy-btn" type="button" aria-label="Copy code"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle;"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg><span>Copy</span></button></div><pre><code class="language-text">Non-authoritative answer:
 Name:    tyagihub.in
 Addresses:  185.199.108.153
             185.199.109.153
             185.199.110.153
-            185.199.111.153</code></pre>
+            185.199.111.153</code></pre></div>
 
 ---
 
@@ -673,6 +673,6 @@ Addresses:  185.199.108.153
   
   <div class="copy-toast" id="copy-toast">Link copied to clipboard!</div>
 
-  <script src="/assets/js/main.js" defer></script>
+  <script src="/assets/js/main.js?v=20261118_v2" defer></script>
 </body>
 </html>

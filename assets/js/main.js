@@ -269,10 +269,11 @@
   }
 
   // --- 8. CODE BLOCKS ENHANCEMENT (HEADER & COPY BUTTON) ---
-  function enhanceCodeBlocks() {
-    const preElements = document.querySelectorAll('.article-content pre');
+  function initCodeBlocks() {
+    // 1. Enhance any raw <pre> elements that are not yet inside .code-block-wrapper
+    const preElements = document.querySelectorAll('pre');
     preElements.forEach((pre) => {
-      if (pre.parentElement && pre.parentElement.classList.contains('code-block-wrapper')) {
+      if (pre.closest('.code-block-wrapper')) {
         return;
       }
 
@@ -298,9 +299,24 @@
         </button>
       `;
 
-      const copyBtn = header.querySelector('.code-copy-btn');
+      pre.parentNode.insertBefore(wrapper, pre);
+      wrapper.appendChild(header);
+      wrapper.appendChild(pre);
+    });
+
+    // 2. Attach click event listener to all copy buttons (static or dynamic)
+    document.querySelectorAll('.code-copy-btn').forEach((copyBtn) => {
+      if (copyBtn.dataset.bound === 'true') return;
+      copyBtn.dataset.bound = 'true';
+
       copyBtn.addEventListener('click', async () => {
-        const textToCopy = (code || pre).innerText.trim();
+        const wrapper = copyBtn.closest('.code-block-wrapper');
+        const code = wrapper ? wrapper.querySelector('code') : null;
+        const pre = wrapper ? wrapper.querySelector('pre') : null;
+        const target = code || pre;
+        const textToCopy = target ? target.innerText.trim() : '';
+        if (!textToCopy) return;
+
         try {
           await navigator.clipboard.writeText(textToCopy);
         } catch (err) {
@@ -327,17 +343,13 @@
           copyBtn.classList.remove('copied');
         }, 2000);
       });
-
-      pre.parentNode.insertBefore(wrapper, pre);
-      wrapper.appendChild(header);
-      wrapper.appendChild(pre);
     });
   }
 
   if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', enhanceCodeBlocks);
+    document.addEventListener('DOMContentLoaded', initCodeBlocks);
   } else {
-    enhanceCodeBlocks();
+    initCodeBlocks();
   }
 
 })();

@@ -47,7 +47,7 @@
   <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/apple-touch-icon.png">
 
   
-  <link rel="stylesheet" href="/assets/css/main.css">
+  <link rel="stylesheet" href="/assets/css/main.css?v=20261118_v2">
 
   
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7067722696020503" crossorigin="anonymous"></script>
@@ -286,7 +286,7 @@
 
 <p>Here is a complete, production-ready HTML form implementation:</p>
 
-<pre><code class="language-html">&lt;!DOCTYPE html&gt;
+<div class="code-block-wrapper"><div class="code-block-header"><span class="lang-badge">💻 <span>HTML</span></span><button class="code-copy-btn" type="button" aria-label="Copy code"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle;"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg><span>Copy</span></button></div><pre><code class="language-html">&lt;!DOCTYPE html&gt;
 &lt;html lang="en"&gt;
 &lt;head&gt;
   &lt;meta charset="UTF-8"&gt;
@@ -322,7 +322,7 @@
   &lt;/form&gt;
 
 &lt;/body&gt;
-&lt;/html&gt;</code></pre>
+&lt;/html&gt;</code></pre></div>
 
 <p>
   When the page renders, Cloudflare automatically searches for any element with the class <code>.cf-turnstile</code>. It renders a clean, compact verification widget that matches your visitor's OS dark/light theme (via <code>data-theme="auto"</code>). Once verified, it automatically creates a hidden input field named <code>cf-turnstile-response</code> containing the encrypted cryptographic token.
@@ -340,7 +340,7 @@
   Here is the exact server-side verification middleware I deploy in Node.js / Express applications:
 </p>
 
-<pre><code class="language-javascript">// server.js (Node.js & Express)
+<div class="code-block-wrapper"><div class="code-block-header"><span class="lang-badge">💻 <span>JAVASCRIPT</span></span><button class="code-copy-btn" type="button" aria-label="Copy code"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle;"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg><span>Copy</span></button></div><pre><code class="language-javascript">// server.js (Node.js & Express)
 const express = require('express');
 const app = express();
 
@@ -416,7 +416,7 @@ app.post('/api/submit-contact', async (req, res) => {
   }
 });
 
-app.listen(3000, () => console.log('Server running on port 3000'));</code></pre>
+app.listen(3000, () => console.log('Server running on port 3000'));</code></pre></div>
 
 <hr style="border: none; border-top: 1px solid var(--border); margin: 2.5rem 0;">
 
@@ -426,7 +426,7 @@ app.listen(3000, () => console.log('Server running on port 3000'));</code></pre>
   If you are running a classic PHP website, custom contact form, or WordPress hook, here is the clean native PHP verification code using <code>curl</code>:
 </p>
 
-<pre><code class="language-php">&lt;?php
+<div class="code-block-wrapper"><div class="code-block-header"><span class="lang-badge">💻 <span>PHP</span></span><button class="code-copy-btn" type="button" aria-label="Copy code"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle;"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg><span>Copy</span></button></div><pre><code class="language-php">&lt;?php
 // verify-contact.php
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $turnstile_token = $_POST['cf-turnstile-response'] ?? '';
@@ -469,7 +469,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         echo "Verification failed. Spambots are prohibited.";
     }
 }
-?&gt;</code></pre>
+?&gt;</code></pre></div>
 
 <hr style="border: none; border-top: 1px solid var(--border); margin: 2.5rem 0;">
 
@@ -666,6 +666,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   
   <div class="copy-toast" id="copy-toast">Link copied to clipboard!</div>
 
-  <script src="/assets/js/main.js" defer></script>
+  <script src="/assets/js/main.js?v=20261118_v2" defer></script>
 </body>
 </html>
