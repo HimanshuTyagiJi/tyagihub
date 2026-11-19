@@ -346,10 +346,37 @@
     });
   }
 
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', initCodeBlocks);
-  } else {
+  // --- 9. COOKIE CONSENT BANNER ---
+  function initCookieConsent() {
+    const banner = document.getElementById('cookie-consent-banner');
+    const acceptBtn = document.getElementById('cookie-accept-btn');
+    if (!banner || !acceptBtn) return;
+
+    if (!localStorage.getItem('th_cookie_consent')) {
+      setTimeout(() => {
+        banner.style.display = 'flex';
+      }, 800);
+    }
+
+    acceptBtn.addEventListener('click', () => {
+      localStorage.setItem('th_cookie_consent', 'accepted');
+      banner.style.opacity = '0';
+      banner.style.transition = 'opacity 0.25s ease';
+      setTimeout(() => {
+        banner.style.display = 'none';
+      }, 250);
+    });
+  }
+
+  function initApp() {
     initCodeBlocks();
+    initCookieConsent();
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initApp);
+  } else {
+    initApp();
   }
 
 })();
