@@ -368,9 +368,24 @@
     });
   }
 
+  // --- 10. EXTERNAL LINKS SECURITY & SEO ---
+  function initExternalLinks() {
+    const links = document.querySelectorAll('a[href^="http://"], a[href^="https://"]');
+    links.forEach(link => {
+      try {
+        const url = new URL(link.href);
+        if (url.hostname !== window.location.hostname) {
+          link.setAttribute('target', '_blank');
+          link.setAttribute('rel', 'noopener noreferrer');
+        }
+      } catch (e) {}
+    });
+  }
+
   function initApp() {
     initCodeBlocks();
     initCookieConsent();
+    initExternalLinks();
   }
 
   if (document.readyState === 'loading') {
