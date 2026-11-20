@@ -1,0 +1,133 @@
+<svg preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 480" width="900" height="480">
+  <defs>
+    <linearGradient id="flowBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#064e3b"/>
+      <stop offset="50%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#022c22"/>
+    </linearGradient>
+    <linearGradient id="stepCard" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e293b"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+    <filter id="stepShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="6" stdDeviation="8" flood-color="#000000" flood-opacity="0.4"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="900" height="480" rx="12" fill="url(#flowBg)" stroke="#1e293b" stroke-width="1.5"/>
+
+  <!-- Title -->
+  <text x="450" y="44" text-anchor="middle" fill="#f8fafc" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="800" letter-spacing="-0.5">
+    The Zero-Cost Google Sheets CRM Pipeline Architecture
+  </text>
+  <text x="450" y="70" text-anchor="middle" fill="#94a3b8" font-family="system-ui, -apple-system, sans-serif" font-size="13">
+    How inbound website leads turn into paying clients without expensive SaaS subscriptions
+  </text>
+
+  <!-- Step 1: Inbound Lead Capture -->
+  <g transform="translate(35, 110)" filter="url(#stepShadow)">
+    <rect width="180" height="310" rx="10" fill="url(#stepCard)" stroke="#10b981" stroke-width="1.5"/>
+    <rect width="180" height="38" rx="10" fill="#10b981" opacity="0.25"/>
+    <rect y="24" width="180" height="14" fill="#10b981" opacity="0.25"/>
+    <text x="14" y="24" fill="#34d399" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="750">📥 1. Lead Intake</text>
+
+    <g transform="translate(14, 52)">
+      <text x="0" y="15" fill="#f1f5f9" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="700">Google / Zoho Forms</text>
+      <rect y="24" width="152" height="60" rx="6" fill="#0f172a" stroke="#10b981" stroke-width="0.8"/>
+      <text x="8" y="42" fill="#34d399" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="700">Website Webhook</text>
+      <text x="8" y="58" fill="#94a3b8" font-family="system-ui, -apple-system, sans-serif" font-size="9">Instant form embed</text>
+      <text x="8" y="72" fill="#64748b" font-family="system-ui, -apple-system, sans-serif" font-size="9">Auto-appends to Sheet</text>
+
+      <text x="0" y="105" fill="#cbd5e1" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="600">Captured Data:</text>
+      <text x="0" y="122" fill="#94a3b8" font-family="system-ui, -apple-system, sans-serif" font-size="9">• Client Full Name</text>
+      <text x="0" y="138" fill="#94a3b8" font-family="system-ui, -apple-system, sans-serif" font-size="9">• Business Email</text>
+      <text x="0" y="154" fill="#94a3b8" font-family="system-ui, -apple-system, sans-serif" font-size="9">• Project Budget</text>
+      <text x="0" y="170" fill="#94a3b8" font-family="system-ui, -apple-system, sans-serif" font-size="9">• Target Deadline</text>
+    </g>
+  </g>
+
+  <!-- Arrow 1 -> 2 -->
+  <g transform="translate(225, 255)">
+    <line x1="0" y1="0" x2="20" y2="0" stroke="#10b981" stroke-width="2"/>
+    <polygon points="20,-5 28,0 20,5" fill="#10b981"/>
+  </g>
+
+  <!-- Step 2: Triage & Qualification -->
+  <g transform="translate(255, 110)" filter="url(#stepShadow)">
+    <rect width="180" height="310" rx="10" fill="url(#stepCard)" stroke="#0284c7" stroke-width="1.5"/>
+    <rect width="180" height="38" rx="10" fill="#0284c7" opacity="0.25"/>
+    <rect y="24" width="180" height="14" fill="#0284c7" opacity="0.25"/>
+    <text x="14" y="24" fill="#38bdf8" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="750">🔍 2. Lead Triage</text>
+
+    <g transform="translate(14, 52)">
+      <text x="0" y="15" fill="#f1f5f9" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="700">Data Validation Menu</text>
+      <rect y="24" width="152" height="60" rx="6" fill="#0f172a" stroke="#0284c7" stroke-width="0.8"/>
+      <text x="8" y="42" fill="#38bdf8" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="700">Deal Stage Dropdown</text>
+      <text x="8" y="58" fill="#94a3b8" font-family="system-ui, -apple-system, sans-serif" font-size="9">Color-coded badge</text>
+      <text x="8" y="72" fill="#64748b" font-family="system-ui, -apple-system, sans-serif" font-size="9">Filter by Priority</text>
+
+      <text x="0" y="105" fill="#cbd5e1" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="600">Key Actions:</text>
+      <text x="0" y="122" fill="#94a3b8" font-family="system-ui, -apple-system, sans-serif" font-size="9">• Initial Fit Check</text>
+      <text x="0" y="138" fill="#94a3b8" font-family="system-ui, -apple-system, sans-serif" font-size="9">• Estimate Deal Value</text>
+      <text x="0" y="154" fill="#94a3b8" font-family="system-ui, -apple-system, sans-serif" font-size="9">• Send Discovery Invite</text>
+      <text x="0" y="170" fill="#94a3b8" font-family="system-ui, -apple-system, sans-serif" font-size="9">• Set Follow-up Date</text>
+    </g>
+  </g>
+
+  <!-- Arrow 2 -> 3 -->
+  <g transform="translate(445, 255)">
+    <line x1="0" y1="0" x2="20" y2="0" stroke="#0284c7" stroke-width="2"/>
+    <polygon points="20,-5 28,0 20,5" fill="#0284c7"/>
+  </g>
+
+  <!-- Step 3: Follow-Up Engine -->
+  <g transform="translate(475, 110)" filter="url(#stepShadow)">
+    <rect width="180" height="310" rx="10" fill="url(#stepCard)" stroke="#f59e0b" stroke-width="1.5"/>
+    <rect width="180" height="38" rx="10" fill="#f59e0b" opacity="0.25"/>
+    <rect y="24" width="180" height="14" fill="#f59e0b" opacity="0.25"/>
+    <text x="14" y="24" fill="#fbbf24" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="750">⚡ 3. Follow-Up Alerts</text>
+
+    <g transform="translate(14, 52)">
+      <text x="0" y="15" fill="#f1f5f9" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="700">Conditional Formulas</text>
+      <rect y="24" width="152" height="60" rx="6" fill="#0f172a" stroke="#f59e0b" stroke-width="0.8"/>
+      <text x="8" y="42" fill="#fbbf24" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="700">Formula: TODAY()</text>
+      <text x="8" y="58" fill="#94a3b8" font-family="system-ui, -apple-system, sans-serif" font-size="9">Auto-flags overdue dates</text>
+      <text x="8" y="72" fill="#64748b" font-family="system-ui, -apple-system, sans-serif" font-size="9">Red / Amber color trigger</text>
+
+      <text x="0" y="105" fill="#cbd5e1" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="600">Zero Lost Deals:</text>
+      <text x="0" y="122" fill="#94a3b8" font-family="system-ui, -apple-system, sans-serif" font-size="9">• 48-hr proposal check</text>
+      <text x="0" y="138" fill="#94a3b8" font-family="system-ui, -apple-system, sans-serif" font-size="9">• Scope review reminder</text>
+      <text x="0" y="154" fill="#94a3b8" font-family="system-ui, -apple-system, sans-serif" font-size="9">• Daily priority queue</text>
+      <text x="0" y="170" fill="#94a3b8" font-family="system-ui, -apple-system, sans-serif" font-size="9">• WhatsApp/Email ping</text>
+    </g>
+  </g>
+
+  <!-- Arrow 3 -> 4 -->
+  <g transform="translate(665, 255)">
+    <line x1="0" y1="0" x2="20" y2="0" stroke="#f59e0b" stroke-width="2"/>
+    <polygon points="20,-5 28,0 20,5" fill="#f59e0b"/>
+  </g>
+
+  <!-- Step 4: Closed Won & Invoicing -->
+  <g transform="translate(695, 110)" filter="url(#stepShadow)">
+    <rect width="170" height="310" rx="10" fill="url(#stepCard)" stroke="#10b981" stroke-width="1.5"/>
+    <rect width="170" height="38" rx="10" fill="#10b981" opacity="0.25"/>
+    <rect y="24" width="170" height="14" fill="#10b981" opacity="0.25"/>
+    <text x="14" y="24" fill="#34d399" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="750">🏆 4. Closed Won</text>
+
+    <g transform="translate(14, 52)">
+      <text x="0" y="15" fill="#f1f5f9" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="700">Revenue Metrics</text>
+      <rect y="24" width="142" height="60" rx="6" fill="#0f172a" stroke="#10b981" stroke-width="0.8"/>
+      <text x="8" y="42" fill="#34d399" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="700">SUMIFS Revenue</text>
+      <text x="8" y="58" fill="#94a3b8" font-family="system-ui, -apple-system, sans-serif" font-size="9">Real-time pipeline total</text>
+      <text x="8" y="72" fill="#64748b" font-family="system-ui, -apple-system, sans-serif" font-size="9">Win conversion rate %</text>
+
+      <text x="0" y="105" fill="#cbd5e1" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="600">Seamless Handoff:</text>
+      <text x="0" y="122" fill="#94a3b8" font-family="system-ui, -apple-system, sans-serif" font-size="9">• Export to Zoho Invoice</text>
+      <text x="0" y="138" fill="#94a3b8" font-family="system-ui, -apple-system, sans-serif" font-size="9">• Airtable project sync</text>
+      <text x="0" y="154" fill="#94a3b8" font-family="system-ui, -apple-system, sans-serif" font-size="9">• Contract onboarding</text>
+      <text x="0" y="170" fill="#94a3b8" font-family="system-ui, -apple-system, sans-serif" font-size="9">• 100% Free Ecosystem</text>
+    </g>
+  </g>
+</svg>
