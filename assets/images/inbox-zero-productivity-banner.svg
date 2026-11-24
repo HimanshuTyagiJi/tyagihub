@@ -1,0 +1,99 @@
+<svg preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <linearGradient id="izbBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#312e81"/>
+      <stop offset="45%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#020617"/>
+    </linearGradient>
+    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e293b"/>
+      <stop offset="100%" stop-color="#090d16"/>
+    </linearGradient>
+    <filter id="izbShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="12" stdDeviation="18" flood-color="#000000" flood-opacity="0.6"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#izbBg)"/>
+
+  <!-- Subtle Ambient Grid -->
+  <g opacity="0.06" stroke="#ffffff" stroke-width="1">
+    <line x1="100" y1="0" x2="100" y2="630"/>
+    <line x1="250" y1="0" x2="250" y2="630"/>
+    <line x1="400" y1="0" x2="400" y2="630"/>
+    <line x1="550" y1="0" x2="550" y2="630"/>
+    <line x1="700" y1="0" x2="700" y2="630"/>
+    <line x1="850" y1="0" x2="850" y2="630"/>
+    <line x1="1000" y1="0" x2="1000" y2="630"/>
+    <line x1="1150" y1="0" x2="1150" y2="630"/>
+    <line x1="0" y1="90" x2="1200" y2="90"/>
+    <line x1="0" y1="180" x2="1200" y2="180"/>
+    <line x1="0" y1="270" x2="1200" y2="270"/>
+    <line x1="0" y1="360" x2="1200" y2="360"/>
+    <line x1="0" y1="450" x2="1200" y2="450"/>
+    <line x1="0" y1="540" x2="1200" y2="540"/>
+  </g>
+
+  <!-- Category Badge -->
+  <g transform="translate(80, 75)">
+    <rect width="260" height="38" rx="8" fill="#818cf8" opacity="0.2"/>
+    <rect width="260" height="38" rx="8" fill="none" stroke="#818cf8" stroke-width="1.5"/>
+    <text x="24" y="24" fill="#a5b4fc" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="800" letter-spacing="1.5">
+      PRODUCTIVITY &amp; SYSTEMS
+    </text>
+  </g>
+
+  <!-- Headline -->
+  <text x="80" y="185" fill="#ffffff" font-family="system-ui, -apple-system, sans-serif" font-size="46" font-weight="900" letter-spacing="-1">
+    The Inbox Zero Operating System
+  </text>
+  <text x="80" y="240" fill="#94a3b8" font-family="system-ui, -apple-system, sans-serif" font-size="23" font-weight="500">
+    Clear Daily Email Clutter in 15 Minutes with the 4D Triage Framework
+  </text>
+
+  <!-- Mockup Container (Clean Inbox Window) -->
+  <g transform="translate(80, 295)" filter="url(#izbShadow)">
+    <rect width="1040" height="270" rx="12" fill="url(#cardGrad)" stroke="#334155" stroke-width="1.5"/>
+
+    <!-- Titlebar -->
+    <rect width="1040" height="42" rx="12" fill="#0f172a"/>
+    <rect y="24" width="1040" height="18" fill="#0f172a"/>
+    <line x1="0" y1="42" x2="1040" y2="42" stroke="#1e293b" stroke-width="1"/>
+
+    <circle cx="28" cy="21" r="6" fill="#ef4444"/>
+    <circle cx="48" cy="21" r="6" fill="#eab308"/>
+    <circle cx="68" cy="21" r="6" fill="#10b981"/>
+
+    <text x="520" y="26" text-anchor="middle" fill="#64748b" font-family="system-ui, sans-serif" font-size="13">
+      TyagiHub Mail &bull; Primary Inbox (0 Unread)
+    </text>
+
+    <!-- Clean Inbox State Mockup Body -->
+    <g transform="translate(520, 160)" text-anchor="middle">
+      <circle cx="0" cy="-30" r="32" fill="#10b981" opacity="0.15"/>
+      <text x="0" y="-20" font-size="28" text-anchor="middle">✨</text>
+
+      <text x="0" y="24" fill="#f8fafc" font-family="system-ui, sans-serif" font-size="20" font-weight="800">
+        You're completely caught up!
+      </text>
+      <text x="0" y="50" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="14">
+        Zero unread emails in Primary. Next triage scheduled for 04:30 PM.
+      </text>
+
+      <!-- Badges -->
+      <g transform="translate(-160, 68)">
+        <rect width="100" height="24" rx="6" fill="#ef4444" opacity="0.2"/>
+        <text x="50" y="16" fill="#f87171" font-family="system-ui, sans-serif" font-size="11" font-weight="700" text-anchor="middle">@Action (3)</text>
+      </g>
+      <g transform="translate(-40, 68)">
+        <rect width="100" height="24" rx="6" fill="#38bdf8" opacity="0.2"/>
+        <text x="50" y="16" fill="#38bdf8" font-family="system-ui, sans-serif" font-size="11" font-weight="700" text-anchor="middle">@Waiting (2)</text>
+      </g>
+      <g transform="translate(80, 68)">
+        <rect width="100" height="24" rx="6" fill="#10b981" opacity="0.2"/>
+        <text x="50" y="16" fill="#34d399" font-family="system-ui, sans-serif" font-size="11" font-weight="700" text-anchor="middle">Archive (All)</text>
+      </g>
+    </g>
+  </g>
+</svg>

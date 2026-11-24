@@ -1,0 +1,115 @@
+<svg preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 480" width="900" height="480">
+  <defs>
+    <linearGradient id="izBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e1b4b"/>
+      <stop offset="45%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#030712"/>
+    </linearGradient>
+    <linearGradient id="izCard" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e293b"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+    <filter id="izShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="6" stdDeviation="8" flood-color="#000000" flood-opacity="0.4"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="900" height="480" rx="12" fill="url(#izBg)" stroke="#1e293b" stroke-width="1.5"/>
+
+  <!-- Title -->
+  <text x="450" y="44" text-anchor="middle" fill="#f8fafc" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="800" letter-spacing="-0.5">
+    The 4D Triage Framework for Inbox Zero Execution
+  </text>
+  <text x="450" y="70" text-anchor="middle" fill="#94a3b8" font-family="system-ui, -apple-system, sans-serif" font-size="13">
+    How solopreneurs process 100+ daily emails in 15 minutes without decision fatigue
+  </text>
+
+  <!-- Pillar 1: DELETE -->
+  <g transform="translate(35, 110)" filter="url(#izShadow)">
+    <rect width="180" height="310" rx="10" fill="url(#izCard)" stroke="#ef4444" stroke-width="1.5"/>
+    <rect width="180" height="38" rx="10" fill="#ef4444" opacity="0.25"/>
+    <rect y="24" width="180" height="14" fill="#ef4444" opacity="0.25"/>
+    <text x="14" y="24" fill="#f87171" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="750">🗑️ 1. DELETE</text>
+
+    <g transform="translate(14, 52)">
+      <text x="0" y="15" fill="#f1f5f9" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="700">Immediate Purge</text>
+      <rect y="24" width="152" height="60" rx="6" fill="#0f172a" stroke="#ef4444" stroke-width="0.8"/>
+      <text x="8" y="42" fill="#f87171" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="700">Rule: 0 Second Hesitation</text>
+      <text x="8" y="58" fill="#94a3b8" font-family="system-ui, -apple-system, sans-serif" font-size="9">Hit 'e' (Archive) or '#' (Trash)</text>
+      <text x="8" y="72" fill="#64748b" font-family="system-ui, -apple-system, sans-serif" font-size="9">Ruthless filtering</text>
+
+      <text x="0" y="105" fill="#cbd5e1" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="600">Targets:</text>
+      <text x="0" y="122" fill="#94a3b8" font-family="system-ui, -apple-system, sans-serif" font-size="9">• Unread marketing blasts</text>
+      <text x="0" y="138" fill="#94a3b8" font-family="system-ui, -apple-system, sans-serif" font-size="9">• Cold pitch templates</text>
+      <text x="0" y="154" fill="#94a3b8" font-family="system-ui, -apple-system, sans-serif" font-size="9">• FYIs with no action items</text>
+      <text x="0" y="170" fill="#94a3b8" font-family="system-ui, -apple-system, sans-serif" font-size="9">• Expired notifications</text>
+    </g>
+  </g>
+
+  <!-- Pillar 2: DELEGATE -->
+  <g transform="translate(255, 110)" filter="url(#izShadow)">
+    <rect width="180" height="310" rx="10" fill="url(#izCard)" stroke="#38bdf8" stroke-width="1.5"/>
+    <rect width="180" height="38" rx="10" fill="#38bdf8" opacity="0.25"/>
+    <rect y="24" width="180" height="14" fill="#38bdf8" opacity="0.25"/>
+    <text x="14" y="24" fill="#38bdf8" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="750">👥 2. DELEGATE</text>
+
+    <g transform="translate(14, 52)">
+      <text x="0" y="15" fill="#f1f5f9" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="700">Handoff &amp; Track</text>
+      <rect y="24" width="152" height="60" rx="6" fill="#0f172a" stroke="#38bdf8" stroke-width="0.8"/>
+      <text x="8" y="42" fill="#38bdf8" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="700">Rule: Forward in 30s</text>
+      <text x="8" y="58" fill="#94a3b8" font-family="system-ui, -apple-system, sans-serif" font-size="9">Add 1-line expectation</text>
+      <text x="8" y="72" fill="#64748b" font-family="system-ui, -apple-system, sans-serif" font-size="9">Tag @Waiting-On</text>
+
+      <text x="0" y="105" fill="#cbd5e1" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="600">Targets:</text>
+      <text x="0" y="122" fill="#94a3b8" font-family="system-ui, -apple-system, sans-serif" font-size="9">• Client technical questions</text>
+      <text x="0" y="138" fill="#94a3b8" font-family="system-ui, -apple-system, sans-serif" font-size="9">• Vendor invoice inquiries</text>
+      <text x="0" y="154" fill="#94a3b8" font-family="system-ui, -apple-system, sans-serif" font-size="9">• Team task assignments</text>
+      <text x="0" y="170" fill="#94a3b8" font-family="system-ui, -apple-system, sans-serif" font-size="9">• Clear ownership transfer</text>
+    </g>
+  </g>
+
+  <!-- Pillar 3: DO (2-Minute Rule) -->
+  <g transform="translate(475, 110)" filter="url(#izShadow)">
+    <rect width="180" height="310" rx="10" fill="url(#izCard)" stroke="#10b981" stroke-width="1.5"/>
+    <rect width="180" height="38" rx="10" fill="#10b981" opacity="0.25"/>
+    <rect y="24" width="180" height="14" fill="#10b981" opacity="0.25"/>
+    <text x="14" y="24" fill="#34d399" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="750">⚡ 3. DO (2-Min)</text>
+
+    <g transform="translate(14, 52)">
+      <text x="0" y="15" fill="#f1f5f9" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="700">Immediate Action</text>
+      <rect y="24" width="152" height="60" rx="6" fill="#0f172a" stroke="#10b981" stroke-width="0.8"/>
+      <text x="8" y="42" fill="#34d399" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="700">Rule: Takes &lt; 120s?</text>
+      <text x="8" y="58" fill="#94a3b8" font-family="system-ui, -apple-system, sans-serif" font-size="9">Reply &amp; archive immediately</text>
+      <text x="8" y="72" fill="#64748b" font-family="system-ui, -apple-system, sans-serif" font-size="9">Do not file or postpone</text>
+
+      <text x="0" y="105" fill="#cbd5e1" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="600">Targets:</text>
+      <text x="0" y="122" fill="#94a3b8" font-family="system-ui, -apple-system, sans-serif" font-size="9">• Simple yes/no approvals</text>
+      <text x="0" y="138" fill="#94a3b8" font-family="system-ui, -apple-system, sans-serif" font-size="9">• Meeting confirmations</text>
+      <text x="0" y="154" fill="#94a3b8" font-family="system-ui, -apple-system, sans-serif" font-size="9">• 1-sentence quick replies</text>
+      <text x="0" y="170" fill="#94a3b8" font-family="system-ui, -apple-system, sans-serif" font-size="9">• Receipt downloads</text>
+    </g>
+  </g>
+
+  <!-- Pillar 4: DEFER -->
+  <g transform="translate(695, 110)" filter="url(#izShadow)">
+    <rect width="170" height="310" rx="10" fill="url(#izCard)" stroke="#f59e0b" stroke-width="1.5"/>
+    <rect width="170" height="38" rx="10" fill="#f59e0b" opacity="0.25"/>
+    <rect y="24" width="170" height="14" fill="#f59e0b" opacity="0.25"/>
+    <text x="14" y="24" fill="#fbbf24" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="750">📅 4. DEFER</text>
+
+    <g transform="translate(14, 52)">
+      <text x="0" y="15" fill="#f1f5f9" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="700">Schedule Deep Work</text>
+      <rect y="24" width="142" height="60" rx="6" fill="#0f172a" stroke="#f59e0b" stroke-width="0.8"/>
+      <text x="8" y="42" fill="#fbbf24" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="700">Rule: Takes &gt; 2 Min?</text>
+      <text x="8" y="58" fill="#94a3b8" font-family="system-ui, -apple-system, sans-serif" font-size="9">Label @Action-Required</text>
+      <text x="8" y="72" fill="#64748b" font-family="system-ui, -apple-system, sans-serif" font-size="9">Archive from Primary</text>
+
+      <text x="0" y="105" fill="#cbd5e1" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="600">Targets:</text>
+      <text x="0" y="122" fill="#94a3b8" font-family="system-ui, -apple-system, sans-serif" font-size="9">• Detailed proposals</text>
+      <text x="0" y="138" fill="#94a3b8" font-family="system-ui, -apple-system, sans-serif" font-size="9">• Contract reviews</text>
+      <text x="0" y="154" fill="#94a3b8" font-family="system-ui, -apple-system, sans-serif" font-size="9">• Strategy feedback</text>
+      <text x="0" y="170" fill="#94a3b8" font-family="system-ui, -apple-system, sans-serif" font-size="9">• Afternoon focus block</text>
+    </g>
+  </g>
+</svg>
