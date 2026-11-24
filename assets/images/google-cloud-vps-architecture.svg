@@ -1,0 +1,133 @@
+<svg preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 480" width="900" height="480">
+  <defs>
+    <linearGradient id="archBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e3a8a"/>
+      <stop offset="50%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#020617"/>
+    </linearGradient>
+    <linearGradient id="stepBox" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e293b"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+    <filter id="boxShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="6" stdDeviation="8" flood-color="#000000" flood-opacity="0.4"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="900" height="480" rx="12" fill="url(#archBg)" stroke="#1e293b" stroke-width="1.5"/>
+
+  <!-- Title -->
+  <text x="450" y="44" text-anchor="middle" fill="#f8fafc" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="800" letter-spacing="-0.5">
+    The Zero-Cost Google Cloud Compute Engine Architecture
+  </text>
+  <text x="450" y="70" text-anchor="middle" fill="#94a3b8" font-family="system-ui, -apple-system, sans-serif" font-size="13">
+    How solopreneurs host 24/7 background tasks without unexpected billing or memory crashes
+  </text>
+
+  <!-- Step 1: Free Tier Specs -->
+  <g transform="translate(35, 110)" filter="url(#boxShadow)">
+    <rect width="180" height="310" rx="10" fill="url(#stepBox)" stroke="#38bdf8" stroke-width="1.5"/>
+    <rect width="180" height="38" rx="10" fill="#38bdf8" opacity="0.25"/>
+    <rect y="24" width="180" height="14" fill="#38bdf8" opacity="0.25"/>
+    <text x="14" y="24" fill="#38bdf8" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="750">☁️ 1. Free Quota</text>
+
+    <g transform="translate(14, 52)">
+      <text x="0" y="15" fill="#f1f5f9" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="700">Compute Engine</text>
+      <rect y="24" width="152" height="60" rx="6" fill="#0f172a" stroke="#38bdf8" stroke-width="0.8"/>
+      <text x="8" y="42" fill="#38bdf8" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="700">e2-micro Instance</text>
+      <text x="8" y="58" fill="#94a3b8" font-family="system-ui, -apple-system, sans-serif" font-size="9">us-central1 / us-east1</text>
+      <text x="8" y="72" fill="#64748b" font-family="system-ui, -apple-system, sans-serif" font-size="9">100% Free Forever</text>
+
+      <text x="0" y="105" fill="#cbd5e1" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="600">Hardware Limits:</text>
+      <text x="0" y="122" fill="#94a3b8" font-family="system-ui, -apple-system, sans-serif" font-size="9">• 1 vCPU (shared core)</text>
+      <text x="0" y="138" fill="#94a3b8" font-family="system-ui, -apple-system, sans-serif" font-size="9">• 1 GB RAM memory</text>
+      <text x="0" y="154" fill="#94a3b8" font-family="system-ui, -apple-system, sans-serif" font-size="9">• 30 GB Standard Disk</text>
+      <text x="0" y="170" fill="#94a3b8" font-family="system-ui, -apple-system, sans-serif" font-size="9">• 1 GB Egress to World</text>
+    </g>
+  </g>
+
+  <!-- Arrow 1 -> 2 -->
+  <g transform="translate(225, 255)">
+    <line x1="0" y1="0" x2="20" y2="0" stroke="#38bdf8" stroke-width="2"/>
+    <polygon points="20,-5 28,0 20,5" fill="#38bdf8"/>
+  </g>
+
+  <!-- Step 2: RAM Swap Optimizer -->
+  <g transform="translate(255, 110)" filter="url(#boxShadow)">
+    <rect width="180" height="310" rx="10" fill="url(#stepBox)" stroke="#10b981" stroke-width="1.5"/>
+    <rect width="180" height="38" rx="10" fill="#10b981" opacity="0.25"/>
+    <rect y="24" width="180" height="14" fill="#10b981" opacity="0.25"/>
+    <text x="14" y="24" fill="#34d399" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="750">⚙️ 2. Memory Shield</text>
+
+    <g transform="translate(14, 52)">
+      <text x="0" y="15" fill="#f1f5f9" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="700">Linux Swapfile</text>
+      <rect y="24" width="152" height="60" rx="6" fill="#0f172a" stroke="#10b981" stroke-width="0.8"/>
+      <text x="8" y="42" fill="#34d399" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="700">2 GB Swap on Disk</text>
+      <text x="8" y="58" fill="#94a3b8" font-family="system-ui, -apple-system, sans-serif" font-size="9">Total Virtual RAM: 3GB</text>
+      <text x="8" y="72" fill="#64748b" font-family="system-ui, -apple-system, sans-serif" font-size="9">Prevents OOM Crashes</text>
+
+      <text x="0" y="105" fill="#cbd5e1" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="600">Optimization Steps:</text>
+      <text x="0" y="122" fill="#94a3b8" font-family="system-ui, -apple-system, sans-serif" font-size="9">• allocate /swapfile 2G</text>
+      <text x="0" y="138" fill="#94a3b8" font-family="system-ui, -apple-system, sans-serif" font-size="9">• chmod 600 security</text>
+      <text x="0" y="154" fill="#94a3b8" font-family="system-ui, -apple-system, sans-serif" font-size="9">• swappiness = 10</text>
+      <text x="0" y="170" fill="#94a3b8" font-family="system-ui, -apple-system, sans-serif" font-size="9">• Persist in /etc/fstab</text>
+    </g>
+  </g>
+
+  <!-- Arrow 2 -> 3 -->
+  <g transform="translate(445, 255)">
+    <line x1="0" y1="0" x2="20" y2="0" stroke="#10b981" stroke-width="2"/>
+    <polygon points="20,-5 28,0 20,5" fill="#10b981"/>
+  </g>
+
+  <!-- Step 3: 24/7 Daemons (systemd) -->
+  <g transform="translate(475, 110)" filter="url(#boxShadow)">
+    <rect width="180" height="310" rx="10" fill="url(#stepBox)" stroke="#f59e0b" stroke-width="1.5"/>
+    <rect width="180" height="38" rx="10" fill="#f59e0b" opacity="0.25"/>
+    <rect y="24" width="180" height="14" fill="#f59e0b" opacity="0.25"/>
+    <text x="14" y="24" fill="#fbbf24" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="750">🤖 3. Auto-Restart</text>
+
+    <g transform="translate(14, 52)">
+      <text x="0" y="15" fill="#f1f5f9" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="700">systemd Service</text>
+      <rect y="24" width="152" height="60" rx="6" fill="#0f172a" stroke="#f59e0b" stroke-width="0.8"/>
+      <text x="8" y="42" fill="#fbbf24" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="700">Restart=always</text>
+      <text x="8" y="58" fill="#94a3b8" font-family="system-ui, -apple-system, sans-serif" font-size="9">Auto-recovers on reboot</text>
+      <text x="8" y="72" fill="#64748b" font-family="system-ui, -apple-system, sans-serif" font-size="9">Zero downtime daemon</text>
+
+      <text x="0" y="105" fill="#cbd5e1" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="600">Workloads Hosted:</text>
+      <text x="0" y="122" fill="#94a3b8" font-family="system-ui, -apple-system, sans-serif" font-size="9">• Telegram Cloud Bots</text>
+      <text x="0" y="138" fill="#94a3b8" font-family="system-ui, -apple-system, sans-serif" font-size="9">• Python price scrapers</text>
+      <text x="0" y="154" fill="#94a3b8" font-family="system-ui, -apple-system, sans-serif" font-size="9">• Webhook listeners</text>
+      <text x="0" y="170" fill="#94a3b8" font-family="system-ui, -apple-system, sans-serif" font-size="9">• Node.js microservices</text>
+    </g>
+  </g>
+
+  <!-- Arrow 3 -> 4 -->
+  <g transform="translate(665, 255)">
+    <line x1="0" y1="0" x2="20" y2="0" stroke="#f59e0b" stroke-width="2"/>
+    <polygon points="20,-5 28,0 20,5" fill="#f59e0b"/>
+  </g>
+
+  <!-- Step 4: Billing Guardrail -->
+  <g transform="translate(695, 110)" filter="url(#boxShadow)">
+    <rect width="170" height="310" rx="10" fill="url(#stepBox)" stroke="#ef4444" stroke-width="1.5"/>
+    <rect width="170" height="38" rx="10" fill="#ef4444" opacity="0.25"/>
+    <rect y="24" width="170" height="14" fill="#ef4444" opacity="0.25"/>
+    <text x="14" y="24" fill="#f87171" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="750">🛡️ 4. ₹0 Guardrail</text>
+
+    <g transform="translate(14, 52)">
+      <text x="0" y="15" fill="#f1f5f9" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="700">Billing Budget Alert</text>
+      <rect y="24" width="142" height="60" rx="6" fill="#0f172a" stroke="#ef4444" stroke-width="0.8"/>
+      <text x="8" y="42" fill="#f87171" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="700">Budget: ₹1.00</text>
+      <text x="8" y="58" fill="#94a3b8" font-family="system-ui, -apple-system, sans-serif" font-size="9">Instant email alert</text>
+      <text x="8" y="72" fill="#64748b" font-family="system-ui, -apple-system, sans-serif" font-size="9">Zero bill surprises</text>
+
+      <text x="0" y="105" fill="#cbd5e1" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="600">Security Safeguards:</text>
+      <text x="0" y="122" fill="#94a3b8" font-family="system-ui, -apple-system, sans-serif" font-size="9">• Key-based SSH only</text>
+      <text x="0" y="138" fill="#94a3b8" font-family="system-ui, -apple-system, sans-serif" font-size="9">• UFW firewall enabled</text>
+      <text x="0" y="154" fill="#94a3b8" font-family="system-ui, -apple-system, sans-serif" font-size="9">• Ephemeral / Free IP</text>
+      <text x="0" y="170" fill="#94a3b8" font-family="system-ui, -apple-system, sans-serif" font-size="9">• 100% Free Forever</text>
+    </g>
+  </g>
+</svg>

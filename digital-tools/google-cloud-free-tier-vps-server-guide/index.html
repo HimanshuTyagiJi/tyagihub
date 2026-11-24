@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Google Cloud Always Free Server: How to Host Python Bots, Cron Jobs & Webhooks for ₹0 Forever (2026 Guide) | TyagiHub</title>
+  <meta name="description" content="A complete, verified blueprint on provisioning an e2-micro Google Cloud virtual machine within the official Always Free tier, configuring 2GB swap memory to avoid crashes, managing systemd 24/7 daemons, and setting up ₹0 billing guardrails.">
+  <link rel="canonical" href="https://tyagihub.in/digital-tools/google-cloud-free-tier-vps-server-guide/">
+  <meta name="robots" content="index, follow">
+  <meta name="google-site-verification" content="9bG9tMUfi3YGFJ2QkwK6TmZ8g40LFUkE07vvs7oo6Zg">
+
+  
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-2HX1M5QQ44"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-2HX1M5QQ44');
+  </script>
+
+  
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Google Cloud Always Free Server: How to Host Python Bots, Cron Jobs & Webhooks for ₹0 Forever (2026 Guide) | TyagiHub">
+  <meta property="og:description" content="A complete, verified blueprint on provisioning an e2-micro Google Cloud virtual machine within the official Always Free tier, configuring 2GB swap memory to avoid crashes, managing systemd 24/7 daemons, and setting up ₹0 billing guardrails.">
+  <meta property="og:url" content="https://tyagihub.in/digital-tools/google-cloud-free-tier-vps-server-guide/">
+  <meta property="og:site_name" content="TyagiHub">
+  <meta property="og:image" content="https://tyagihub.in/assets/images/logo.png">
+
+  
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "TechArticle",
+        "@id": "https://tyagihub.in/digital-tools/google-cloud-free-tier-vps-server-guide/#article",
+        "headline": "Google Cloud Always Free Server: How to Host Python Bots, Cron Jobs & Webhooks for ₹0 Forever (2026 Guide)",
+        "description": "A complete, verified blueprint on provisioning an e2-micro Google Cloud virtual machine within the official Always Free tier, configuring 2GB swap memory to avoid crashes, managing systemd 24/7 daemons, and setting up ₹0 billing guardrails.",
+        "url": "https://tyagihub.in/digital-tools/google-cloud-free-tier-vps-server-guide/",
+        "datePublished": "2026-11-24",
+        "dateModified": "2026-11-24",
+        "inLanguage": "en-US",
+        "author": {
+          "@type": "Person",
+          "name": "Himanshu Tyagi",
+          "url": "https://tyagihub.in/about/"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "TyagiHub",
+          "url": "https://tyagihub.in/",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://tyagihub.in/assets/images/logo.png"
+          }
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://tyagihub.in/digital-tools/google-cloud-free-tier-vps-server-guide/#breadcrumb",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://tyagihub.in/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Digital Tools",
+            "item": "https://tyagihub.in/digital-tools/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Google Cloud Always Free Server: How to Host Python Bots, Cron Jobs & Webhooks for ₹0 Forever (2026 Guide)",
+            "item": "https://tyagihub.in/digital-tools/google-cloud-free-tier-vps-server-guide/"
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+
+  
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/apple-touch-icon.png">
+
+  
+  <link rel="stylesheet" href="/assets/css/main.css?v=20261119_v1">
+
+  
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7067722696020503" crossorigin="anonymous"></script>
+
+  <script>
+    (function() {
+      const savedTheme = localStorage.getItem('th_theme');
+      if (savedTheme) {
+        document.documentElement.setAttribute('data-theme', savedTheme);
+      } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.documentElement.setAttribute('data-theme', 'dark');
+      }
+    })();
+  </script>
+</head>
+<body>
+  
+  <div class="reading-progress-bar" id="progress-bar"></div>
+
+  
+  <header class="site-header">
+    <div class="header-container">
+      <a href="/" class="brand">
+        <img src="/assets/images/logo.png" alt="TyagiHub Logo" class="brand-logo" width="36" height="36">
+        <span class="brand-text">Tyagi<span>Hub</span></span>
+      </a>
+
+      <nav class="desktop-nav" aria-label="Desktop Navigation">
+        <ul class="nav-links">
+          <li><a href="/" class="nav-link">Home</a></li>
+          <li><a href="/digital-tools/" class="nav-link">Digital Tools</a></li>
+          <li><a href="/productivity/" class="nav-link">Productivity</a></li>
+          <li><a href="/about/" class="nav-link">About</a></li>
+          <li><a href="/contact/" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <button class="search-trigger-btn" type="button" aria-label="Search Guides">
+          <span>🔍</span>
+          <span>Search guides...</span>
+          <kbd>/</kbd>
+        </button>
+
+        <button class="theme-toggle-btn" type="button" aria-label="Toggle Theme">
+          <span class="theme-icon">🌙</span>
+        </button>
+
+        <button class="hamburger-btn" id="hamburger-btn" type="button" aria-label="Toggle Mobile Menu" aria-expanded="false">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  
+  <div class="mobile-drawer-overlay" id="drawer-overlay" aria-hidden="true"></div>
+
+  
+  <aside class="mobile-drawer" id="mobile-drawer" aria-label="Mobile Navigation">
+    <div class="drawer-header">
+      <div class="brand">
+        <img src="/assets/images/logo.png" alt="TyagiHub Logo" class="brand-logo" width="32" height="32">
+        <span class="brand-text">Tyagi<span>Hub</span></span>
+      </div>
+      <button class="drawer-close-btn" id="drawer-close-btn" type="button" aria-label="Close Menu">✕</button>
+    </div>
+
+    <div class="mobile-search-box">
+      <span class="mobile-search-icon">🔍</span>
+      <input type="text" class="mobile-search-input" id="mobile-search-input" placeholder="Search guides & topics...">
+    </div>
+
+    <ul class="drawer-nav-list">
+      <li class="drawer-nav-item"><a href="/">🏠 Home</a></li>
+      <li class="drawer-nav-item"><a href="/digital-tools/">🛠️ Digital Tools</a></li>
+      <li class="drawer-nav-item"><a href="/productivity/">⚡ Productivity</a></li>
+      <li class="drawer-nav-item"><a href="/about/">ℹ️ About Us</a></li>
+      <li class="drawer-nav-item"><a href="/contact/">✉️ Contact Us</a></li>
+      <li class="drawer-nav-item"><a href="/privacy-policy/">🔒 Privacy Policy</a></li>
+      <li class="drawer-nav-item"><a href="/terms/">📜 Terms of Service</a></li>
+      <li class="drawer-nav-item"><a href="/disclaimer/">⚠️ Disclaimer</a></li>
+      <li class="drawer-nav-item"><a href="/sitemap/">🗺️ HTML Sitemap</a></li>
+    </ul>
+
+    <div class="drawer-footer">
+      <p>&copy; 2026 TyagiHub. All rights reserved.</p>
+    </div>
+  </aside>
+
+  
+  <div class="search-modal" id="search-modal" role="dialog" aria-modal="true" aria-label="Search Guides">
+    <div class="search-dialog">
+      <div class="search-bar-wrap">
+        <span>🔍</span>
+        <input type="search" class="search-main-input" id="search-main-input" placeholder="Search Zoho, Airtable, Invoices..." autocomplete="off">
+        <button class="search-close-btn" id="search-close-btn" type="button">ESC</button>
+      </div>
+      <ul class="search-results-list" id="search-results-list">
+        <li class="search-empty-state">Type keywords to search verified tech guides...</li>
+      </ul>
+    </div>
+  </div>
+
+  <main>
+    <article class="article-container">
+      <nav class="article-breadcrumb" aria-label="Breadcrumb">
+        <a href="/">Home</a> &rsaquo; <a href="/digital-tools/">Digital Tools</a> &rsaquo; <span>Current Guide</span>
+      </nav>
+
+      <header class="article-header">
+        <h1 class="article-title">Google Cloud Always Free Server: How to Host Python Bots, Cron Jobs & Webhooks for ₹0 Forever (2026 Guide)</h1>
+        <div class="article-meta-bar">
+          <div class="author-chip">
+            <img src="/assets/images/logo.png" alt="Himanshu Tyagi">
+            <span>By Himanshu Tyagi</span>
+          </div>
+          <span>&bull;</span>
+          <time datetime="2026-11-24">November 24, 2026</time>
+          <span>&bull;</span>
+          <span>Category: Digital Tools</span>
+        </div>
+      </header>
+
+      
+      <div class="share-strip">
+        <span class="share-strip-label">Share this guide:</span>
+        <button class="share-btn" id="copy-link-btn" type="button">🔗 Copy Link</button>
+        <a class="share-btn" id="share-twitter" href="#" target="_blank" rel="noopener">🐦 X (Twitter)</a>
+        <a class="share-btn" id="share-linkedin" href="#" target="_blank" rel="noopener">💼 LinkedIn</a>
+        <a class="share-btn" id="share-whatsapp" href="#" target="_blank" rel="noopener">💬 WhatsApp</a>
+      </div>
+
+      <div class="article-content">
+        
+
+<figure style="margin: 0 0 2rem 0; border-radius: var(--radius-md); overflow: hidden; border: 1px solid var(--border); box-shadow: var(--shadow-sm);">
+  <img src="/assets/images/google-cloud-vps-banner.svg" alt="Google Cloud Always Free VM Server Blueprint Banner" style="width: 100%; height: auto; display: block;" width="1200" height="630">
+</figure>
+
+<p>
+  If you build custom Telegram bots, run automated web scrapers, schedule nightly database backups, or listen for Stripe and Razorpay payment webhooks, you quickly hit a frustrating barrier: <strong>your local computer cannot stay on 24 hours a day, 7 days a week</strong>.
+</p>
+
+<p>
+  The standard developer advice is to spin up a basic cloud server (VPS) on DigitalOcean, Linode, or AWS Lightsail. However, the cheapest entry-level instances on these platforms now cost $6.00 to $8.00 per month. When you add foreign transaction conversion fees and 18% Indian GST, you are paying between ₹6,500 and ₹9,500 every single year simply to keep a tiny 50-line Python automation script running in the background.
+</p>
+
+<p>
+  What most independent developers, freelancers, and solopreneurs do not realize is that <strong>Google Cloud Platform (GCP) provides a 100% free virtual server forever</strong> through its official <em>Always Free</em> tier. Unlike the temporary 90-day trial credits offered by competitors, Google Cloud’s e2-micro compute tier does not expire as long as you stay within the specified regional hardware limits.
+</p>
+
+<p>
+  In this exhaustive, verified blueprint, I will guide you step-by-step through setting up an <strong>e2-micro Ubuntu server</strong> on Google Cloud, configuring the critical <strong>2GB swap memory</strong> to prevent Out-Of-Memory (OOM) crashes, deploying self-healing 24/7 background tasks using <code>systemd</code>, and configuring an automated <strong>₹1 budget alert</strong> so you never receive an unexpected bill.
+</p>
+
+<div class="callout success">
+  <div class="callout-title">💰 The Financial Value of Google Cloud's Always Free Tier</div>
+  <p style="margin: 0;">
+    Over a 3-year period, hosting an entry-level virtual server on DigitalOcean or AWS costs roughly <strong>₹21,000 to ₹28,000</strong>. By provisioning Google Cloud’s official Always Free e2-micro instance, your infrastructure expense is <strong>₹0.00 forever</strong>. Pair this with our free <a href="/digital-tools/github-pages-custom-domain-free-hosting-guide/">GitHub Pages custom domain hosting</a> and you have a complete zero-cost production cloud stack.
+  </p>
+</div>
+
+---
+
+<h2>1. The Google Cloud Always Free Compute Engine Architecture</h2>
+
+<p>
+  Google Cloud is an enterprise-grade cloud provider designed for high scalability, but its Always Free tier offers generous baseline compute power specifically intended for developers to run lightweight workloads:
+</p>
+
+<figure style="margin: 2.5rem 0; border-radius: var(--radius-md); overflow: hidden; border: 1px solid var(--border); box-shadow: var(--shadow-sm);">
+  <img src="/assets/images/google-cloud-vps-architecture.svg" alt="Google Cloud Always Free Compute Engine Architecture Flowchart" style="width: 100%; height: auto; display: block;" width="900" height="480">
+  <figcaption style="text-align: center; font-size: 0.85rem; color: var(--text-light); margin-top: 0.5rem;">
+    Figure 1: The 4-layer architecture of a persistent, self-healing free cloud server with zero billing surprises.
+  </figcaption>
+</figure>
+
+<h3>The Exact Free Tier Quota Limits (Memorize These):</h3>
+<p>
+  To ensure Google never bills your credit card, your virtual machine must stay strictly inside these technical boundaries:
+</p>
+
+<div class="table-responsive" style="margin: 1.5rem 0; overflow-x: auto;">
+  <table style="width: 100%; border-collapse: collapse; font-size: 0.95rem;">
+    <thead>
+      <tr style="background: var(--bg-surface); border-bottom: 2px solid var(--border);">
+        <th style="padding: 0.75rem; text-align: left;">Resource</th>
+        <th style="padding: 0.75rem; text-align: left;">Allowed Free Quota</th>
+        <th style="padding: 0.75rem; text-align: left;">Critical Rule to Avoid Billing</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr style="border-bottom: 1px solid var(--border);">
+        <td style="padding: 0.75rem;"><strong>Machine Type</strong></td>
+        <td style="padding: 0.75rem;"><code>e2-micro</code></td>
+        <td style="padding: 0.75rem;">Must select e2-micro (2 shared vCPUs, 1 GB RAM). Do NOT select e2-small or f1-micro.</td>
+      </tr>
+      <tr style="border-bottom: 1px solid var(--border);">
+        <td style="padding: 0.75rem;"><strong>Allowed Region</strong></td>
+        <td style="padding: 0.75rem;">US Regions Only</td>
+        <td style="padding: 0.75rem;">Must select <code>us-central1</code> (Iowa), <code>us-east1</code> (S. Carolina), or <code>us-west1</code> (Oregon).</td>
+      </tr>
+      <tr style="border-bottom: 1px solid var(--border);">
+        <td style="padding: 0.75rem;"><strong>Boot Disk</strong></td>
+        <td style="padding: 0.75rem;">30 GB Persistent Disk</td>
+        <td style="padding: 0.75rem;">Must select <strong>Standard Persistent Disk</strong>. Do NOT choose SSD Persistent Disk or Balanced Disk.</td>
+      </tr>
+      <tr style="border-bottom: 1px solid var(--border);">
+        <td style="padding: 0.75rem;"><strong>Network Egress</strong></td>
+        <td style="padding: 0.75rem;">1 GB / month to world</td>
+        <td style="padding: 0.75rem;">Perfect for bots, webhooks, and scripts. Do NOT use as a high-bandwidth video/file streaming proxy.</td>
+      </tr>
+      <tr>
+        <td style="padding: 0.75rem;"><strong>Monthly Usage</strong></td>
+        <td style="padding: 0.75rem;">744 hours per month</td>
+        <td style="padding: 0.75rem;">Covers 1 continuous instance running 24/7 (31 days &times; 24 hours = 744 hours).</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+---
+
+<h2>2. Step-by-Step: Provisioning the Free e2-micro VM</h2>
+
+<p>
+  Follow these exact configuration steps in the Google Cloud Console to ensure your instance falls 100% under the Always Free discount:
+</p>
+
+<ol>
+  <li>Navigate to the <a href="https://console.cloud.google.com/" target="_blank" rel="noopener">Google Cloud Console</a> and sign in with your Google account.</li>
+  <li>Create a new project (e.g., <code>tyagihub-cloud-automation</code>).</li>
+  <li>Open the navigation menu and click <strong>Compute Engine &gt; VM instances</strong>. (Click "Enable API" if prompted and wait 60 seconds).</li>
+  <li>Click the blue <strong>Create Instance</strong> button at the top.</li>
+</ol>
+
+<h3>Configuring the Instance Parameters:</h3>
+
+<ul>
+  <li><strong>Name:</strong> <code>free-automation-node</code></li>
+  <li><strong>Region:</strong> Select <code>us-central1 (Iowa)</code> &bull; <strong>Zone:</strong> <code>us-central1-a</code> (or b/c/f).</li>
+  <li><strong>Series:</strong> Select <code>E2</code>.</li>
+  <li><strong>Machine type:</strong> Choose <code>e2-micro (2 vCPU, 1 GB memory)</code> from the dropdown list.</li>
+</ul>
+
+<div class="callout warning">
+  <div class="callout-title">⚠️ The Boot Disk Trap (Most Common Mistake)</div>
+  <p style="margin: 0;">
+    By default, Google Cloud configures a Debian image on a 10 GB "Balanced Persistent Disk". <strong>Balanced Disks are NOT free!</strong> You must click <strong>Change</strong> under Boot Disk, select <strong>Ubuntu (Ubuntu 24.04 LTS x86/64)</strong>, change the Boot disk type to <strong>Standard Persistent Disk</strong>, and set the size to <strong>30 GB</strong>.
+  </p>
+</div>
+
+<ul>
+  <li><strong>Firewall:</strong> Check both <em>Allow HTTP traffic</em> and <em>Allow HTTPS traffic</em> if you plan to run webhooks.</li>
+  <li>Click <strong>Create</strong> at the bottom of the page. Within 30 seconds, your virtual machine will spin up with a green checkmark.</li>
+</ul>
+
+---
+
+<h2>3. Connecting via SSH (Zero-Password Browser Terminal)</h2>
+
+<p>
+  Google Cloud eliminates the hassle of generating and copying local SSH keys. Right in your VM instances list, next to your instance name, click the small <strong>SSH</strong> button:
+</p>
+
+<p>
+  A secure in-browser terminal will open automatically, authenticated via Google IAM. Run the standard Ubuntu package updates to ensure your server has the latest security patches:
+</p>
+
+<div class="code-block-wrapper"><div class="code-block-header"><span class="lang-badge">💻 <span>BASH</span></span><button class="code-copy-btn" type="button" aria-label="Copy code"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle;"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg><span>Copy</span></button></div><pre><code class="language-bash">sudo apt update &amp;&amp; sudo apt upgrade -y
+sudo apt install -y curl wget git htop ufw python3-pip python3-venv</code></pre></div>
+
+---
+
+<h2>4. The Critical Memory Fix: Configuring 2GB Linux Swap Space</h2>
+
+<p>
+  The <code>e2-micro</code> instance provides exactly 1 GB of physical RAM. While this is sufficient for Linux itself, running modern Python scripts, installing NPM packages, or compiling C-extensions can easily spike memory to 1.1 GB.
+</p>
+
+<p>
+  Without swap space, the Linux kernel triggers the <strong>Out-Of-Memory (OOM) Killer</strong>, abruptly killing your background bots and terminating your SSH session. Because Google gives us a generous <strong>30 GB boot disk</strong>, we can allocate a 2 GB swapfile on the SSD storage, effectively giving our server <strong>3 GB of virtual memory</strong>:
+</p>
+
+<div class="code-block-wrapper"><div class="code-block-header"><span class="lang-badge">💻 <span>BASH</span></span><button class="code-copy-btn" type="button" aria-label="Copy code"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle;"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg><span>Copy</span></button></div><pre><code class="language-bash"># 1. Allocate a 2GB file on the root filesystem
+sudo fallocate -l 2G /swapfile
+
+# 2. Restrict permissions so only root can read it
+sudo chmod 600 /swapfile
+
+# 3. Mark the file as Linux swap area
+sudo mkswap /swapfile
+
+# 4. Enable the swap space immediately
+sudo swapon /swapfile
+
+# 5. Make swap permanent across system reboots
+echo '/swapfile none swap sw 0 0' | sudo tee -a /etc/fstab
+
+# 6. Optimize swappiness (prefer physical RAM, use swap only as a safety net)
+sudo sysctl vm.swappiness=10
+echo 'vm.swappiness=10' | sudo tee -a /etc/sysctl.conf</code></pre></div>
+
+<p>
+  Verify that your virtual memory is active by running <code>free -h</code>. You will see <code>Swap: 2.0Gi</code> ready and operational. Your server will now run heavy scripts smoothly without random crashes.
+</p>
+
+---
+
+<h2>5. Running 24/7 Bots &amp; Scripts with Systemd (Self-Healing Daemons)</h2>
+
+<p>
+  If you launch a script by simply typing <code>python3 bot.py</code>, it will stop the moment you close your browser or your internet disconnects. While tools like <code>screen</code> or <code>tmux</code> keep terminal sessions alive, they cannot recover if the server reboots for Google maintenance.
+</p>
+
+<p>
+  The industry-standard solution on Linux is <strong>systemd</strong>. Systemd runs your application as an official background daemon, starts it automatically when the server boots, and restarts it automatically if it ever crashes.
+</p>
+
+<p>
+  For example, let's configure our <a href="/digital-tools/telegram-bot-personal-cloud-automation-guide/">Personal Telegram Cloud Automation Bot</a> to run 24/7 forever:
+</p>
+
+<h3>Step 1: Create a systemd service file:</h3>
+<div class="code-block-wrapper"><div class="code-block-header"><span class="lang-badge">💻 <span>BASH</span></span><button class="code-copy-btn" type="button" aria-label="Copy code"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle;"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg><span>Copy</span></button></div><pre><code class="language-bash">sudo nano /etc/systemd/system/telegram-bot.service</code></pre></div>
+
+<h3>Step 2: Paste the following service configuration:</h3>
+<div class="code-block-wrapper"><div class="code-block-header"><span class="lang-badge">💻 <span>INI</span></span><button class="code-copy-btn" type="button" aria-label="Copy code"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle;"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg><span>Copy</span></button></div><pre><code class="language-ini">[Unit]
+Description=TyagiHub 24/7 Telegram Cloud Bot Service
+After=network.target
+
+[Service]
+Type=simple
+User=himanshu
+WorkingDirectory=/home/himanshu/telegram-bot
+ExecStart=/usr/bin/python3 /home/himanshu/telegram-bot/bot.py
+Restart=always
+RestartSec=5
+Environment=PYTHONUNBUFFERED=1
+
+[Install]
+WantedBy=multi-user.target</code></pre></div>
+
+<h3>Step 3: Enable and start your background service:</h3>
+<div class="code-block-wrapper"><div class="code-block-header"><span class="lang-badge">💻 <span>BASH</span></span><button class="code-copy-btn" type="button" aria-label="Copy code"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle;"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg><span>Copy</span></button></div><pre><code class="language-bash"># Reload systemd to recognize the new service
+sudo systemctl daemon-reload
+
+# Enable service to launch automatically on server boot
+sudo systemctl enable telegram-bot
+
+# Start the service right now
+sudo systemctl start telegram-bot
+
+# Check the live status and execution logs
+sudo systemctl status telegram-bot</code></pre></div>
+
+<p>
+  With <code>Restart=always</code> configured, even if your script encounters an unexpected API timeout or network glitch, Linux will wait 5 seconds and automatically reboot it without any manual intervention.
+</p>
+
+---
+
+<h2>6. The Zero-Cost Guardrail: Setting a ₹1.00 Budget Alert</h2>
+
+<p>
+  The biggest fear developers have with cloud providers is receiving a shocking bill at the end of the month due to a forgotten setting or unexpected outbound traffic. We completely neutralize this risk using Google Cloud's native billing alerts:
+</p>
+
+<ol>
+  <li>In the Google Cloud navigation menu, go to <strong>Billing &gt; Budgets &amp; alerts</strong>.</li>
+  <li>Click <strong>Create Budget</strong>.</li>
+  <li>Set the Budget Name to <code>Zero-Cost Safety Shield</code>.</li>
+  <li>Under "Budget type", select <strong>Specified amount</strong> and enter <strong>₹1.00</strong> (or $1.00 USD).</li>
+  <li>Under "Set alert threshold rules", add triggers at <strong>50%, 90%, and 100%</strong>.</li>
+  <li>Check <em>Email alerts to billing account administrators</em>.</li>
+  <li>Click <strong>Finish</strong>.</li>
+</ol>
+
+<p>
+  If your account ever consumes even ₹0.50 ($0.01) worth of non-free resources, Google Cloud will immediately send an alert straight to your primary email address so you can inspect and stop it before any significant charge occurs.
+</p>
+
+---
+
+<h2>7. Commercial VPS vs Google Cloud Always Free Tier</h2>
+
+<div class="table-responsive" style="margin: 1.5rem 0; overflow-x: auto;">
+  <table style="width: 100%; border-collapse: collapse; font-size: 0.95rem;">
+    <thead>
+      <tr style="background: var(--bg-surface); border-bottom: 2px solid var(--border);">
+        <th style="padding: 0.75rem; text-align: left;">Feature</th>
+        <th style="padding: 0.75rem; text-align: left;">Google Cloud Always Free</th>
+        <th style="padding: 0.75rem; text-align: left;">DigitalOcean Basic Droplet</th>
+        <th style="padding: 0.75rem; text-align: left;">AWS Lightsail Entry</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr style="border-bottom: 1px solid var(--border);">
+        <td style="padding: 0.75rem;"><strong>Monthly Cost</strong></td>
+        <td style="padding: 0.75rem;"><strong>₹0.00 / month forever</strong></td>
+        <td style="padding: 0.75rem;">$6.00 / mo (~₹600 with tax)</td>
+        <td style="padding: 0.75rem;">$3.50 – $5.00 / mo (~₹450)</td>
+      </tr>
+      <tr style="border-bottom: 1px solid var(--border);">
+        <td style="padding: 0.75rem;"><strong>vCPU &amp; RAM</strong></td>
+        <td style="padding: 0.75rem;">2 vCPU (shared), 1GB + 2GB Swap</td>
+        <td style="padding: 0.75rem;">1 vCPU, 1GB RAM</td>
+        <td style="padding: 0.75rem;">1 vCPU, 512MB – 1GB RAM</td>
+      </tr>
+      <tr style="border-bottom: 1px solid var(--border);">
+        <td style="padding: 0.75rem;"><strong>Included Disk</strong></td>
+        <td style="padding: 0.75rem;"><strong>30 GB Standard Persistent</strong></td>
+        <td style="padding: 0.75rem;">25 GB SSD</td>
+        <td style="padding: 0.75rem;">20 GB SSD</td>
+      </tr>
+      <tr style="border-bottom: 1px solid var(--border);">
+        <td style="padding: 0.75rem;"><strong>Free Tier Expiry</strong></td>
+        <td style="padding: 0.75rem;"><strong>Never expires (Permanent)</strong></td>
+        <td style="padding: 0.75rem;">No free tier (60-day credit only)</td>
+        <td style="padding: 0.75rem;">3 months free trial only</td>
+      </tr>
+      <tr>
+        <td style="padding: 0.75rem;"><strong>Ideal Workloads</strong></td>
+        <td style="padding: 0.75rem;">Python bots, webhooks, cron syncs</td>
+        <td style="padding: 0.75rem;">High-traffic PHP/WordPress sites</td>
+        <td style="padding: 0.75rem;">General purpose microservices</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+---
+
+<h2>8. Frequently Asked Questions (FAQ)</h2>
+
+<div class="faq-accordion" style="margin: 2rem 0;">
+  <div style="margin-bottom: 1.5rem; padding: 1.25rem; background: var(--bg-surface); border: 1px solid var(--border); border-radius: var(--radius-sm);">
+    <h3 style="margin-top: 0; font-size: 1.15rem; color: var(--text-main);">Does Google Cloud require a credit card for Always Free tier?</h3>
+    <p style="margin: 0.5rem 0 0; color: var(--text-muted); line-height: 1.6;">
+      Yes. Google requires credit card or international debit card verification to prevent fraudulent bot-net accounts. They make a temporary refundable authorization charge of ₹2.00 (or $1.00) that is reversed immediately. As long as you stay within the e2-micro US regional limits outlined in this guide, your card will never be billed.
+    </p>
+  </div>
+
+  <div style="margin-bottom: 1.5rem; padding: 1.25rem; background: var(--bg-surface); border: 1px solid var(--border); border-radius: var(--radius-sm);">
+    <h3 style="margin-top: 0; font-size: 1.15rem; color: var(--text-main);">Will my server stop working when the $300 90-day free trial credit expires?</h3>
+    <p style="margin: 0.5rem 0 0; color: var(--text-muted); line-height: 1.6;">
+      No. Google Cloud explicitly separates the "90-Day Free Trial" from the "Always Free Products". Even after your $300 trial credits expire, the e2-micro instance (in US regions) continues running indefinitely at zero cost under the permanent Always Free quota.
+    </p>
+  </div>
+
+  <div style="margin-bottom: 1.5rem; padding: 1.25rem; background: var(--bg-surface); border: 1px solid var(--border); border-radius: var(--radius-sm);">
+    <h3 style="margin-top: 0; font-size: 1.15rem; color: var(--text-main);">What happens if I stop and restart the virtual machine?</h3>
+    <p style="margin: 0.5rem 0 0; color: var(--text-muted); line-height: 1.6;">
+      By default, Google assigns an ephemeral external IP address. If you shut down the machine and power it back on, the public IP address may change. For Telegram bots or background scrapers making outbound requests, this does not matter at all. If you are pointing a custom domain to it, use a free dynamic DNS client or keep the VM running continuously.
+    </p>
+  </div>
+</div>
+
+---
+
+<div class="author-box" style="margin-top: 3rem;">
+  <img src="/assets/images/logo.png" alt="Himanshu Tyagi" class="author-box-img">
+  <div>
+    <h3 style="font-size: 1.15rem; font-weight: 750; margin-bottom: 0.25rem;">Written by Himanshu Tyagi</h3>
+    <div style="font-size: 0.85rem; color: var(--primary); font-weight: 600; margin-bottom: 0.5rem;">Founder, Independent Software &amp; Systems Developer &bull; Ghaziabad, India</div>
+    <p style="font-size: 0.9rem; color: var(--text-muted); line-height: 1.6; margin: 0;">
+      Himanshu tests and documents practical, zero-cost digital systems for developers, solopreneurs, and small businesses on TyagiHub. Have questions about setting up systemd services or configuring swap memory? Reach out directly via our <a href="/contact/">Contact Us</a> page.
+    </p>
+  </div>
+</div>
+
+      </div>
+
+      <div class="author-box">
+        <img src="/assets/images/logo.png" alt="Himanshu Tyagi" class="author-box-img">
+        <div>
+          <div class="author-box-name">Himanshu Tyagi</div>
+          <div class="author-box-role">Founder &amp; Software Developer &bull; Ghaziabad, India</div>
+          <div class="author-box-bio">
+            Himanshu is an independent software and Android developer based in Ghaziabad, Uttar Pradesh. He writes hands-on, verified guides helping creators, developers, and small businesses configure digital tools, cloud software, and productivity workflows.
+          </div>
+        </div>
+      </div>
+    </article>
+  </main>
+
+  
+  <footer class="site-footer">
+    <div class="footer-main-grid">
+      
+      <div>
+        <div class="brand" style="margin-bottom: 1rem;">
+          <img src="/assets/images/logo.png" alt="TyagiHub Logo" class="brand-logo" width="36" height="36">
+          <span class="brand-text">Tyagi<span>Hub</span></span>
+        </div>
+        <p style="color: var(--text-muted); font-size: 0.92rem; line-height: 1.7; margin-bottom: 0.75rem;">
+          TyagiHub is an independent digital publication founded by Himanshu Tyagi, providing practical tutorials on cloud tools, business email setups, GST billing, and everyday workflow productivity.
+        </p>
+        <p style="color: var(--text-light); font-size: 0.83rem; margin-top: 0.5rem;">
+          📍 Ghaziabad, Uttar Pradesh, India &bull; <a href="mailto:contact@tyagihub.in" style="color: var(--primary);">contact@tyagihub.in</a>
+        </p>
+        <div style="display: flex; gap: 0.65rem; margin-top: 1rem; align-items: center; flex-wrap: wrap;">
+          <a href="https://youtube.com/@tyagihubs" target="_blank" rel="noopener" aria-label="TyagiHub on YouTube" style="color: var(--text-muted); font-size: 0.82rem; display: inline-flex; align-items: center; gap: 0.35rem; padding: 0.3rem 0.6rem; border-radius: var(--radius-sm); border: 1px solid var(--border); background: var(--bg-surface);">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+            <span>YouTube</span>
+          </a>
+          <a href="https://instagram.com/tyagihub" target="_blank" rel="noopener" aria-label="TyagiHub on Instagram" style="color: var(--text-muted); font-size: 0.82rem; display: inline-flex; align-items: center; gap: 0.35rem; padding: 0.3rem 0.6rem; border-radius: var(--radius-sm); border: 1px solid var(--border); background: var(--bg-surface);">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+            <span>Instagram</span>
+          </a>
+          <a href="https://github.com/HimanshuTyagiJi" target="_blank" rel="noopener" aria-label="Himanshu on GitHub" style="color: var(--text-muted); font-size: 0.82rem; display: inline-flex; align-items: center; gap: 0.35rem; padding: 0.3rem 0.6rem; border-radius: var(--radius-sm); border: 1px solid var(--border); background: var(--bg-surface);">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+            <span>GitHub</span>
+          </a>
+        </div>
+      </div>
+
+      
+      <div>
+        <h4 class="footer-col-title">Topic Clusters</h4>
+        <ul class="footer-links-list">
+          <li class="footer-link-item"><a href="/digital-tools/">🛠️ Digital Tools</a></li>
+          <li class="footer-link-item"><a href="/productivity/">⚡ Productivity Guides</a></li>
+          <li class="footer-link-item"><a href="/digital-tools/whatsapp-business-automation-client-guide/">💬 WhatsApp Business Automation</a></li>
+          <li class="footer-link-item"><a href="/productivity/google-calendar-time-blocking-solopreneur-guide/">📅 Google Calendar Scheduling</a></li>
+          <li class="footer-link-item"><a href="/digital-tools/github-pages-custom-domain-free-hosting-guide/">🌐 Free GitHub Pages Hosting</a></li>
+          <li class="footer-link-item"><a href="/productivity/obsidian-beginner-offline-notes-guide/">🧠 Obsidian Offline Notes Hub</a></li>
+        </ul>
+      </div>
+
+      
+      <div>
+        <h4 class="footer-col-title">Trust &amp; Legal</h4>
+        <ul class="footer-links-list">
+          <li class="footer-link-item"><a href="/about/">About Us &amp; Editorial</a></li>
+          <li class="footer-link-item"><a href="/contact/">Contact Us &amp; Support</a></li>
+          <li class="footer-link-item"><a href="/privacy-policy/">Privacy Policy</a></li>
+          <li class="footer-link-item"><a href="/terms/">Terms of Service</a></li>
+          <li class="footer-link-item"><a href="/disclaimer/">Disclaimer</a></li>
+          <li class="footer-link-item"><a href="/sitemap/">HTML Sitemap</a></li>
+        </ul>
+      </div>
+    </div>
+
+    
+    <div class="footer-bottom-bar">
+      <div>&copy; 2026 TyagiHub. All rights reserved.</div>
+      <div style="display: flex; gap: 1.25rem; flex-wrap: wrap;">
+        <a href="/privacy-policy/" style="color: var(--text-light); font-size: 0.85rem;">Privacy Policy</a>
+        <a href="/terms/" style="color: var(--text-light); font-size: 0.85rem;">Terms of Service</a>
+        <a href="/disclaimer/" style="color: var(--text-light); font-size: 0.85rem;">Disclaimer</a>
+        <a href="/sitemap/" style="color: var(--text-light); font-size: 0.85rem;">Sitemap</a>
+        <a href="/contact/" style="color: var(--text-light); font-size: 0.85rem;">Contact Us</a>
+      </div>
+    </div>
+  </footer>
+
+  
+  <button class="back-to-top-btn" id="back-to-top" aria-label="Back to Top" type="button">↑</button>
+
+  
+  <div class="copy-toast" id="copy-toast">Link copied to clipboard!</div>
+
+  
+  <div id="cookie-consent-banner" class="cookie-consent-bar" style="display: none;">
+    <div class="cookie-consent-content">
+      <span class="cookie-icon" style="font-size: 1.25rem;">🍪</span>
+      <p>
+        We use essential cookies and analytics to ensure you get the best browsing experience on TyagiHub. Learn more in our <a href="/privacy-policy/">Privacy Policy</a>.
+      </p>
+    </div>
+    <div class="cookie-consent-actions">
+      <button type="button" id="cookie-accept-btn" class="cookie-btn cookie-accept-btn">Got it</button>
+    </div>
+  </div>
+
+  <script src="/assets/js/main.js?v=20261119_v1" defer></script>
+</body>
+</html>
